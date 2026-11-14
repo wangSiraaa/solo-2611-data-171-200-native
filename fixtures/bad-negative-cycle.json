@@ -1,0 +1,52 @@
+[
+  {
+    "id": "n1",
+    "head": {
+      "predicate": "eligible",
+      "args": [
+        "?x"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "supplier",
+        "args": [
+          "?x"
+        ]
+      }
+    ],
+    "negative": [
+      {
+        "predicate": "review",
+        "args": [
+          "?x"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "n2",
+    "head": {
+      "predicate": "review",
+      "args": [
+        "?x"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "supplier",
+        "args": [
+          "?x"
+        ]
+      }
+    ],
+    "negative": [
+      {
+        "predicate": "eligible",
+        "args": [
+          "?x"
+        ]
+      }
+    ]
+  }
+]

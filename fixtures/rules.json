@@ -1,0 +1,134 @@
+[
+  {
+    "id": "r1",
+    "head": {
+      "predicate": "reach",
+      "args": [
+        "?x",
+        "?y"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "link",
+        "args": [
+          "?x",
+          "?y"
+        ]
+      }
+    ],
+    "negative": []
+  },
+  {
+    "id": "r2",
+    "head": {
+      "predicate": "reach",
+      "args": [
+        "?x",
+        "?z"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "reach",
+        "args": [
+          "?x",
+          "?y"
+        ]
+      },
+      {
+        "predicate": "link",
+        "args": [
+          "?y",
+          "?z"
+        ]
+      }
+    ],
+    "negative": []
+  },
+  {
+    "id": "r3",
+    "head": {
+      "predicate": "allowed",
+      "args": [
+        "?x",
+        "?y"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "reach",
+        "args": [
+          "?x",
+          "?y"
+        ]
+      }
+    ],
+    "negative": [
+      {
+        "predicate": "banned",
+        "args": [
+          "?x",
+          "?y"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r4",
+    "head": {
+      "predicate": "eligible",
+      "args": [
+        "?x"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "supplier",
+        "args": [
+          "?x"
+        ]
+      },
+      {
+        "predicate": "allowed",
+        "args": [
+          "?x",
+          "W"
+        ]
+      }
+    ],
+    "negative": [
+      {
+        "predicate": "suspended",
+        "args": [
+          "?x"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r5",
+    "head": {
+      "predicate": "review",
+      "args": [
+        "?x"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "supplier",
+        "args": [
+          "?x"
+        ]
+      }
+    ],
+    "negative": [
+      {
+        "predicate": "eligible",
+        "args": [
+          "?x"
+        ]
+      }
+    ]
+  }
+]

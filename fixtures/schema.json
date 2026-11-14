@@ -1,0 +1,18 @@
+{
+  "predicates": {
+    "link": 2,
+    "supplier": 1,
+    "banned": 2,
+    "suspended": 1,
+    "reach": 2,
+    "allowed": 2,
+    "eligible": 1,
+    "review": 1
+  },
+  "extensional": [
+    "link",
+    "supplier",
+    "banned",
+    "suspended"
+  ]
+}

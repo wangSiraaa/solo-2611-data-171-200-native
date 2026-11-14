@@ -1,0 +1,27 @@
+[
+  {
+    "predicate": "eligible",
+    "args": [
+      "S2"
+    ]
+  },
+  {
+    "predicate": "review",
+    "args": [
+      "S1"
+    ]
+  },
+  {
+    "predicate": "reach",
+    "args": [
+      "A",
+      "A"
+    ]
+  },
+  {
+    "predicate": "eligible",
+    "args": [
+      "S4"
+    ]
+  }
+]

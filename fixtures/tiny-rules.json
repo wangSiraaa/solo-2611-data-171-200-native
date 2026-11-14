@@ -1,0 +1,49 @@
+[
+  {
+    "id": "r1",
+    "head": {
+      "predicate": "reach",
+      "args": [
+        "?x",
+        "?y"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "link",
+        "args": [
+          "?x",
+          "?y"
+        ]
+      }
+    ],
+    "negative": []
+  },
+  {
+    "id": "r2_recursive_join",
+    "head": {
+      "predicate": "reach",
+      "args": [
+        "?x",
+        "?z"
+      ]
+    },
+    "positive": [
+      {
+        "predicate": "reach",
+        "args": [
+          "?x",
+          "?y"
+        ]
+      },
+      {
+        "predicate": "reach",
+        "args": [
+          "?y",
+          "?z"
+        ]
+      }
+    ],
+    "negative": []
+  }
+]

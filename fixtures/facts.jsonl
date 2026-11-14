@@ -1,0 +1,14 @@
+{"predicate": "supplier", "args": ["S1"]}
+{"predicate": "supplier", "args": ["S2"]}
+{"predicate": "supplier", "args": ["S3"]}
+{"predicate": "supplier", "args": ["S4"]}
+{"predicate": "link", "args": ["S1", "A"]}
+{"predicate": "link", "args": ["S2", "B"]}
+{"predicate": "link", "args": ["A", "B"]}
+{"predicate": "link", "args": ["B", "A"]}
+{"predicate": "link", "args": ["B", "W"]}
+{"predicate": "link", "args": ["S3", "C"]}
+{"predicate": "link", "args": ["C", "W"]}
+{"predicate": "banned", "args": ["S1", "W"]}
+{"predicate": "suspended", "args": ["S3"]}
+{"predicate": "link", "args": ["S1", "A"]}

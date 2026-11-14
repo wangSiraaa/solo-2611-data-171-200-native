@@ -1,0 +1,3 @@
+{"predicate": "link", "args": ["a", "b"]}
+{"predicate": "link", "args": ["b", "a"]}
+{"predicate": "link", "args": ["b", "c"]}
