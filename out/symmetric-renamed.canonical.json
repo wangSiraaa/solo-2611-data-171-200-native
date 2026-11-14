@@ -1,0 +1,23 @@
+{
+  "source": "fixtures/symmetric-renamed.nq",
+  "sha256": "610f210f45625fdfac29099b52a324df7c248f4ce6f98ffafdd98cf5fb1c7509",
+  "labeling": {
+    "q0": "c0",
+    "q1": "c5",
+    "q2": "c4",
+    "q3": "c1",
+    "q4": "c3",
+    "q5": "c2"
+  },
+  "stats": {
+    "blank_nodes": 6,
+    "quads": 6,
+    "refinement_rounds": 19,
+    "cells_after_refinement": 1,
+    "search_nodes": 7,
+    "search_leaves": 6
+  },
+  "quads": 6,
+  "duplicates_folded": 0,
+  "elapsed_ms": 0.51
+}

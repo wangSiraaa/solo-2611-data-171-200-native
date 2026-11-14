@@ -1,0 +1,21 @@
+{
+  "source": "fixtures/renamed.nq",
+  "sha256": "0d42afddfd243fc218effa2499ff8aaa95d5988c10cf22a3ad8c0e6a09f7efef",
+  "labeling": {
+    "a1": "c2",
+    "b99": "c1",
+    "gg": "c3",
+    "z9": "c0"
+  },
+  "stats": {
+    "blank_nodes": 4,
+    "quads": 10,
+    "refinement_rounds": 2,
+    "cells_after_refinement": 4,
+    "search_nodes": 1,
+    "search_leaves": 1
+  },
+  "quads": 10,
+  "duplicates_folded": 0,
+  "elapsed_ms": 0.4
+}

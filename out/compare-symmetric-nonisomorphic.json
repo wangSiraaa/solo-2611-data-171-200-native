@@ -1,0 +1,36 @@
+{
+  "equivalent": false,
+  "sha256_a": "610f210f45625fdfac29099b52a324df7c248f4ce6f98ffafdd98cf5fb1c7509",
+  "sha256_b": "456def595dec84b85e2c4b657e4506465f4317671e51e4d8a23fec420d39aa20",
+  "stats_a": {
+    "blank_nodes": 6,
+    "quads": 6,
+    "refinement_rounds": 19,
+    "cells_after_refinement": 1,
+    "search_nodes": 7,
+    "search_leaves": 6
+  },
+  "stats_b": {
+    "blank_nodes": 6,
+    "quads": 6,
+    "refinement_rounds": 49,
+    "cells_after_refinement": 1,
+    "search_nodes": 25,
+    "search_leaves": 18
+  },
+  "only_in_a": [
+    "_:c2 <https://example.invalid/next> _:c4 .",
+    "_:c3 <https://example.invalid/next> _:c1 .",
+    "_:c4 <https://example.invalid/next> _:c5 .",
+    "_:c5 <https://example.invalid/next> _:c3 ."
+  ],
+  "only_in_b": [
+    "_:c2 <https://example.invalid/next> _:c1 .",
+    "_:c3 <https://example.invalid/next> _:c5 .",
+    "_:c4 <https://example.invalid/next> _:c3 .",
+    "_:c5 <https://example.invalid/next> _:c4 ."
+  ],
+  "note": "差异为两份规范形式的四元组集合差, 不声称是最小编辑, 也不对实体相似性做任何猜测。",
+  "file_a": "fixtures/symmetric.nq",
+  "file_b": "fixtures/nonisomorphic.nq"
+}

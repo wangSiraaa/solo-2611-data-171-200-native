@@ -1,0 +1,6 @@
+_:c0 <https://example.invalid/next> _:c2 .
+_:c1 <https://example.invalid/next> _:c0 .
+_:c2 <https://example.invalid/next> _:c4 .
+_:c3 <https://example.invalid/next> _:c1 .
+_:c4 <https://example.invalid/next> _:c5 .
+_:c5 <https://example.invalid/next> _:c3 .

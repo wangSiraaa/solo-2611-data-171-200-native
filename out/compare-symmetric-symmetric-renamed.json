@@ -1,0 +1,98 @@
+{
+  "equivalent": true,
+  "sha256_a": "610f210f45625fdfac29099b52a324df7c248f4ce6f98ffafdd98cf5fb1c7509",
+  "sha256_b": "610f210f45625fdfac29099b52a324df7c248f4ce6f98ffafdd98cf5fb1c7509",
+  "stats_a": {
+    "blank_nodes": 6,
+    "quads": 6,
+    "refinement_rounds": 19,
+    "cells_after_refinement": 1,
+    "search_nodes": 7,
+    "search_leaves": 6
+  },
+  "stats_b": {
+    "blank_nodes": 6,
+    "quads": 6,
+    "refinement_rounds": 19,
+    "cells_after_refinement": 1,
+    "search_nodes": 7,
+    "search_leaves": 6
+  },
+  "bnode_mapping_a_to_b": {
+    "v0": "q0",
+    "v1": "q5",
+    "v2": "q2",
+    "v3": "q1",
+    "v4": "q4",
+    "v5": "q3"
+  },
+  "statements_a": [
+    {
+      "line": 1,
+      "statement": "_:v0 <https://example.invalid/next> _:v1 .",
+      "canonical": "_:c0 <https://example.invalid/next> _:c2 ."
+    },
+    {
+      "line": 2,
+      "statement": "_:v1 <https://example.invalid/next> _:v2 .",
+      "canonical": "_:c2 <https://example.invalid/next> _:c4 ."
+    },
+    {
+      "line": 3,
+      "statement": "_:v2 <https://example.invalid/next> _:v3 .",
+      "canonical": "_:c4 <https://example.invalid/next> _:c5 ."
+    },
+    {
+      "line": 4,
+      "statement": "_:v3 <https://example.invalid/next> _:v4 .",
+      "canonical": "_:c5 <https://example.invalid/next> _:c3 ."
+    },
+    {
+      "line": 5,
+      "statement": "_:v4 <https://example.invalid/next> _:v5 .",
+      "canonical": "_:c3 <https://example.invalid/next> _:c1 ."
+    },
+    {
+      "line": 6,
+      "statement": "_:v5 <https://example.invalid/next> _:v0 .",
+      "canonical": "_:c1 <https://example.invalid/next> _:c0 ."
+    }
+  ],
+  "statements_b": [
+    {
+      "line": 1,
+      "statement": "_:q4 <https://example.invalid/next> _:q3 .",
+      "canonical": "_:c3 <https://example.invalid/next> _:c1 ."
+    },
+    {
+      "line": 2,
+      "statement": "_:q1 <https://example.invalid/next> _:q4 .",
+      "canonical": "_:c5 <https://example.invalid/next> _:c3 ."
+    },
+    {
+      "line": 3,
+      "statement": "_:q2 <https://example.invalid/next> _:q1 .",
+      "canonical": "_:c4 <https://example.invalid/next> _:c5 ."
+    },
+    {
+      "line": 4,
+      "statement": "_:q5 <https://example.invalid/next> _:q2 .",
+      "canonical": "_:c2 <https://example.invalid/next> _:c4 ."
+    },
+    {
+      "line": 5,
+      "statement": "_:q0 <https://example.invalid/next> _:q5 .",
+      "canonical": "_:c0 <https://example.invalid/next> _:c2 ."
+    },
+    {
+      "line": 6,
+      "statement": "_:q3 <https://example.invalid/next> _:q0 .",
+      "canonical": "_:c1 <https://example.invalid/next> _:c0 ."
+    }
+  ],
+  "verification": {
+    "mapping_replay_ok": true
+  },
+  "file_a": "fixtures/symmetric.nq",
+  "file_b": "fixtures/symmetric-renamed.nq"
+}

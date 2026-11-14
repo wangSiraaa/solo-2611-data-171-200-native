@@ -1,0 +1,30 @@
+{
+  "equivalent": false,
+  "sha256_a": "0d42afddfd243fc218effa2499ff8aaa95d5988c10cf22a3ad8c0e6a09f7efef",
+  "sha256_b": "9799cc9d943992d88d7d47ba607f92902351e3b88cf60f9189dd84660e0e1a8d",
+  "stats_a": {
+    "blank_nodes": 4,
+    "quads": 10,
+    "refinement_rounds": 2,
+    "cells_after_refinement": 4,
+    "search_nodes": 1,
+    "search_leaves": 1
+  },
+  "stats_b": {
+    "blank_nodes": 4,
+    "quads": 10,
+    "refinement_rounds": 4,
+    "cells_after_refinement": 3,
+    "search_nodes": 3,
+    "search_leaves": 2
+  },
+  "only_in_a": [
+    "_:c1 <https://example.invalid/code> \"01\"^^<http://www.w3.org/2001/XMLSchema#integer> ."
+  ],
+  "only_in_b": [
+    "_:c1 <https://example.invalid/code> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ."
+  ],
+  "note": "差异为两份规范形式的四元组集合差, 不声称是最小编辑, 也不对实体相似性做任何猜测。",
+  "file_a": "fixtures/base.nq",
+  "file_b": "fixtures/changed.nq"
+}

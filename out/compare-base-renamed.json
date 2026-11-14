@@ -1,0 +1,141 @@
+{
+  "equivalent": true,
+  "sha256_a": "0d42afddfd243fc218effa2499ff8aaa95d5988c10cf22a3ad8c0e6a09f7efef",
+  "sha256_b": "0d42afddfd243fc218effa2499ff8aaa95d5988c10cf22a3ad8c0e6a09f7efef",
+  "stats_a": {
+    "blank_nodes": 4,
+    "quads": 10,
+    "refinement_rounds": 2,
+    "cells_after_refinement": 4,
+    "search_nodes": 1,
+    "search_leaves": 1
+  },
+  "stats_b": {
+    "blank_nodes": 4,
+    "quads": 10,
+    "refinement_rounds": 2,
+    "cells_after_refinement": 4,
+    "search_nodes": 1,
+    "search_leaves": 1
+  },
+  "bnode_mapping_a_to_b": {
+    "graph": "gg",
+    "left": "b99",
+    "right": "a1",
+    "root": "z9"
+  },
+  "statements_a": [
+    {
+      "line": 1,
+      "statement": "<https://example.invalid/dataset> <https://example.invalid/has> _:root .",
+      "canonical": "<https://example.invalid/dataset> <https://example.invalid/has> _:c0 ."
+    },
+    {
+      "line": 2,
+      "statement": "_:root <https://example.invalid/child> _:left .",
+      "canonical": "_:c0 <https://example.invalid/child> _:c1 ."
+    },
+    {
+      "line": 3,
+      "statement": "_:root <https://example.invalid/child> _:right .",
+      "canonical": "_:c0 <https://example.invalid/child> _:c2 ."
+    },
+    {
+      "line": 4,
+      "statement": "_:left <https://example.invalid/code> \"01\"^^<http://www.w3.org/2001/XMLSchema#integer> .",
+      "canonical": "_:c1 <https://example.invalid/code> \"01\"^^<http://www.w3.org/2001/XMLSchema#integer> ."
+    },
+    {
+      "line": 5,
+      "statement": "_:right <https://example.invalid/code> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> .",
+      "canonical": "_:c2 <https://example.invalid/code> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ."
+    },
+    {
+      "line": 6,
+      "statement": "_:left <https://example.invalid/label> \"é\\n样本\"@ZH-cn <https://example.invalid/g> .",
+      "canonical": "_:c1 <https://example.invalid/label> \"é\\n样本\"@zh-cn <https://example.invalid/g> ."
+    },
+    {
+      "line": 7,
+      "statement": "_:right <https://example.invalid/label> \"é\\n样本\"@zh-CN <https://example.invalid/g> .",
+      "canonical": "_:c2 <https://example.invalid/label> \"é\\n样本\"@zh-cn <https://example.invalid/g> ."
+    },
+    {
+      "line": 8,
+      "statement": "_:left <https://example.invalid/peer> _:right _:graph .",
+      "canonical": "_:c1 <https://example.invalid/peer> _:c2 _:c3 ."
+    },
+    {
+      "line": 9,
+      "statement": "_:right <https://example.invalid/peer> _:left _:graph .",
+      "canonical": "_:c2 <https://example.invalid/peer> _:c1 _:c3 ."
+    },
+    {
+      "line": 10,
+      "statement": "_:graph <https://example.invalid/name> \"source\" .",
+      "canonical": "_:c3 <https://example.invalid/name> \"source\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+    },
+    {
+      "line": 11,
+      "statement": "_:root <https://example.invalid/child> _:left .",
+      "canonical": "_:c0 <https://example.invalid/child> _:c1 ."
+    }
+  ],
+  "statements_b": [
+    {
+      "line": 1,
+      "statement": "_:gg <https://example.invalid/name> \"source\" .",
+      "canonical": "_:c3 <https://example.invalid/name> \"source\"^^<http://www.w3.org/2001/XMLSchema#string> ."
+    },
+    {
+      "line": 2,
+      "statement": "_:a1 <https://example.invalid/peer> _:b99 _:gg .",
+      "canonical": "_:c2 <https://example.invalid/peer> _:c1 _:c3 ."
+    },
+    {
+      "line": 3,
+      "statement": "_:b99 <https://example.invalid/peer> _:a1 _:gg .",
+      "canonical": "_:c1 <https://example.invalid/peer> _:c2 _:c3 ."
+    },
+    {
+      "line": 4,
+      "statement": "_:a1 <https://example.invalid/label> \"é\\n样本\"@zh-cn <https://example.invalid/g> .",
+      "canonical": "_:c2 <https://example.invalid/label> \"é\\n样本\"@zh-cn <https://example.invalid/g> ."
+    },
+    {
+      "line": 5,
+      "statement": "_:b99 <https://example.invalid/label> \"é\\n样本\"@zh-cn <https://example.invalid/g> .",
+      "canonical": "_:c1 <https://example.invalid/label> \"é\\n样本\"@zh-cn <https://example.invalid/g> ."
+    },
+    {
+      "line": 6,
+      "statement": "_:a1 <https://example.invalid/code> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> .",
+      "canonical": "_:c2 <https://example.invalid/code> \"1\"^^<http://www.w3.org/2001/XMLSchema#integer> ."
+    },
+    {
+      "line": 7,
+      "statement": "_:b99 <https://example.invalid/code> \"01\"^^<http://www.w3.org/2001/XMLSchema#integer> .",
+      "canonical": "_:c1 <https://example.invalid/code> \"01\"^^<http://www.w3.org/2001/XMLSchema#integer> ."
+    },
+    {
+      "line": 8,
+      "statement": "_:z9 <https://example.invalid/child> _:a1 .",
+      "canonical": "_:c0 <https://example.invalid/child> _:c2 ."
+    },
+    {
+      "line": 9,
+      "statement": "_:z9 <https://example.invalid/child> _:b99 .",
+      "canonical": "_:c0 <https://example.invalid/child> _:c1 ."
+    },
+    {
+      "line": 10,
+      "statement": "<https://example.invalid/dataset> <https://example.invalid/has> _:z9 .",
+      "canonical": "<https://example.invalid/dataset> <https://example.invalid/has> _:c0 ."
+    }
+  ],
+  "verification": {
+    "mapping_replay_ok": true
+  },
+  "file_a": "fixtures/base.nq",
+  "file_b": "fixtures/renamed.nq"
+}

@@ -1,0 +1,23 @@
+{
+  "source": "fixtures/nonisomorphic.nq",
+  "sha256": "456def595dec84b85e2c4b657e4506465f4317671e51e4d8a23fec420d39aa20",
+  "labeling": {
+    "v0": "c0",
+    "v1": "c2",
+    "v2": "c1",
+    "v3": "c3",
+    "v4": "c5",
+    "v5": "c4"
+  },
+  "stats": {
+    "blank_nodes": 6,
+    "quads": 6,
+    "refinement_rounds": 49,
+    "cells_after_refinement": 1,
+    "search_nodes": 25,
+    "search_leaves": 18
+  },
+  "quads": 6,
+  "duplicates_folded": 0,
+  "elapsed_ms": 0.88
+}

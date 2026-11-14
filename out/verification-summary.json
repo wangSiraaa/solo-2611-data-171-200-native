@@ -1,0 +1,35 @@
+{
+  "fixture_pairs": {
+    "base-renamed": {
+      "verdict": true,
+      "brute_force": true,
+      "match": true,
+      "mapping_replay_ok": true
+    },
+    "base-changed": {
+      "verdict": false,
+      "brute_force": false,
+      "match": true
+    },
+    "symmetric-symmetric-renamed": {
+      "verdict": true,
+      "brute_force": true,
+      "match": true,
+      "mapping_replay_ok": true
+    },
+    "symmetric-nonisomorphic": {
+      "verdict": false,
+      "brute_force": false,
+      "match": true
+    }
+  },
+  "micro_bruteforce": {
+    "pairs": 10,
+    "matched": 10
+  },
+  "random_relabel": {
+    "trials": 150,
+    "mismatches": 0
+  },
+  "all_ok": true
+}
