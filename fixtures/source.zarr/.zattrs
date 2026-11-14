@@ -1,0 +1,9 @@
+{
+  "axis_names": [
+    "time",
+    "row",
+    "column"
+  ],
+  "units": "synthetic integer counts",
+  "note": "Sparse chunk absence has fill semantics."
+}

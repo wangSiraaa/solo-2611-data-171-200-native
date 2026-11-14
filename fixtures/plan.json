@@ -1,0 +1,31 @@
+{
+  "source": "source.zarr",
+  "axis_permutation": [
+    2,
+    0,
+    1
+  ],
+  "target_chunks": [
+    11,
+    9,
+    10
+  ],
+  "target_compressor": {
+    "id": "zlib",
+    "level": 1
+  },
+  "data_buffer_budget_bytes": 12288,
+  "source_physical_edge_encoding": "full declared chunk shape, out-of-domain cells filled",
+  "source_missing_chunk": "fill_value throughout its logical extent, zero decoder calls",
+  "target_chunk_policy": "write every target grid key once, including all-fill; full physical edge chunks padded with fill",
+  "attribute_policy": "permute axis_names consistently; preserve units and note",
+  "data_buffer_accounting": "sum unique simultaneously live underlying uncompressed numerical arrays and raw fragment buffers, including copies; views do not double count; compressed input/output bytes, metadata and interpreter overhead are separately reported",
+  "execution_io": "at most one decode per existing source key; exactly one final encode/write per target key; no full-array materialization; external fragment spool allowed",
+  "validation": "independent zarr consumer may materialize the small source/target only in a separate verifier run",
+  "corruption_probe": {
+    "base_store": "source.zarr",
+    "replace_key": "0.0.1",
+    "replacement": "corrupt-chunk.bin",
+    "instruction": "copy source to a disposable input, replace that key, then run conversion to a fresh output path"
+  }
+}
