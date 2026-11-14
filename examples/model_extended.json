@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "entity": {
+    "table": "orders",
+    "key": [
+      "order_id"
+    ]
+  },
+  "facts": {
+    "orders": {
+      "key": [
+        "order_id"
+      ],
+      "entity_key": "order_id"
+    },
+    "lines": {
+      "key": [
+        "line_id"
+      ],
+      "entity_key": "order_id"
+    },
+    "payments": {
+      "key": [
+        "payment_id"
+      ],
+      "entity_key": "order_id"
+    }
+  },
+  "relations": [
+    {
+      "from": "lines",
+      "from_key": "order_id",
+      "to": "orders",
+      "to_key": "order_id",
+      "cardinality": "many_to_one"
+    },
+    {
+      "from": "payments",
+      "from_key": "order_id",
+      "to": "orders",
+      "to_key": "order_id",
+      "cardinality": "many_to_one"
+    },
+    {
+      "from": "orders",
+      "from_key": "customer_id",
+      "to": "customers",
+      "to_key": "customer_id",
+      "cardinality": "many_to_one"
+    },
+    {
+      "from": "lines",
+      "from_key": "product_id",
+      "to": "products",
+      "to_key": "product_id",
+      "cardinality": "many_to_one"
+    }
+  ],
+  "dimensions": {
+    "region": {
+      "table": "customers",
+      "column": "region"
+    },
+    "day": {
+      "table": "orders",
+      "column": "order_date"
+    },
+    "category": {
+      "table": "products",
+      "column": "category"
+    },
+    "method": {
+      "table": "payments",
+      "column": "method"
+    }
+  },
+  "metrics": {
+    "booked": {
+      "fact": "orders",
+      "op": "sum",
+      "column": "order_amount"
+    },
+    "order_count": {
+      "fact": "orders",
+      "op": "count"
+    },
+    "sales": {
+      "fact": "lines",
+      "op": "sum",
+      "column": "line_amount"
+    },
+    "units": {
+      "fact": "lines",
+      "op": "sum",
+      "column": "quantity"
+    },
+    "received": {
+      "fact": "payments",
+      "op": "sum",
+      "column": "paid_amount"
+    },
+    "payment_count": {
+      "fact": "payments",
+      "op": "count"
+    },
+    "paid_ratio": {
+      "op": "ratio",
+      "numerator": "received",
+      "denominator": "booked"
+    },
+    "line_share_ratio": {
+      "op": "ratio",
+      "numerator": "sales",
+      "denominator": "booked"
+    },
+    "avg_line_value": {
+      "op": "ratio",
+      "numerator": "sales",
+      "denominator": "units"
+    },
+    "avg_payment_value": {
+      "op": "ratio",
+      "numerator": "received",
+      "denominator": "payment_count"
+    }
+  },
+  "semantics": {
+    "group_domain": "union_of_metric_groups_after_filters",
+    "empty_measure": 0,
+    "zero_denominator": null,
+    "absent_all_metrics": "omit_group",
+    "money": "integer cents",
+    "reachable_dimension": "follow only declared many_to_one direction from each fact; joining back down is not a dimension path",
+    "filters": "AND; local filters restrict their stated fact; entity_exists computes an order-id semijoin intersected across filters and then restricts all metrics",
+    "predicate_ops": [
+      "eq",
+      "in",
+      "gte"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+region,booked,sales,received,order_count,paid_ratio,paid_ratio__numerator,paid_ratio__denominator,__rows_orders,__rows_lines,__rows_payments
+north,18000,18000,10000,3,0.5555555555555556,10000,18000,3,4,3
+south,20000,20000,18000,2,0.9,18000,20000,2,2,3

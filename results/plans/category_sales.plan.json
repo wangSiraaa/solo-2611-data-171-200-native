@@ -1,0 +1,90 @@
+{
+  "dimensions": [
+    "category"
+  ],
+  "requested_metrics": [
+    "sales",
+    "units"
+  ],
+  "leaf_metrics": [
+    "sales",
+    "units"
+  ],
+  "ratio_metrics": {},
+  "filters": [],
+  "inert_local_filters": [],
+  "filter_scopes": {
+    "local": [],
+    "entity_exists": [],
+    "entity_exists_sql": null,
+    "entity_exists_orders": null,
+    "entity_exists_order_count": null
+  },
+  "tasks": [
+    {
+      "fact": "lines",
+      "grain": {
+        "row_identity": [
+          "line_id"
+        ],
+        "entity_key": "order_id",
+        "how": "each row of lines is used exactly once; aggregation happens per category only after grouping"
+      },
+      "metrics": [
+        {
+          "name": "sales",
+          "kind": "sum",
+          "sql_expression": "SUM(lines.line_amount)"
+        },
+        {
+          "name": "units",
+          "kind": "sum",
+          "sql_expression": "SUM(lines.quantity)"
+        }
+      ],
+      "group_dimensions": [
+        {
+          "dimension": "category",
+          "path": "lines-many_to_one->products",
+          "sql_expression": "j1.\"category\""
+        }
+      ],
+      "local_filters": [],
+      "entity_exists_restriction": {
+        "applied": false,
+        "detail": "none"
+      },
+      "join_clauses": [
+        "JOIN \"products\" AS j1 ON t0.\"product_id\" = j1.\"product_id\""
+      ],
+      "sql": "SELECT j1.\"category\", SUM(t0.\"line_amount\") AS m0, SUM(t0.\"quantity\") AS m1, COUNT(*) AS n_rows\nFROM \"lines\" AS t0\n  JOIN \"products\" AS j1 ON t0.\"product_id\" = j1.\"product_id\"\nGROUP BY j1.\"category\"",
+      "notes": [
+        "summing metrics ['sales', 'units'] sum a column of this fact; adding rows of another fact cannot change them"
+      ]
+    }
+  ],
+  "combination": {
+    "group_key": [
+      "category"
+    ],
+    "group_domain": "union_of_metric_groups_after_filters",
+    "merge": "per-fact results are merged on the group key; each fact is aggregated in its own SQL statement, so no fact row is ever counted through another fact",
+    "empty_measure": 0,
+    "zero_denominator": null,
+    "absent_all_metrics": "omit_group",
+    "ratios": []
+  },
+  "support_columns": {
+    "ratio_numerators_denominators": [],
+    "fact_row_counts": {
+      "lines": "__rows_lines"
+    }
+  },
+  "why_no_double_count": [
+    "Each fact is read by its own single-fact aggregation statement; orders/lines/payments are never in the same FROM clause.",
+    "Every dimension join follows only declared many_to_one edges, so joining a dimension cannot multiply fact rows.",
+    "entity_exists is computed once as an order-id set (intersected across entity filters) and applied as a key restriction; it does not copy filter predicates onto unrelated facts.",
+    "local filters appear only in the WHERE clause of their own fact's aggregation.",
+    "The final combination is a keyed union: a group missing from a fact receives the model's empty_measure (0), never a duplicate row."
+  ]
+}

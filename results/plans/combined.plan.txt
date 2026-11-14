@@ -1,0 +1,108 @@
+=== 指标查询执行计划 / Metric query plan ===
+维度 dimensions: ['region', 'day']
+请求指标 requested metrics: ['sales', 'received', 'paid_ratio']
+基础指标 leaf metrics (planning grain): ['sales', 'received', 'booked']
+
+[过滤 Filters]
+  - entity_exists: fact=lines category eq 'A'
+  - local: fact=payments method eq 'bank'
+  entity_exists 订单集合 (intersection across entity filters): 4 order(s) ['O1', 'O2', 'O4', 'O5']
+  semijoin SQL: SELECT DISTINCT s0."order_id" FROM "lines" AS s0
+  JOIN "products" AS sj1 ON s0."product_id" = sj1."product_id"
+WHERE sj1."category" = 'A'
+  说明: 该集合作为 entity_key 限制应用到所有指标; local 过滤不会传播到它。
+
+[事实 Task: orders]
+  行身份 row identity: ['order_id']  entity_key: order_id
+  聚集粒度/aggregation: each row of orders is used exactly once; aggregation happens per region, day only after grouping
+  指标 metrics:
+    - booked (sum) = SUM(orders.order_amount)
+  维度路径 dimension paths:
+    - region: orders-many_to_one->customers -> j1."region"
+    - day: orders -> t0."order_date"
+  局部过滤 local filters: (none)
+  实体限制 entity restriction: entity_key IN (order-id semijoin)
+  joins:
+    JOIN "customers" AS j1 ON t0."customer_id" = j1."customer_id"
+  SQL:
+    SELECT j1."region", t0."order_date", SUM(t0."order_amount") AS m0, COUNT(*) AS n_rows
+    FROM "orders" AS t0
+      JOIN "customers" AS j1 ON t0."customer_id" = j1."customer_id"
+    WHERE t0."order_id" IN (
+    SELECT DISTINCT s0."order_id" FROM "lines" AS s0
+      JOIN "products" AS sj1 ON s0."product_id" = sj1."product_id"
+    WHERE sj1."category" = 'A'
+    )
+    GROUP BY j1."region", t0."order_date"
+  note: summing metrics ['booked'] sum a column of this fact; adding rows of another fact cannot change them
+  note: the shared entity-key semijoin restricts this fact to the same order set as every other metric
+
+[事实 Task: lines]
+  行身份 row identity: ['line_id']  entity_key: order_id
+  聚集粒度/aggregation: each row of lines is used exactly once; aggregation happens per region, day only after grouping
+  指标 metrics:
+    - sales (sum) = SUM(lines.line_amount)
+  维度路径 dimension paths:
+    - region: lines-many_to_one->orders-many_to_one->customers -> j2."region"
+    - day: lines-many_to_one->orders -> j1."order_date"
+  局部过滤 local filters: (none)
+  实体限制 entity restriction: entity_key IN (order-id semijoin)
+  joins:
+    JOIN "orders" AS j1 ON t0."order_id" = j1."order_id"
+    JOIN "customers" AS j2 ON j1."customer_id" = j2."customer_id"
+  SQL:
+    SELECT j2."region", j1."order_date", SUM(t0."line_amount") AS m0, COUNT(*) AS n_rows
+    FROM "lines" AS t0
+      JOIN "orders" AS j1 ON t0."order_id" = j1."order_id"
+      JOIN "customers" AS j2 ON j1."customer_id" = j2."customer_id"
+    WHERE t0."order_id" IN (
+    SELECT DISTINCT s0."order_id" FROM "lines" AS s0
+      JOIN "products" AS sj1 ON s0."product_id" = sj1."product_id"
+    WHERE sj1."category" = 'A'
+    )
+    GROUP BY j2."region", j1."order_date"
+  note: summing metrics ['sales'] sum a column of this fact; adding rows of another fact cannot change them
+  note: the shared entity-key semijoin restricts this fact to the same order set as every other metric
+
+[事实 Task: payments]
+  行身份 row identity: ['payment_id']  entity_key: order_id
+  聚集粒度/aggregation: each row of payments is used exactly once; aggregation happens per region, day only after grouping
+  指标 metrics:
+    - received (sum) = SUM(payments.paid_amount)
+  维度路径 dimension paths:
+    - region: payments-many_to_one->orders-many_to_one->customers -> j2."region"
+    - day: payments-many_to_one->orders -> j1."order_date"
+  局部过滤 local filters: [{'scope': 'local', 'fact': 'payments', 'dimension': 'method', 'op': 'eq', 'value': 'bank'}]
+  实体限制 entity restriction: entity_key IN (order-id semijoin)
+  joins:
+    JOIN "orders" AS j1 ON t0."order_id" = j1."order_id"
+    JOIN "customers" AS j2 ON j1."customer_id" = j2."customer_id"
+  SQL:
+    SELECT j2."region", j1."order_date", SUM(t0."paid_amount") AS m0, COUNT(*) AS n_rows
+    FROM "payments" AS t0
+      JOIN "orders" AS j1 ON t0."order_id" = j1."order_id"
+      JOIN "customers" AS j2 ON j1."customer_id" = j2."customer_id"
+    WHERE t0."method" = 'bank'
+      AND t0."order_id" IN (
+    SELECT DISTINCT s0."order_id" FROM "lines" AS s0
+      JOIN "products" AS sj1 ON s0."product_id" = sj1."product_id"
+    WHERE sj1."category" = 'A'
+    )
+    GROUP BY j2."region", j1."order_date"
+  note: summing metrics ['received'] sum a column of this fact; adding rows of another fact cannot change them
+  note: local filters restrict only this fact's participating rows; they are not propagated to other facts
+  note: the shared entity-key semijoin restricts this fact to the same order set as every other metric
+
+[组合 Combination]
+  分组键 group key: ['region', 'day']
+  分组域: union_of_metric_groups_after_filters
+  合并: per-fact results are merged on the group key; each fact is aggregated in its own SQL statement, so no fact row is ever counted through another fact
+  empty_measure=0  zero_denominator=None  absent_all_metrics=omit_group
+  比率 paid_ratio = received / booked  (recomputed per output group: numerator/denominator; denominator == 0 yields the model's zero_denominator)
+
+[为什么不会重复计量 Why no double counting]
+  1. Each fact is read by its own single-fact aggregation statement; orders/lines/payments are never in the same FROM clause.
+  2. Every dimension join follows only declared many_to_one edges, so joining a dimension cannot multiply fact rows.
+  3. entity_exists is computed once as an order-id set (intersected across entity filters) and applied as a key restriction; it does not copy filter predicates onto unrelated facts.
+  4. local filters appear only in the WHERE clause of their own fact's aggregation.
+  5. The final combination is a keyed union: a group missing from a fact receives the model's empty_measure (0), never a duplicate row.

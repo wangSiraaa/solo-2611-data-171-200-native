@@ -1,0 +1,312 @@
+{
+  "columns": [
+    "region",
+    "day",
+    "sales",
+    "received",
+    "paid_ratio",
+    "paid_ratio__numerator",
+    "paid_ratio__denominator",
+    "__rows_orders",
+    "__rows_lines",
+    "__rows_payments"
+  ],
+  "rows": [
+    {
+      "region": "north",
+      "day": "2026-01-01",
+      "sales": 10000,
+      "received": 6000,
+      "paid_ratio": 0.6,
+      "paid_ratio__numerator": 6000,
+      "paid_ratio__denominator": 10000,
+      "__rows_orders": 1,
+      "__rows_lines": 2,
+      "__rows_payments": 1
+    },
+    {
+      "region": "north",
+      "day": "2026-01-02",
+      "sales": 8000,
+      "received": 0,
+      "paid_ratio": 0.0,
+      "paid_ratio__numerator": 0,
+      "paid_ratio__denominator": 8000,
+      "__rows_orders": 1,
+      "__rows_lines": 1,
+      "__rows_payments": 0
+    },
+    {
+      "region": "north",
+      "day": "2026-01-03",
+      "sales": 0,
+      "received": 0,
+      "paid_ratio": null,
+      "paid_ratio__numerator": 0,
+      "paid_ratio__denominator": 0,
+      "__rows_orders": 1,
+      "__rows_lines": 1,
+      "__rows_payments": 0
+    },
+    {
+      "region": "south",
+      "day": "2026-01-03",
+      "sales": 5000,
+      "received": 3000,
+      "paid_ratio": 0.6,
+      "paid_ratio__numerator": 3000,
+      "paid_ratio__denominator": 5000,
+      "__rows_orders": 1,
+      "__rows_lines": 1,
+      "__rows_payments": 1
+    }
+  ],
+  "plan": {
+    "dimensions": [
+      "region",
+      "day"
+    ],
+    "requested_metrics": [
+      "sales",
+      "received",
+      "paid_ratio"
+    ],
+    "leaf_metrics": [
+      "sales",
+      "received",
+      "booked"
+    ],
+    "ratio_metrics": {
+      "paid_ratio": {
+        "numerator": "received",
+        "denominator": "booked",
+        "numerator_column": "paid_ratio__numerator",
+        "denominator_column": "paid_ratio__denominator"
+      }
+    },
+    "filters": [
+      {
+        "scope": "entity_exists",
+        "fact": "lines",
+        "dimension": "category",
+        "op": "eq",
+        "value": "A"
+      },
+      {
+        "scope": "local",
+        "fact": "payments",
+        "dimension": "method",
+        "op": "eq",
+        "value": "bank"
+      }
+    ],
+    "inert_local_filters": [],
+    "filter_scopes": {
+      "local": [
+        {
+          "scope": "local",
+          "fact": "payments",
+          "dimension": "method",
+          "op": "eq",
+          "value": "bank"
+        }
+      ],
+      "entity_exists": [
+        {
+          "scope": "entity_exists",
+          "fact": "lines",
+          "dimension": "category",
+          "op": "eq",
+          "value": "A"
+        }
+      ],
+      "entity_exists_sql": "SELECT DISTINCT s0.\"order_id\" FROM \"lines\" AS s0\n  JOIN \"products\" AS sj1 ON s0.\"product_id\" = sj1.\"product_id\"\nWHERE sj1.\"category\" = 'A'",
+      "entity_exists_orders": [
+        "O1",
+        "O2",
+        "O4",
+        "O5"
+      ],
+      "entity_exists_order_count": 4
+    },
+    "tasks": [
+      {
+        "fact": "orders",
+        "grain": {
+          "row_identity": [
+            "order_id"
+          ],
+          "entity_key": "order_id",
+          "how": "each row of orders is used exactly once; aggregation happens per region, day only after grouping"
+        },
+        "metrics": [
+          {
+            "name": "booked",
+            "kind": "sum",
+            "sql_expression": "SUM(orders.order_amount)"
+          }
+        ],
+        "group_dimensions": [
+          {
+            "dimension": "region",
+            "path": "orders-many_to_one->customers",
+            "sql_expression": "j1.\"region\""
+          },
+          {
+            "dimension": "day",
+            "path": "orders",
+            "sql_expression": "t0.\"order_date\""
+          }
+        ],
+        "local_filters": [],
+        "entity_exists_restriction": {
+          "applied": true,
+          "detail": "entity_key IN (order-id semijoin)"
+        },
+        "join_clauses": [
+          "JOIN \"customers\" AS j1 ON t0.\"customer_id\" = j1.\"customer_id\""
+        ],
+        "sql": "SELECT j1.\"region\", t0.\"order_date\", SUM(t0.\"order_amount\") AS m0, COUNT(*) AS n_rows\nFROM \"orders\" AS t0\n  JOIN \"customers\" AS j1 ON t0.\"customer_id\" = j1.\"customer_id\"\nWHERE t0.\"order_id\" IN (\nSELECT DISTINCT s0.\"order_id\" FROM \"lines\" AS s0\n  JOIN \"products\" AS sj1 ON s0.\"product_id\" = sj1.\"product_id\"\nWHERE sj1.\"category\" = 'A'\n)\nGROUP BY j1.\"region\", t0.\"order_date\"",
+        "notes": [
+          "summing metrics ['booked'] sum a column of this fact; adding rows of another fact cannot change them",
+          "the shared entity-key semijoin restricts this fact to the same order set as every other metric"
+        ]
+      },
+      {
+        "fact": "lines",
+        "grain": {
+          "row_identity": [
+            "line_id"
+          ],
+          "entity_key": "order_id",
+          "how": "each row of lines is used exactly once; aggregation happens per region, day only after grouping"
+        },
+        "metrics": [
+          {
+            "name": "sales",
+            "kind": "sum",
+            "sql_expression": "SUM(lines.line_amount)"
+          }
+        ],
+        "group_dimensions": [
+          {
+            "dimension": "region",
+            "path": "lines-many_to_one->orders-many_to_one->customers",
+            "sql_expression": "j2.\"region\""
+          },
+          {
+            "dimension": "day",
+            "path": "lines-many_to_one->orders",
+            "sql_expression": "j1.\"order_date\""
+          }
+        ],
+        "local_filters": [],
+        "entity_exists_restriction": {
+          "applied": true,
+          "detail": "entity_key IN (order-id semijoin)"
+        },
+        "join_clauses": [
+          "JOIN \"orders\" AS j1 ON t0.\"order_id\" = j1.\"order_id\"",
+          "JOIN \"customers\" AS j2 ON j1.\"customer_id\" = j2.\"customer_id\""
+        ],
+        "sql": "SELECT j2.\"region\", j1.\"order_date\", SUM(t0.\"line_amount\") AS m0, COUNT(*) AS n_rows\nFROM \"lines\" AS t0\n  JOIN \"orders\" AS j1 ON t0.\"order_id\" = j1.\"order_id\"\n  JOIN \"customers\" AS j2 ON j1.\"customer_id\" = j2.\"customer_id\"\nWHERE t0.\"order_id\" IN (\nSELECT DISTINCT s0.\"order_id\" FROM \"lines\" AS s0\n  JOIN \"products\" AS sj1 ON s0.\"product_id\" = sj1.\"product_id\"\nWHERE sj1.\"category\" = 'A'\n)\nGROUP BY j2.\"region\", j1.\"order_date\"",
+        "notes": [
+          "summing metrics ['sales'] sum a column of this fact; adding rows of another fact cannot change them",
+          "the shared entity-key semijoin restricts this fact to the same order set as every other metric"
+        ]
+      },
+      {
+        "fact": "payments",
+        "grain": {
+          "row_identity": [
+            "payment_id"
+          ],
+          "entity_key": "order_id",
+          "how": "each row of payments is used exactly once; aggregation happens per region, day only after grouping"
+        },
+        "metrics": [
+          {
+            "name": "received",
+            "kind": "sum",
+            "sql_expression": "SUM(payments.paid_amount)"
+          }
+        ],
+        "group_dimensions": [
+          {
+            "dimension": "region",
+            "path": "payments-many_to_one->orders-many_to_one->customers",
+            "sql_expression": "j2.\"region\""
+          },
+          {
+            "dimension": "day",
+            "path": "payments-many_to_one->orders",
+            "sql_expression": "j1.\"order_date\""
+          }
+        ],
+        "local_filters": [
+          {
+            "scope": "local",
+            "fact": "payments",
+            "dimension": "method",
+            "op": "eq",
+            "value": "bank"
+          }
+        ],
+        "entity_exists_restriction": {
+          "applied": true,
+          "detail": "entity_key IN (order-id semijoin)"
+        },
+        "join_clauses": [
+          "JOIN \"orders\" AS j1 ON t0.\"order_id\" = j1.\"order_id\"",
+          "JOIN \"customers\" AS j2 ON j1.\"customer_id\" = j2.\"customer_id\""
+        ],
+        "sql": "SELECT j2.\"region\", j1.\"order_date\", SUM(t0.\"paid_amount\") AS m0, COUNT(*) AS n_rows\nFROM \"payments\" AS t0\n  JOIN \"orders\" AS j1 ON t0.\"order_id\" = j1.\"order_id\"\n  JOIN \"customers\" AS j2 ON j1.\"customer_id\" = j2.\"customer_id\"\nWHERE t0.\"method\" = 'bank'\n  AND t0.\"order_id\" IN (\nSELECT DISTINCT s0.\"order_id\" FROM \"lines\" AS s0\n  JOIN \"products\" AS sj1 ON s0.\"product_id\" = sj1.\"product_id\"\nWHERE sj1.\"category\" = 'A'\n)\nGROUP BY j2.\"region\", j1.\"order_date\"",
+        "notes": [
+          "summing metrics ['received'] sum a column of this fact; adding rows of another fact cannot change them",
+          "local filters restrict only this fact's participating rows; they are not propagated to other facts",
+          "the shared entity-key semijoin restricts this fact to the same order set as every other metric"
+        ]
+      }
+    ],
+    "combination": {
+      "group_key": [
+        "region",
+        "day"
+      ],
+      "group_domain": "union_of_metric_groups_after_filters",
+      "merge": "per-fact results are merged on the group key; each fact is aggregated in its own SQL statement, so no fact row is ever counted through another fact",
+      "empty_measure": 0,
+      "zero_denominator": null,
+      "absent_all_metrics": "omit_group",
+      "ratios": [
+        {
+          "metric": "paid_ratio",
+          "numerator": "received",
+          "denominator": "booked",
+          "rule": "recomputed per output group: numerator/denominator; denominator == 0 yields the model's zero_denominator"
+        }
+      ]
+    },
+    "support_columns": {
+      "ratio_numerators_denominators": [
+        {
+          "metric": "paid_ratio",
+          "numerator_column": "paid_ratio__numerator",
+          "denominator_column": "paid_ratio__denominator"
+        }
+      ],
+      "fact_row_counts": {
+        "orders": "__rows_orders",
+        "lines": "__rows_lines",
+        "payments": "__rows_payments"
+      }
+    },
+    "why_no_double_count": [
+      "Each fact is read by its own single-fact aggregation statement; orders/lines/payments are never in the same FROM clause.",
+      "Every dimension join follows only declared many_to_one edges, so joining a dimension cannot multiply fact rows.",
+      "entity_exists is computed once as an order-id set (intersected across entity filters) and applied as a key restriction; it does not copy filter predicates onto unrelated facts.",
+      "local filters appear only in the WHERE clause of their own fact's aggregation.",
+      "The final combination is a keyed union: a group missing from a fact receives the model's empty_measure (0), never a duplicate row."
+    ]
+  }
+}

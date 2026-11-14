@@ -1,0 +1,31 @@
+{
+  "dimensions": [
+    "region"
+  ],
+  "metrics": [
+    "booked",
+    "sales",
+    "units",
+    "received",
+    "payment_count",
+    "line_share_ratio",
+    "avg_line_value",
+    "avg_payment_value"
+  ],
+  "filters": [
+    {
+      "scope": "entity_exists",
+      "fact": "payments",
+      "dimension": "method",
+      "op": "in",
+      "value": ["card", "bank"]
+    },
+    {
+      "scope": "local",
+      "fact": "lines",
+      "dimension": "category",
+      "op": "in",
+      "value": ["A"]
+    }
+  ]
+}

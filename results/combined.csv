@@ -1,0 +1,5 @@
+region,day,sales,received,paid_ratio,paid_ratio__numerator,paid_ratio__denominator,__rows_orders,__rows_lines,__rows_payments
+north,2026-01-01,10000,6000,0.6,6000,10000,1,2,1
+north,2026-01-02,8000,0,0.0,0,8000,1,1,0
+north,2026-01-03,0,0,,0,0,1,1,0
+south,2026-01-03,5000,3000,0.6,3000,5000,1,1,1
