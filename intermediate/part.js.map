@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sourceRoot": "../src/",
+  "sources": [
+    "core.ts"
+  ],
+  "names": [],
+  "mappings": "AAAA,yBACQ;AAGN"
+}

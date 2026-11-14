@@ -1,0 +1,6 @@
+Error: synthetic boundary probes (not captured from Node)
+    at left (<FIXTURE_ROOT>/assets/boundaries.js:1:6)
+    at gap (<FIXTURE_ROOT>/assets/boundaries.js:1:7)
+    at right (<FIXTURE_ROOT>/assets/boundaries.js:1:13)
+    at emptyLine (<FIXTURE_ROOT>/assets/boundaries.js:2:3)
+    at missing (<FIXTURE_ROOT>/assets/no-map.js:2:1)

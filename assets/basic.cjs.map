@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "basic.cjs",
+  "sourceRoot": "../src/",
+  "sources": [
+    "basic source (demo).js"
+  ],
+  "sourcesContent": [
+    "const banner = \"🧭\";\nfunction boom() {\n  throw new Error(\"basic failure\");\n}\nboom();\n"
+  ],
+  "names": [],
+  "mappings": "A,kBACA,gBACE,MAAM,2BAER"
+}

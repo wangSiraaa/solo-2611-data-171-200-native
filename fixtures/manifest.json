@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "root_alias": "<FIXTURE_ROOT>",
+  "maps": {
+    "assets/basic.cjs": "assets/basic.cjs.map",
+    "assets/indexed.cjs": "assets/indexed.cjs.map",
+    "intermediate/part.js": "intermediate/part.js.map",
+    "assets/boundaries.js": "assets/boundaries.js.map"
+  },
+  "allowed_roots": [
+    "assets",
+    "src",
+    "intermediate"
+  ],
+  "max_hops": 2,
+  "stack_coordinate_base": 1,
+  "map_coordinate_base": 0,
+  "column_unit": "UTF-16 code units",
+  "lookup": "same generated line, greatest segment column <= target; one-field segment explicitly unmapped",
+  "indexed": "section chosen by lexicographic (line,column) offset; subtract section column only on first section line",
+  "interpolation": "none; use the selected segment original position exactly",
+  "sources_content": "may replace absent physical content only when supplied by that map"
+}

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node assets/basic.cjs",
+    "node assets/indexed.cjs"
+  ],
+  "captured_node_version": "v26.0.0",
+  "expected_exit_code": 1,
+  "normalization": "only absolute fixture root replaced by <FIXTURE_ROOT>; Node versions may add different internal frames",
+  "target_runtime": "Node 20; fixture syntax is supported by Node 20; compare user bundle frames not version-specific internal frames"
+}
