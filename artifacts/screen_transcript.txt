@@ -1,0 +1,7 @@
+=== 提交后画面（状态区 + 预演区）===
+ 0| TUI 小表粘贴编辑器  20×8  row_id 只读
+ 1|当前格: 逻辑(18,2)  row_id=R18  列id=name(text)
+ 2|当前值: [text] Name 名称\nnewline
+ 3| 已导出当前表到 /workspace/artifacts/verification_export.json（row_id 与值/类型原样保留）
+27|（无待处理预演：粘贴后此处显示矩形范围与逐格校验结果）
+28|
