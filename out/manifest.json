@@ -1,0 +1,134 @@
+{
+  "template": "fixtures/template.docx",
+  "template_error": null,
+  "records": [
+    {
+      "record_id": "packet-A",
+      "ok": true,
+      "output": "out/0001_packet-A.docx",
+      "loop_rows": 2,
+      "fields": [
+        {
+          "field": "item.name",
+          "kind": "loop_field",
+          "location": "word/document.xml tbl#0 row#0",
+          "source": "items[0].name"
+        },
+        {
+          "field": "item.qty",
+          "kind": "loop_field",
+          "location": "word/document.xml tbl#0 row#0",
+          "source": "items[0].qty"
+        },
+        {
+          "field": "item.price",
+          "kind": "loop_field",
+          "location": "word/document.xml tbl#0 row#0",
+          "source": "items[0].price"
+        },
+        {
+          "field": "item.name",
+          "kind": "loop_field",
+          "location": "word/document.xml tbl#0 row#1",
+          "source": "items[1].name"
+        },
+        {
+          "field": "item.qty",
+          "kind": "loop_field",
+          "location": "word/document.xml tbl#0 row#1",
+          "source": "items[1].qty"
+        },
+        {
+          "field": "item.price",
+          "kind": "loop_field",
+          "location": "word/document.xml tbl#0 row#1",
+          "source": "items[1].price"
+        },
+        {
+          "field": "customer",
+          "kind": "scalar",
+          "location": "word/document.xml body#1 p#1",
+          "source": "customer"
+        },
+        {
+          "field": "ref",
+          "kind": "scalar",
+          "location": "word/document.xml body#2 p#2",
+          "source": "ref"
+        },
+        {
+          "field": "note",
+          "kind": "scalar",
+          "location": "word/document.xml body#5 p#4",
+          "source": "note"
+        }
+      ],
+      "checks": {
+        "residual_placeholders": 0,
+        "bookmark_pairs": 2,
+        "bookmark_names": 2,
+        "docpr": 2,
+        "relationships_used": 2,
+        "rows": 3
+      },
+      "errors": []
+    },
+    {
+      "record_id": "packet-empty",
+      "ok": true,
+      "output": "out/0002_packet-empty.docx",
+      "loop_rows": 0,
+      "fields": [
+        {
+          "field": "customer",
+          "kind": "scalar",
+          "location": "word/document.xml body#1 p#1",
+          "source": "customer"
+        },
+        {
+          "field": "ref",
+          "kind": "scalar",
+          "location": "word/document.xml body#2 p#2",
+          "source": "ref"
+        },
+        {
+          "field": "note",
+          "kind": "scalar",
+          "location": "word/document.xml body#5 p#4",
+          "source": "note"
+        }
+      ],
+      "checks": {
+        "residual_placeholders": 0,
+        "bookmark_pairs": 0,
+        "bookmark_names": 0,
+        "docpr": 0,
+        "relationships_used": 1,
+        "rows": 1
+      },
+      "errors": []
+    },
+    {
+      "record_id": "packet-missing",
+      "ok": false,
+      "output": null,
+      "loop_rows": 0,
+      "fields": [],
+      "checks": {},
+      "errors": [
+        {
+          "code": "missing_value",
+          "message": "record has no value for field 'note'",
+          "location": "word/document.xml body#5 p#4",
+          "location_detail": {
+            "part": "word/document.xml",
+            "body_index": 5,
+            "paragraph_index": 4
+          },
+          "record_id": "packet-missing",
+          "field": "note"
+        }
+      ]
+    }
+  ]
+}
