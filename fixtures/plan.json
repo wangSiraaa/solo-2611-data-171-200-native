@@ -1,0 +1,10 @@
+{
+  "output_t0_start_s": 0,
+  "output_t0_step_s": 0.002,
+  "output_count": 360,
+  "stretch_limit": 0.35,
+  "interpolation": "linear on recorded trace time; exact sample permitted",
+  "live_trace_code": 1,
+  "velocity_interpolation": "linear in t0; no extrapolation",
+  "offset_unit": "metre"
+}
