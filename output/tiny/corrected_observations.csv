@@ -1,0 +1,1 @@
+fragment,variant_id,allele,weight,decision,reason,r1_flag,r1_reverse,r1_mapq,r1_cigar,r1_ref_start,r1_query_index,r1_base,r1_qual,r1_status,r1_detail,r2_flag,r2_reverse,r2_mapq,r2_cigar,r2_ref_start,r2_query_index,r2_base,r2_qual,r2_status,r2_detail

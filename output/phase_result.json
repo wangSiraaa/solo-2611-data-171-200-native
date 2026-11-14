@@ -1,0 +1,953 @@
+{
+  "plan": {
+    "max_variants_per_block": 12,
+    "max_fragments_per_block": 40,
+    "min_mapping_quality": 20,
+    "min_base_quality": 20,
+    "mate_disagreement_min_quality_gap": 10,
+    "position_coordinate": "1-based reference SNV positions",
+    "accepted_cigar": [
+      "M",
+      "=",
+      "X",
+      "I",
+      "D",
+      "S"
+    ],
+    "excluded_flags": [
+      "unmapped",
+      "secondary",
+      "supplementary"
+    ],
+    "group_by": "query_name; exactly one primary read1 and read2",
+    "allele_merge": "single acceptable base uses Q; mates agree uses max Q; disagreement gap>=10 uses higher-Q allele with weight=gap; otherwise no call at this fragment/locus",
+    "objective": "sum_fragment min(weighted mismatch to h, weighted mismatch to complement(h))",
+    "tie_policy": "first variant in each component phase0=0; stable best solution; read tie remains unassigned",
+    "local_probe": "consecutive loci within each component; force opposite relative phase and reoptimize"
+  },
+  "fragments": [
+    {
+      "fragment": "frag01",
+      "status": "complete",
+      "read1_cigar": "14M2I39M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag02",
+      "status": "complete",
+      "read1_cigar": "4S53M3S",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag03",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag04",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag05",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag06",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag07",
+      "status": "complete",
+      "read1_cigar": "8=1X39=1X4=",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag08",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag09",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag10",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "53M"
+    },
+    {
+      "fragment": "frag11",
+      "status": "complete",
+      "read1_cigar": "37M",
+      "read2_cigar": "37M"
+    },
+    {
+      "fragment": "frag12",
+      "status": "complete",
+      "read1_cigar": "37M",
+      "read2_cigar": "37M"
+    },
+    {
+      "fragment": "frag13",
+      "status": "complete",
+      "read1_cigar": "37M",
+      "read2_cigar": "37M"
+    },
+    {
+      "fragment": "frag14",
+      "status": "complete",
+      "read1_cigar": "17M",
+      "read2_cigar": "17M"
+    },
+    {
+      "fragment": "frag15",
+      "status": "complete",
+      "read1_cigar": "53M",
+      "read2_cigar": "24M1D28M"
+    }
+  ],
+  "components": [
+    {
+      "component_id": "block_v1+v2+v3+v4+v5+v6+v7+v8",
+      "variant_ids": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7",
+        "v8"
+      ],
+      "fragments": [
+        "frag01",
+        "frag02",
+        "frag03",
+        "frag04",
+        "frag05",
+        "frag06",
+        "frag07",
+        "frag08",
+        "frag09",
+        "frag10",
+        "frag15"
+      ],
+      "mec_cost": 0,
+      "haplotype": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "fragment_assignments": [
+        {
+          "fragment": "frag01",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 90,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v1",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v2",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v3",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag02",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 90,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v2",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v3",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v4",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag03",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 90,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v3",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v4",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v5",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag04",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 90,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v4",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v5",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v6",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag05",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 90,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v5",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v6",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v7",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag06",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 90,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v6",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v7",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v8",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag07",
+          "loss": 0,
+          "assignment": "c",
+          "mismatch_to_h": 90,
+          "mismatch_to_complement": 0,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v1",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v2",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v3",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag08",
+          "loss": 0,
+          "assignment": "c",
+          "mismatch_to_h": 90,
+          "mismatch_to_complement": 0,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v4",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v5",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v6",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag09",
+          "loss": 0,
+          "assignment": "c",
+          "mismatch_to_h": 60,
+          "mismatch_to_complement": 0,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v2",
+              "allele": 0,
+              "weight": 30,
+              "decision": "single_read1"
+            },
+            {
+              "variant_id": "v5",
+              "allele": 0,
+              "weight": 30,
+              "decision": "single_read2"
+            }
+          ]
+        },
+        {
+          "fragment": "frag10",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 50,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v3",
+              "allele": 0,
+              "weight": 20,
+              "decision": "adjudicated"
+            },
+            {
+              "variant_id": "v5",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag15",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 60,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v6",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v8",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        }
+      ],
+      "probes": [
+        {
+          "left_variant": "v1",
+          "right_variant": "v2",
+          "main_relative_phase": 1,
+          "forced_relative_phase": 0,
+          "main_cost": 0,
+          "forced_cost": 60,
+          "increment": 60,
+          "alternative_haplotype": [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "same_cost": false
+        },
+        {
+          "left_variant": "v2",
+          "right_variant": "v3",
+          "main_relative_phase": 1,
+          "forced_relative_phase": 0,
+          "main_cost": 0,
+          "forced_cost": 120,
+          "increment": 120,
+          "alternative_haplotype": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "same_cost": false
+        },
+        {
+          "left_variant": "v3",
+          "right_variant": "v4",
+          "main_relative_phase": 0,
+          "forced_relative_phase": 1,
+          "main_cost": 0,
+          "forced_cost": 110,
+          "increment": 110,
+          "alternative_haplotype": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "same_cost": false
+        },
+        {
+          "left_variant": "v4",
+          "right_variant": "v5",
+          "main_relative_phase": 1,
+          "forced_relative_phase": 0,
+          "main_cost": 0,
+          "forced_cost": 120,
+          "increment": 120,
+          "alternative_haplotype": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "same_cost": false
+        },
+        {
+          "left_variant": "v5",
+          "right_variant": "v6",
+          "main_relative_phase": 0,
+          "forced_relative_phase": 1,
+          "main_cost": 0,
+          "forced_cost": 90,
+          "increment": 90,
+          "alternative_haplotype": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "same_cost": false
+        },
+        {
+          "left_variant": "v6",
+          "right_variant": "v7",
+          "main_relative_phase": 1,
+          "forced_relative_phase": 0,
+          "main_cost": 0,
+          "forced_cost": 60,
+          "increment": 60,
+          "alternative_haplotype": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "same_cost": false
+        },
+        {
+          "left_variant": "v7",
+          "right_variant": "v8",
+          "main_relative_phase": 1,
+          "forced_relative_phase": 0,
+          "main_cost": 0,
+          "forced_cost": 60,
+          "increment": 60,
+          "alternative_haplotype": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "same_cost": false
+        }
+      ]
+    },
+    {
+      "component_id": "block_v9+v10+v11",
+      "variant_ids": [
+        "v9",
+        "v10",
+        "v11"
+      ],
+      "fragments": [
+        "frag11",
+        "frag12",
+        "frag13"
+      ],
+      "mec_cost": 30,
+      "haplotype": [
+        0,
+        0,
+        1
+      ],
+      "fragment_assignments": [
+        {
+          "fragment": "frag11",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 60,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v9",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v10",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag12",
+          "loss": 30,
+          "assignment": "u",
+          "mismatch_to_h": 30,
+          "mismatch_to_complement": 30,
+          "status": "unassigned_tie",
+          "used_loci": [
+            {
+              "variant_id": "v9",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v10",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        },
+        {
+          "fragment": "frag13",
+          "loss": 0,
+          "assignment": "h",
+          "mismatch_to_h": 0,
+          "mismatch_to_complement": 60,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v10",
+              "allele": 0,
+              "weight": 30,
+              "decision": "mates_agree"
+            },
+            {
+              "variant_id": "v11",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        }
+      ],
+      "probes": [
+        {
+          "left_variant": "v9",
+          "right_variant": "v10",
+          "main_relative_phase": 0,
+          "forced_relative_phase": 1,
+          "main_cost": 30,
+          "forced_cost": 30,
+          "increment": 0,
+          "alternative_haplotype": [
+            0,
+            1,
+            0
+          ],
+          "same_cost": true
+        },
+        {
+          "left_variant": "v10",
+          "right_variant": "v11",
+          "main_relative_phase": 1,
+          "forced_relative_phase": 0,
+          "main_cost": 30,
+          "forced_cost": 60,
+          "increment": 30,
+          "alternative_haplotype": [
+            0,
+            0,
+            0
+          ],
+          "same_cost": false
+        }
+      ]
+    },
+    {
+      "component_id": "block_v12",
+      "variant_ids": [
+        "v12"
+      ],
+      "fragments": [
+        "frag14"
+      ],
+      "mec_cost": 0,
+      "haplotype": [
+        0
+      ],
+      "fragment_assignments": [
+        {
+          "fragment": "frag14",
+          "loss": 0,
+          "assignment": "c",
+          "mismatch_to_h": 30,
+          "mismatch_to_complement": 0,
+          "status": "assigned",
+          "used_loci": [
+            {
+              "variant_id": "v12",
+              "allele": 1,
+              "weight": 30,
+              "decision": "mates_agree"
+            }
+          ]
+        }
+      ],
+      "probes": []
+    }
+  ],
+  "locus_diagnostics": [
+    {
+      "variant_id": "v1",
+      "position": 101,
+      "usable_evidence": 2,
+      "decision_counts": {
+        "mates_agree": 2,
+        "no_call": 13
+      },
+      "end_status_counts": {
+        "valid": 4,
+        "outside": 26
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v2",
+      "position": 121,
+      "usable_evidence": 4,
+      "decision_counts": {
+        "mates_agree": 3,
+        "no_call": 11,
+        "single_read1": 1
+      },
+      "end_status_counts": {
+        "valid": 7,
+        "outside": 23
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v3",
+      "position": 141,
+      "usable_evidence": 5,
+      "decision_counts": {
+        "mates_agree": 4,
+        "no_call": 10,
+        "adjudicated": 1
+      },
+      "end_status_counts": {
+        "valid": 10,
+        "outside": 18,
+        "low_base_qual": 2
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v4",
+      "position": 161,
+      "usable_evidence": 4,
+      "decision_counts": {
+        "no_call": 10,
+        "mates_agree": 4,
+        "undecided": 1
+      },
+      "end_status_counts": {
+        "outside": 18,
+        "valid": 10,
+        "low_base_qual": 2
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v5",
+      "position": 181,
+      "usable_evidence": 6,
+      "decision_counts": {
+        "no_call": 9,
+        "mates_agree": 5,
+        "single_read2": 1
+      },
+      "end_status_counts": {
+        "outside": 19,
+        "valid": 11
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v6",
+      "position": 201,
+      "usable_evidence": 5,
+      "decision_counts": {
+        "no_call": 10,
+        "mates_agree": 5
+      },
+      "end_status_counts": {
+        "outside": 20,
+        "valid": 10
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v7",
+      "position": 221,
+      "usable_evidence": 2,
+      "decision_counts": {
+        "no_call": 13,
+        "mates_agree": 2
+      },
+      "end_status_counts": {
+        "outside": 24,
+        "valid": 4,
+        "low_base_qual": 1,
+        "deletion": 1
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v8",
+      "position": 241,
+      "usable_evidence": 2,
+      "decision_counts": {
+        "no_call": 13,
+        "mates_agree": 2
+      },
+      "end_status_counts": {
+        "outside": 26,
+        "valid": 4
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v9",
+      "position": 301,
+      "usable_evidence": 2,
+      "decision_counts": {
+        "no_call": 13,
+        "mates_agree": 2
+      },
+      "end_status_counts": {
+        "outside": 26,
+        "valid": 4
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v10",
+      "position": 321,
+      "usable_evidence": 3,
+      "decision_counts": {
+        "no_call": 12,
+        "mates_agree": 3
+      },
+      "end_status_counts": {
+        "outside": 24,
+        "valid": 6
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v11",
+      "position": 341,
+      "usable_evidence": 1,
+      "decision_counts": {
+        "no_call": 14,
+        "mates_agree": 1
+      },
+      "end_status_counts": {
+        "outside": 28,
+        "valid": 2
+      },
+      "in_component": true,
+      "note": "component member"
+    },
+    {
+      "variant_id": "v12",
+      "position": 361,
+      "usable_evidence": 1,
+      "decision_counts": {
+        "no_call": 14,
+        "mates_agree": 1
+      },
+      "end_status_counts": {
+        "outside": 28,
+        "valid": 2
+      },
+      "in_component": true,
+      "note": "component member"
+    }
+  ],
+  "diagnostics": [
+    {
+      "type": "filtered_record",
+      "query_name": "frag02",
+      "flag": 355,
+      "mapq": 5,
+      "cigar": "4S53M3S",
+      "reason": "secondary;mapq<20"
+    }
+  ],
+  "counts": {
+    "bam_records": 31,
+    "fragments_grouped": 15,
+    "fragments_complete": 15,
+    "end_observations": 360,
+    "evidence_records": 180,
+    "usable_evidence": 37,
+    "components": 3
+  }
+}

@@ -1,0 +1,361 @@
+fragment,variant_id,mate,flag,reverse,mapq,cigar,ref_start_1based,query_index,base,qual,status,detail
+frag01,v1,read1,99,0,60,14M2I39M,93,8,A,30,valid,
+frag01,v1,read2,147,1,60,53M,97,4,A,30,valid,
+frag01,v2,read1,99,0,60,14M2I39M,93,30,G,30,valid,
+frag01,v2,read2,147,1,60,53M,97,24,G,30,valid,
+frag01,v3,read1,99,0,60,14M2I39M,93,50,A,30,valid,
+frag01,v3,read2,147,1,60,53M,97,44,A,30,valid,
+frag01,v4,read1,99,0,60,14M2I39M,93,,,,outside,"pos 161 outside [93,145]"
+frag01,v4,read2,147,1,60,53M,97,,,,outside,"pos 161 outside [97,149]"
+frag01,v5,read1,99,0,60,14M2I39M,93,,,,outside,"pos 181 outside [93,145]"
+frag01,v5,read2,147,1,60,53M,97,,,,outside,"pos 181 outside [97,149]"
+frag01,v6,read1,99,0,60,14M2I39M,93,,,,outside,"pos 201 outside [93,145]"
+frag01,v6,read2,147,1,60,53M,97,,,,outside,"pos 201 outside [97,149]"
+frag01,v7,read1,99,0,60,14M2I39M,93,,,,outside,"pos 221 outside [93,145]"
+frag01,v7,read2,147,1,60,53M,97,,,,outside,"pos 221 outside [97,149]"
+frag01,v8,read1,99,0,60,14M2I39M,93,,,,outside,"pos 241 outside [93,145]"
+frag01,v8,read2,147,1,60,53M,97,,,,outside,"pos 241 outside [97,149]"
+frag01,v9,read1,99,0,60,14M2I39M,93,,,,outside,"pos 301 outside [93,145]"
+frag01,v9,read2,147,1,60,53M,97,,,,outside,"pos 301 outside [97,149]"
+frag01,v10,read1,99,0,60,14M2I39M,93,,,,outside,"pos 321 outside [93,145]"
+frag01,v10,read2,147,1,60,53M,97,,,,outside,"pos 321 outside [97,149]"
+frag01,v11,read1,99,0,60,14M2I39M,93,,,,outside,"pos 341 outside [93,145]"
+frag01,v11,read2,147,1,60,53M,97,,,,outside,"pos 341 outside [97,149]"
+frag01,v12,read1,99,0,60,14M2I39M,93,,,,outside,"pos 361 outside [93,145]"
+frag01,v12,read2,147,1,60,53M,97,,,,outside,"pos 361 outside [97,149]"
+frag02,v1,read1,99,0,60,4S53M3S,113,,,,outside,"pos 101 outside [113,165]"
+frag02,v1,read2,147,1,60,53M,117,,,,outside,"pos 101 outside [117,169]"
+frag02,v2,read1,99,0,60,4S53M3S,113,12,G,30,valid,
+frag02,v2,read2,147,1,60,53M,117,4,G,30,valid,
+frag02,v3,read1,99,0,60,4S53M3S,113,32,A,30,valid,
+frag02,v3,read2,147,1,60,53M,117,24,A,30,valid,
+frag02,v4,read1,99,0,60,4S53M3S,113,52,A,30,valid,
+frag02,v4,read2,147,1,60,53M,117,44,A,30,valid,
+frag02,v5,read1,99,0,60,4S53M3S,113,,,,outside,"pos 181 outside [113,165]"
+frag02,v5,read2,147,1,60,53M,117,,,,outside,"pos 181 outside [117,169]"
+frag02,v6,read1,99,0,60,4S53M3S,113,,,,outside,"pos 201 outside [113,165]"
+frag02,v6,read2,147,1,60,53M,117,,,,outside,"pos 201 outside [117,169]"
+frag02,v7,read1,99,0,60,4S53M3S,113,,,,outside,"pos 221 outside [113,165]"
+frag02,v7,read2,147,1,60,53M,117,,,,outside,"pos 221 outside [117,169]"
+frag02,v8,read1,99,0,60,4S53M3S,113,,,,outside,"pos 241 outside [113,165]"
+frag02,v8,read2,147,1,60,53M,117,,,,outside,"pos 241 outside [117,169]"
+frag02,v9,read1,99,0,60,4S53M3S,113,,,,outside,"pos 301 outside [113,165]"
+frag02,v9,read2,147,1,60,53M,117,,,,outside,"pos 301 outside [117,169]"
+frag02,v10,read1,99,0,60,4S53M3S,113,,,,outside,"pos 321 outside [113,165]"
+frag02,v10,read2,147,1,60,53M,117,,,,outside,"pos 321 outside [117,169]"
+frag02,v11,read1,99,0,60,4S53M3S,113,,,,outside,"pos 341 outside [113,165]"
+frag02,v11,read2,147,1,60,53M,117,,,,outside,"pos 341 outside [117,169]"
+frag02,v12,read1,99,0,60,4S53M3S,113,,,,outside,"pos 361 outside [113,165]"
+frag02,v12,read2,147,1,60,53M,117,,,,outside,"pos 361 outside [117,169]"
+frag03,v1,read1,99,0,60,53M,133,,,,outside,"pos 101 outside [133,185]"
+frag03,v1,read2,147,1,60,53M,137,,,,outside,"pos 101 outside [137,189]"
+frag03,v2,read1,99,0,60,53M,133,,,,outside,"pos 121 outside [133,185]"
+frag03,v2,read2,147,1,60,53M,137,,,,outside,"pos 121 outside [137,189]"
+frag03,v3,read1,99,0,60,53M,133,8,A,30,valid,
+frag03,v3,read2,147,1,60,53M,137,4,A,30,valid,
+frag03,v4,read1,99,0,60,53M,133,28,A,30,valid,
+frag03,v4,read2,147,1,60,53M,137,24,A,30,valid,
+frag03,v5,read1,99,0,60,53M,133,48,G,30,valid,
+frag03,v5,read2,147,1,60,53M,137,44,G,30,valid,
+frag03,v6,read1,99,0,60,53M,133,,,,outside,"pos 201 outside [133,185]"
+frag03,v6,read2,147,1,60,53M,137,,,,outside,"pos 201 outside [137,189]"
+frag03,v7,read1,99,0,60,53M,133,,,,outside,"pos 221 outside [133,185]"
+frag03,v7,read2,147,1,60,53M,137,,,,outside,"pos 221 outside [137,189]"
+frag03,v8,read1,99,0,60,53M,133,,,,outside,"pos 241 outside [133,185]"
+frag03,v8,read2,147,1,60,53M,137,,,,outside,"pos 241 outside [137,189]"
+frag03,v9,read1,99,0,60,53M,133,,,,outside,"pos 301 outside [133,185]"
+frag03,v9,read2,147,1,60,53M,137,,,,outside,"pos 301 outside [137,189]"
+frag03,v10,read1,99,0,60,53M,133,,,,outside,"pos 321 outside [133,185]"
+frag03,v10,read2,147,1,60,53M,137,,,,outside,"pos 321 outside [137,189]"
+frag03,v11,read1,99,0,60,53M,133,,,,outside,"pos 341 outside [133,185]"
+frag03,v11,read2,147,1,60,53M,137,,,,outside,"pos 341 outside [137,189]"
+frag03,v12,read1,99,0,60,53M,133,,,,outside,"pos 361 outside [133,185]"
+frag03,v12,read2,147,1,60,53M,137,,,,outside,"pos 361 outside [137,189]"
+frag04,v1,read1,99,0,60,53M,153,,,,outside,"pos 101 outside [153,205]"
+frag04,v1,read2,147,1,60,53M,157,,,,outside,"pos 101 outside [157,209]"
+frag04,v2,read1,99,0,60,53M,153,,,,outside,"pos 121 outside [153,205]"
+frag04,v2,read2,147,1,60,53M,157,,,,outside,"pos 121 outside [157,209]"
+frag04,v3,read1,99,0,60,53M,153,,,,outside,"pos 141 outside [153,205]"
+frag04,v3,read2,147,1,60,53M,157,,,,outside,"pos 141 outside [157,209]"
+frag04,v4,read1,99,0,60,53M,153,8,A,30,valid,
+frag04,v4,read2,147,1,60,53M,157,4,A,30,valid,
+frag04,v5,read1,99,0,60,53M,153,28,G,30,valid,
+frag04,v5,read2,147,1,60,53M,157,24,G,30,valid,
+frag04,v6,read1,99,0,60,53M,153,48,G,30,valid,
+frag04,v6,read2,147,1,60,53M,157,44,G,30,valid,
+frag04,v7,read1,99,0,60,53M,153,,,,outside,"pos 221 outside [153,205]"
+frag04,v7,read2,147,1,60,53M,157,,,,outside,"pos 221 outside [157,209]"
+frag04,v8,read1,99,0,60,53M,153,,,,outside,"pos 241 outside [153,205]"
+frag04,v8,read2,147,1,60,53M,157,,,,outside,"pos 241 outside [157,209]"
+frag04,v9,read1,99,0,60,53M,153,,,,outside,"pos 301 outside [153,205]"
+frag04,v9,read2,147,1,60,53M,157,,,,outside,"pos 301 outside [157,209]"
+frag04,v10,read1,99,0,60,53M,153,,,,outside,"pos 321 outside [153,205]"
+frag04,v10,read2,147,1,60,53M,157,,,,outside,"pos 321 outside [157,209]"
+frag04,v11,read1,99,0,60,53M,153,,,,outside,"pos 341 outside [153,205]"
+frag04,v11,read2,147,1,60,53M,157,,,,outside,"pos 341 outside [157,209]"
+frag04,v12,read1,99,0,60,53M,153,,,,outside,"pos 361 outside [153,205]"
+frag04,v12,read2,147,1,60,53M,157,,,,outside,"pos 361 outside [157,209]"
+frag05,v1,read1,99,0,60,53M,173,,,,outside,"pos 101 outside [173,225]"
+frag05,v1,read2,147,1,60,53M,177,,,,outside,"pos 101 outside [177,229]"
+frag05,v2,read1,99,0,60,53M,173,,,,outside,"pos 121 outside [173,225]"
+frag05,v2,read2,147,1,60,53M,177,,,,outside,"pos 121 outside [177,229]"
+frag05,v3,read1,99,0,60,53M,173,,,,outside,"pos 141 outside [173,225]"
+frag05,v3,read2,147,1,60,53M,177,,,,outside,"pos 141 outside [177,229]"
+frag05,v4,read1,99,0,60,53M,173,,,,outside,"pos 161 outside [173,225]"
+frag05,v4,read2,147,1,60,53M,177,,,,outside,"pos 161 outside [177,229]"
+frag05,v5,read1,99,0,60,53M,173,8,G,30,valid,
+frag05,v5,read2,147,1,60,53M,177,4,G,30,valid,
+frag05,v6,read1,99,0,60,53M,173,28,G,30,valid,
+frag05,v6,read2,147,1,60,53M,177,24,G,30,valid,
+frag05,v7,read1,99,0,60,53M,173,48,A,30,valid,
+frag05,v7,read2,147,1,60,53M,177,44,A,30,valid,
+frag05,v8,read1,99,0,60,53M,173,,,,outside,"pos 241 outside [173,225]"
+frag05,v8,read2,147,1,60,53M,177,,,,outside,"pos 241 outside [177,229]"
+frag05,v9,read1,99,0,60,53M,173,,,,outside,"pos 301 outside [173,225]"
+frag05,v9,read2,147,1,60,53M,177,,,,outside,"pos 301 outside [177,229]"
+frag05,v10,read1,99,0,60,53M,173,,,,outside,"pos 321 outside [173,225]"
+frag05,v10,read2,147,1,60,53M,177,,,,outside,"pos 321 outside [177,229]"
+frag05,v11,read1,99,0,60,53M,173,,,,outside,"pos 341 outside [173,225]"
+frag05,v11,read2,147,1,60,53M,177,,,,outside,"pos 341 outside [177,229]"
+frag05,v12,read1,99,0,60,53M,173,,,,outside,"pos 361 outside [173,225]"
+frag05,v12,read2,147,1,60,53M,177,,,,outside,"pos 361 outside [177,229]"
+frag06,v1,read1,99,0,60,53M,193,,,,outside,"pos 101 outside [193,245]"
+frag06,v1,read2,147,1,60,53M,197,,,,outside,"pos 101 outside [197,249]"
+frag06,v2,read1,99,0,60,53M,193,,,,outside,"pos 121 outside [193,245]"
+frag06,v2,read2,147,1,60,53M,197,,,,outside,"pos 121 outside [197,249]"
+frag06,v3,read1,99,0,60,53M,193,,,,outside,"pos 141 outside [193,245]"
+frag06,v3,read2,147,1,60,53M,197,,,,outside,"pos 141 outside [197,249]"
+frag06,v4,read1,99,0,60,53M,193,,,,outside,"pos 161 outside [193,245]"
+frag06,v4,read2,147,1,60,53M,197,,,,outside,"pos 161 outside [197,249]"
+frag06,v5,read1,99,0,60,53M,193,,,,outside,"pos 181 outside [193,245]"
+frag06,v5,read2,147,1,60,53M,197,,,,outside,"pos 181 outside [197,249]"
+frag06,v6,read1,99,0,60,53M,193,8,G,30,valid,
+frag06,v6,read2,147,1,60,53M,197,4,G,30,valid,
+frag06,v7,read1,99,0,60,53M,193,28,A,30,valid,
+frag06,v7,read2,147,1,60,53M,197,24,A,30,valid,
+frag06,v8,read1,99,0,60,53M,193,48,G,30,valid,
+frag06,v8,read2,147,1,60,53M,197,44,G,30,valid,
+frag06,v9,read1,99,0,60,53M,193,,,,outside,"pos 301 outside [193,245]"
+frag06,v9,read2,147,1,60,53M,197,,,,outside,"pos 301 outside [197,249]"
+frag06,v10,read1,99,0,60,53M,193,,,,outside,"pos 321 outside [193,245]"
+frag06,v10,read2,147,1,60,53M,197,,,,outside,"pos 321 outside [197,249]"
+frag06,v11,read1,99,0,60,53M,193,,,,outside,"pos 341 outside [193,245]"
+frag06,v11,read2,147,1,60,53M,197,,,,outside,"pos 341 outside [197,249]"
+frag06,v12,read1,99,0,60,53M,193,,,,outside,"pos 361 outside [193,245]"
+frag06,v12,read2,147,1,60,53M,197,,,,outside,"pos 361 outside [197,249]"
+frag07,v1,read1,99,0,60,8=1X39=1X4=,93,8,G,30,valid,
+frag07,v1,read2,147,1,60,53M,97,4,G,30,valid,
+frag07,v2,read1,99,0,60,8=1X39=1X4=,93,28,A,30,valid,
+frag07,v2,read2,147,1,60,53M,97,24,A,30,valid,
+frag07,v3,read1,99,0,60,8=1X39=1X4=,93,48,G,30,valid,
+frag07,v3,read2,147,1,60,53M,97,44,G,30,valid,
+frag07,v4,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 161 outside [93,145]"
+frag07,v4,read2,147,1,60,53M,97,,,,outside,"pos 161 outside [97,149]"
+frag07,v5,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 181 outside [93,145]"
+frag07,v5,read2,147,1,60,53M,97,,,,outside,"pos 181 outside [97,149]"
+frag07,v6,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 201 outside [93,145]"
+frag07,v6,read2,147,1,60,53M,97,,,,outside,"pos 201 outside [97,149]"
+frag07,v7,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 221 outside [93,145]"
+frag07,v7,read2,147,1,60,53M,97,,,,outside,"pos 221 outside [97,149]"
+frag07,v8,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 241 outside [93,145]"
+frag07,v8,read2,147,1,60,53M,97,,,,outside,"pos 241 outside [97,149]"
+frag07,v9,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 301 outside [93,145]"
+frag07,v9,read2,147,1,60,53M,97,,,,outside,"pos 301 outside [97,149]"
+frag07,v10,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 321 outside [93,145]"
+frag07,v10,read2,147,1,60,53M,97,,,,outside,"pos 321 outside [97,149]"
+frag07,v11,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 341 outside [93,145]"
+frag07,v11,read2,147,1,60,53M,97,,,,outside,"pos 341 outside [97,149]"
+frag07,v12,read1,99,0,60,8=1X39=1X4=,93,,,,outside,"pos 361 outside [93,145]"
+frag07,v12,read2,147,1,60,53M,97,,,,outside,"pos 361 outside [97,149]"
+frag08,v1,read1,99,0,60,53M,153,,,,outside,"pos 101 outside [153,205]"
+frag08,v1,read2,147,1,60,53M,157,,,,outside,"pos 101 outside [157,209]"
+frag08,v2,read1,99,0,60,53M,153,,,,outside,"pos 121 outside [153,205]"
+frag08,v2,read2,147,1,60,53M,157,,,,outside,"pos 121 outside [157,209]"
+frag08,v3,read1,99,0,60,53M,153,,,,outside,"pos 141 outside [153,205]"
+frag08,v3,read2,147,1,60,53M,157,,,,outside,"pos 141 outside [157,209]"
+frag08,v4,read1,99,0,60,53M,153,8,G,30,valid,
+frag08,v4,read2,147,1,60,53M,157,4,G,30,valid,
+frag08,v5,read1,99,0,60,53M,153,28,A,30,valid,
+frag08,v5,read2,147,1,60,53M,157,24,A,30,valid,
+frag08,v6,read1,99,0,60,53M,153,48,A,30,valid,
+frag08,v6,read2,147,1,60,53M,157,44,A,30,valid,
+frag08,v7,read1,99,0,60,53M,153,,,,outside,"pos 221 outside [153,205]"
+frag08,v7,read2,147,1,60,53M,157,,,,outside,"pos 221 outside [157,209]"
+frag08,v8,read1,99,0,60,53M,153,,,,outside,"pos 241 outside [153,205]"
+frag08,v8,read2,147,1,60,53M,157,,,,outside,"pos 241 outside [157,209]"
+frag08,v9,read1,99,0,60,53M,153,,,,outside,"pos 301 outside [153,205]"
+frag08,v9,read2,147,1,60,53M,157,,,,outside,"pos 301 outside [157,209]"
+frag08,v10,read1,99,0,60,53M,153,,,,outside,"pos 321 outside [153,205]"
+frag08,v10,read2,147,1,60,53M,157,,,,outside,"pos 321 outside [157,209]"
+frag08,v11,read1,99,0,60,53M,153,,,,outside,"pos 341 outside [153,205]"
+frag08,v11,read2,147,1,60,53M,157,,,,outside,"pos 341 outside [157,209]"
+frag08,v12,read1,99,0,60,53M,153,,,,outside,"pos 361 outside [153,205]"
+frag08,v12,read2,147,1,60,53M,157,,,,outside,"pos 361 outside [157,209]"
+frag09,v1,read1,99,0,60,53M,113,,,,outside,"pos 101 outside [113,165]"
+frag09,v1,read2,147,1,60,53M,137,,,,outside,"pos 101 outside [137,189]"
+frag09,v2,read1,99,0,60,53M,113,8,A,30,valid,
+frag09,v2,read2,147,1,60,53M,137,,,,outside,"pos 121 outside [137,189]"
+frag09,v3,read1,99,0,60,53M,113,28,A,5,low_base_qual,Q5 < 20
+frag09,v3,read2,147,1,60,53M,137,4,A,5,low_base_qual,Q5 < 20
+frag09,v4,read1,99,0,60,53M,113,48,A,5,low_base_qual,Q5 < 20
+frag09,v4,read2,147,1,60,53M,137,24,A,5,low_base_qual,Q5 < 20
+frag09,v5,read1,99,0,60,53M,113,,,,outside,"pos 181 outside [113,165]"
+frag09,v5,read2,147,1,60,53M,137,44,A,30,valid,
+frag09,v6,read1,99,0,60,53M,113,,,,outside,"pos 201 outside [113,165]"
+frag09,v6,read2,147,1,60,53M,137,,,,outside,"pos 201 outside [137,189]"
+frag09,v7,read1,99,0,60,53M,113,,,,outside,"pos 221 outside [113,165]"
+frag09,v7,read2,147,1,60,53M,137,,,,outside,"pos 221 outside [137,189]"
+frag09,v8,read1,99,0,60,53M,113,,,,outside,"pos 241 outside [113,165]"
+frag09,v8,read2,147,1,60,53M,137,,,,outside,"pos 241 outside [137,189]"
+frag09,v9,read1,99,0,60,53M,113,,,,outside,"pos 301 outside [113,165]"
+frag09,v9,read2,147,1,60,53M,137,,,,outside,"pos 301 outside [137,189]"
+frag09,v10,read1,99,0,60,53M,113,,,,outside,"pos 321 outside [113,165]"
+frag09,v10,read2,147,1,60,53M,137,,,,outside,"pos 321 outside [137,189]"
+frag09,v11,read1,99,0,60,53M,113,,,,outside,"pos 341 outside [113,165]"
+frag09,v11,read2,147,1,60,53M,137,,,,outside,"pos 341 outside [137,189]"
+frag09,v12,read1,99,0,60,53M,113,,,,outside,"pos 361 outside [113,165]"
+frag09,v12,read2,147,1,60,53M,137,,,,outside,"pos 361 outside [137,189]"
+frag10,v1,read1,99,0,60,53M,133,,,,outside,"pos 101 outside [133,185]"
+frag10,v1,read2,147,1,60,53M,137,,,,outside,"pos 101 outside [137,189]"
+frag10,v2,read1,99,0,60,53M,133,,,,outside,"pos 121 outside [133,185]"
+frag10,v2,read2,147,1,60,53M,137,,,,outside,"pos 121 outside [137,189]"
+frag10,v3,read1,99,0,60,53M,133,8,A,40,valid,
+frag10,v3,read2,147,1,60,53M,137,4,G,20,valid,
+frag10,v4,read1,99,0,60,53M,133,28,A,30,valid,
+frag10,v4,read2,147,1,60,53M,137,24,G,35,valid,
+frag10,v5,read1,99,0,60,53M,133,48,G,30,valid,
+frag10,v5,read2,147,1,60,53M,137,44,G,30,valid,
+frag10,v6,read1,99,0,60,53M,133,,,,outside,"pos 201 outside [133,185]"
+frag10,v6,read2,147,1,60,53M,137,,,,outside,"pos 201 outside [137,189]"
+frag10,v7,read1,99,0,60,53M,133,,,,outside,"pos 221 outside [133,185]"
+frag10,v7,read2,147,1,60,53M,137,,,,outside,"pos 221 outside [137,189]"
+frag10,v8,read1,99,0,60,53M,133,,,,outside,"pos 241 outside [133,185]"
+frag10,v8,read2,147,1,60,53M,137,,,,outside,"pos 241 outside [137,189]"
+frag10,v9,read1,99,0,60,53M,133,,,,outside,"pos 301 outside [133,185]"
+frag10,v9,read2,147,1,60,53M,137,,,,outside,"pos 301 outside [137,189]"
+frag10,v10,read1,99,0,60,53M,133,,,,outside,"pos 321 outside [133,185]"
+frag10,v10,read2,147,1,60,53M,137,,,,outside,"pos 321 outside [137,189]"
+frag10,v11,read1,99,0,60,53M,133,,,,outside,"pos 341 outside [133,185]"
+frag10,v11,read2,147,1,60,53M,137,,,,outside,"pos 341 outside [137,189]"
+frag10,v12,read1,99,0,60,53M,133,,,,outside,"pos 361 outside [133,185]"
+frag10,v12,read2,147,1,60,53M,137,,,,outside,"pos 361 outside [137,189]"
+frag11,v1,read1,99,0,60,37M,293,,,,outside,"pos 101 outside [293,329]"
+frag11,v1,read2,147,1,60,37M,293,,,,outside,"pos 101 outside [293,329]"
+frag11,v2,read1,99,0,60,37M,293,,,,outside,"pos 121 outside [293,329]"
+frag11,v2,read2,147,1,60,37M,293,,,,outside,"pos 121 outside [293,329]"
+frag11,v3,read1,99,0,60,37M,293,,,,outside,"pos 141 outside [293,329]"
+frag11,v3,read2,147,1,60,37M,293,,,,outside,"pos 141 outside [293,329]"
+frag11,v4,read1,99,0,60,37M,293,,,,outside,"pos 161 outside [293,329]"
+frag11,v4,read2,147,1,60,37M,293,,,,outside,"pos 161 outside [293,329]"
+frag11,v5,read1,99,0,60,37M,293,,,,outside,"pos 181 outside [293,329]"
+frag11,v5,read2,147,1,60,37M,293,,,,outside,"pos 181 outside [293,329]"
+frag11,v6,read1,99,0,60,37M,293,,,,outside,"pos 201 outside [293,329]"
+frag11,v6,read2,147,1,60,37M,293,,,,outside,"pos 201 outside [293,329]"
+frag11,v7,read1,99,0,60,37M,293,,,,outside,"pos 221 outside [293,329]"
+frag11,v7,read2,147,1,60,37M,293,,,,outside,"pos 221 outside [293,329]"
+frag11,v8,read1,99,0,60,37M,293,,,,outside,"pos 241 outside [293,329]"
+frag11,v8,read2,147,1,60,37M,293,,,,outside,"pos 241 outside [293,329]"
+frag11,v9,read1,99,0,60,37M,293,8,A,30,valid,
+frag11,v9,read2,147,1,60,37M,293,8,A,30,valid,
+frag11,v10,read1,99,0,60,37M,293,28,A,30,valid,
+frag11,v10,read2,147,1,60,37M,293,28,A,30,valid,
+frag11,v11,read1,99,0,60,37M,293,,,,outside,"pos 341 outside [293,329]"
+frag11,v11,read2,147,1,60,37M,293,,,,outside,"pos 341 outside [293,329]"
+frag11,v12,read1,99,0,60,37M,293,,,,outside,"pos 361 outside [293,329]"
+frag11,v12,read2,147,1,60,37M,293,,,,outside,"pos 361 outside [293,329]"
+frag12,v1,read1,99,0,60,37M,293,,,,outside,"pos 101 outside [293,329]"
+frag12,v1,read2,147,1,60,37M,293,,,,outside,"pos 101 outside [293,329]"
+frag12,v2,read1,99,0,60,37M,293,,,,outside,"pos 121 outside [293,329]"
+frag12,v2,read2,147,1,60,37M,293,,,,outside,"pos 121 outside [293,329]"
+frag12,v3,read1,99,0,60,37M,293,,,,outside,"pos 141 outside [293,329]"
+frag12,v3,read2,147,1,60,37M,293,,,,outside,"pos 141 outside [293,329]"
+frag12,v4,read1,99,0,60,37M,293,,,,outside,"pos 161 outside [293,329]"
+frag12,v4,read2,147,1,60,37M,293,,,,outside,"pos 161 outside [293,329]"
+frag12,v5,read1,99,0,60,37M,293,,,,outside,"pos 181 outside [293,329]"
+frag12,v5,read2,147,1,60,37M,293,,,,outside,"pos 181 outside [293,329]"
+frag12,v6,read1,99,0,60,37M,293,,,,outside,"pos 201 outside [293,329]"
+frag12,v6,read2,147,1,60,37M,293,,,,outside,"pos 201 outside [293,329]"
+frag12,v7,read1,99,0,60,37M,293,,,,outside,"pos 221 outside [293,329]"
+frag12,v7,read2,147,1,60,37M,293,,,,outside,"pos 221 outside [293,329]"
+frag12,v8,read1,99,0,60,37M,293,,,,outside,"pos 241 outside [293,329]"
+frag12,v8,read2,147,1,60,37M,293,,,,outside,"pos 241 outside [293,329]"
+frag12,v9,read1,99,0,60,37M,293,8,A,30,valid,
+frag12,v9,read2,147,1,60,37M,293,8,A,30,valid,
+frag12,v10,read1,99,0,60,37M,293,28,G,30,valid,
+frag12,v10,read2,147,1,60,37M,293,28,G,30,valid,
+frag12,v11,read1,99,0,60,37M,293,,,,outside,"pos 341 outside [293,329]"
+frag12,v11,read2,147,1,60,37M,293,,,,outside,"pos 341 outside [293,329]"
+frag12,v12,read1,99,0,60,37M,293,,,,outside,"pos 361 outside [293,329]"
+frag12,v12,read2,147,1,60,37M,293,,,,outside,"pos 361 outside [293,329]"
+frag13,v1,read1,99,0,60,37M,313,,,,outside,"pos 101 outside [313,349]"
+frag13,v1,read2,147,1,60,37M,313,,,,outside,"pos 101 outside [313,349]"
+frag13,v2,read1,99,0,60,37M,313,,,,outside,"pos 121 outside [313,349]"
+frag13,v2,read2,147,1,60,37M,313,,,,outside,"pos 121 outside [313,349]"
+frag13,v3,read1,99,0,60,37M,313,,,,outside,"pos 141 outside [313,349]"
+frag13,v3,read2,147,1,60,37M,313,,,,outside,"pos 141 outside [313,349]"
+frag13,v4,read1,99,0,60,37M,313,,,,outside,"pos 161 outside [313,349]"
+frag13,v4,read2,147,1,60,37M,313,,,,outside,"pos 161 outside [313,349]"
+frag13,v5,read1,99,0,60,37M,313,,,,outside,"pos 181 outside [313,349]"
+frag13,v5,read2,147,1,60,37M,313,,,,outside,"pos 181 outside [313,349]"
+frag13,v6,read1,99,0,60,37M,313,,,,outside,"pos 201 outside [313,349]"
+frag13,v6,read2,147,1,60,37M,313,,,,outside,"pos 201 outside [313,349]"
+frag13,v7,read1,99,0,60,37M,313,,,,outside,"pos 221 outside [313,349]"
+frag13,v7,read2,147,1,60,37M,313,,,,outside,"pos 221 outside [313,349]"
+frag13,v8,read1,99,0,60,37M,313,,,,outside,"pos 241 outside [313,349]"
+frag13,v8,read2,147,1,60,37M,313,,,,outside,"pos 241 outside [313,349]"
+frag13,v9,read1,99,0,60,37M,313,,,,outside,"pos 301 outside [313,349]"
+frag13,v9,read2,147,1,60,37M,313,,,,outside,"pos 301 outside [313,349]"
+frag13,v10,read1,99,0,60,37M,313,8,A,30,valid,
+frag13,v10,read2,147,1,60,37M,313,8,A,30,valid,
+frag13,v11,read1,99,0,60,37M,313,28,G,30,valid,
+frag13,v11,read2,147,1,60,37M,313,28,G,30,valid,
+frag13,v12,read1,99,0,60,37M,313,,,,outside,"pos 361 outside [313,349]"
+frag13,v12,read2,147,1,60,37M,313,,,,outside,"pos 361 outside [313,349]"
+frag14,v1,read1,99,0,60,17M,353,,,,outside,"pos 101 outside [353,369]"
+frag14,v1,read2,147,1,60,17M,353,,,,outside,"pos 101 outside [353,369]"
+frag14,v2,read1,99,0,60,17M,353,,,,outside,"pos 121 outside [353,369]"
+frag14,v2,read2,147,1,60,17M,353,,,,outside,"pos 121 outside [353,369]"
+frag14,v3,read1,99,0,60,17M,353,,,,outside,"pos 141 outside [353,369]"
+frag14,v3,read2,147,1,60,17M,353,,,,outside,"pos 141 outside [353,369]"
+frag14,v4,read1,99,0,60,17M,353,,,,outside,"pos 161 outside [353,369]"
+frag14,v4,read2,147,1,60,17M,353,,,,outside,"pos 161 outside [353,369]"
+frag14,v5,read1,99,0,60,17M,353,,,,outside,"pos 181 outside [353,369]"
+frag14,v5,read2,147,1,60,17M,353,,,,outside,"pos 181 outside [353,369]"
+frag14,v6,read1,99,0,60,17M,353,,,,outside,"pos 201 outside [353,369]"
+frag14,v6,read2,147,1,60,17M,353,,,,outside,"pos 201 outside [353,369]"
+frag14,v7,read1,99,0,60,17M,353,,,,outside,"pos 221 outside [353,369]"
+frag14,v7,read2,147,1,60,17M,353,,,,outside,"pos 221 outside [353,369]"
+frag14,v8,read1,99,0,60,17M,353,,,,outside,"pos 241 outside [353,369]"
+frag14,v8,read2,147,1,60,17M,353,,,,outside,"pos 241 outside [353,369]"
+frag14,v9,read1,99,0,60,17M,353,,,,outside,"pos 301 outside [353,369]"
+frag14,v9,read2,147,1,60,17M,353,,,,outside,"pos 301 outside [353,369]"
+frag14,v10,read1,99,0,60,17M,353,,,,outside,"pos 321 outside [353,369]"
+frag14,v10,read2,147,1,60,17M,353,,,,outside,"pos 321 outside [353,369]"
+frag14,v11,read1,99,0,60,17M,353,,,,outside,"pos 341 outside [353,369]"
+frag14,v11,read2,147,1,60,17M,353,,,,outside,"pos 341 outside [353,369]"
+frag14,v12,read1,99,0,60,17M,353,8,G,30,valid,
+frag14,v12,read2,147,1,60,17M,353,8,G,30,valid,
+frag15,v1,read1,99,0,60,53M,193,,,,outside,"pos 101 outside [193,245]"
+frag15,v1,read2,147,1,60,24M1D28M,197,,,,outside,"pos 101 outside [197,249]"
+frag15,v2,read1,99,0,60,53M,193,,,,outside,"pos 121 outside [193,245]"
+frag15,v2,read2,147,1,60,24M1D28M,197,,,,outside,"pos 121 outside [197,249]"
+frag15,v3,read1,99,0,60,53M,193,,,,outside,"pos 141 outside [193,245]"
+frag15,v3,read2,147,1,60,24M1D28M,197,,,,outside,"pos 141 outside [197,249]"
+frag15,v4,read1,99,0,60,53M,193,,,,outside,"pos 161 outside [193,245]"
+frag15,v4,read2,147,1,60,24M1D28M,197,,,,outside,"pos 161 outside [197,249]"
+frag15,v5,read1,99,0,60,53M,193,,,,outside,"pos 181 outside [193,245]"
+frag15,v5,read2,147,1,60,24M1D28M,197,,,,outside,"pos 181 outside [197,249]"
+frag15,v6,read1,99,0,60,53M,193,8,G,30,valid,
+frag15,v6,read2,147,1,60,24M1D28M,197,4,G,30,valid,
+frag15,v7,read1,99,0,60,53M,193,28,A,5,low_base_qual,Q5 < 20
+frag15,v7,read2,147,1,60,24M1D28M,197,,,,deletion,"D block [24,25) covers local=24; no query base"
+frag15,v8,read1,99,0,60,53M,193,48,G,30,valid,
+frag15,v8,read2,147,1,60,24M1D28M,197,43,G,30,valid,
+frag15,v9,read1,99,0,60,53M,193,,,,outside,"pos 301 outside [193,245]"
+frag15,v9,read2,147,1,60,24M1D28M,197,,,,outside,"pos 301 outside [197,249]"
+frag15,v10,read1,99,0,60,53M,193,,,,outside,"pos 321 outside [193,245]"
+frag15,v10,read2,147,1,60,24M1D28M,197,,,,outside,"pos 321 outside [197,249]"
+frag15,v11,read1,99,0,60,53M,193,,,,outside,"pos 341 outside [193,245]"
+frag15,v11,read2,147,1,60,24M1D28M,197,,,,outside,"pos 341 outside [197,249]"
+frag15,v12,read1,99,0,60,53M,193,,,,outside,"pos 361 outside [193,245]"
+frag15,v12,read2,147,1,60,24M1D28M,197,,,,outside,"pos 361 outside [197,249]"

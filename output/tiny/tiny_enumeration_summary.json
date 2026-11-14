@@ -1,0 +1,47 @@
+{
+  "component_variants": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+  ],
+  "fragments": [
+    "frag01",
+    "frag02",
+    "frag03"
+  ],
+  "n_candidate_haplotypes": 8,
+  "best_cost": 0,
+  "optimal_haplotypes": [
+    "0100"
+  ],
+  "probes": [
+    {
+      "left": "v1",
+      "right": "v2",
+      "main_relative_phase": 1,
+      "forced_relative_phase": 0,
+      "main_cost": 0,
+      "forced_min_cost": 30,
+      "increment": 30
+    },
+    {
+      "left": "v2",
+      "right": "v3",
+      "main_relative_phase": 1,
+      "forced_relative_phase": 0,
+      "main_cost": 0,
+      "forced_min_cost": 60,
+      "increment": 60
+    },
+    {
+      "left": "v3",
+      "right": "v4",
+      "main_relative_phase": 0,
+      "forced_relative_phase": 1,
+      "main_cost": 0,
+      "forced_min_cost": 60,
+      "increment": 60
+    }
+  ]
+}

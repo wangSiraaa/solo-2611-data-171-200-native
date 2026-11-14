@@ -1,0 +1,4 @@
+component_id,fragment,loss,assignment,status,mismatch_to_h,mismatch_to_complement
+block_v1+v2+v3+v4,frag01,0,h,assigned,0,90
+block_v1+v2+v3+v4,frag02,0,h,assigned,0,90
+block_v1+v2+v3+v4,frag03,0,h,assigned,0,60

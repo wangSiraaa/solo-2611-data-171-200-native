@@ -1,0 +1,13 @@
+fragment,variant_id,allele,weight,decision,reason,r1_flag,r1_reverse,r1_mapq,r1_cigar,r1_ref_start,r1_query_index,r1_base,r1_qual,r1_status,r1_detail,r2_flag,r2_reverse,r2_mapq,r2_cigar,r2_ref_start,r2_query_index,r2_base,r2_qual,r2_status,r2_detail
+frag01,v1,0,30,mates_agree,read1:valid:base=A:Q30 | read2:valid:base=A:Q30,99,0,60,14M2I39M,93,8,A,30,valid,,147,1,60,53M,97,4,A,30,valid,
+frag01,v2,1,30,mates_agree,read1:valid:base=G:Q30 | read2:valid:base=G:Q30,99,0,60,14M2I39M,93,30,G,30,valid,,147,1,60,53M,97,24,G,30,valid,
+frag01,v3,0,30,mates_agree,read1:valid:base=A:Q30 | read2:valid:base=A:Q30,99,0,60,14M2I39M,93,50,A,30,valid,,147,1,60,53M,97,44,A,30,valid,
+frag01,v4,,,no_call,read1:outside:base=-:Q-1 | read2:outside:base=-:Q-1,99,0,60,14M2I39M,93,,,,outside,"pos 161 outside [93,145]",147,1,60,53M,97,,,,outside,"pos 161 outside [97,149]"
+frag02,v1,,,no_call,read1:outside:base=-:Q-1 | read2:outside:base=-:Q-1,99,0,60,4S53M3S,113,,,,outside,"pos 101 outside [113,165]",147,1,60,53M,117,,,,outside,"pos 101 outside [117,169]"
+frag02,v2,1,30,mates_agree,read1:valid:base=G:Q30 | read2:valid:base=G:Q30,99,0,60,4S53M3S,113,12,G,30,valid,,147,1,60,53M,117,4,G,30,valid,
+frag02,v3,0,30,mates_agree,read1:valid:base=A:Q30 | read2:valid:base=A:Q30,99,0,60,4S53M3S,113,32,A,30,valid,,147,1,60,53M,117,24,A,30,valid,
+frag02,v4,0,30,mates_agree,read1:valid:base=A:Q30 | read2:valid:base=A:Q30,99,0,60,4S53M3S,113,52,A,30,valid,,147,1,60,53M,117,44,A,30,valid,
+frag03,v1,,,no_call,read1:outside:base=-:Q-1 | read2:outside:base=-:Q-1,99,0,60,53M,133,,,,outside,"pos 101 outside [133,185]",147,1,60,53M,137,,,,outside,"pos 101 outside [137,189]"
+frag03,v2,,,no_call,read1:outside:base=-:Q-1 | read2:outside:base=-:Q-1,99,0,60,53M,133,,,,outside,"pos 121 outside [133,185]",147,1,60,53M,137,,,,outside,"pos 121 outside [137,189]"
+frag03,v3,0,30,mates_agree,read1:valid:base=A:Q30 | read2:valid:base=A:Q30,99,0,60,53M,133,8,A,30,valid,,147,1,60,53M,137,4,A,30,valid,
+frag03,v4,0,30,mates_agree,read1:valid:base=A:Q30 | read2:valid:base=A:Q30,99,0,60,53M,133,28,A,30,valid,,147,1,60,53M,137,24,A,30,valid,

@@ -1,0 +1,13 @@
+variant_id,position,usable_evidence,decision_counts,end_status_counts,in_component,note
+v1,101,2,"{""mates_agree"": 2, ""no_call"": 13}","{""outside"": 26, ""valid"": 4}",1,component member
+v2,121,4,"{""mates_agree"": 3, ""no_call"": 11, ""single_read1"": 1}","{""outside"": 23, ""valid"": 7}",1,component member
+v3,141,5,"{""adjudicated"": 1, ""mates_agree"": 4, ""no_call"": 10}","{""low_base_qual"": 2, ""outside"": 18, ""valid"": 10}",1,component member
+v4,161,4,"{""mates_agree"": 4, ""no_call"": 10, ""undecided"": 1}","{""low_base_qual"": 2, ""outside"": 18, ""valid"": 10}",1,component member
+v5,181,6,"{""mates_agree"": 5, ""no_call"": 9, ""single_read2"": 1}","{""outside"": 19, ""valid"": 11}",1,component member
+v6,201,5,"{""mates_agree"": 5, ""no_call"": 10}","{""outside"": 20, ""valid"": 10}",1,component member
+v7,221,2,"{""mates_agree"": 2, ""no_call"": 13}","{""deletion"": 1, ""low_base_qual"": 1, ""outside"": 24, ""valid"": 4}",1,component member
+v8,241,2,"{""mates_agree"": 2, ""no_call"": 13}","{""outside"": 26, ""valid"": 4}",1,component member
+v9,301,2,"{""mates_agree"": 2, ""no_call"": 13}","{""outside"": 26, ""valid"": 4}",1,component member
+v10,321,3,"{""mates_agree"": 3, ""no_call"": 12}","{""outside"": 24, ""valid"": 6}",1,component member
+v11,341,1,"{""mates_agree"": 1, ""no_call"": 14}","{""outside"": 28, ""valid"": 2}",1,component member
+v12,361,1,"{""mates_agree"": 1, ""no_call"": 14}","{""outside"": 28, ""valid"": 2}",1,component member

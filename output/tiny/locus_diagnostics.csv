@@ -1,0 +1,5 @@
+variant_id,position,usable_evidence,decision_counts,end_status_counts,in_component,note
+v1,101,1,"{""mates_agree"": 1, ""no_call"": 2}","{""outside"": 4, ""valid"": 2}",1,component member
+v2,121,2,"{""mates_agree"": 2, ""no_call"": 1}","{""outside"": 2, ""valid"": 4}",1,component member
+v3,141,3,"{""mates_agree"": 3}","{""valid"": 6}",1,component member
+v4,161,2,"{""mates_agree"": 2, ""no_call"": 1}","{""outside"": 2, ""valid"": 4}",1,component member

@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "problems": [],
+  "notes": [
+    "fragments with complete primary read1/read2: 3",
+    "manual CIGAR ground-truth checks: 9",
+    "evidence records replayed: 12 (mismatches=0)",
+    "traceability checks (read/CIGAR/query-index/base/Q): 16",
+    "components re-solved from scratch: 1",
+    "shuffled-order replay identical",
+    "BAM records: 6; complete fragments: 3"
+  ]
+}

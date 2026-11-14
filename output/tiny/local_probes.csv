@@ -1,0 +1,4 @@
+component_id,left_variant,right_variant,main_relative_phase,forced_relative_phase,main_cost,forced_cost,increment,same_cost,alternative_haplotype
+block_v1+v2+v3+v4,v1,v2,1,0,0,30,30,False,0011
+block_v1+v2+v3+v4,v2,v3,1,0,0,60,60,False,0000
+block_v1+v2+v3+v4,v3,v4,0,1,0,60,60,False,0101

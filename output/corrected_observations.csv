@@ -1,0 +1,5 @@
+fragment,variant_id,allele,weight,decision,reason,r1_flag,r1_reverse,r1_mapq,r1_cigar,r1_ref_start,r1_query_index,r1_base,r1_qual,r1_status,r1_detail,r2_flag,r2_reverse,r2_mapq,r2_cigar,r2_ref_start,r2_query_index,r2_base,r2_qual,r2_status,r2_detail
+frag09,v2,0,30,single_read1,read1:valid:base=A:Q30 | read2:outside:base=-:Q-1,99,0,60,53M,113,8,A,30,valid,,147,1,60,53M,137,,,,outside,"pos 121 outside [137,189]"
+frag09,v5,0,30,single_read2,read1:outside:base=-:Q-1 | read2:valid:base=A:Q30,99,0,60,53M,113,,,,outside,"pos 181 outside [113,165]",147,1,60,53M,137,44,A,30,valid,
+frag10,v3,0,20,adjudicated,read1:valid:base=A:Q40 | read2:valid:base=G:Q20 | gap=20>= 10; winner read1 Q40,99,0,60,53M,133,8,A,40,valid,,147,1,60,53M,137,4,G,20,valid,
+frag10,v4,,,undecided,read1:valid:base=A:Q30 | read2:valid:base=G:Q35 | gap=5 < 10,99,0,60,53M,133,28,A,30,valid,,147,1,60,53M,137,24,G,35,valid,
