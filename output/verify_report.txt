@@ -1,0 +1,94 @@
+MVT verify 报告：解码 8 块瓦片，zooms=[9, 10]
+检查 91 项，通过 91 项，失败 0 项
+========================================================================================
+[PASS] structure.version_extent@(9, 255, 255) — version=2, extent=4096
+[PASS] structure.props@(9, 255, 255):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 255, 255):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 255, 255):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.version_extent@(9, 255, 256) — version=2, extent=4096
+[PASS] structure.props@(9, 255, 256):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 255, 256):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 255, 256):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.version_extent@(9, 256, 255) — version=2, extent=4096
+[PASS] structure.props@(9, 256, 255):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 256, 255):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 256, 255):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.version_extent@(9, 256, 256) — version=2, extent=4096
+[PASS] structure.props@(9, 256, 256):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 256, 256):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(9, 256, 256):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.version_extent@(10, 511, 511) — version=2, extent=4096
+[PASS] structure.props@(10, 511, 511):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 511, 511):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 511, 511):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.version_extent@(10, 511, 512) — version=2, extent=4096
+[PASS] structure.props@(10, 511, 512):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 511, 512):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 511, 512):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.version_extent@(10, 512, 511) — version=2, extent=4096
+[PASS] structure.props@(10, 512, 511):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 512, 511):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 512, 511):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.version_extent@(10, 512, 512) — version=2, extent=4096
+[PASS] structure.props@(10, 512, 512):1 — 解码属性={'name': 'across', 'active': True, 'rank': 0}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 512, 512):2 — 解码属性={'name': 'parcel-hole', 'active': False, 'rank': 2}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] structure.props@(10, 512, 512):4 — 解码属性={'name': 'on-boundary', 'active': True, 'rank': 4}（类型逐键比对，bool 不被当 int，0/false 保留）
+[PASS] winding.exterior@(9, 255, 255):2:r0 — 外环顺时针 area2=287100
+[PASS] winding.hole@(9, 255, 255):2:r1 — 孔环逆时针 area2=-12168，前置外环存在=True
+[PASS] winding.exterior@(9, 255, 256):2:r0 — 外环顺时针 area2=287100
+[PASS] winding.hole@(9, 255, 256):2:r1 — 孔环逆时针 area2=-12168，前置外环存在=True
+[PASS] winding.exterior@(9, 256, 255):2:r0 — 外环顺时针 area2=287100
+[PASS] winding.hole@(9, 256, 255):2:r1 — 孔环逆时针 area2=-12168，前置外环存在=True
+[PASS] winding.exterior@(9, 256, 256):2:r0 — 外环顺时针 area2=287100
+[PASS] winding.hole@(9, 256, 256):2:r1 — 孔环逆时针 area2=-12168，前置外环存在=True
+[PASS] winding.exterior@(10, 511, 511):2:r0 — 外环顺时针 area2=1098664
+[PASS] winding.hole@(10, 511, 511):2:r1 — 孔环逆时针 area2=-39762，前置外环存在=True
+[PASS] winding.exterior@(10, 511, 512):2:r0 — 外环顺时针 area2=1098664
+[PASS] winding.hole@(10, 511, 512):2:r1 — 孔环逆时针 area2=-39762，前置外环存在=True
+[PASS] winding.exterior@(10, 512, 511):2:r0 — 外环顺时针 area2=1098664
+[PASS] winding.hole@(10, 512, 511):2:r1 — 孔环逆时针 area2=-39762，前置外环存在=True
+[PASS] winding.exterior@(10, 512, 512):2:r0 — 外环顺时针 area2=1098664
+[PASS] winding.hole@(10, 512, 512):2:r1 — 孔环逆时针 area2=-39762，前置外环存在=True
+[PASS] seam.line@z9:(255, 255)-(255, 256):f1 — seam 上全局网格点：瓦片1=[1048576] 瓦片2=[1048576]
+[PASS] seam.polygon@z9:(255, 255)-(255, 256):f2 — seam 上整数覆盖区间：瓦片1=[(1048157, 1048592), (1048513, 1048591)] 瓦片2=[(1048157, 1048592), (1048513, 1048591)]
+[PASS] seam.line@z9:(255, 255)-(255, 256):f4 — seam 上全局网格点：瓦片1=[1048576] 瓦片2=[1048576]
+[PASS] seam.line@z9:(255, 255)-(256, 255):f1 — seam 上全局网格点：瓦片1=[1048576] 瓦片2=[1048576]
+[PASS] seam.polygon@z9:(255, 255)-(256, 255):f2 — seam 上整数覆盖区间：瓦片1=[(1048262, 1048592), (1048513, 1048591)] 瓦片2=[(1048262, 1048592), (1048513, 1048591)]
+[PASS] seam.line@z9:(255, 255)-(256, 255):f4 — seam 上全局网格点：瓦片1=[1048105, 1048592] 瓦片2=[1048105, 1048592]
+[PASS] seam.line@z9:(255, 256)-(256, 256):f1 — seam 上全局网格点：瓦片1=[1048576] 瓦片2=[1048576]
+[PASS] seam.polygon@z9:(255, 256)-(256, 256):f2 — seam 上整数覆盖区间：瓦片1=[(1048560, 1048890), (1048561, 1048639)] 瓦片2=[(1048560, 1048890), (1048561, 1048639)]
+[PASS] seam.line@z9:(255, 256)-(256, 256):f4 — seam 上全局网格点：瓦片1=[1048560, 1049047] 瓦片2=[1048560, 1049047]
+[PASS] seam.line@z9:(256, 255)-(256, 256):f1 — seam 上全局网格点：瓦片1=[1048576] 瓦片2=[1048576]
+[PASS] seam.polygon@z9:(256, 255)-(256, 256):f2 — seam 上整数覆盖区间：瓦片1=[(1048560, 1048995), (1048561, 1048639)] 瓦片2=[(1048560, 1048995), (1048561, 1048639)]
+[PASS] seam.line@z9:(256, 255)-(256, 256):f4 — seam 上全局网格点：瓦片1=[1048576] 瓦片2=[1048576]
+[PASS] seam.line@z10:(511, 511)-(511, 512):f1 — seam 上全局网格点：瓦片1=[2097152] 瓦片2=[2097152]
+[PASS] seam.polygon@z10:(511, 511)-(511, 512):f2 — seam 上整数覆盖区间：瓦片1=[(2096315, 2097168), (2097026, 2097167)] 瓦片2=[(2096315, 2097168), (2097026, 2097167)]
+[PASS] seam.line@z10:(511, 511)-(511, 512):f4 — seam 上全局网格点：瓦片1=[2097152] 瓦片2=[2097152]
+[PASS] seam.line@z10:(511, 511)-(512, 511):f1 — seam 上全局网格点：瓦片1=[2097152] 瓦片2=[2097152]
+[PASS] seam.polygon@z10:(511, 511)-(512, 511):f2 — seam 上整数覆盖区间：瓦片1=[(2096524, 2097168), (2097026, 2097167)] 瓦片2=[(2096524, 2097168), (2097026, 2097167)]
+[PASS] seam.line@z10:(511, 511)-(512, 511):f4 — seam 上全局网格点：瓦片1=[2096210, 2097168] 瓦片2=[2096210, 2097168]
+[PASS] seam.line@z10:(511, 512)-(512, 512):f1 — seam 上全局网格点：瓦片1=[2097152] 瓦片2=[2097152]
+[PASS] seam.polygon@z10:(511, 512)-(512, 512):f2 — seam 上整数覆盖区间：瓦片1=[(2097136, 2097780), (2097137, 2097278)] 瓦片2=[(2097136, 2097780), (2097137, 2097278)]
+[PASS] seam.line@z10:(511, 512)-(512, 512):f4 — seam 上全局网格点：瓦片1=[2097136, 2098094] 瓦片2=[2097136, 2098094]
+[PASS] seam.line@z10:(512, 511)-(512, 512):f1 — seam 上全局网格点：瓦片1=[2097152] 瓦片2=[2097152]
+[PASS] seam.polygon@z10:(512, 511)-(512, 512):f2 — seam 上整数覆盖区间：瓦片1=[(2097136, 2097989), (2097137, 2097278)] 瓦片2=[(2097136, 2097989), (2097137, 2097278)]
+[PASS] seam.line@z10:(512, 511)-(512, 512):f4 — seam 上全局网格点：瓦片1=[2097152] 瓦片2=[2097152]
+[PASS] boundary_line.presence@(9, 255, 255) — 边界线全局 gx 集合=[1048576]，期望=[1048576]，点数=2，gy 区间=[1048105,1048592]
+[PASS] boundary_line.presence@(9, 255, 256) — 边界线全局 gx 集合=[1048576]，期望=[1048576]，点数=2，gy 区间=[1048560,1049047]
+[PASS] boundary_line.presence@(9, 256, 255) — 边界线全局 gx 集合=[1048576]，期望=[1048576]，点数=2，gy 区间=[1048105,1048592]
+[PASS] boundary_line.presence@(9, 256, 256) — 边界线全局 gx 集合=[1048576]，期望=[1048576]，点数=2，gy 区间=[1048560,1049047]
+[PASS] boundary_line.coverage@z9 — gy 期望 [1048105,1049047] 共 943 个网格行；四瓦片线段并集缺失 0 行；各瓦片区间={'(9, 255, 255)': (1048105, 1048592), '(9, 255, 256)': (1048560, 1049047), '(9, 256, 255)': (1048105, 1048592), '(9, 256, 256)': (1048560, 1049047)}
+[PASS] boundary_line.presence@(10, 511, 511) — 边界线全局 gx 集合=[2097152]，期望=[2097152]，点数=2，gy 区间=[2096210,2097168]
+[PASS] boundary_line.presence@(10, 511, 512) — 边界线全局 gx 集合=[2097152]，期望=[2097152]，点数=2，gy 区间=[2097136,2098094]
+[PASS] boundary_line.presence@(10, 512, 511) — 边界线全局 gx 集合=[2097152]，期望=[2097152]，点数=2，gy 区间=[2096210,2097168]
+[PASS] boundary_line.presence@(10, 512, 512) — 边界线全局 gx 集合=[2097152]，期望=[2097152]，点数=2，gy 区间=[2097136,2098094]
+[PASS] boundary_line.coverage@z10 — gy 期望 [2096210,2098094] 共 1885 个网格行；四瓦片线段并集缺失 0 行；各瓦片区间={'(10, 511, 511)': (2096210, 2097168), '(10, 511, 512)': (2097136, 2098094), '(10, 512, 511)': (2096210, 2097168), '(10, 512, 512)': (2097136, 2098094)}
+[PASS] coverage.cells@z9:f2 — 实际单元格=511864 期望=511864 多出=0 缺失=0；解码外环数=4 孔环数=4
+[PASS] coverage.cells@z9:f3 — 实际单元格=0 期望=0 多出=0 缺失=0；解码外环数=0 孔环数=0
+[PASS] coverage.cells@z10:f2 — 实际单元格=2042028 期望=2042028 多出=0 缺失=0；解码外环数=4 孔环数=4
+[PASS] coverage.cells@z10:f3 — 实际单元格=0 期望=0 多出=0 缺失=0；解码外环数=0 孔环数=0
+[PASS] quant.error_bound@z9 — 最大绝对量化误差=6.920503 m，理论半格上界=9.554629 m（resolution=19.109257 m）
+[PASS] quant.error_bound@z10 — 最大绝对量化误差=4.453715 m，理论半格上界=4.777314 m（resolution=9.554629 m）
+[PASS] collapse.thin_polygon — 窄面(f3)塌缩记录 4 条，期望 4 条（每 zoom 北排两瓦片各 1 条；南排仅边界相触无 2D 交集，不产生片段）；全部为外环零面积丢弃，f3 无孔，不存在“删孔填实”场景
+[PASS] collapse.hole_survival — 带孔面(f2)孔环塌缩记录 0 条（期望 0，孔未被静默填实）
+[PASS] determinism.byte_identical — 随机瓦片顺序重建后逐字节比对 8 块，不一致=[]

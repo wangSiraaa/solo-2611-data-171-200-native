@@ -1,0 +1,425 @@
+{
+  "tile": {
+    "z": 9,
+    "x": 255,
+    "y": 256
+  },
+  "transform": {
+    "tile": {
+      "z": 9,
+      "x": 255,
+      "y": 256
+    },
+    "scheme": "XYZ, y increases southward",
+    "clip_box_m": {
+      "minx": -78577.26507716278,
+      "miny": -78577.26507716278,
+      "maxx": 305.748113140705,
+      "maxy": 305.748113140705
+    },
+    "buffer_units_tile_space": 16,
+    "buffer_m": 305.748113140705,
+    "local_coordinate_range": [
+      -16,
+      4112
+    ],
+    "note": "buffer 为整数瓦片单位，经 resolution_m 换算成米仅用于裁切框；量化一律走全局网格"
+  },
+  "grid": {
+    "z": 9,
+    "extent": 4096,
+    "matrix_size": 512,
+    "tile_span_m": 78271.51696402048,
+    "resolution_m": 19.109257071294063,
+    "origin_global_grid": [
+      0,
+      0
+    ],
+    "rounding_rule": "half-up: floor(v + 0.5), ties toward positive infinity",
+    "global_grid_formula": {
+      "gx": "floor(((x_m + W) / resolution_m) + 0.5)",
+      "gy": "floor(((W - y_m) / resolution_m) + 0.5)",
+      "local": "local_x = gx - tile_x * extent; local_y = gy - tile_y * extent"
+    }
+  },
+  "fragments": [
+    {
+      "source_feature_id": 1,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 256
+      },
+      "encoded_geometry_type": "LineString",
+      "line_evidence": [
+        {
+          "part_index": 0,
+          "vertex_count": 5,
+          "unique_vertices": 5,
+          "length_grid": 66.27217442122753,
+          "dropped": false,
+          "drop_reason": null,
+          "points": [
+            {
+              "x_m": -865.3788767441711,
+              "y_m": 305.748113140705,
+              "global_grid": [
+                1048531,
+                1048560
+              ],
+              "tile_local": [
+                4051,
+                -16
+              ],
+              "quant_error_m": [
+                5.462309,
+                -0.0
+              ]
+            },
+            {
+              "x_m": -100.0,
+              "y_m": 80.0,
+              "global_grid": [
+                1048571,
+                1048572
+              ],
+              "tile_local": [
+                4091,
+                -4
+              ],
+              "quant_error_m": [
+                4.453715,
+                -3.562972
+              ]
+            },
+            {
+              "x_m": 0.0,
+              "y_m": 0.0,
+              "global_grid": [
+                1048576,
+                1048576
+              ],
+              "tile_local": [
+                4096,
+                0
+              ],
+              "quant_error_m": [
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "x_m": 100.0,
+              "y_m": -80.0,
+              "global_grid": [
+                1048581,
+                1048580
+              ],
+              "tile_local": [
+                4101,
+                4
+              ],
+              "quant_error_m": [
+                -4.453715,
+                3.562972
+              ]
+            },
+            {
+              "x_m": 305.748113140705,
+              "y_m": -147.50387532256838,
+              "global_grid": [
+                1048592,
+                1048584
+              ],
+              "tile_local": [
+                4112,
+                8
+              ],
+              "quant_error_m": [
+                -0.0,
+                -5.370181
+              ]
+            }
+          ]
+        }
+      ],
+      "ring_evidence": [],
+      "dropped_lines": [],
+      "dropped_rings": [],
+      "dropped_fragments": []
+    },
+    {
+      "source_feature_id": 2,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 256
+      },
+      "encoded_geometry_type": "Polygon",
+      "line_evidence": [],
+      "ring_evidence": [
+        {
+          "role": "exterior",
+          "part_index": 0,
+          "vertex_count": 5,
+          "unique_vertices": 4,
+          "area_grid2_before": 286851.92250818753,
+          "area_grid2_after": -287100,
+          "dropped": false,
+          "drop_reason": null,
+          "points": [
+            {
+              "x_m": -8000.0,
+              "y_m": 305.748115140705,
+              "global_grid": [
+                1048157,
+                1048560
+              ],
+              "tile_local": [
+                3677,
+                -16
+              ],
+              "quant_error_m": [
+                -6.778713,
+                -2e-06
+              ]
+            },
+            {
+              "x_m": -8000.0,
+              "y_m": -6000.0,
+              "global_grid": [
+                1048157,
+                1048890
+              ],
+              "tile_local": [
+                3677,
+                314
+              ],
+              "quant_error_m": [
+                -6.778713,
+                -0.30672
+              ]
+            },
+            {
+              "x_m": 305.748115140705,
+              "y_m": -6000.0,
+              "global_grid": [
+                1048592,
+                1048890
+              ],
+              "tile_local": [
+                4112,
+                314
+              ],
+              "quant_error_m": [
+                -2e-06,
+                -0.30672
+              ]
+            },
+            {
+              "x_m": 305.748115140705,
+              "y_m": 305.748115140705,
+              "global_grid": [
+                1048592,
+                1048560
+              ],
+              "tile_local": [
+                4112,
+                -16
+              ],
+              "quant_error_m": [
+                -2e-06,
+                -2e-06
+              ]
+            },
+            {
+              "x_m": -8000.0,
+              "y_m": 305.748115140705,
+              "global_grid": [
+                1048157,
+                1048560
+              ],
+              "tile_local": [
+                3677,
+                -16
+              ],
+              "quant_error_m": [
+                -6.778713,
+                -2e-06
+              ]
+            }
+          ]
+        },
+        {
+          "role": "hole",
+          "part_index": 0,
+          "vertex_count": 5,
+          "unique_vertices": 4,
+          "area_grid2_before": -12417.868189648358,
+          "area_grid2_after": 12482,
+          "dropped": false,
+          "drop_reason": null,
+          "points": [
+            {
+              "x_m": 305.748114140705,
+              "y_m": 305.748114140705,
+              "global_grid": [
+                1048592,
+                1048560
+              ],
+              "tile_local": [
+                4112,
+                -16
+              ],
+              "quant_error_m": [
+                -1e-06,
+                -1e-06
+              ]
+            },
+            {
+              "x_m": 305.748114140705,
+              "y_m": -1200.0,
+              "global_grid": [
+                1048592,
+                1048639
+              ],
+              "tile_local": [
+                4112,
+                63
+              ],
+              "quant_error_m": [
+                -1e-06,
+                -3.883195
+              ]
+            },
+            {
+              "x_m": -1200.0,
+              "y_m": -1200.0,
+              "global_grid": [
+                1048513,
+                1048639
+              ],
+              "tile_local": [
+                4033,
+                63
+              ],
+              "quant_error_m": [
+                -3.883195,
+                -3.883195
+              ]
+            },
+            {
+              "x_m": -1200.0,
+              "y_m": 305.748114140705,
+              "global_grid": [
+                1048513,
+                1048560
+              ],
+              "tile_local": [
+                4033,
+                -16
+              ],
+              "quant_error_m": [
+                -3.883195,
+                -1e-06
+              ]
+            },
+            {
+              "x_m": 305.748114140705,
+              "y_m": 305.748114140705,
+              "global_grid": [
+                1048592,
+                1048560
+              ],
+              "tile_local": [
+                4112,
+                -16
+              ],
+              "quant_error_m": [
+                -1e-06,
+                -1e-06
+              ]
+            }
+          ]
+        }
+      ],
+      "dropped_lines": [],
+      "dropped_rings": [],
+      "dropped_fragments": []
+    },
+    {
+      "source_feature_id": 4,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 256
+      },
+      "encoded_geometry_type": "LineString",
+      "line_evidence": [
+        {
+          "part_index": 0,
+          "vertex_count": 2,
+          "unique_vertices": 2,
+          "length_grid": 487.0,
+          "dropped": false,
+          "drop_reason": null,
+          "points": [
+            {
+              "x_m": 0.0,
+              "y_m": -9000.0,
+              "global_grid": [
+                1048576,
+                1049047
+              ],
+              "tile_local": [
+                4096,
+                471
+              ],
+              "quant_error_m": [
+                0.0,
+                -0.460081
+              ]
+            },
+            {
+              "x_m": 0.0,
+              "y_m": 305.748113140705,
+              "global_grid": [
+                1048576,
+                1048560
+              ],
+              "tile_local": [
+                4096,
+                -16
+              ],
+              "quant_error_m": [
+                0.0,
+                -0.0
+              ]
+            }
+          ]
+        }
+      ],
+      "ring_evidence": [],
+      "dropped_lines": [],
+      "dropped_rings": [],
+      "dropped_fragments": []
+    }
+  ],
+  "empty_or_dropped": [
+    {
+      "source_feature_id": 3,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 256
+      },
+      "encoded_geometry_type": null,
+      "line_evidence": [],
+      "ring_evidence": [],
+      "dropped_lines": [],
+      "dropped_rings": [],
+      "dropped_fragments": []
+    }
+  ],
+  "provenance_note": "同一 source feature 可在相邻瓦片 buffer 中重复出现，这些是同一来源的裁切片段，不是新地物"
+}

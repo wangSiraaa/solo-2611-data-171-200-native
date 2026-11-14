@@ -1,0 +1,345 @@
+{
+  "quantization": {
+    "9": {
+      "resolution_m": 19.109257071294063,
+      "tile_span_m": 78271.51696402048,
+      "half_cell_bound_m": 9.554628535647032,
+      "max_abs_error_m": 6.920503,
+      "worst_point": {
+        "x_m": -305.748113140705,
+        "y_m": 140.68530205766248,
+        "global_grid": [
+          1048560,
+          1048569
+        ],
+        "tile_local": [
+          -16,
+          4089
+        ],
+        "quant_error_m": [
+          0.0,
+          -6.920503
+        ]
+      },
+      "rounding_rule": "half-up: floor(v + 0.5), ties toward positive infinity"
+    },
+    "10": {
+      "resolution_m": 9.554628535647032,
+      "tile_span_m": 39135.75848201024,
+      "half_cell_bound_m": 4.777314267823516,
+      "max_abs_error_m": 4.453715,
+      "worst_point": {
+        "x_m": -100.0,
+        "y_m": 80.0,
+        "global_grid": [
+          2097142,
+          2097144
+        ],
+        "tile_local": [
+          4086,
+          4088
+        ],
+        "quant_error_m": [
+          4.453715,
+          -3.562972
+        ]
+      },
+      "rounding_rule": "half-up: floor(v + 0.5), ties toward positive infinity"
+    }
+  },
+  "collapsed_lines": [],
+  "collapsed_rings": [
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 255
+      },
+      "role": "exterior",
+      "part_index": 0,
+      "reason": "量化后零面积环（唯一顶点 2 个，有向面积2倍=0）",
+      "area_grid2_before": 1.0953991145020165,
+      "area_grid2_after": 0
+    },
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 9,
+        "x": 256,
+        "y": 255
+      },
+      "role": "exterior",
+      "part_index": 0,
+      "reason": "量化后零面积环（唯一顶点 2 个，有向面积2倍=0）",
+      "area_grid2_before": 1.0953991145020165,
+      "area_grid2_after": 0
+    },
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 10,
+        "x": 511,
+        "y": 511
+      },
+      "role": "exterior",
+      "part_index": 0,
+      "reason": "量化后零面积环（唯一顶点 2 个，有向面积2倍=0）",
+      "area_grid2_before": 4.381596458008066,
+      "area_grid2_after": 0
+    },
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 10,
+        "x": 512,
+        "y": 511
+      },
+      "role": "exterior",
+      "part_index": 0,
+      "reason": "量化后零面积环（唯一顶点 2 个，有向面积2倍=0）",
+      "area_grid2_before": 4.381596458008066,
+      "area_grid2_after": 0
+    }
+  ],
+  "dropped_fragments": [
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 255
+      },
+      "part_index": 0,
+      "reason": "外环量化后零面积（面片段塌缩），整个片段丢弃",
+      "area_grid2_after": 0
+    },
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 9,
+        "x": 256,
+        "y": 255
+      },
+      "part_index": 0,
+      "reason": "外环量化后零面积（面片段塌缩），整个片段丢弃",
+      "area_grid2_after": 0
+    },
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 10,
+        "x": 511,
+        "y": 511
+      },
+      "part_index": 0,
+      "reason": "外环量化后零面积（面片段塌缩），整个片段丢弃",
+      "area_grid2_after": 0
+    },
+    {
+      "feature_id": 3,
+      "tile": {
+        "z": 10,
+        "x": 512,
+        "y": 511
+      },
+      "part_index": 0,
+      "reason": "外环量化后零面积（面片段塌缩），整个片段丢弃",
+      "area_grid2_after": 0
+    }
+  ],
+  "hole_handling": [
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 255
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 12482
+    },
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 256
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 12482
+    },
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 9,
+        "x": 256,
+        "y": 255
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 12482
+    },
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 9,
+        "x": 256,
+        "y": 256
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 12482
+    },
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 10,
+        "x": 511,
+        "y": 511
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 40328
+    },
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 10,
+        "x": 511,
+        "y": 512
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 40328
+    },
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 10,
+        "x": 512,
+        "y": 511
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 40328
+    },
+    {
+      "feature_id": 2,
+      "tile": {
+        "z": 10,
+        "x": 512,
+        "y": 512
+      },
+      "part_index": 0,
+      "status": "kept",
+      "area_grid2_after": 40328
+    }
+  ],
+  "per_tile_feature_counts": [
+    {
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 255
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "tile": {
+        "z": 9,
+        "x": 255,
+        "y": 256
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "tile": {
+        "z": 9,
+        "x": 256,
+        "y": 255
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "tile": {
+        "z": 9,
+        "x": 256,
+        "y": 256
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "tile": {
+        "z": 10,
+        "x": 511,
+        "y": 511
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "tile": {
+        "z": 10,
+        "x": 511,
+        "y": 512
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "tile": {
+        "z": 10,
+        "x": 512,
+        "y": 511
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "tile": {
+        "z": 10,
+        "x": 512,
+        "y": 512
+      },
+      "encoded_feature_ids": [
+        1,
+        2,
+        4
+      ]
+    }
+  ],
+  "topology_adjustments": {
+    "meter_space_hole_epsilon_m": 1e-06,
+    "meter_space_exterior_epsilon_m": 2e-06,
+    "grid_space_hole_inward_shift_units": 1,
+    "invisibility_note": "米空间调整远小于 z10 半格(4.777m)，量化后不可见；网格调整仅限 buffer 区，瓦片真实空间[0,extent]覆盖不变"
+  }
+}
