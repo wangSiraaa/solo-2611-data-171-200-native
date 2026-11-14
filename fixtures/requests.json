@@ -1,0 +1,73 @@
+[
+  {
+    "case_id": "path_reserved",
+    "operationId": "asset",
+    "parameters": {
+      "asset_id": "plant/a #7"
+    }
+  },
+  {
+    "case_id": "comma_and_ampersand",
+    "operationId": "search",
+    "parameters": {
+      "tags": [
+        "north,south",
+        "a&b",
+        "汉字"
+      ],
+      "active": false,
+      "filter": {
+        "region": "east/west",
+        "min_age": 0
+      }
+    }
+  },
+  {
+    "case_id": "repeat_keys",
+    "operationId": "labels",
+    "parameters": {
+      "tag": [
+        "a b",
+        "x+y",
+        "a b"
+      ],
+      "note": ""
+    }
+  },
+  {
+    "case_id": "empty_array",
+    "operationId": "labels",
+    "parameters": {
+      "tag": []
+    }
+  },
+  {
+    "case_id": "body_null",
+    "operationId": "report",
+    "parameters": {
+      "dryRun": true
+    },
+    "body": {
+      "title": "daily",
+      "columns": [
+        "id",
+        "name"
+      ],
+      "note": null
+    }
+  },
+  {
+    "case_id": "invalid_bool",
+    "operationId": "search",
+    "parameters": {
+      "active": "false"
+    }
+  },
+  {
+    "case_id": "invalid_null",
+    "operationId": "labels",
+    "parameters": {
+      "note": null
+    }
+  }
+]

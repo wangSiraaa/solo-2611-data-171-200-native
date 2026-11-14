@@ -1,0 +1,8 @@
+{
+  "refs": "local acyclic JSON Pointer only",
+  "query_empty_array": "omitted; empty scalar string serialized as name=",
+  "null": "only allowed by nullable true in a JSON body; query/path null unsupported",
+  "encoding": "percent-encode each data atom as UTF-8 before joining style separators; form space uses percent encoding or plus consistently; literal comma within a tag is escaped",
+  "supported": "path simple primitive, query form primitive/array and deepObject flat object, JSON requestBody, object/array/string/integer/number/boolean and nullable",
+  "no_network_ref": true
+}

@@ -1,0 +1,215 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Local inventory input API",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8171"
+    }
+  ],
+  "components": {
+    "parameters": {
+      "TagCsv": {
+        "name": "tags",
+        "in": "query",
+        "schema": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "style": "form",
+        "explode": false
+      },
+      "Active": {
+        "name": "active",
+        "in": "query",
+        "schema": {
+          "type": "boolean"
+        },
+        "style": "form",
+        "explode": true
+      }
+    },
+    "schemas": {
+      "Report": {
+        "type": "object",
+        "required": [
+          "title",
+          "columns"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "columns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/assets/{asset_id}": {
+      "get": {
+        "operationId": "asset",
+        "parameters": [
+          {
+            "name": "asset_id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "style": "matrix",
+            "explode": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "JSON result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "operationId": "search",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/TagCsv"
+          },
+          {
+            "$ref": "#/components/parameters/Active"
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "region": {
+                  "type": "string"
+                },
+                "min_age": {
+                  "type": "integer"
+                }
+              }
+            },
+            "style": "deepObject",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "JSON result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/labels": {
+      "get": {
+        "operationId": "labels",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "style": "form",
+            "explode": true
+          },
+          {
+            "name": "note",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "JSON result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reports": {
+      "post": {
+        "operationId": "report",
+        "parameters": [
+          {
+            "name": "dryRun",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "style": "form",
+            "explode": true
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Report"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
