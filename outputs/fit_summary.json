@@ -1,0 +1,72 @@
+[
+  {
+    "case": "dwi",
+    "voxels": 12,
+    "fitted": 10,
+    "physical": 9,
+    "metric_valid": 9,
+    "principal_direction_defined": 3,
+    "status_counts": {
+      "fitted": 3,
+      "fitted_tied_principal_eigenvalues_direction_undefined": 6,
+      "excluded_insufficient_diffusion_rows": 1,
+      "excluded_insufficient_valid_b0": 1,
+      "fitted_unphysical_negative_eigenvalue": 1
+    },
+    "outputs": {
+      "tensor": "outputs/dwi/tensor.nii.gz",
+      "fa": "outputs/dwi/fa.nii.gz",
+      "md": "outputs/dwi/md.nii.gz",
+      "eigenvalues": "outputs/dwi/eigenvalues.nii.gz",
+      "eigenvectors": "outputs/dwi/eigenvectors.nii.gz",
+      "principal_direction": "outputs/dwi/principal_direction.nii.gz",
+      "s0": "outputs/dwi/s0.nii.gz",
+      "residual_sum_sq": "outputs/dwi/residual_sum_sq.nii.gz",
+      "condition_number": "outputs/dwi/condition_number.nii.gz",
+      "fitted_mask": "outputs/dwi/fitted_mask.nii.gz",
+      "physical_mask": "outputs/dwi/physical_mask.nii.gz",
+      "metric_valid_mask": "outputs/dwi/metric_valid_mask.nii.gz",
+      "principal_direction_defined_mask": "outputs/dwi/principal_direction_defined_mask.nii.gz",
+      "missing_results_mask": "outputs/dwi/missing_results_mask.nii.gz",
+      "n_valid_b0": "outputs/dwi/n_valid_b0.nii.gz",
+      "n_valid_directions": "outputs/dwi/n_valid_directions.nii.gz",
+      "diagnostics_json": "outputs/dwi/voxel_diagnostics.json",
+      "diagnostics_csv": "outputs/dwi/voxel_diagnostics.csv"
+    }
+  },
+  {
+    "case": "dwi-permuted",
+    "voxels": 12,
+    "fitted": 10,
+    "physical": 9,
+    "metric_valid": 9,
+    "principal_direction_defined": 3,
+    "status_counts": {
+      "fitted": 3,
+      "fitted_tied_principal_eigenvalues_direction_undefined": 6,
+      "excluded_insufficient_diffusion_rows": 1,
+      "excluded_insufficient_valid_b0": 1,
+      "fitted_unphysical_negative_eigenvalue": 1
+    },
+    "outputs": {
+      "tensor": "outputs/dwi-permuted/tensor.nii.gz",
+      "fa": "outputs/dwi-permuted/fa.nii.gz",
+      "md": "outputs/dwi-permuted/md.nii.gz",
+      "eigenvalues": "outputs/dwi-permuted/eigenvalues.nii.gz",
+      "eigenvectors": "outputs/dwi-permuted/eigenvectors.nii.gz",
+      "principal_direction": "outputs/dwi-permuted/principal_direction.nii.gz",
+      "s0": "outputs/dwi-permuted/s0.nii.gz",
+      "residual_sum_sq": "outputs/dwi-permuted/residual_sum_sq.nii.gz",
+      "condition_number": "outputs/dwi-permuted/condition_number.nii.gz",
+      "fitted_mask": "outputs/dwi-permuted/fitted_mask.nii.gz",
+      "physical_mask": "outputs/dwi-permuted/physical_mask.nii.gz",
+      "metric_valid_mask": "outputs/dwi-permuted/metric_valid_mask.nii.gz",
+      "principal_direction_defined_mask": "outputs/dwi-permuted/principal_direction_defined_mask.nii.gz",
+      "missing_results_mask": "outputs/dwi-permuted/missing_results_mask.nii.gz",
+      "n_valid_b0": "outputs/dwi-permuted/n_valid_b0.nii.gz",
+      "n_valid_directions": "outputs/dwi-permuted/n_valid_directions.nii.gz",
+      "diagnostics_json": "outputs/dwi-permuted/voxel_diagnostics.json",
+      "diagnostics_csv": "outputs/dwi-permuted/voxel_diagnostics.csv"
+    }
+  }
+]

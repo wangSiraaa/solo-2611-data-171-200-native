@@ -1,0 +1,20 @@
+[
+  {
+    "case": "dwi",
+    "voxels_recomputed": 9,
+    "findings": [],
+    "ok": true
+  },
+  {
+    "case": "dwi-permuted",
+    "voxels_recomputed": 9,
+    "findings": [],
+    "ok": true
+  },
+  {
+    "check": "world-position cross-case correspondence",
+    "n_voxels_matched": 12,
+    "findings": [],
+    "ok": true
+  }
+]

@@ -1,0 +1,447 @@
+{
+  "case": "dwi-permuted",
+  "coordinate_frame": "world RAS; tensor component order ['Dxx', 'Dyy', 'Dzz', 'Dxy', 'Dxz', 'Dyz']",
+  "sign_convention": "principal vector sign fixed so its largest absolute component is positive",
+  "affine": [
+    [
+      -1.0421769618988037,
+      1.8179315328598022,
+      0.0,
+      -12.0
+    ],
+    [
+      2.272414445877075,
+      0.8337416052818298,
+      0.0,
+      4.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.0,
+      8.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "rotation_voxel_to_world_ras": [
+    [
+      -0.41687077696425695,
+      0.9089657525063738,
+      0.0
+    ],
+    [
+      0.9089657613536478,
+      0.4168707962552927,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "det_rotation": -0.9999999999999998,
+  "world_gradients": [
+    {
+      "volume": 0,
+      "b": 0.0,
+      "g_world_ras": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "volume": 1,
+      "b": 0.0,
+      "g_world_ras": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "volume": 2,
+      "b": 0.0,
+      "g_world_ras": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "volume": 3,
+      "b": 1000.0,
+      "g_world_ras": [
+        0.9089657525063738,
+        0.4168707962552927,
+        0.0
+      ]
+    },
+    {
+      "volume": 4,
+      "b": 1000.0,
+      "g_world_ras": [
+        -0.41687077696425695,
+        0.9089657613536478,
+        0.0
+      ]
+    },
+    {
+      "volume": 5,
+      "b": 1000.0,
+      "g_world_ras": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "volume": 6,
+      "b": 1000.0,
+      "g_world_ras": [
+        0.347963694193659,
+        0.9375080206303104,
+        0.0
+      ]
+    },
+    {
+      "volume": 7,
+      "b": 1000.0,
+      "g_world_ras": [
+        0.9375080007335208,
+        -0.34796368680880424,
+        0.0
+      ]
+    },
+    {
+      "volume": 8,
+      "b": 1000.0,
+      "g_world_ras": [
+        0.6427358474635899,
+        0.2947721669107531,
+        0.7071067811865475
+      ]
+    },
+    {
+      "volume": 9,
+      "b": 1000.0,
+      "g_world_ras": [
+        0.6427358474635899,
+        0.2947721669107531,
+        -0.7071067811865475
+      ]
+    },
+    {
+      "volume": 10,
+      "b": 1000.0,
+      "g_world_ras": [
+        -0.2947721532699309,
+        0.6427358537195573,
+        0.7071067811865475
+      ]
+    },
+    {
+      "volume": 11,
+      "b": 1000.0,
+      "g_world_ras": [
+        -0.2947721532699309,
+        0.6427358537195573,
+        -0.7071067811865475
+      ]
+    },
+    {
+      "volume": 12,
+      "b": 1000.0,
+      "g_world_ras": [
+        0.28411116659610347,
+        0.7654720934369688,
+        0.5773502691896258
+      ]
+    }
+  ],
+  "voxels": [
+    {
+      "voxel_index": 0,
+      "voxel_ijk": [
+        0,
+        0,
+        0
+      ],
+      "excluded_volumes": {
+        "5": "dwi_non_positive_or_nonfinite"
+      },
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 9,
+      "s0": 1000.0,
+      "condition_number": 2.280066376890008,
+      "residual_sum_sq": 8.301912630922285e-13,
+      "status": "fitted",
+      "eigenvalues": [
+        0.00040048245643962657,
+        0.0004497087227978124,
+        0.0014994899767722437
+      ],
+      "md": 0.0007832270520032276,
+      "fa": 0.6654172698619926
+    },
+    {
+      "voxel_index": 1,
+      "voxel_ijk": [
+        0,
+        0,
+        1
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 9.991701981989444e-37,
+      "status": "fitted_tied_principal_eigenvalues_direction_undefined",
+      "eigenvalues": [
+        0.0007001717806371213,
+        0.0007001717954969099,
+        0.0007001718103566989
+      ],
+      "md": 0.00070017179549691,
+      "fa": 2.1223061106563058e-08
+    },
+    {
+      "voxel_index": 2,
+      "voxel_ijk": [
+        0,
+        1,
+        0
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 9.991701981989444e-37,
+      "status": "fitted_tied_principal_eigenvalues_direction_undefined",
+      "eigenvalues": [
+        0.0007001717806371213,
+        0.0007001717954969099,
+        0.0007001718103566989
+      ],
+      "md": 0.00070017179549691,
+      "fa": 2.1223061106563058e-08
+    },
+    {
+      "voxel_index": 3,
+      "voxel_ijk": [
+        0,
+        1,
+        1
+      ],
+      "excluded_volumes": {
+        "3": "dwi_non_positive_or_nonfinite",
+        "4": "dwi_non_positive_or_nonfinite",
+        "5": "dwi_non_positive_or_nonfinite",
+        "6": "dwi_non_positive_or_nonfinite",
+        "7": "dwi_non_positive_or_nonfinite",
+        "8": "dwi_non_positive_or_nonfinite",
+        "9": "dwi_non_positive_or_nonfinite"
+      },
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 3,
+      "s0": 1000.0,
+      "status": "excluded_insufficient_diffusion_rows",
+      "condition_number": null,
+      "residual_sum_sq": null
+    },
+    {
+      "voxel_index": 4,
+      "voxel_ijk": [
+        0,
+        2,
+        0
+      ],
+      "excluded_volumes": {
+        "0": "b0_non_positive_or_nonfinite",
+        "1": "b0_non_positive_or_nonfinite"
+      },
+      "notes": [],
+      "status": "excluded_insufficient_valid_b0",
+      "s0": null,
+      "n_valid_b0": 1,
+      "n_valid_directions": 0,
+      "condition_number": null,
+      "residual_sum_sq": null
+    },
+    {
+      "voxel_index": 5,
+      "voxel_ijk": [
+        0,
+        2,
+        1
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 9.991701981989444e-37,
+      "status": "fitted_tied_principal_eigenvalues_direction_undefined",
+      "eigenvalues": [
+        0.0007001717806371213,
+        0.0007001717954969099,
+        0.0007001718103566989
+      ],
+      "md": 0.00070017179549691,
+      "fa": 2.1223061106563058e-08
+    },
+    {
+      "voxel_index": 6,
+      "voxel_ijk": [
+        1,
+        0,
+        0
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 9.991701981989444e-37,
+      "status": "fitted_tied_principal_eigenvalues_direction_undefined",
+      "eigenvalues": [
+        0.0007001717806371213,
+        0.0007001717954969099,
+        0.0007001718103566989
+      ],
+      "md": 0.00070017179549691,
+      "fa": 2.1223061106563058e-08
+    },
+    {
+      "voxel_index": 7,
+      "voxel_ijk": [
+        1,
+        0,
+        1
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 1.0847365676977502e-12,
+      "status": "fitted",
+      "eigenvalues": [
+        0.00040007042596705485,
+        0.0004498092801918481,
+        0.0014995667800871892
+      ],
+      "md": 0.0007831488287486974,
+      "fa": 0.6655731663292278
+    },
+    {
+      "voxel_index": 8,
+      "voxel_ijk": [
+        1,
+        1,
+        0
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 1.0847365676977502e-12,
+      "status": "fitted",
+      "eigenvalues": [
+        0.00040007042596705485,
+        0.0004498092801918481,
+        0.0014995667800871892
+      ],
+      "md": 0.0007831488287486974,
+      "fa": 0.6655731663292278
+    },
+    {
+      "voxel_index": 9,
+      "voxel_ijk": [
+        1,
+        1,
+        1
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 9.991701981989444e-37,
+      "status": "fitted_tied_principal_eigenvalues_direction_undefined",
+      "eigenvalues": [
+        0.0007001717806371213,
+        0.0007001717954969099,
+        0.0007001718103566989
+      ],
+      "md": 0.00070017179549691,
+      "fa": 2.1223061106563058e-08
+    },
+    {
+      "voxel_index": 10,
+      "voxel_ijk": [
+        1,
+        2,
+        0
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 9.991701981989444e-37,
+      "status": "fitted_tied_principal_eigenvalues_direction_undefined",
+      "eigenvalues": [
+        0.0007001717806371213,
+        0.0007001717954969099,
+        0.0007001718103566989
+      ],
+      "md": 0.00070017179549691,
+      "fa": 2.1223061106563058e-08
+    },
+    {
+      "voxel_index": 11,
+      "voxel_ijk": [
+        1,
+        2,
+        1
+      ],
+      "excluded_volumes": {},
+      "notes": [],
+      "n_valid_b0": 3,
+      "n_valid_directions": 10,
+      "s0": 1000.0,
+      "condition_number": 1.7944325458727357,
+      "residual_sum_sq": 3.240668388618822e-13,
+      "status": "fitted_unphysical_negative_eigenvalue",
+      "negative_eigenvalues": [
+        -0.000199922055657729
+      ],
+      "eigenvalues": [
+        -0.000199922055657729,
+        0.00039986465788591436,
+        0.0010997453028534676
+      ],
+      "eigenvalue_tolerance_mm2_s": 1e-07
+    }
+  ]
+}
