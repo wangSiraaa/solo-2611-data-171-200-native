@@ -1,0 +1,26 @@
+[
+  {
+    "op": "insert_rows",
+    "sheet": "Data",
+    "before": 4,
+    "count": 2
+  },
+  {
+    "op": "delete_rows",
+    "sheet": "Data",
+    "start": 7,
+    "count": 2
+  },
+  {
+    "op": "insert_cols",
+    "sheet": "Data",
+    "before": 3,
+    "count": 1
+  },
+  {
+    "op": "delete_cols",
+    "sheet": "Data",
+    "start": 2,
+    "count": 1
+  }
+]

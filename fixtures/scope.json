@@ -1,0 +1,8 @@
+{
+  "references": "A1 or rectangular range; sheet-qualified or local; absolute/mixed dollar flags preserved; sheet names may be quoted and contain escaped apostrophes",
+  "formula_functions": "preserve all formula tokens except supported references; no expression evaluation; reject external workbook refs, structured table refs, 3D refs and dynamic address functions INDIRECT/OFFSET",
+  "ranges": "insertion strictly inside referenced interval expands it; insertion before or at first position shifts it; deletion keeps bounding rectangle of surviving referenced cells; empty result becomes #REF!",
+  "names": "global or sheet-local simple cell/range definitions move with referenced sheet; references to the name keep spelling and scope",
+  "cell_movement": "move source cells according to structural edits; reference movement is not relative-copy translation",
+  "preserve": "unaffected literal strings, ordinary styles, sheet order and stable cell content identities; source unchanged"
+}
