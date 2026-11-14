@@ -1,0 +1,4 @@
+Release checklist
+- write changelog
+- tag the release
+- notify stakeholders

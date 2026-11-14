@@ -1,0 +1,45 @@
+--- a/util.py
++++ b/helpers.py
+@@ -6,0 +6,1 @@
++    """Clamp value into the [low, high] range."""
+--- a/README.md
++++ b/README.md
+@@ -5,5 +5,0 @@
+-## Legacy section
+-
+-This section describes the v1 deployment.
+-It is obsolete and will be removed.
+-
+--- a/app.py
++++ b/app.py
+@@ -2,1 +2,1 @@
+-    return "Hello, world"
++    return "Hello, everyone"
+--- a/config.ini
++++ b/config.ini
+@@ -4,0 +4,3 @@
++
++[tuning]
++workers = 4
+--- a/docs/notes.txt
++++ b/docs/notes.txt
+@@ -1,4 +0,0 @@
+-Release checklist
+-- write changelog
+-- tag the release
+-- notify stakeholders
+Binary files differ: assets/logo.bin (None -> 8333ac6293)
+--- a/docs/notes-archive.txt
++++ b/docs/notes-archive.txt
+@@ -0,0 +1,4 @@
++Release checklist
++- write changelog
++- tag the release
++- notify stakeholders
+--- a/docs/notes-v2.txt
++++ b/docs/notes-v2.txt
+@@ -0,0 +1,4 @@
++Release checklist
++- write changelog
++- tag the release
++- notify stakeholders

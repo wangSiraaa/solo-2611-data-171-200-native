@@ -1,0 +1,31 @@
+{
+ "ok": true,
+ "files": [
+  {
+   "path": "ambiguous.txt",
+   "status": "ok",
+   "expected": "cb765c24ebd4f6206cc4b2efc7d84adc823b38b1",
+   "actual": "cb765c24ebd4f6206cc4b2efc7d84adc823b38b1"
+  },
+  {
+   "path": "logo.bin",
+   "status": "ok",
+   "expected": "b737a8c1097c1cfb469c02852f84361bd4c8df20",
+   "actual": "b737a8c1097c1cfb469c02852f84361bd4c8df20"
+  },
+  {
+   "path": "notes.txt",
+   "status": "ok",
+   "expected": "56bfefdca759bf574b461c7f6a8b6e091d7cbdca",
+   "actual": "56bfefdca759bf574b461c7f6a8b6e091d7cbdca"
+  },
+  {
+   "path": "service.txt",
+   "status": "ok",
+   "expected": "8ae1e7b6e07bcb444aab9c3fe9c39feee24de5d6",
+   "actual": "8ae1e7b6e07bcb444aab9c3fe9c39feee24de5d6"
+  }
+ ],
+ "base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+ "target": "553b07d73d17984f1d1313e0713c75fb1a60a805"
+}

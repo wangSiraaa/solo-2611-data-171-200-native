@@ -1,0 +1,49 @@
+{
+ "ok": true,
+ "files": [
+  {
+   "path": "README.md",
+   "status": "ok",
+   "expected": "560cf19c1dbc7f96a4554b89aa125e376ddc539e",
+   "actual": "560cf19c1dbc7f96a4554b89aa125e376ddc539e"
+  },
+  {
+   "path": "app.py",
+   "status": "ok",
+   "expected": "2e488bd238fe701d78039f4faaf4c28eec6491f6",
+   "actual": "2e488bd238fe701d78039f4faaf4c28eec6491f6"
+  },
+  {
+   "path": "assets/logo.bin",
+   "status": "ok",
+   "expected": "8333ac6293f010895b4d018ad5276948bd24c6ff",
+   "actual": "8333ac6293f010895b4d018ad5276948bd24c6ff"
+  },
+  {
+   "path": "config.ini",
+   "status": "ok",
+   "expected": "95d9a45374d94fbe2631184cf48a83afc8ad11f5",
+   "actual": "95d9a45374d94fbe2631184cf48a83afc8ad11f5"
+  },
+  {
+   "path": "docs/notes-archive.txt",
+   "status": "ok",
+   "expected": "751d66a8bb688e898d8c102251d233be44ad9a9b",
+   "actual": "751d66a8bb688e898d8c102251d233be44ad9a9b"
+  },
+  {
+   "path": "docs/notes-v2.txt",
+   "status": "ok",
+   "expected": "751d66a8bb688e898d8c102251d233be44ad9a9b",
+   "actual": "751d66a8bb688e898d8c102251d233be44ad9a9b"
+  },
+  {
+   "path": "helpers.py",
+   "status": "ok",
+   "expected": "247076d953d9eaa5d84a0a9c15682980ee99d30f",
+   "actual": "247076d953d9eaa5d84a0a9c15682980ee99d30f"
+  }
+ ],
+ "base": "ee451a76ff6047e622d415c4458b1fba3f0dde9f",
+ "target": "d97470cb1c6d87582e62b3fea083c7340fbb1672"
+}

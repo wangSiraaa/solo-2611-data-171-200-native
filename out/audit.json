@@ -1,0 +1,671 @@
+{
+ "plan": {
+  "base": "release-base",
+  "target": "release-target",
+  "text_encoding": "UTF-8",
+  "text_files": [
+   "app.txt",
+   "service.txt",
+   "notes.txt",
+   "ambiguous.txt"
+  ],
+  "binary_files": [
+   "logo.bin"
+  ],
+  "rename_policy": "choose and document a deterministic content-similarity threshold; retain ties",
+  "net_fragment": "line-level insertion/deletion spans with exact content and blob identity",
+  "source_statuses": [
+   "single_branch",
+   "multiple_candidate_origins",
+   "merge_resolution",
+   "unresolved"
+  ],
+  "read_only_input": true
+ },
+ "base": {
+  "ref": "release-base",
+  "sha": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+ },
+ "target": {
+  "ref": "release-target",
+  "sha": "553b07d73d17984f1d1313e0713c75fb1a60a805"
+ },
+ "generated": "2026-11-14T16:17:56",
+ "commits": [
+  "65e52035aedcb28896f41a68194c1d50e27be00a",
+  "a7c518311db86fd051700b7e6820e5f157c57ae9",
+  "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+  "5570222bf6abc085a095931b0c59d9c50c20224e",
+  "36591ef463ab752d83d52e8ca008462655175af3",
+  "66c540876db5ac4d2653df568cbc43aa28433bfb",
+  "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+  "c27dac0c96cf01830d170c5587cd9a5ce8186db3",
+  "1e2868fff43b74f6cc6008019cb021dca7b41441",
+  "9fbcd3baec1e5ebde590a0b8f65e0a846b9eccca",
+  "553b07d73d17984f1d1313e0713c75fb1a60a805"
+ ],
+ "metas": {
+  "65e52035aedcb28896f41a68194c1d50e27be00a": {
+   "sha": "65e52035aedcb28896f41a68194c1d50e27be00a",
+   "parents": [
+    "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Fast mode and remove obsolete line"
+  },
+  "a7c518311db86fd051700b7e6820e5f157c57ae9": {
+   "sha": "a7c518311db86fd051700b7e6820e5f157c57ae9",
+   "parents": [
+    "65e52035aedcb28896f41a68194c1d50e27be00a"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "A independently enables shared flag"
+  },
+  "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20": {
+   "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+   "parents": [
+    "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+    "a7c518311db86fd051700b7e6820e5f157c57ae9"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Merge feature A"
+  },
+  "5570222bf6abc085a095931b0c59d9c50c20224e": {
+   "sha": "5570222bf6abc085a095931b0c59d9c50c20224e",
+   "parents": [
+    "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Safe mode"
+  },
+  "36591ef463ab752d83d52e8ca008462655175af3": {
+   "sha": "36591ef463ab752d83d52e8ca008462655175af3",
+   "parents": [
+    "5570222bf6abc085a095931b0c59d9c50c20224e"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "B independently enables shared flag"
+  },
+  "66c540876db5ac4d2653df568cbc43aa28433bfb": {
+   "sha": "66c540876db5ac4d2653df568cbc43aa28433bfb",
+   "parents": [
+    "36591ef463ab752d83d52e8ca008462655175af3"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Branch B documentation"
+  },
+  "b5d83f056b29fcf854d94152d2a4944a53dc3e09": {
+   "sha": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+   "parents": [
+    "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+    "66c540876db5ac4d2653df568cbc43aa28433bfb"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Resolve merge with balanced mode"
+  },
+  "c27dac0c96cf01830d170c5587cd9a5ce8186db3": {
+   "sha": "c27dac0c96cf01830d170c5587cd9a5ce8186db3",
+   "parents": [
+    "b5d83f056b29fcf854d94152d2a4944a53dc3e09"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Rename app manifest to service manifest"
+  },
+  "1e2868fff43b74f6cc6008019cb021dca7b41441": {
+   "sha": "1e2868fff43b74f6cc6008019cb021dca7b41441",
+   "parents": [
+    "c27dac0c96cf01830d170c5587cd9a5ce8186db3"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Temporary timeout experiment"
+  },
+  "9fbcd3baec1e5ebde590a0b8f65e0a846b9eccca": {
+   "sha": "9fbcd3baec1e5ebde590a0b8f65e0a846b9eccca",
+   "parents": [
+    "1e2868fff43b74f6cc6008019cb021dca7b41441"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Revert \"Temporary timeout experiment\""
+  },
+  "553b07d73d17984f1d1313e0713c75fb1a60a805": {
+   "sha": "553b07d73d17984f1d1313e0713c75fb1a60a805",
+   "parents": [
+    "9fbcd3baec1e5ebde590a0b8f65e0a846b9eccca"
+   ],
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "subject": "Update binary logo identity"
+  }
+ },
+ "not_in_target": [],
+ "entries": [
+  {
+   "change": "rename",
+   "path": "service.txt",
+   "old_path": "app.txt",
+   "base_blob": "58a8a99777687dc62a8d410be5aa19566ffe980c",
+   "target_blob": "8ae1e7b6e07bcb444aab9c3fe9c39feee24de5d6",
+   "base_mode": "100644",
+   "target_mode": "100644",
+   "binary": false,
+   "fragments": [
+    {
+     "base_start": 2,
+     "base_count": 1,
+     "target_start": 2,
+     "deleted": [
+      "mode: base"
+     ],
+     "added": [
+      "mode: balanced"
+     ],
+     "attribution": {
+      "added": {
+       "kind": "merge_resolution",
+       "status": "merge_resolution",
+       "introduction_commits": [
+        "b5d83f056b29fcf854d94152d2a4944a53dc3e09"
+       ],
+       "merge_rows": [
+        {
+         "merge": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+         "in_result": true,
+         "parents": [
+          {
+           "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+           "present": false
+          },
+          {
+           "sha": "66c540876db5ac4d2653df568cbc43aa28433bfb",
+           "present": false
+          }
+         ],
+         "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+         "in_merge_base": false
+        }
+       ],
+       "base_locations": [],
+       "target_locations": [
+        [
+         "service.txt",
+         2
+        ]
+       ],
+       "rationale": "该文本在合并提交 b5d83f056b 的全部父版本中均不存在, 首次出现于合并结果 ⇒ 手工合并解决阶段引入。"
+      },
+      "deleted": {
+       "kind": "independent",
+       "status": "multiple_candidate_origins",
+       "deletion_commits": [
+        "65e52035aedcb28896f41a68194c1d50e27be00a",
+        "5570222bf6abc085a095931b0c59d9c50c20224e"
+       ],
+       "merge_edges": [
+        {
+         "commit": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+         "parent": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+        }
+       ],
+       "merge_rows": [
+        {
+         "merge": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+         "in_result": false,
+         "parents": [
+          {
+           "sha": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+           "present": true
+          },
+          {
+           "sha": "a7c518311db86fd051700b7e6820e5f157c57ae9",
+           "present": false
+          }
+         ],
+         "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+         "in_merge_base": true
+        }
+       ],
+       "still_present": [],
+       "rationale": "同一段内容被 2 个提交分别删除: 65e52035ae（Fast mode and remove obsolete line）、5570222bf6（Safe mode）。 ⇒ 不能凭单一命中归因, 保留候选集。 合并边 5e428c4b2d(父 1eecd2ab4f) 上的消失沿用上述删除（内容在该合并的另一父分支已被删除）, 非合并解决。",
+       "base_path": "app.txt",
+       "base_range": [
+        2,
+        2
+       ]
+      }
+     }
+    },
+    {
+     "base_start": 4,
+     "base_count": 1,
+     "target_start": 4,
+     "deleted": [
+      "obsolete: remove-this"
+     ],
+     "added": [],
+     "attribution": {
+      "deleted": {
+       "kind": "single",
+       "status": "single_branch",
+       "deletion_commits": [
+        "65e52035aedcb28896f41a68194c1d50e27be00a"
+       ],
+       "merge_edges": [
+        {
+         "commit": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+         "parent": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+        },
+        {
+         "commit": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+         "parent": "66c540876db5ac4d2653df568cbc43aa28433bfb"
+        }
+       ],
+       "merge_rows": [
+        {
+         "merge": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+         "in_result": false,
+         "parents": [
+          {
+           "sha": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+           "present": true
+          },
+          {
+           "sha": "a7c518311db86fd051700b7e6820e5f157c57ae9",
+           "present": false
+          }
+         ],
+         "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+         "in_merge_base": true
+        },
+        {
+         "merge": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+         "in_result": false,
+         "parents": [
+          {
+           "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+           "present": false
+          },
+          {
+           "sha": "66c540876db5ac4d2653df568cbc43aa28433bfb",
+           "present": true
+          }
+         ],
+         "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+         "in_merge_base": true
+        }
+       ],
+       "still_present": [],
+       "rationale": "父边对照: 1eecd2ab4f 中存在 → 65e52035ae 中消失; 全区间仅此一条非合并消失边 ⇒ 由提交 65e52035ae（Fast mode and remove obsolete line）删除。 合并边 5e428c4b2d(父 1eecd2ab4f)、b5d83f056b(父 66c540876d) 上的消失沿用上述删除（内容在该合并的另一父分支已被删除）, 非合并解决。",
+       "base_path": "app.txt",
+       "base_range": [
+        4,
+        4
+       ]
+      }
+     }
+    }
+   ],
+   "similarity": 0.7846
+  },
+  {
+   "change": "modify",
+   "path": "ambiguous.txt",
+   "old_path": "ambiguous.txt",
+   "base_blob": "86e4f291619214d10d1e6cdcb2f4270cb3f2b085",
+   "target_blob": "cb765c24ebd4f6206cc4b2efc7d84adc823b38b1",
+   "base_mode": "100644",
+   "target_mode": "100644",
+   "binary": false,
+   "fragments": [
+    {
+     "base_start": 2,
+     "base_count": 0,
+     "target_start": 2,
+     "deleted": [],
+     "added": [
+      "shared: enabled"
+     ],
+     "attribution": {
+      "added": {
+       "kind": "independent",
+       "status": "multiple_candidate_origins",
+       "introduction_commits": [
+        "a7c518311db86fd051700b7e6820e5f157c57ae9",
+        "36591ef463ab752d83d52e8ca008462655175af3"
+       ],
+       "merge_rows": [
+        {
+         "merge": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+         "in_result": true,
+         "parents": [
+          {
+           "sha": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+           "present": false
+          },
+          {
+           "sha": "a7c518311db86fd051700b7e6820e5f157c57ae9",
+           "present": true
+          }
+         ],
+         "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+         "in_merge_base": false
+        },
+        {
+         "merge": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+         "in_result": true,
+         "parents": [
+          {
+           "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+           "present": true
+          },
+          {
+           "sha": "66c540876db5ac4d2653df568cbc43aa28433bfb",
+           "present": true
+          }
+         ],
+         "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+         "in_merge_base": false
+        }
+       ],
+       "base_locations": [],
+       "target_locations": [
+        [
+         "ambiguous.txt",
+         2
+        ]
+       ],
+       "rationale": "相同文本在 2 个提交中各自首次出现（其父版本均不含）: a7c518311d（A independently enables shared flag）、36591ef463（B independently enables shared flag）。 ⇒ 多分支独立产生相同文本, 不能凭首次命中归因, 保留候选集。"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "change": "modify",
+   "path": "logo.bin",
+   "old_path": "logo.bin",
+   "base_blob": "eaf36c1daccfdf325514461cd1a2ffbc139b5464",
+   "target_blob": "b737a8c1097c1cfb469c02852f84361bd4c8df20",
+   "base_mode": "100644",
+   "target_mode": "100644",
+   "binary": true,
+   "fragments": [],
+   "content_b64": "AAEHAw==",
+   "note": "二进制文件: 仅报告 blob 身份"
+  },
+  {
+   "change": "modify",
+   "path": "notes.txt",
+   "old_path": "notes.txt",
+   "base_blob": "159263d199951198c6b040ae8505607a6f305686",
+   "target_blob": "56bfefdca759bf574b461c7f6a8b6e091d7cbdca",
+   "base_mode": "100644",
+   "target_mode": "100644",
+   "binary": false,
+   "fragments": [
+    {
+     "base_start": 3,
+     "base_count": 0,
+     "target_start": 3,
+     "deleted": [],
+     "added": [
+      "branch-b: accepted"
+     ],
+     "attribution": {
+      "added": {
+       "kind": "single",
+       "status": "single_branch",
+       "introduction_commits": [
+        "66c540876db5ac4d2653df568cbc43aa28433bfb"
+       ],
+       "merge_rows": [
+        {
+         "merge": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+         "in_result": true,
+         "parents": [
+          {
+           "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+           "present": false
+          },
+          {
+           "sha": "66c540876db5ac4d2653df568cbc43aa28433bfb",
+           "present": true
+          }
+         ],
+         "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+         "in_merge_base": false
+        }
+       ],
+       "base_locations": [],
+       "target_locations": [
+        [
+         "notes.txt",
+         3
+        ]
+       ],
+       "rationale": "父边对照: 36591ef463 中不存在 → 66c540876d 中出现; 全区间仅此一条引入边 ⇒ 由提交 66c540876d（Branch B documentation）引入。"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "renames": [
+  {
+   "old_path": "app.txt",
+   "new_path": "service.txt",
+   "similarity": 0.7846
+  }
+ ],
+ "ambiguous_renames": [],
+ "history": [
+  {
+   "sha": "65e52035aedcb28896f41a68194c1d50e27be00a",
+   "subject": "Fast mode and remove obsolete line",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+   ],
+   "is_merge": false,
+   "adds": 1,
+   "dels": 2,
+   "annotations": [
+    "本提交引入的行在 target 中均不存在（被后续修改覆盖或撤销）, 仅作历史说明, 不计入净变更"
+   ]
+  },
+  {
+   "sha": "a7c518311db86fd051700b7e6820e5f157c57ae9",
+   "subject": "A independently enables shared flag",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "65e52035aedcb28896f41a68194c1d50e27be00a"
+   ],
+   "is_merge": false,
+   "adds": 1,
+   "dels": 0,
+   "annotations": []
+  },
+  {
+   "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+   "subject": "Merge feature A",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+    "a7c518311db86fd051700b7e6820e5f157c57ae9"
+   ],
+   "is_merge": true,
+   "adds": null,
+   "dels": null,
+   "annotations": []
+  },
+  {
+   "sha": "5570222bf6abc085a095931b0c59d9c50c20224e",
+   "subject": "Safe mode",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+   ],
+   "is_merge": false,
+   "adds": 1,
+   "dels": 1,
+   "annotations": [
+    "本提交引入的行在 target 中均不存在（被后续修改覆盖或撤销）, 仅作历史说明, 不计入净变更"
+   ]
+  },
+  {
+   "sha": "36591ef463ab752d83d52e8ca008462655175af3",
+   "subject": "B independently enables shared flag",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "5570222bf6abc085a095931b0c59d9c50c20224e"
+   ],
+   "is_merge": false,
+   "adds": 1,
+   "dels": 0,
+   "annotations": []
+  },
+  {
+   "sha": "66c540876db5ac4d2653df568cbc43aa28433bfb",
+   "subject": "Branch B documentation",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "36591ef463ab752d83d52e8ca008462655175af3"
+   ],
+   "is_merge": false,
+   "adds": 1,
+   "dels": 0,
+   "annotations": []
+  },
+  {
+   "sha": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+   "subject": "Resolve merge with balanced mode",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+    "66c540876db5ac4d2653df568cbc43aa28433bfb"
+   ],
+   "is_merge": true,
+   "adds": null,
+   "dels": null,
+   "annotations": []
+  },
+  {
+   "sha": "c27dac0c96cf01830d170c5587cd9a5ce8186db3",
+   "subject": "Rename app manifest to service manifest",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "b5d83f056b29fcf854d94152d2a4944a53dc3e09"
+   ],
+   "is_merge": false,
+   "adds": 4,
+   "dels": 4,
+   "annotations": []
+  },
+  {
+   "sha": "1e2868fff43b74f6cc6008019cb021dca7b41441",
+   "subject": "Temporary timeout experiment",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "c27dac0c96cf01830d170c5587cd9a5ce8186db3"
+   ],
+   "is_merge": false,
+   "adds": 1,
+   "dels": 1,
+   "annotations": [
+    "本提交引入的行在 target 中均不存在（被后续修改覆盖或撤销）, 仅作历史说明, 不计入净变更"
+   ]
+  },
+  {
+   "sha": "9fbcd3baec1e5ebde590a0b8f65e0a846b9eccca",
+   "subject": "Revert \"Temporary timeout experiment\"",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "1e2868fff43b74f6cc6008019cb021dca7b41441"
+   ],
+   "is_merge": false,
+   "adds": 1,
+   "dels": 1,
+   "annotations": [
+    "移除的行与 1e2868fff4 引入的行一致 ⇒ 疑似撤销该提交的修改"
+   ]
+  },
+  {
+   "sha": "553b07d73d17984f1d1313e0713c75fb1a60a805",
+   "subject": "Update binary logo identity",
+   "author": "Synthetic Fixture",
+   "date": "2026-11-14",
+   "parents": [
+    "9fbcd3baec1e5ebde590a0b8f65e0a846b9eccca"
+   ],
+   "is_merge": false,
+   "adds": 0,
+   "dels": 0,
+   "annotations": []
+  }
+ ],
+ "merges": [
+  {
+   "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+   "subject": "Merge feature A",
+   "parents": [
+    {
+     "sha": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b",
+     "adds": 2,
+     "dels": 2
+    },
+    {
+     "sha": "a7c518311db86fd051700b7e6820e5f157c57ae9",
+     "adds": 0,
+     "dels": 0
+    }
+   ],
+   "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+  },
+  {
+   "sha": "b5d83f056b29fcf854d94152d2a4944a53dc3e09",
+   "subject": "Resolve merge with balanced mode",
+   "parents": [
+    {
+     "sha": "5e428c4b2df42a7f6b3e4fa0ce1056031bd59a20",
+     "adds": 2,
+     "dels": 1
+    },
+    {
+     "sha": "66c540876db5ac4d2653df568cbc43aa28433bfb",
+     "adds": 1,
+     "dels": 2
+    }
+   ],
+   "merge_base": "1eecd2ab4f49f39628c8ec2f42f752e87e5f8d7b"
+  }
+ ],
+ "summary": {
+  "commits": 11,
+  "merges": 2,
+  "files_changed": 4,
+  "net_adds": 3,
+  "net_dels": 2,
+  "renames": 1,
+  "ambiguous": 0,
+  "binary": 1
+ }
+}

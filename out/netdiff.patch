@@ -1,0 +1,18 @@
+--- a/app.txt
++++ b/service.txt
+@@ -2,1 +2,1 @@
+-mode: base
++mode: balanced
+--- a/app.txt
++++ b/service.txt
+@@ -4,1 +4,0 @@
+-obsolete: remove-this
+--- a/ambiguous.txt
++++ b/ambiguous.txt
+@@ -2,0 +2,1 @@
++shared: enabled
+Binary files differ: logo.bin (eaf36c1dac -> b737a8c109)
+--- a/notes.txt
++++ b/notes.txt
+@@ -3,0 +3,1 @@
++branch-b: accepted
