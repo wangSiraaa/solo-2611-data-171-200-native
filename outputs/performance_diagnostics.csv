@@ -1,0 +1,3 @@
+code,tick,track,event_index,port,channel,note,message
+unmatched_release,1550,1,14,0,0,50,"松键事件找不到尚按下的匹配实例 (port=0, ch=0, pitch=50)，仅诊断，不伪造音符"
+eof_still_sounding,1920,,,0,0,72,"音符到全曲末 tick 1920 仍未止音，按计划截断（非正常释放）: note_id=9, pitch=72"

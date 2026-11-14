@@ -1,0 +1,3 @@
+note_id,port,channel,pitch,velocity,onset_tick,onset_seconds,key_release_tick,key_release_seconds,sound_end_tick,sound_end_seconds,stop_cause,truncated,onset_event,key_release_event,sound_end_event
+1,0,0,60,80,0,0.0,480,0.5,480,0.5,key_release,False,t1e0@0,t1e1@480,t1e1@480
+2,0,0,64,90,480,0.5,960,1.0,960,1.0,key_release,False,t1e2@480,t1e3@960,t1e3@960

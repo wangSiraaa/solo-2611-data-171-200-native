@@ -1,0 +1,2 @@
+code,tick,track,event_index,port,channel,note,message
+tempo_conflict,240,,,,,,"tick 240 存在 2 个不同 tempo 值 [400000, 600000] µs/beat；按同 tick 顺序采用 400000（track 0, event 1）"

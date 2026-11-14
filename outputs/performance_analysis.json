@@ -1,0 +1,933 @@
+{
+  "schema_version": 1,
+  "source_file": "fixtures/performance.mid",
+  "smf_type": 1,
+  "ticks_per_beat": 480,
+  "default_tempo_us_per_beat": 500000,
+  "eof_tick": 1920,
+  "total_seconds": 2.5,
+  "seconds_precision": {
+    "json": "float64 (full double precision, ~1e-16 relative; tick is the authoritative integer axis)",
+    "csv_and_html": "rounded to 6 decimal places (microsecond, 1e-6 s)"
+  },
+  "ordering_rule": "global sort key (absolute_tick, track_index, event_index); per-track tempo conversion is never concatenated",
+  "tempo_map": [
+    {
+      "start_tick": 0,
+      "end_tick": 960,
+      "tempo_us_per_beat": 500000,
+      "bpm": 120.0,
+      "start_seconds": 0.0,
+      "end_seconds": 1.0,
+      "source_event": null
+    },
+    {
+      "start_tick": 960,
+      "end_tick": 1920,
+      "tempo_us_per_beat": 750000,
+      "bpm": 80.0,
+      "start_seconds": 1.0,
+      "end_seconds": 2.5,
+      "source_event": {
+        "track": 0,
+        "event_index": 1,
+        "tick": 960
+      }
+    }
+  ],
+  "tempo_boundary_continuity": {
+    "continuous": true,
+    "violations": []
+  },
+  "notes": [
+    {
+      "note_id": 1,
+      "port": 0,
+      "channel": 0,
+      "pitch": 60,
+      "velocity": 90,
+      "onset": {
+        "tick": 0,
+        "seconds": 0.0,
+        "event": {
+          "track": 1,
+          "event_index": 1,
+          "tick": 0
+        }
+      },
+      "key_release": {
+        "tick": 480,
+        "seconds": 0.5,
+        "event": {
+          "track": 1,
+          "event_index": 5,
+          "tick": 480
+        }
+      },
+      "sound_end": {
+        "tick": 1200,
+        "seconds": 1.375,
+        "event": {
+          "track": 2,
+          "event_index": 6,
+          "tick": 1200
+        },
+        "stop_cause": "sustain_up",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": true,
+        "sostenuto_captured_ever": true
+      }
+    },
+    {
+      "note_id": 2,
+      "port": 0,
+      "channel": 0,
+      "pitch": 62,
+      "velocity": 75,
+      "onset": {
+        "tick": 120,
+        "seconds": 0.125,
+        "event": {
+          "track": 2,
+          "event_index": 1,
+          "tick": 120
+        }
+      },
+      "key_release": {
+        "tick": 650,
+        "seconds": 0.6770833333333334,
+        "event": {
+          "track": 2,
+          "event_index": 4,
+          "tick": 650
+        }
+      },
+      "sound_end": {
+        "tick": 1200,
+        "seconds": 1.375,
+        "event": {
+          "track": 2,
+          "event_index": 6,
+          "tick": 1200
+        },
+        "stop_cause": "sustain_up",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": true,
+        "sostenuto_captured_ever": true
+      }
+    },
+    {
+      "note_id": 3,
+      "port": 0,
+      "channel": 0,
+      "pitch": 64,
+      "velocity": 80,
+      "onset": {
+        "tick": 240,
+        "seconds": 0.25,
+        "event": {
+          "track": 1,
+          "event_index": 2,
+          "tick": 240
+        }
+      },
+      "key_release": {
+        "tick": 720,
+        "seconds": 0.75,
+        "event": {
+          "track": 1,
+          "event_index": 6,
+          "tick": 720
+        }
+      },
+      "sound_end": {
+        "tick": 1200,
+        "seconds": 1.375,
+        "event": {
+          "track": 2,
+          "event_index": 6,
+          "tick": 1200
+        },
+        "stop_cause": "sustain_up",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": true,
+        "sostenuto_captured_ever": true
+      }
+    },
+    {
+      "note_id": 4,
+      "port": 0,
+      "channel": 0,
+      "pitch": 69,
+      "velocity": 70,
+      "onset": {
+        "tick": 400,
+        "seconds": 0.4166666666666667,
+        "event": {
+          "track": 1,
+          "event_index": 3,
+          "tick": 400
+        }
+      },
+      "key_release": {
+        "tick": 440,
+        "seconds": 0.4583333333333333,
+        "event": {
+          "track": 1,
+          "event_index": 4,
+          "tick": 440
+        }
+      },
+      "sound_end": {
+        "tick": 440,
+        "seconds": 0.4583333333333333,
+        "event": {
+          "track": 1,
+          "event_index": 4,
+          "tick": 440
+        },
+        "stop_cause": "key_release",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": false,
+        "sostenuto_captured_ever": false
+      }
+    },
+    {
+      "note_id": 5,
+      "port": 0,
+      "channel": 0,
+      "pitch": 67,
+      "velocity": 70,
+      "onset": {
+        "tick": 800,
+        "seconds": 0.8333333333333334,
+        "event": {
+          "track": 1,
+          "event_index": 7,
+          "tick": 800
+        }
+      },
+      "key_release": {
+        "tick": 900,
+        "seconds": 0.9375,
+        "event": {
+          "track": 1,
+          "event_index": 8,
+          "tick": 900
+        }
+      },
+      "sound_end": {
+        "tick": 1200,
+        "seconds": 1.375,
+        "event": {
+          "track": 2,
+          "event_index": 6,
+          "tick": 1200
+        },
+        "stop_cause": "sustain_up",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": true,
+        "sostenuto_captured_ever": false
+      }
+    },
+    {
+      "note_id": 6,
+      "port": 0,
+      "channel": 0,
+      "pitch": 60,
+      "velocity": 88,
+      "onset": {
+        "tick": 1300,
+        "seconds": 1.53125,
+        "event": {
+          "track": 1,
+          "event_index": 9,
+          "tick": 1300
+        }
+      },
+      "key_release": {
+        "tick": 1400,
+        "seconds": 1.6875,
+        "event": {
+          "track": 1,
+          "event_index": 11,
+          "tick": 1400
+        }
+      },
+      "sound_end": {
+        "tick": 1400,
+        "seconds": 1.6875,
+        "event": {
+          "track": 1,
+          "event_index": 11,
+          "tick": 1400
+        },
+        "stop_cause": "key_release",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": false,
+        "sostenuto_captured_ever": false
+      }
+    },
+    {
+      "note_id": 7,
+      "port": 0,
+      "channel": 0,
+      "pitch": 60,
+      "velocity": 77,
+      "onset": {
+        "tick": 1340,
+        "seconds": 1.59375,
+        "event": {
+          "track": 1,
+          "event_index": 10,
+          "tick": 1340
+        }
+      },
+      "key_release": {
+        "tick": 1450,
+        "seconds": 1.765625,
+        "event": {
+          "track": 1,
+          "event_index": 12,
+          "tick": 1450
+        }
+      },
+      "sound_end": {
+        "tick": 1450,
+        "seconds": 1.765625,
+        "event": {
+          "track": 1,
+          "event_index": 12,
+          "tick": 1450
+        },
+        "stop_cause": "key_release",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": false,
+        "sostenuto_captured_ever": false
+      }
+    },
+    {
+      "note_id": 8,
+      "port": 0,
+      "channel": 1,
+      "pitch": 65,
+      "velocity": 80,
+      "onset": {
+        "tick": 1340,
+        "seconds": 1.59375,
+        "event": {
+          "track": 2,
+          "event_index": 7,
+          "tick": 1340
+        }
+      },
+      "key_release": {
+        "tick": 1400,
+        "seconds": 1.6875,
+        "event": {
+          "track": 2,
+          "event_index": 8,
+          "tick": 1400
+        }
+      },
+      "sound_end": {
+        "tick": 1400,
+        "seconds": 1.6875,
+        "event": {
+          "track": 2,
+          "event_index": 8,
+          "tick": 1400
+        },
+        "stop_cause": "key_release",
+        "truncated": false
+      },
+      "holds": {
+        "sustain_held_ever": false,
+        "sostenuto_captured_ever": false
+      }
+    },
+    {
+      "note_id": 9,
+      "port": 0,
+      "channel": 0,
+      "pitch": 72,
+      "velocity": 60,
+      "onset": {
+        "tick": 1500,
+        "seconds": 1.84375,
+        "event": {
+          "track": 1,
+          "event_index": 13,
+          "tick": 1500
+        }
+      },
+      "key_release": {
+        "tick": null,
+        "seconds": null,
+        "event": null
+      },
+      "sound_end": {
+        "tick": 1920,
+        "seconds": 2.5,
+        "event": {
+          "track": 2,
+          "event_index": 9,
+          "tick": 1920
+        },
+        "stop_cause": "eof_truncated",
+        "truncated": true
+      },
+      "holds": {
+        "sustain_held_ever": false,
+        "sostenuto_captured_ever": false
+      }
+    }
+  ],
+  "pedal_events": [
+    {
+      "ref": {
+        "track": 2,
+        "event_index": 2,
+        "tick": 360
+      },
+      "port": 0,
+      "channel": 0,
+      "pedal": "sostenuto",
+      "control": 66,
+      "value": 127,
+      "transition": "down",
+      "stopped_note_ids": [],
+      "captured_note_ids": [
+        1,
+        2,
+        3
+      ],
+      "tick": 360,
+      "seconds": 0.375,
+      "event": {
+        "track": 2,
+        "event_index": 2,
+        "tick": 360
+      },
+      "seconds_display": 0.375
+    },
+    {
+      "ref": {
+        "track": 2,
+        "event_index": 3,
+        "tick": 600
+      },
+      "port": 0,
+      "channel": 0,
+      "pedal": "sustain",
+      "control": 64,
+      "value": 127,
+      "transition": "down",
+      "stopped_note_ids": [],
+      "captured_note_ids": [],
+      "tick": 600,
+      "seconds": 0.625,
+      "event": {
+        "track": 2,
+        "event_index": 3,
+        "tick": 600
+      },
+      "seconds_display": 0.625
+    },
+    {
+      "ref": {
+        "track": 2,
+        "event_index": 5,
+        "tick": 1000
+      },
+      "port": 0,
+      "channel": 0,
+      "pedal": "sostenuto",
+      "control": 66,
+      "value": 0,
+      "transition": "up",
+      "stopped_note_ids": [],
+      "captured_note_ids": [],
+      "tick": 1000,
+      "seconds": 1.0625,
+      "event": {
+        "track": 2,
+        "event_index": 5,
+        "tick": 1000
+      },
+      "seconds_display": 1.0625
+    },
+    {
+      "ref": {
+        "track": 2,
+        "event_index": 6,
+        "tick": 1200
+      },
+      "port": 0,
+      "channel": 0,
+      "pedal": "sustain",
+      "control": 64,
+      "value": 0,
+      "transition": "up",
+      "stopped_note_ids": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "captured_note_ids": [],
+      "tick": 1200,
+      "seconds": 1.375,
+      "event": {
+        "track": 2,
+        "event_index": 6,
+        "tick": 1200
+      },
+      "seconds_display": 1.375
+    }
+  ],
+  "diagnostics": [
+    {
+      "code": "unmatched_release",
+      "tick": 1550,
+      "message": "松键事件找不到尚按下的匹配实例 (port=0, ch=0, pitch=50)，仅诊断，不伪造音符",
+      "track": 1,
+      "event_index": 14,
+      "port": 0,
+      "channel": 0,
+      "note": 50,
+      "detail": {}
+    },
+    {
+      "code": "eof_still_sounding",
+      "tick": 1920,
+      "message": "音符到全曲末 tick 1920 仍未止音，按计划截断（非正常释放）: note_id=9, pitch=72",
+      "track": null,
+      "event_index": null,
+      "port": 0,
+      "channel": 0,
+      "note": 72,
+      "detail": {
+        "note_id": 9
+      }
+    }
+  ],
+  "event_stream": [
+    {
+      "tick": 0,
+      "seconds": 0.0,
+      "track": 0,
+      "event_index": 0,
+      "kind": "set_tempo",
+      "port": null,
+      "channel": null,
+      "note": null,
+      "velocity": null,
+      "control": null,
+      "value": null,
+      "tempo_us": 500000,
+      "raw_type": "set_tempo"
+    },
+    {
+      "tick": 0,
+      "seconds": 0.0,
+      "track": 1,
+      "event_index": 0,
+      "kind": "midi_port",
+      "port": 0,
+      "channel": null,
+      "note": null,
+      "velocity": null,
+      "control": null,
+      "value": 0,
+      "tempo_us": null,
+      "raw_type": "midi_port"
+    },
+    {
+      "tick": 0,
+      "seconds": 0.0,
+      "track": 1,
+      "event_index": 1,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 60,
+      "velocity": 90,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 0,
+      "seconds": 0.0,
+      "track": 2,
+      "event_index": 0,
+      "kind": "midi_port",
+      "port": 0,
+      "channel": null,
+      "note": null,
+      "velocity": null,
+      "control": null,
+      "value": 0,
+      "tempo_us": null,
+      "raw_type": "midi_port"
+    },
+    {
+      "tick": 120,
+      "seconds": 0.125,
+      "track": 2,
+      "event_index": 1,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 62,
+      "velocity": 75,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 240,
+      "seconds": 0.25,
+      "track": 1,
+      "event_index": 2,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 64,
+      "velocity": 80,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 360,
+      "seconds": 0.375,
+      "track": 2,
+      "event_index": 2,
+      "kind": "cc66_sostenuto",
+      "port": 0,
+      "channel": 0,
+      "note": null,
+      "velocity": null,
+      "control": 66,
+      "value": 127,
+      "tempo_us": null,
+      "raw_type": "control_change"
+    },
+    {
+      "tick": 400,
+      "seconds": 0.4166666666666667,
+      "track": 1,
+      "event_index": 3,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 69,
+      "velocity": 70,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 440,
+      "seconds": 0.4583333333333333,
+      "track": 1,
+      "event_index": 4,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 0,
+      "note": 69,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    },
+    {
+      "tick": 480,
+      "seconds": 0.5,
+      "track": 1,
+      "event_index": 5,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 0,
+      "note": 60,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    },
+    {
+      "tick": 600,
+      "seconds": 0.625,
+      "track": 2,
+      "event_index": 3,
+      "kind": "cc64_sustain",
+      "port": 0,
+      "channel": 0,
+      "note": null,
+      "velocity": null,
+      "control": 64,
+      "value": 127,
+      "tempo_us": null,
+      "raw_type": "control_change"
+    },
+    {
+      "tick": 650,
+      "seconds": 0.6770833333333334,
+      "track": 2,
+      "event_index": 4,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 0,
+      "note": 62,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    },
+    {
+      "tick": 720,
+      "seconds": 0.75,
+      "track": 1,
+      "event_index": 6,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 64,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 800,
+      "seconds": 0.8333333333333334,
+      "track": 1,
+      "event_index": 7,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 67,
+      "velocity": 70,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 900,
+      "seconds": 0.9375,
+      "track": 1,
+      "event_index": 8,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 0,
+      "note": 67,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    },
+    {
+      "tick": 960,
+      "seconds": 1.0,
+      "track": 0,
+      "event_index": 1,
+      "kind": "set_tempo",
+      "port": null,
+      "channel": null,
+      "note": null,
+      "velocity": null,
+      "control": null,
+      "value": null,
+      "tempo_us": 750000,
+      "raw_type": "set_tempo"
+    },
+    {
+      "tick": 1000,
+      "seconds": 1.0625,
+      "track": 2,
+      "event_index": 5,
+      "kind": "cc66_sostenuto",
+      "port": 0,
+      "channel": 0,
+      "note": null,
+      "velocity": null,
+      "control": 66,
+      "value": 0,
+      "tempo_us": null,
+      "raw_type": "control_change"
+    },
+    {
+      "tick": 1200,
+      "seconds": 1.375,
+      "track": 2,
+      "event_index": 6,
+      "kind": "cc64_sustain",
+      "port": 0,
+      "channel": 0,
+      "note": null,
+      "velocity": null,
+      "control": 64,
+      "value": 0,
+      "tempo_us": null,
+      "raw_type": "control_change"
+    },
+    {
+      "tick": 1300,
+      "seconds": 1.53125,
+      "track": 1,
+      "event_index": 9,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 60,
+      "velocity": 88,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 1340,
+      "seconds": 1.59375,
+      "track": 1,
+      "event_index": 10,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 60,
+      "velocity": 77,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 1340,
+      "seconds": 1.59375,
+      "track": 2,
+      "event_index": 7,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 1,
+      "note": 65,
+      "velocity": 80,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 1400,
+      "seconds": 1.6875,
+      "track": 1,
+      "event_index": 11,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 0,
+      "note": 60,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    },
+    {
+      "tick": 1400,
+      "seconds": 1.6875,
+      "track": 2,
+      "event_index": 8,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 1,
+      "note": 65,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    },
+    {
+      "tick": 1450,
+      "seconds": 1.765625,
+      "track": 1,
+      "event_index": 12,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 0,
+      "note": 60,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    },
+    {
+      "tick": 1500,
+      "seconds": 1.84375,
+      "track": 1,
+      "event_index": 13,
+      "kind": "note_on",
+      "port": 0,
+      "channel": 0,
+      "note": 72,
+      "velocity": 60,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_on"
+    },
+    {
+      "tick": 1550,
+      "seconds": 1.921875,
+      "track": 1,
+      "event_index": 14,
+      "kind": "note_off",
+      "port": 0,
+      "channel": 0,
+      "note": 50,
+      "velocity": 0,
+      "control": null,
+      "value": null,
+      "tempo_us": null,
+      "raw_type": "note_off"
+    }
+  ],
+  "summary": {
+    "track_count": 3,
+    "note_count": 9,
+    "truncated_notes": 1,
+    "pedal_event_count": 4,
+    "diagnostic_counts": {
+      "tempo_conflict": 0,
+      "unmatched_release": 1,
+      "eof_still_sounding": 1,
+      "zero_length_note": 0
+    }
+  }
+}

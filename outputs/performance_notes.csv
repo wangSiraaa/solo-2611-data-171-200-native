@@ -1,0 +1,10 @@
+note_id,port,channel,pitch,velocity,onset_tick,onset_seconds,key_release_tick,key_release_seconds,sound_end_tick,sound_end_seconds,stop_cause,truncated,onset_event,key_release_event,sound_end_event
+1,0,0,60,90,0,0.0,480,0.5,1200,1.375,sustain_up,False,t1e1@0,t1e5@480,t2e6@1200
+2,0,0,62,75,120,0.125,650,0.677083,1200,1.375,sustain_up,False,t2e1@120,t2e4@650,t2e6@1200
+3,0,0,64,80,240,0.25,720,0.75,1200,1.375,sustain_up,False,t1e2@240,t1e6@720,t2e6@1200
+4,0,0,69,70,400,0.416667,440,0.458333,440,0.458333,key_release,False,t1e3@400,t1e4@440,t1e4@440
+5,0,0,67,70,800,0.833333,900,0.9375,1200,1.375,sustain_up,False,t1e7@800,t1e8@900,t2e6@1200
+6,0,0,60,88,1300,1.53125,1400,1.6875,1400,1.6875,key_release,False,t1e9@1300,t1e11@1400,t1e11@1400
+7,0,0,60,77,1340,1.59375,1450,1.765625,1450,1.765625,key_release,False,t1e10@1340,t1e12@1450,t1e12@1450
+8,0,1,65,80,1340,1.59375,1400,1.6875,1400,1.6875,key_release,False,t2e7@1340,t2e8@1400,t2e8@1400
+9,0,0,72,60,1500,1.84375,,,1920,2.5,eof_truncated,True,t1e13@1500,,t2e9@1920
