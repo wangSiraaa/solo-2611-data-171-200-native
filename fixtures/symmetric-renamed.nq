@@ -1,0 +1,6 @@
+_:q4 <https://example.invalid/next> _:q3 .
+_:q1 <https://example.invalid/next> _:q4 .
+_:q2 <https://example.invalid/next> _:q1 .
+_:q5 <https://example.invalid/next> _:q2 .
+_:q0 <https://example.invalid/next> _:q5 .
+_:q3 <https://example.invalid/next> _:q0 .

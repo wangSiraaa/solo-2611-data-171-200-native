@@ -1,0 +1,6 @@
+_:v0 <https://example.invalid/next> _:v1 .
+_:v1 <https://example.invalid/next> _:v2 .
+_:v2 <https://example.invalid/next> _:v0 .
+_:v3 <https://example.invalid/next> _:v4 .
+_:v4 <https://example.invalid/next> _:v5 .
+_:v5 <https://example.invalid/next> _:v3 .

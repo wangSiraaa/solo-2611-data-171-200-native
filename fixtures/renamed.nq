@@ -1,0 +1,10 @@
+_:gg <https://example.invalid/name> "source" .
+_:a1 <https://example.invalid/peer> _:b99 _:gg .
+_:b99 <https://example.invalid/peer> _:a1 _:gg .
+_:a1 <https://example.invalid/label> "é\n样本"@zh-cn <https://example.invalid/g> .
+_:b99 <https://example.invalid/label> "é\n样本"@zh-cn <https://example.invalid/g> .
+_:a1 <https://example.invalid/code> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:b99 <https://example.invalid/code> "01"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:z9 <https://example.invalid/child> _:a1 .
+_:z9 <https://example.invalid/child> _:b99 .
+<https://example.invalid/dataset> <https://example.invalid/has> _:z9 .

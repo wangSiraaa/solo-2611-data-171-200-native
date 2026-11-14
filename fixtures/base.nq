@@ -1,0 +1,11 @@
+<https://example.invalid/dataset> <https://example.invalid/has> _:root .
+_:root <https://example.invalid/child> _:left .
+_:root <https://example.invalid/child> _:right .
+_:left <https://example.invalid/code> "01"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:right <https://example.invalid/code> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:left <https://example.invalid/label> "é\n样本"@ZH-cn <https://example.invalid/g> .
+_:right <https://example.invalid/label> "é\n样本"@zh-CN <https://example.invalid/g> .
+_:left <https://example.invalid/peer> _:right _:graph .
+_:right <https://example.invalid/peer> _:left _:graph .
+_:graph <https://example.invalid/name> "source" .
+_:root <https://example.invalid/child> _:left .

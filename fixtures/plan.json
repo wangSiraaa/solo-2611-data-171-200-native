@@ -1,0 +1,6 @@
+{
+  "max_blank_nodes": 8,
+  "max_quads": 60,
+  "literal_identity": "lexical form + datatype + lower-case language; no numeric value normalization",
+  "plain_string_datatype": "http://www.w3.org/2001/XMLSchema#string"
+}
