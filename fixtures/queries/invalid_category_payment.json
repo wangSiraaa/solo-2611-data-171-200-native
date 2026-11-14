@@ -1,0 +1,10 @@
+{
+  "dimensions": [
+    "category"
+  ],
+  "metrics": [
+    "sales",
+    "received"
+  ],
+  "filters": []
+}

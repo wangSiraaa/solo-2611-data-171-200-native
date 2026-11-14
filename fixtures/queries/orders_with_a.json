@@ -1,0 +1,19 @@
+{
+  "dimensions": [
+    "region"
+  ],
+  "metrics": [
+    "booked",
+    "sales",
+    "received"
+  ],
+  "filters": [
+    {
+      "scope": "entity_exists",
+      "fact": "lines",
+      "dimension": "category",
+      "op": "eq",
+      "value": "A"
+    }
+  ]
+}

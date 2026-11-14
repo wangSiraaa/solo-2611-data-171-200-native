@@ -1,0 +1,27 @@
+{
+  "dimensions": [
+    "region",
+    "day"
+  ],
+  "metrics": [
+    "sales",
+    "received",
+    "paid_ratio"
+  ],
+  "filters": [
+    {
+      "scope": "entity_exists",
+      "fact": "lines",
+      "dimension": "category",
+      "op": "eq",
+      "value": "A"
+    },
+    {
+      "scope": "local",
+      "fact": "payments",
+      "dimension": "method",
+      "op": "eq",
+      "value": "bank"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dimensions": [
+    "region"
+  ],
+  "metrics": [
+    "booked",
+    "sales",
+    "received",
+    "order_count",
+    "paid_ratio"
+  ],
+  "filters": []
+}

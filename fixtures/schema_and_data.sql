@@ -1,0 +1,11 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE customers(customer_id TEXT PRIMARY KEY,region TEXT NOT NULL);
+CREATE TABLE products(product_id TEXT PRIMARY KEY,category TEXT NOT NULL);
+CREATE TABLE orders(order_id TEXT PRIMARY KEY,customer_id TEXT NOT NULL REFERENCES customers,order_date TEXT NOT NULL,order_amount INTEGER NOT NULL);
+CREATE TABLE lines(line_id TEXT PRIMARY KEY,order_id TEXT NOT NULL REFERENCES orders,product_id TEXT NOT NULL REFERENCES products,quantity INTEGER NOT NULL,line_amount INTEGER NOT NULL);
+CREATE TABLE payments(payment_id TEXT PRIMARY KEY,order_id TEXT NOT NULL REFERENCES orders,method TEXT NOT NULL,paid_amount INTEGER NOT NULL);
+INSERT INTO customers VALUES ('C1','north'),('C2','south'),('C3','north');
+INSERT INTO products VALUES ('P1','A'),('P2','B'),('P3','A');
+INSERT INTO orders VALUES ('O1','C1','2026-01-01',10000),('O2','C1','2026-01-02',8000),('O3','C2','2026-01-01',15000),('O4','C3','2026-01-03',0),('O5','C2','2026-01-03',5000);
+INSERT INTO lines VALUES ('L1','O1','P1',1,6000),('L2','O1','P2',2,4000),('L3','O2','P3',2,8000),('L4','O3','P2',3,15000),('L5','O4','P1',0,0),('L6','O5','P1',1,5000);
+INSERT INTO payments VALUES ('T1','O1','card',4000),('T2','O1','bank',6000),('T3','O3','card',10000),('T4','O3','bank',5000),('T5','O4','card',0),('T6','O5','bank',3000);

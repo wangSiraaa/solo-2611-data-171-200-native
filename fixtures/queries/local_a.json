@@ -1,0 +1,18 @@
+{
+  "dimensions": [
+    "region"
+  ],
+  "metrics": [
+    "sales",
+    "received"
+  ],
+  "filters": [
+    {
+      "scope": "local",
+      "fact": "lines",
+      "dimension": "category",
+      "op": "eq",
+      "value": "A"
+    }
+  ]
+}
