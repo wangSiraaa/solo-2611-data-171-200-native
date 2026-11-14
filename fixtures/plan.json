@@ -1,0 +1,19 @@
+{
+  "allowed_highways": [
+    "residential",
+    "service",
+    "primary"
+  ],
+  "roundabout_default_oneway": true,
+  "u_turn_default": "allowed unless no_u_turn relation",
+  "restriction_types": [
+    "no_left_turn",
+    "no_right_turn",
+    "no_straight_on",
+    "no_u_turn",
+    "only_left_turn",
+    "only_right_turn",
+    "only_straight_on"
+  ],
+  "earth_radius_m": 6371008.8
+}
