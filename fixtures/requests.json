@@ -1,0 +1,21 @@
+[
+  {
+    "case_id": "late_extra",
+    "requirements": [
+      "data-app==1.0"
+    ]
+  },
+  {
+    "case_id": "impossible",
+    "requirements": [
+      "data-app==1.0",
+      "value-core>=2"
+    ]
+  },
+  {
+    "case_id": "charts_direct",
+    "requirements": [
+      "view-lib[charts]>=1,<3"
+    ]
+  }
+]

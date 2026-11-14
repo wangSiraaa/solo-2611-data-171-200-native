@@ -1,0 +1,8 @@
+{
+  "one_version_per_normalized_name": true,
+  "candidate_selection": "deterministic feasible solution; no requirement to globally maximize versions",
+  "metadata": "Requires-Python, Requires-Dist version specifiers, environment markers and extras; every extra requested by any selected parent is activated until closure",
+  "only": "pure Python py3-none-any wheels in the supplied directory",
+  "reject": "direct URLs, editable/source distributions, malformed conflicting metadata, hash mismatch",
+  "lock": "selected file SHA256, normalized name/version, active extras and reason edges; installation uses no dependency resolution"
+}

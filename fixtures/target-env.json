@@ -1,0 +1,13 @@
+{
+  "implementation_name": "cpython",
+  "implementation_version": "3.11.0",
+  "os_name": "posix",
+  "platform_machine": "x86_64",
+  "platform_release": "",
+  "platform_system": "Linux",
+  "platform_version": "",
+  "python_full_version": "3.11.0",
+  "platform_python_implementation": "CPython",
+  "python_version": "3.11",
+  "sys_platform": "linux"
+}
