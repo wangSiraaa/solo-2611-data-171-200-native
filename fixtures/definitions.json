@@ -1,0 +1,189 @@
+{
+  "product": {
+    "kind": "assembly",
+    "children": [
+      {
+        "id": "left",
+        "ref": "module",
+        "qty": 1,
+        "overrides": {
+          "finish": "steel"
+        }
+      },
+      {
+        "id": "right",
+        "ref": "module",
+        "qty": 2,
+        "overrides": {
+          "finish": "painted"
+        }
+      },
+      {
+        "id": "service",
+        "ref": "service",
+        "qty": 1,
+        "when": {
+          "eq": [
+            {
+              "option": "service"
+            },
+            true
+          ]
+        }
+      }
+    ]
+  },
+  "module": {
+    "kind": "assembly",
+    "children": [
+      {
+        "id": "frame",
+        "ref": "frame",
+        "qty": 1
+      },
+      {
+        "id": "drive",
+        "ref": "drive",
+        "qty": 1
+      },
+      {
+        "id": "turbo",
+        "ref": "turbo",
+        "qty": 1,
+        "when": {
+          "eq": [
+            {
+              "option": "turbo"
+            },
+            true
+          ]
+        }
+      }
+    ]
+  },
+  "frame": {
+    "kind": "assembly",
+    "children": [
+      {
+        "id": "shell",
+        "ref": "shell",
+        "qty": 1
+      },
+      {
+        "id": "coat",
+        "ref": "coat",
+        "qty": 2,
+        "when": {
+          "eq": [
+            {
+              "option": "finish"
+            },
+            "painted"
+          ]
+        }
+      }
+    ]
+  },
+  "drive": {
+    "kind": "assembly",
+    "children": [
+      {
+        "id": "motor_a",
+        "ref": "motor_a",
+        "qty": 1,
+        "when": {
+          "eq": [
+            {
+              "option": "interface"
+            },
+            "A"
+          ]
+        }
+      },
+      {
+        "id": "motor_b",
+        "ref": "motor_b",
+        "qty": 1,
+        "when": {
+          "eq": [
+            {
+              "option": "interface"
+            },
+            "B"
+          ]
+        }
+      },
+      {
+        "id": "bolt",
+        "ref": "bolt",
+        "qty": 4
+      }
+    ]
+  },
+  "turbo": {
+    "kind": "assembly",
+    "children": [
+      {
+        "id": "rotor",
+        "ref": "rotor",
+        "qty": 1
+      },
+      {
+        "id": "bolt",
+        "ref": "bolt",
+        "qty": 2
+      }
+    ]
+  },
+  "service": {
+    "kind": "assembly",
+    "children": [
+      {
+        "id": "kit",
+        "ref": "service_kit",
+        "qty": 1
+      },
+      {
+        "id": "again",
+        "ref": "service",
+        "qty": 1,
+        "when": {
+          "eq": [
+            {
+              "option": "recursive_service"
+            },
+            true
+          ]
+        }
+      }
+    ]
+  },
+  "shell": {
+    "kind": "part",
+    "unit": "piece"
+  },
+  "coat": {
+    "kind": "part",
+    "unit": "piece"
+  },
+  "motor_a": {
+    "kind": "part",
+    "unit": "piece"
+  },
+  "motor_b": {
+    "kind": "part",
+    "unit": "piece"
+  },
+  "bolt": {
+    "kind": "part",
+    "unit": "piece"
+  },
+  "rotor": {
+    "kind": "part",
+    "unit": "piece"
+  },
+  "service_kit": {
+    "kind": "part",
+    "unit": "piece"
+  }
+}

@@ -1,0 +1,7 @@
+# 有限配置语义
+
+条件只有 eq、all、any、not；option读取当前发生的有效选项，未赋值为unknown；布尔逻辑使用三值强Kleene规则。没有when表示true。root选项→祖先继承→边overrides→该路径instance_overrides依次覆盖；选项覆盖是常量，不支持表达式。每条边qty是正整数。
+
+约束路径按root与边id用点连接。equal_options比较两处有效值；not_both_true禁止两处都为true。引用路径未发生或该值未知时约束为未决。false与unknown都阻止最终声明完整可制造，但已确定的发生与物料仍应导出并标为partial。
+
+环是在当前活动祖先链重复出现相同定义和有效选项状态；全局复用不是环。条件不确定的边不实际递归，但必须记缺口。实例覆盖只应用于精确给出的路径及其子代继承，不是通配符。

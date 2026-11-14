@@ -1,0 +1,11 @@
+{
+  "root_definition": "product",
+  "root_id": "root",
+  "options": {
+    "interface": "A",
+    "finish": "steel",
+    "service": false,
+    "recursive_service": false
+  },
+  "instance_overrides": {}
+}

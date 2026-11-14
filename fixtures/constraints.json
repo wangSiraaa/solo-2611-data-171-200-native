@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ports_match",
+    "op": "equal_options",
+    "left": {
+      "path": "root.left.drive",
+      "option": "interface"
+    },
+    "right": {
+      "path": "root.right.drive",
+      "option": "interface"
+    }
+  },
+  {
+    "id": "not_both_turbo",
+    "op": "not_both_true",
+    "left": {
+      "path": "root.left",
+      "option": "turbo"
+    },
+    "right": {
+      "path": "root.right",
+      "option": "turbo"
+    }
+  }
+]
