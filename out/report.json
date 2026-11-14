@@ -1,0 +1,196 @@
+{
+ "verdict": "pass",
+ "tolerances": {
+  "numeric_tolerance_m": 1e-08,
+  "area_tolerance_m2": 1e-07,
+  "node_quantisation": "1e-9",
+  "error_metric": "symmetric Hausdorff, vertices + 16 samples/segment, both directions, original arc vs result arc",
+  "buffers_used": "none -- all comparisons are exact segment-set equality or distances against the stated tolerances"
+ },
+ "counts": {
+  "input": {
+   "regions": 6,
+   "vertices_as_stored": 56,
+   "unique_nodes": 34,
+   "shared_arcs": 9
+  },
+  "output": {
+   "regions": 6,
+   "vertices_as_stored": 36,
+   "unique_nodes": 20,
+   "shared_arcs": 9
+  }
+ },
+ "checks": [
+  {
+   "name": "C1 region ids and count",
+   "status": "pass",
+   "detail": "input=['A', 'B', 'C', 'D', 'E', 'F'] output=['A', 'B', 'C', 'D', 'E', 'F']"
+  },
+  {
+   "name": "C2 output polygons valid, positive area, hole counts preserved",
+   "status": "pass",
+   "detail": "all valid"
+  },
+  {
+   "name": "C3 adjacency relation preserved",
+   "status": "pass",
+   "detail": "pairs=A|B,A|D,B|C,B|D,B|E,C|E,C|F,D|E,E|F"
+  },
+  {
+   "name": "C4 point-contact relation preserved",
+   "status": "pass",
+   "detail": "0 contact pair(s)"
+  },
+  {
+   "name": "C5 junction/T nodes fixed",
+   "status": "pass",
+   "detail": "10 junction nodes"
+  },
+  {
+   "name": "C6 outer domain boundary unchanged (exact segments)",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "name": "C7 protected hole boundaries unchanged (exact segments)",
+   "status": "pass",
+   "detail": "1 hole loop(s)"
+  },
+  {
+   "name": "C8 shared boundaries consistent (no cracks/overlaps along edges)",
+   "status": "pass",
+   "detail": "every interior edge has exactly 2 opposite uses"
+  },
+  {
+   "name": "C9 no new intersections between arcs",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "name": "C10 domain coverage and internal non-overlap",
+   "status": "pass",
+   "detail": "symmetric difference=0 m^2, internal overlap=0 m^2 (limit 1e-07)"
+  },
+  {
+   "name": "C11 per-arc symmetric Hausdorff within plan tolerance",
+   "status": "pass",
+   "detail": "9 shared arcs checked"
+  },
+  {
+   "name": "C12 matches protected.geojson (outer + holes, exact point sets)",
+   "status": "pass",
+   "detail": ""
+  }
+ ],
+ "arc_errors": [
+  {
+   "arc": "A|B",
+   "faces": [
+    "A",
+    "B"
+   ],
+   "symmetric_hausdorff_m": 0.5,
+   "limit_m": 5.0,
+   "n_vertices_in": 9,
+   "n_vertices_out": 2,
+   "status": "pass"
+  },
+  {
+   "arc": "A|D",
+   "faces": [
+    "A",
+    "D"
+   ],
+   "symmetric_hausdorff_m": 0.0,
+   "limit_m": 5.0,
+   "n_vertices_in": 2,
+   "n_vertices_out": 2,
+   "status": "pass"
+  },
+  {
+   "arc": "B|C",
+   "faces": [
+    "B",
+    "C"
+   ],
+   "symmetric_hausdorff_m": 2.1150719637318973,
+   "limit_m": 5.0,
+   "n_vertices_in": 5,
+   "n_vertices_out": 4,
+   "status": "pass"
+  },
+  {
+   "arc": "B|D",
+   "faces": [
+    "B",
+    "D"
+   ],
+   "symmetric_hausdorff_m": 0.0,
+   "limit_m": 5.0,
+   "n_vertices_in": 2,
+   "n_vertices_out": 2,
+   "status": "pass"
+  },
+  {
+   "arc": "B|E",
+   "faces": [
+    "B",
+    "E"
+   ],
+   "symmetric_hausdorff_m": 0.0,
+   "limit_m": 5.0,
+   "n_vertices_in": 2,
+   "n_vertices_out": 2,
+   "status": "pass"
+  },
+  {
+   "arc": "C|E",
+   "faces": [
+    "C",
+    "E"
+   ],
+   "symmetric_hausdorff_m": 0.0,
+   "limit_m": 5.0,
+   "n_vertices_in": 2,
+   "n_vertices_out": 2,
+   "status": "pass"
+  },
+  {
+   "arc": "C|F",
+   "faces": [
+    "C",
+    "F"
+   ],
+   "symmetric_hausdorff_m": 0.0,
+   "limit_m": 5.0,
+   "n_vertices_in": 2,
+   "n_vertices_out": 2,
+   "status": "pass"
+  },
+  {
+   "arc": "D|E",
+   "faces": [
+    "D",
+    "E"
+   ],
+   "symmetric_hausdorff_m": 0.3999999999999986,
+   "limit_m": 5.0,
+   "n_vertices_in": 5,
+   "n_vertices_out": 2,
+   "status": "pass"
+  },
+  {
+   "arc": "E|F",
+   "faces": [
+    "E",
+    "F"
+   ],
+   "symmetric_hausdorff_m": 0.20000000000000284,
+   "limit_m": 5.0,
+   "n_vertices_in": 5,
+   "n_vertices_out": 2,
+   "status": "pass"
+  }
+ ]
+}

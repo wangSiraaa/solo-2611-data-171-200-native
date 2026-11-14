@@ -1,0 +1,329 @@
+{
+ "input": "/workspace/fixtures/regions.geojson",
+ "plan": {
+  "crs": "synthetic planar metres",
+  "max_symmetric_hausdorff_m": 5.0,
+  "numeric_tolerance_m": 1e-08,
+  "area_tolerance_m2": 1e-07,
+  "fixed": [
+   "outer domain boundary",
+   "all original hole boundaries",
+   "shared arc junctions including degree>=3 nodes and point contacts"
+  ],
+  "topology": "preserve which region pairs share positive-length boundary and which only meet at points; no new intersections; preserve protected holes and region count",
+  "successful_reduction": "reduce at least one nonfixed redundant arc; no global optimum required",
+  "candidate_attempts": "record at least one nontrivial candidate and acceptance/rejection reason; if chosen strategy never creates an invalid candidate, demonstrate rejection with a separately proposed aggressive candidate",
+  "error": "symmetric Hausdorff between each original complete arc and corresponding simplified complete arc, not just retained vertices"
+ },
+ "totals": {
+  "vertices_input": 56,
+  "vertices_output": 36,
+  "unique_nodes_input": 34,
+  "unique_nodes_output": 20,
+  "shared_arcs": 9
+ },
+ "adjacency": [
+  "A|B",
+  "A|D",
+  "B|C",
+  "B|D",
+  "B|E",
+  "C|E",
+  "C|F",
+  "D|E",
+  "E|F"
+ ],
+ "point_contacts": [],
+ "boundary_loops": [
+  {
+   "kind": "outer",
+   "vertices": 10,
+   "fixed": true
+  },
+  {
+   "kind": "hole",
+   "vertices": 4,
+   "fixed": true
+  }
+ ],
+ "shared_arcs": [
+  {
+   "arc_id": "A|B",
+   "faces": [
+    "A",
+    "B"
+   ],
+   "left_face": "A",
+   "right_face": "B",
+   "traversal": {
+    "A": "forward",
+    "B": "reversed"
+   },
+   "start_node": [
+    40.0,
+    0.0
+   ],
+   "end_node": [
+    40.0,
+    40.0
+   ],
+   "n_vertices_orig": 9,
+   "tolerance": 5.0,
+   "attempts": [
+    {
+     "tolerance": 5.0,
+     "n_vertices": 2,
+     "result": "accepted"
+    }
+   ],
+   "status": "simplified",
+   "n_vertices_new": 2,
+   "error": 0.5
+  },
+  {
+   "arc_id": "B|C",
+   "faces": [
+    "B",
+    "C"
+   ],
+   "left_face": "B",
+   "right_face": "C",
+   "traversal": {
+    "B": "forward",
+    "C": "reversed"
+   },
+   "start_node": [
+    80.0,
+    0.0
+   ],
+   "end_node": [
+    80.0,
+    40.0
+   ],
+   "n_vertices_orig": 5,
+   "tolerance": 5.0,
+   "attempts": [
+    {
+     "tolerance": 5.0,
+     "n_vertices": 2,
+     "result": "rejected",
+     "reason": "swept region contains node (76.8,21.5); a hole/junction would change containing region"
+    },
+    {
+     "tolerance": 2.5,
+     "n_vertices": 4,
+     "result": "accepted"
+    }
+   ],
+   "status": "simplified",
+   "n_vertices_new": 4,
+   "error": 2.1150719637318973
+  },
+  {
+   "arc_id": "D|E",
+   "faces": [
+    "D",
+    "E"
+   ],
+   "left_face": "D",
+   "right_face": "E",
+   "traversal": {
+    "D": "forward",
+    "E": "reversed"
+   },
+   "start_node": [
+    50.0,
+    40.0
+   ],
+   "end_node": [
+    50.0,
+    80.0
+   ],
+   "n_vertices_orig": 5,
+   "tolerance": 5.0,
+   "attempts": [
+    {
+     "tolerance": 5.0,
+     "n_vertices": 2,
+     "result": "accepted"
+    }
+   ],
+   "status": "simplified",
+   "n_vertices_new": 2,
+   "error": 0.3999999999999986
+  },
+  {
+   "arc_id": "E|F",
+   "faces": [
+    "E",
+    "F"
+   ],
+   "left_face": "E",
+   "right_face": "F",
+   "traversal": {
+    "E": "forward",
+    "F": "reversed"
+   },
+   "start_node": [
+    90.0,
+    40.0
+   ],
+   "end_node": [
+    90.0,
+    80.0
+   ],
+   "n_vertices_orig": 5,
+   "tolerance": 5.0,
+   "attempts": [
+    {
+     "tolerance": 5.0,
+     "n_vertices": 2,
+     "result": "accepted"
+    }
+   ],
+   "status": "simplified",
+   "n_vertices_new": 2,
+   "error": 0.20000000000000284
+  },
+  {
+   "arc_id": "A|D",
+   "faces": [
+    "A",
+    "D"
+   ],
+   "left_face": "A",
+   "right_face": "D",
+   "traversal": {
+    "A": "forward",
+    "D": "reversed"
+   },
+   "start_node": [
+    40.0,
+    40.0
+   ],
+   "end_node": [
+    0.0,
+    40.0
+   ],
+   "n_vertices_orig": 2,
+   "tolerance": 5.0,
+   "attempts": [],
+   "status": "kept",
+   "reason": "already minimal (2 nodes)",
+   "n_vertices_new": 2,
+   "error": 0.0
+  },
+  {
+   "arc_id": "B|D",
+   "faces": [
+    "B",
+    "D"
+   ],
+   "left_face": "D",
+   "right_face": "B",
+   "traversal": {
+    "B": "reversed",
+    "D": "forward"
+   },
+   "start_node": [
+    40.0,
+    40.0
+   ],
+   "end_node": [
+    50.0,
+    40.0
+   ],
+   "n_vertices_orig": 2,
+   "tolerance": 5.0,
+   "attempts": [],
+   "status": "kept",
+   "reason": "already minimal (2 nodes)",
+   "n_vertices_new": 2,
+   "error": 0.0
+  },
+  {
+   "arc_id": "B|E",
+   "faces": [
+    "B",
+    "E"
+   ],
+   "left_face": "B",
+   "right_face": "E",
+   "traversal": {
+    "B": "forward",
+    "E": "reversed"
+   },
+   "start_node": [
+    80.0,
+    40.0
+   ],
+   "end_node": [
+    50.0,
+    40.0
+   ],
+   "n_vertices_orig": 2,
+   "tolerance": 5.0,
+   "attempts": [],
+   "status": "kept",
+   "reason": "already minimal (2 nodes)",
+   "n_vertices_new": 2,
+   "error": 0.0
+  },
+  {
+   "arc_id": "C|E",
+   "faces": [
+    "C",
+    "E"
+   ],
+   "left_face": "E",
+   "right_face": "C",
+   "traversal": {
+    "C": "reversed",
+    "E": "forward"
+   },
+   "start_node": [
+    80.0,
+    40.0
+   ],
+   "end_node": [
+    90.0,
+    40.0
+   ],
+   "n_vertices_orig": 2,
+   "tolerance": 5.0,
+   "attempts": [],
+   "status": "kept",
+   "reason": "already minimal (2 nodes)",
+   "n_vertices_new": 2,
+   "error": 0.0
+  },
+  {
+   "arc_id": "C|F",
+   "faces": [
+    "C",
+    "F"
+   ],
+   "left_face": "C",
+   "right_face": "F",
+   "traversal": {
+    "C": "forward",
+    "F": "reversed"
+   },
+   "start_node": [
+    120.0,
+    40.0
+   ],
+   "end_node": [
+    90.0,
+    40.0
+   ],
+   "n_vertices_orig": 2,
+   "tolerance": 5.0,
+   "attempts": [],
+   "status": "kept",
+   "reason": "already minimal (2 nodes)",
+   "n_vertices_new": 2,
+   "error": 0.0
+  }
+ ]
+}
