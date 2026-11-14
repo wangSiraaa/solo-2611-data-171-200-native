@@ -1,0 +1,15 @@
+{
+  "crs": "synthetic planar metres",
+  "max_symmetric_hausdorff_m": 5.0,
+  "numeric_tolerance_m": 1e-08,
+  "area_tolerance_m2": 1e-07,
+  "fixed": [
+    "outer domain boundary",
+    "all original hole boundaries",
+    "shared arc junctions including degree>=3 nodes and point contacts"
+  ],
+  "topology": "preserve which region pairs share positive-length boundary and which only meet at points; no new intersections; preserve protected holes and region count",
+  "successful_reduction": "reduce at least one nonfixed redundant arc; no global optimum required",
+  "candidate_attempts": "record at least one nontrivial candidate and acceptance/rejection reason; if chosen strategy never creates an invalid candidate, demonstrate rejection with a separately proposed aggressive candidate",
+  "error": "symmetric Hausdorff between each original complete arc and corresponding simplified complete arc, not just retained vertices"
+}
