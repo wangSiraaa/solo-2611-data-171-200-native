@@ -1,0 +1,13 @@
+{
+  "table": "window_events",
+  "identity": "event_id",
+  "types": {
+    "event_id": "integer",
+    "account": "text",
+    "tick": "integer nullable",
+    "amount": "integer nullable"
+  },
+  "scope": "single SELECT on this table, projection of event_id and supported window functions, optional named WINDOW; no JOIN/filter/grouping/subquery",
+  "frame": "explicit ROWS/GROUPS bounded or unbounded endpoints; single integer order key for offset RANGE; no EXCLUDE",
+  "order_qualification": "ROWS and FIRST/LAST value require declared ordering to determine needed within-peer position; report nondeterministic rather than inventing order"
+}

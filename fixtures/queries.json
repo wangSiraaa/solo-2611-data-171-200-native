@@ -1,0 +1,26 @@
+[
+  {
+    "query_id": "rows",
+    "sql": "SELECT event_id, SUM(amount) OVER w AS total, LAST_VALUE(amount) OVER w AS last_amount FROM window_events WINDOW base AS (PARTITION BY account ORDER BY tick NULLS LAST, event_id), w AS (base ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) ORDER BY event_id"
+  },
+  {
+    "query_id": "groups",
+    "sql": "SELECT event_id, SUM(amount) OVER (PARTITION BY account ORDER BY tick NULLS LAST GROUPS BETWEEN 1 PRECEDING AND CURRENT ROW) AS total FROM window_events ORDER BY event_id"
+  },
+  {
+    "query_id": "range",
+    "sql": "SELECT event_id, COUNT(amount) OVER (PARTITION BY account ORDER BY tick NULLS LAST RANGE BETWEEN 1 PRECEDING AND CURRENT ROW) AS n FROM window_events ORDER BY event_id"
+  },
+  {
+    "query_id": "empty",
+    "sql": "SELECT event_id, SUM(amount) OVER w AS total, COUNT(*) OVER w AS n FROM window_events WINDOW w AS (PARTITION BY account ORDER BY event_id ROWS BETWEEN 2 FOLLOWING AND 3 FOLLOWING) ORDER BY event_id"
+  },
+  {
+    "query_id": "first_last",
+    "sql": "SELECT event_id, FIRST_VALUE(amount) OVER w AS first_amount, LAST_VALUE(amount) OVER w AS last_amount FROM window_events WINDOW w AS (PARTITION BY account ORDER BY tick NULLS FIRST, event_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) ORDER BY event_id"
+  },
+  {
+    "query_id": "ambiguous_rows",
+    "sql": "SELECT event_id, SUM(amount) OVER (PARTITION BY account ORDER BY tick ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) AS total FROM window_events ORDER BY event_id"
+  }
+]
