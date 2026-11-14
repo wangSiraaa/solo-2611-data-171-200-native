@@ -1,0 +1,11 @@
+{
+  "table": "frame_modes",
+  "identity": "event_id",
+  "types": {
+    "event_id": "integer",
+    "account": "text",
+    "tick": "integer nullable",
+    "amount": "integer nullable"
+  },
+  "scope": "manual frame-table supplement for comparing ROWS, GROUPS and RANGE boundaries on identical rows"
+}

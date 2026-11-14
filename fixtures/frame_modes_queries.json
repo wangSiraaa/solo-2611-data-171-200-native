@@ -1,0 +1,22 @@
+[
+  {
+    "query_id": "modes_rows",
+    "sql": "SELECT event_id, SUM(amount) OVER w AS total, COUNT(*) OVER w AS n FROM frame_modes WINDOW w AS (PARTITION BY account ORDER BY tick NULLS LAST ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) ORDER BY event_id"
+  },
+  {
+    "query_id": "modes_groups",
+    "sql": "SELECT event_id, SUM(amount) OVER w AS total, COUNT(*) OVER w AS n FROM frame_modes WINDOW w AS (PARTITION BY account ORDER BY tick NULLS LAST GROUPS BETWEEN 1 PRECEDING AND CURRENT ROW) ORDER BY event_id"
+  },
+  {
+    "query_id": "modes_range",
+    "sql": "SELECT event_id, SUM(amount) OVER w AS total, COUNT(*) OVER w AS n FROM frame_modes WINDOW w AS (PARTITION BY account ORDER BY tick NULLS LAST RANGE BETWEEN 1 PRECEDING AND CURRENT ROW) ORDER BY event_id"
+  },
+  {
+    "query_id": "modes_range_current",
+    "sql": "SELECT event_id, SUM(amount) OVER w AS total, COUNT(amount) OVER w AS n FROM frame_modes WINDOW w AS (PARTITION BY account ORDER BY tick NULLS LAST RANGE BETWEEN CURRENT ROW AND CURRENT ROW) ORDER BY event_id"
+  },
+  {
+    "query_id": "modes_first_last",
+    "sql": "SELECT event_id, FIRST_VALUE(amount) OVER w AS first_amount, LAST_VALUE(amount) OVER w AS last_amount FROM frame_modes WINDOW w AS (PARTITION BY account ORDER BY tick NULLS LAST, event_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) ORDER BY event_id"
+  }
+]
