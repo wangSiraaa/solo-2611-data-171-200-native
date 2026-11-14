@@ -1,0 +1,96 @@
+{
+  "cutoff": "2026-01-03T12:00:00Z",
+  "gaps": [
+    {
+      "reason": "missing-fragment-target",
+      "url": "https://archive.example.invalid/site/about.html",
+      "fragment": "not-present",
+      "detail": "fragment #not-present has no id or a[name] target in https://archive.example.invalid/site/about.html after redirects",
+      "chain": [
+        "https://archive.example.invalid/site/about.html"
+      ],
+      "referrers": [
+        {
+          "page": "https://archive.example.invalid/site/guide.html",
+          "page_path": "site/guide.html",
+          "kind": "a[href]",
+          "raw": "about.html#not-present"
+        }
+      ]
+    },
+    {
+      "reason": "missing-revisit-reference",
+      "url": "https://archive.example.invalid/img/missing-revisit.png",
+      "fragment": null,
+      "detail": "explicit WARC-Refers-To urn:uuid:869cb53a-73e9-5c8a-815e-e829c61d0fe1 is not present in the archive; digest fallback is not allowed for explicit references",
+      "chain": [
+        "urn:uuid:9fe18ce7-43cb-5c8d-b08e-ad3fbbcc05bf",
+        "urn:uuid:869cb53a-73e9-5c8a-815e-e829c61d0fe1"
+      ],
+      "referrers": [
+        {
+          "page": "https://archive.example.invalid/site/guide.html",
+          "page_path": "site/guide.html",
+          "kind": "img[src]",
+          "raw": "../img/missing-revisit.png"
+        }
+      ]
+    },
+    {
+      "reason": "redirect-cycle",
+      "url": "https://archive.example.invalid/site/loop-a",
+      "fragment": null,
+      "detail": "redirect loop detected by canonical URL: https://archive.example.invalid/site/loop-a -> https://archive.example.invalid/site/loop-b -> https://archive.example.invalid/site/loop-a",
+      "chain": [
+        "https://archive.example.invalid/site/loop-a",
+        "https://archive.example.invalid/site/loop-b",
+        "https://archive.example.invalid/site/loop-a"
+      ],
+      "referrers": [
+        {
+          "page": "https://archive.example.invalid/site/about.html",
+          "page_path": "site/about.html",
+          "kind": "a[href]",
+          "raw": "loop-a"
+        }
+      ]
+    },
+    {
+      "reason": "revisit-digest-mismatch",
+      "url": "https://archive.example.invalid/img/bad-digest.png",
+      "fragment": null,
+      "detail": "revisit urn:uuid:b7f5d41f-c624-5386-8512-efc4e079d189 states digest sha1:64MNNVKRS2GQCENYKKR3K6UIUCDZD5M3 but the referenced payload from urn:uuid:8c803c13-0c0f-516c-b0f7-9f0b16b5c447 hashes to sha1:JXCXJO6V2JRZBMJHHVX56JZAGNJWLDBH",
+      "chain": [
+        "urn:uuid:b7f5d41f-c624-5386-8512-efc4e079d189",
+        "urn:uuid:8c803c13-0c0f-516c-b0f7-9f0b16b5c447"
+      ],
+      "referrers": [
+        {
+          "page": "https://archive.example.invalid/site/guide.html",
+          "page_path": "site/guide.html",
+          "kind": "img[src]",
+          "raw": "../img/bad-digest.png"
+        }
+      ]
+    },
+    {
+      "reason": "revisit-reference-cycle",
+      "url": "https://archive.example.invalid/img/cycle-a.png",
+      "fragment": null,
+      "detail": "WARC-Refers-To chain loops: urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312 -> urn:uuid:09f6be0c-171e-54fc-82f7-2f14d8ec6710 -> urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312",
+      "chain": [
+        "urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312",
+        "urn:uuid:09f6be0c-171e-54fc-82f7-2f14d8ec6710",
+        "urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312"
+      ],
+      "referrers": [
+        {
+          "page": "https://archive.example.invalid/site/guide.html",
+          "page_path": "site/guide.html",
+          "kind": "img[src]",
+          "raw": "../img/cycle-a.png"
+        }
+      ]
+    }
+  ]
+}

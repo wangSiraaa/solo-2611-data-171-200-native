@@ -1,0 +1,21 @@
+{
+  "warc": "fixtures/site.warc",
+  "plan": "fixtures/plan.json",
+  "records": 21,
+  "cutoffs": [
+    {
+      "cutoff": "2026-01-02T12:00:00Z",
+      "dir": "out2/2026-01-02T12-00-00Z",
+      "resources": 10,
+      "failures": 4,
+      "gaps": 5
+    },
+    {
+      "cutoff": "2026-01-03T12:00:00Z",
+      "dir": "out2/2026-01-03T12-00-00Z",
+      "resources": 10,
+      "failures": 4,
+      "gaps": 5
+    }
+  ]
+}

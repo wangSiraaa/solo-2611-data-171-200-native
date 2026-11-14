@@ -1,0 +1,277 @@
+{
+  "cutoff": "2026-01-03T12:00:00Z",
+  "pages": [
+    {
+      "canon": "https://archive.example.invalid/css/main.css",
+      "local_path": "css/main.css",
+      "kind": "css",
+      "refs": [
+        {
+          "kind": "css @import",
+          "raw": "theme.css",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/css/theme.css",
+          "rewritten": "theme.css",
+          "target_path": "css/theme.css"
+        },
+        {
+          "kind": "css url()",
+          "raw": "../img/bg.png",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/img/bg.png",
+          "rewritten": "../img/bg.png",
+          "target_path": "img/bg.png"
+        }
+      ]
+    },
+    {
+      "canon": "https://archive.example.invalid/css/theme.css",
+      "local_path": "css/theme.css",
+      "kind": "css",
+      "refs": []
+    },
+    {
+      "canon": "https://archive.example.invalid/site/about.html",
+      "local_path": "site/about.html",
+      "kind": "html",
+      "refs": [
+        {
+          "kind": "a[href]",
+          "raw": "index.html",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/index.html",
+          "rewritten": "index.html",
+          "target_path": "site/index.html"
+        },
+        {
+          "kind": "a[href]",
+          "raw": "loop-a",
+          "disposition": "gap",
+          "canon": "https://archive.example.invalid/site/loop-a",
+          "rewritten": "../_gaps/site_loop-a.html",
+          "target_path": "_gaps/site_loop-a.html",
+          "gap_reason": "redirect-cycle"
+        }
+      ],
+      "base": {
+        "raw": null,
+        "resolved": null,
+        "action": null,
+        "base_tags_found": 0
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/guide.html",
+      "local_path": "site/guide.html",
+      "kind": "html",
+      "refs": [
+        {
+          "kind": "a[href]",
+          "raw": "index.html#top",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/index.html",
+          "fragment": "top",
+          "rewritten": "index.html#top",
+          "target_path": "site/index.html"
+        },
+        {
+          "kind": "a[href]",
+          "raw": "about.html#not-present",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/about.html",
+          "fragment": "not-present",
+          "rewritten": "about.html#not-present",
+          "target_path": "site/about.html"
+        },
+        {
+          "kind": "link[href]",
+          "raw": "../css/main.css",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/css/main.css",
+          "rewritten": "../css/main.css",
+          "target_path": "css/main.css"
+        },
+        {
+          "kind": "img[src]",
+          "raw": "../img/logo.png",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/img/logo.png",
+          "rewritten": "../img/logo.png",
+          "target_path": "img/logo.png"
+        },
+        {
+          "kind": "img[src]",
+          "raw": "../img/by-digest.png",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/img/by-digest.png",
+          "rewritten": "../img/by-digest.png",
+          "target_path": "img/by-digest.png"
+        },
+        {
+          "kind": "img[src]",
+          "raw": "../img/missing-revisit.png",
+          "disposition": "gap",
+          "canon": "https://archive.example.invalid/img/missing-revisit.png",
+          "rewritten": "../_gaps/img_missing-revisit.png.html",
+          "target_path": "_gaps/img_missing-revisit.png.html",
+          "gap_reason": "missing-revisit-reference"
+        },
+        {
+          "kind": "img[src]",
+          "raw": "../img/cycle-a.png",
+          "disposition": "gap",
+          "canon": "https://archive.example.invalid/img/cycle-a.png",
+          "rewritten": "../_gaps/img_cycle-a.png.html",
+          "target_path": "_gaps/img_cycle-a.png.html",
+          "gap_reason": "revisit-reference-cycle"
+        },
+        {
+          "kind": "img[src]",
+          "raw": "../img/bad-digest.png",
+          "disposition": "gap",
+          "canon": "https://archive.example.invalid/img/bad-digest.png",
+          "rewritten": "../_gaps/img_bad-digest.png.html",
+          "target_path": "_gaps/img_bad-digest.png.html",
+          "gap_reason": "revisit-digest-mismatch"
+        }
+      ],
+      "base": {
+        "raw": null,
+        "resolved": null,
+        "action": null,
+        "base_tags_found": 0
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/index.html",
+      "local_path": "site/index.html",
+      "kind": "html",
+      "refs": [
+        {
+          "kind": "a[href]",
+          "raw": "site/guide.html#details",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/guide.html",
+          "fragment": "details",
+          "rewritten": "guide.html#details",
+          "target_path": "site/guide.html"
+        },
+        {
+          "kind": "a[href]",
+          "raw": "site/old-guide#details",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/old-guide",
+          "fragment": "details",
+          "rewritten": "guide.html#details",
+          "target_path": "site/guide.html",
+          "redirect_hops": [
+            {
+              "canon": "https://archive.example.invalid/site/old-guide",
+              "record_id": "urn:uuid:dec16d7b-cd15-5ac7-a290-384be9524f07",
+              "warc_date": "2026-01-01T09:00:00Z",
+              "status": 302,
+              "location": "guide.html",
+              "resolved_canon": "https://archive.example.invalid/site/guide.html",
+              "fragment": null,
+              "payload_digest_verified": true
+            }
+          ]
+        },
+        {
+          "kind": "a[href]",
+          "raw": "site/about.html",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/about.html",
+          "rewritten": "about.html",
+          "target_path": "site/about.html"
+        },
+        {
+          "kind": "a[href]",
+          "raw": "site/report?view=a",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/report?view=a",
+          "rewritten": "report~view=a.html",
+          "target_path": "site/report~view=a.html"
+        },
+        {
+          "kind": "a[href]",
+          "raw": "site/report?view=b",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/report?view=b",
+          "rewritten": "report~view=b.html",
+          "target_path": "site/report~view=b.html"
+        },
+        {
+          "kind": "a[href]",
+          "raw": "https://outside.example.invalid/",
+          "disposition": "external",
+          "canon": "https://outside.example.invalid/"
+        },
+        {
+          "kind": "link[href]",
+          "raw": "css/main.css",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/css/main.css",
+          "rewritten": "../css/main.css",
+          "target_path": "css/main.css"
+        },
+        {
+          "kind": "img[src]",
+          "raw": "img/logo.png",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/img/logo.png",
+          "rewritten": "../img/logo.png",
+          "target_path": "img/logo.png"
+        }
+      ],
+      "base": {
+        "raw": "/",
+        "resolved": "https://archive.example.invalid/",
+        "action": "applied-for-resolution-and-removed",
+        "base_tags_found": 1
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/report?view=a",
+      "local_path": "site/report~view=a.html",
+      "kind": "html",
+      "refs": [
+        {
+          "kind": "a[href]",
+          "raw": "index.html",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/index.html",
+          "rewritten": "index.html",
+          "target_path": "site/index.html"
+        }
+      ],
+      "base": {
+        "raw": null,
+        "resolved": null,
+        "action": null,
+        "base_tags_found": 0
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/report?view=b",
+      "local_path": "site/report~view=b.html",
+      "kind": "html",
+      "refs": [
+        {
+          "kind": "a[href]",
+          "raw": "index.html",
+          "disposition": "rewritten",
+          "canon": "https://archive.example.invalid/site/index.html",
+          "rewritten": "index.html",
+          "target_path": "site/index.html"
+        }
+      ],
+      "base": {
+        "raw": null,
+        "resolved": null,
+        "action": null,
+        "base_tags_found": 0
+      }
+    }
+  ]
+}

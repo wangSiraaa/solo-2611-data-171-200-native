@@ -1,0 +1,507 @@
+{
+  "cutoff": "2026-01-03T12:00:00Z",
+  "resources": [
+    {
+      "canon": "https://archive.example.invalid/css/main.css",
+      "local_path": "css/main.css",
+      "kind": "css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "selected_record": {
+        "id": "urn:uuid:6a48b93c-6ee5-5128-9c57-69b5b613d202",
+        "type": "response",
+        "warc_date": "2026-01-01T09:00:00Z",
+        "capture_label": "main-css",
+        "http_headers": [
+          [
+            "Content-Type",
+            "text/css; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "95"
+          ],
+          [
+            "X-Capture-Label",
+            "main-css"
+          ]
+        ],
+        "stated_digest": "sha1:HBQQ4AV2BPJGEVMGF3KVXQNGXCE6RDWO",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:6a48b93c-6ee5-5128-9c57-69b5b613d202"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:HBQQ4AV2BPJGEVMGF3KVXQNGXCE6RDWO",
+        "exported_sha1_b32": "sha1:HBQQ4AV2BPJGEVMGF3KVXQNGXCE6RDWO",
+        "rewritten": true
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/css/theme.css",
+      "local_path": "css/theme.css",
+      "kind": "css",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "selected_record": {
+        "id": "urn:uuid:adf70c7c-3c1f-5ce0-a415-09264f9d6a7e",
+        "type": "response",
+        "warc_date": "2026-01-01T09:00:00Z",
+        "capture_label": "theme-css",
+        "http_headers": [
+          [
+            "Content-Type",
+            "text/css; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "32"
+          ],
+          [
+            "X-Capture-Label",
+            "theme-css"
+          ]
+        ],
+        "stated_digest": "sha1:5ZDRE7UTJHC4GOBCTMQJQSJJNMENV5EM",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:adf70c7c-3c1f-5ce0-a415-09264f9d6a7e"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:5ZDRE7UTJHC4GOBCTMQJQSJJNMENV5EM",
+        "exported_sha1_b32": "sha1:5ZDRE7UTJHC4GOBCTMQJQSJJNMENV5EM",
+        "rewritten": true
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/img/bg.png",
+      "local_path": "img/bg.png",
+      "kind": "binary",
+      "status": 200,
+      "content_type": "image/png",
+      "selected_record": {
+        "id": "urn:uuid:5fe863fd-d04d-5822-9ba1-b02dc3be85fa",
+        "type": "response",
+        "warc_date": "2026-01-01T09:00:00Z",
+        "capture_label": "bg-old",
+        "http_headers": [
+          [
+            "Content-Type",
+            "image/png"
+          ],
+          [
+            "Content-Length",
+            "69"
+          ],
+          [
+            "X-Capture-Label",
+            "bg-old"
+          ]
+        ],
+        "stated_digest": "sha1:HFOKGVNHT7VIRJMABFOBRIZ4YQXRA3J6",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:5fe863fd-d04d-5822-9ba1-b02dc3be85fa"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:HFOKGVNHT7VIRJMABFOBRIZ4YQXRA3J6",
+        "exported_sha1_b32": "sha1:HFOKGVNHT7VIRJMABFOBRIZ4YQXRA3J6",
+        "rewritten": false
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/img/by-digest.png",
+      "local_path": "img/by-digest.png",
+      "kind": "binary",
+      "status": 200,
+      "content_type": "image/png",
+      "selected_record": {
+        "id": "urn:uuid:12940d16-05ed-5e0e-84f6-4184e150bd52",
+        "type": "revisit",
+        "warc_date": "2026-01-02T09:00:00Z",
+        "capture_label": "digest-revisit",
+        "http_headers": [
+          [
+            "Content-Type",
+            "image/png"
+          ],
+          [
+            "Content-Length",
+            "69"
+          ],
+          [
+            "X-Capture-Label",
+            "digest-revisit"
+          ]
+        ],
+        "stated_digest": "sha1:JXCXJO6V2JRZBMJHHVX56JZAGNJWLDBH",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "digest-match",
+        "supports": [
+          "urn:uuid:8c803c13-0c0f-516c-b0f7-9f0b16b5c447"
+        ],
+        "revisit_chain": [
+          "urn:uuid:12940d16-05ed-5e0e-84f6-4184e150bd52"
+        ]
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:JXCXJO6V2JRZBMJHHVX56JZAGNJWLDBH",
+        "exported_sha1_b32": "sha1:JXCXJO6V2JRZBMJHHVX56JZAGNJWLDBH",
+        "rewritten": false
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/img/logo.png",
+      "local_path": "img/logo.png",
+      "kind": "binary",
+      "status": 200,
+      "content_type": "image/png",
+      "selected_record": {
+        "id": "urn:uuid:4eeb087f-2709-57e3-8be8-4e1d4b29a48c",
+        "type": "response",
+        "warc_date": "2026-01-03T09:00:00Z",
+        "capture_label": "logo-future",
+        "http_headers": [
+          [
+            "Content-Type",
+            "image/png"
+          ],
+          [
+            "Content-Length",
+            "69"
+          ],
+          [
+            "X-Capture-Label",
+            "logo-future"
+          ]
+        ],
+        "stated_digest": "sha1:RCR4GAVSNNRBKB33X5KLXD35MBBP4ESG",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:4eeb087f-2709-57e3-8be8-4e1d4b29a48c"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:RCR4GAVSNNRBKB33X5KLXD35MBBP4ESG",
+        "exported_sha1_b32": "sha1:RCR4GAVSNNRBKB33X5KLXD35MBBP4ESG",
+        "rewritten": false
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/about.html",
+      "local_path": "site/about.html",
+      "kind": "html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "selected_record": {
+        "id": "urn:uuid:5fceff86-0766-5d71-b766-1a6ba49e776d",
+        "type": "response",
+        "warc_date": "2026-01-01T09:00:00Z",
+        "capture_label": "about-old",
+        "http_headers": [
+          [
+            "Content-Type",
+            "text/html; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "110"
+          ],
+          [
+            "X-Capture-Label",
+            "about-old"
+          ]
+        ],
+        "stated_digest": "sha1:M6UMJUJJCQB4UEABWFNDDZRL7MCTVKL4",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:5fceff86-0766-5d71-b766-1a6ba49e776d"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:M6UMJUJJCQB4UEABWFNDDZRL7MCTVKL4",
+        "exported_sha1_b32": "sha1:LAYIEY5VAQVIA7WG7L4ZHO372BGBVOYU",
+        "rewritten": true
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/guide.html",
+      "local_path": "site/guide.html",
+      "kind": "html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "selected_record": {
+        "id": "urn:uuid:36b510ed-4a2b-5978-87b9-5ec6e576f035",
+        "type": "revisit",
+        "warc_date": "2026-01-02T09:00:00Z",
+        "capture_label": "guide-revisit",
+        "http_headers": [
+          [
+            "Content-Type",
+            "text/html; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "380"
+          ],
+          [
+            "X-Capture-Label",
+            "guide-revisit"
+          ]
+        ],
+        "stated_digest": "sha1:CVMCYB5SM7PYGTXEZLNW3BW36TJNRCXS",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "refers-to",
+        "supports": [
+          "urn:uuid:32dac531-6245-50c6-a7d5-a9539fb73784"
+        ],
+        "revisit_chain": [
+          "urn:uuid:36b510ed-4a2b-5978-87b9-5ec6e576f035"
+        ]
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:CVMCYB5SM7PYGTXEZLNW3BW36TJNRCXS",
+        "exported_sha1_b32": "sha1:OC3QG3E34U4DL4SHQR6F3ISLXQNAB6HJ",
+        "rewritten": true
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/index.html",
+      "local_path": "site/index.html",
+      "kind": "html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "selected_record": {
+        "id": "urn:uuid:177ad895-82e2-507f-a348-6454e214204e",
+        "type": "response",
+        "warc_date": "2026-01-03T09:00:00Z",
+        "capture_label": "home-future",
+        "http_headers": [
+          [
+            "Content-Type",
+            "text/html; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "430"
+          ],
+          [
+            "X-Capture-Label",
+            "home-future"
+          ]
+        ],
+        "stated_digest": "sha1:5FINYTX43ODNZNHIAH5JSOW4AGISODVS",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:177ad895-82e2-507f-a348-6454e214204e"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:5FINYTX43ODNZNHIAH5JSOW4AGISODVS",
+        "exported_sha1_b32": "sha1:XA3JZ4LKRDA4LUPCATPCRGMS7Y55BAOB",
+        "rewritten": true
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/report?view=a",
+      "local_path": "site/report~view=a.html",
+      "kind": "html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "selected_record": {
+        "id": "urn:uuid:b15b69bb-fd11-5164-b960-3ef95de781ab",
+        "type": "response",
+        "warc_date": "2026-01-01T09:00:00Z",
+        "capture_label": "report-a",
+        "http_headers": [
+          [
+            "Content-Type",
+            "text/html; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "77"
+          ],
+          [
+            "X-Capture-Label",
+            "report-a"
+          ]
+        ],
+        "stated_digest": "sha1:X3Q6RJFIGVXUZCEVD2EDEPNWNKTZB5AM",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:b15b69bb-fd11-5164-b960-3ef95de781ab"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:X3Q6RJFIGVXUZCEVD2EDEPNWNKTZB5AM",
+        "exported_sha1_b32": "sha1:X3Q6RJFIGVXUZCEVD2EDEPNWNKTZB5AM",
+        "rewritten": true
+      }
+    },
+    {
+      "canon": "https://archive.example.invalid/site/report?view=b",
+      "local_path": "site/report~view=b.html",
+      "kind": "html",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "selected_record": {
+        "id": "urn:uuid:6a643ec8-dbdf-5b88-8504-4dda8e1d0b09",
+        "type": "response",
+        "warc_date": "2026-01-01T09:00:00Z",
+        "capture_label": "report-b",
+        "http_headers": [
+          [
+            "Content-Type",
+            "text/html; charset=utf-8"
+          ],
+          [
+            "Content-Length",
+            "77"
+          ],
+          [
+            "X-Capture-Label",
+            "report-b"
+          ]
+        ],
+        "stated_digest": "sha1:GLH7FDWEE64HFM77YU2W733LUAV3HAL2",
+        "payload_digest_verified": true
+      },
+      "payload": {
+        "provenance": "self",
+        "supports": [
+          "urn:uuid:6a643ec8-dbdf-5b88-8504-4dda8e1d0b09"
+        ],
+        "revisit_chain": []
+      },
+      "digests": {
+        "original_sha1_b32": "sha1:GLH7FDWEE64HFM77YU2W733LUAV3HAL2",
+        "exported_sha1_b32": "sha1:GLH7FDWEE64HFM77YU2W733LUAV3HAL2",
+        "rewritten": true
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "from": "https://archive.example.invalid/site/loop-a",
+      "hops": [
+        {
+          "canon": "https://archive.example.invalid/site/loop-a",
+          "record_id": "urn:uuid:e5414843-0e11-526c-b7fc-f2b1d4d8def6",
+          "warc_date": "2026-01-01T09:00:00Z",
+          "status": 302,
+          "location": "loop-b",
+          "resolved_canon": "https://archive.example.invalid/site/loop-b",
+          "fragment": null,
+          "payload_digest_verified": true
+        },
+        {
+          "canon": "https://archive.example.invalid/site/loop-b",
+          "record_id": "urn:uuid:408ff7c3-2b9b-5819-be44-5ca23049ee79",
+          "warc_date": "2026-01-01T09:00:00Z",
+          "status": 302,
+          "location": "loop-a",
+          "resolved_canon": "https://archive.example.invalid/site/loop-a",
+          "fragment": null,
+          "payload_digest_verified": true
+        }
+      ],
+      "error": "redirect-cycle"
+    },
+    {
+      "from": "https://archive.example.invalid/site/old-guide",
+      "hops": [
+        {
+          "canon": "https://archive.example.invalid/site/old-guide",
+          "record_id": "urn:uuid:dec16d7b-cd15-5ac7-a290-384be9524f07",
+          "warc_date": "2026-01-01T09:00:00Z",
+          "status": 302,
+          "location": "guide.html",
+          "resolved_canon": "https://archive.example.invalid/site/guide.html",
+          "fragment": null,
+          "payload_digest_verified": true
+        }
+      ],
+      "final": "https://archive.example.invalid/site/guide.html"
+    }
+  ],
+  "failures": [
+    {
+      "canon": "https://archive.example.invalid/img/bad-digest.png",
+      "reason": "revisit-digest-mismatch",
+      "detail": "revisit urn:uuid:b7f5d41f-c624-5386-8512-efc4e079d189 states digest sha1:64MNNVKRS2GQCENYKKR3K6UIUCDZD5M3 but the referenced payload from urn:uuid:8c803c13-0c0f-516c-b0f7-9f0b16b5c447 hashes to sha1:JXCXJO6V2JRZBMJHHVX56JZAGNJWLDBH",
+      "chain": [
+        "urn:uuid:b7f5d41f-c624-5386-8512-efc4e079d189",
+        "urn:uuid:8c803c13-0c0f-516c-b0f7-9f0b16b5c447"
+      ],
+      "placeholder_path": "_gaps/img_bad-digest.png.html"
+    },
+    {
+      "canon": "https://archive.example.invalid/img/cycle-a.png",
+      "reason": "revisit-reference-cycle",
+      "detail": "WARC-Refers-To chain loops: urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312 -> urn:uuid:09f6be0c-171e-54fc-82f7-2f14d8ec6710 -> urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312",
+      "chain": [
+        "urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312",
+        "urn:uuid:09f6be0c-171e-54fc-82f7-2f14d8ec6710",
+        "urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312"
+      ],
+      "placeholder_path": "_gaps/img_cycle-a.png.html"
+    },
+    {
+      "canon": "https://archive.example.invalid/img/missing-revisit.png",
+      "reason": "missing-revisit-reference",
+      "detail": "explicit WARC-Refers-To urn:uuid:869cb53a-73e9-5c8a-815e-e829c61d0fe1 is not present in the archive; digest fallback is not allowed for explicit references",
+      "chain": [
+        "urn:uuid:9fe18ce7-43cb-5c8d-b08e-ad3fbbcc05bf",
+        "urn:uuid:869cb53a-73e9-5c8a-815e-e829c61d0fe1"
+      ],
+      "placeholder_path": "_gaps/img_missing-revisit.png.html"
+    },
+    {
+      "canon": "https://archive.example.invalid/site/loop-a",
+      "reason": "redirect-cycle",
+      "detail": "redirect loop detected by canonical URL: https://archive.example.invalid/site/loop-a -> https://archive.example.invalid/site/loop-b -> https://archive.example.invalid/site/loop-a",
+      "chain": [
+        "https://archive.example.invalid/site/loop-a",
+        "https://archive.example.invalid/site/loop-b",
+        "https://archive.example.invalid/site/loop-a"
+      ],
+      "placeholder_path": "_gaps/site_loop-a.html"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "cutoff": "2026-01-02T12:00:00Z",
+  "entry_urls": [
+    "https://archive.example.invalid/site/index.html"
+  ],
+  "site_dir": "out2/2026-01-02T12-00-00Z/site",
+  "counts": {
+    "resources": 10,
+    "redirects": 2,
+    "failures": 4,
+    "gaps": 5,
+    "references": 22
+  }
+}
