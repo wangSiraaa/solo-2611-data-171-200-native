@@ -1,0 +1,19 @@
+{
+  "ticks_per_beat": 480,
+  "default_tempo_us_per_beat": 500000,
+  "same_tick_order": [
+    "track_index",
+    "event_index"
+  ],
+  "port_default": 0,
+  "port_scope": "track local meta state; channel controllers keyed by (port, channel)",
+  "overlapping_same_pitch": "FIFO among currently key-down voices; an already-released sounding voice is not matched again",
+  "pedal_threshold": 64,
+  "sostenuto_capture": "on transition below64 to >=64, capture only voices currently key-down; repeated on does not recapture",
+  "sustain": "a released voice remains audible while sustain is down; pedal up stops only voices with no other active hold",
+  "sostenuto_release": "release captured hold on transition to below64; sustain may keep voice audible",
+  "end_of_file": "global maximum absolute EOT tick; truncate still sounding with explicit truncated flag",
+  "unmatched_release": "diagnostic only, do not fabricate a voice",
+  "same_tick_tempo": "different values conflict; duplicates equal values may collapse",
+  "seconds": "integrate integer tick spans using tempo microseconds / ticks_per_beat before formatting"
+}
