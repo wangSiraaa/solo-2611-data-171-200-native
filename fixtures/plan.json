@@ -1,0 +1,21 @@
+{
+  "gradient_frame": "voxel_axes",
+  "authoritative_transform": "sform code>0, no shear; qform may differ only within 1e-5",
+  "b0_threshold": 50,
+  "min_valid_b0": 2,
+  "min_diffusion_rows": 6,
+  "max_design_condition": 1000000,
+  "positive_signal_only": true,
+  "eigenvalue_tolerance_mm2_s": 1e-07,
+  "principal_gap_relative": 0.02,
+  "cases": [
+    {
+      "image": "dwi.nii.gz",
+      "gradients": "gradients.tsv"
+    },
+    {
+      "image": "dwi-permuted.nii.gz",
+      "gradients": "gradients-permuted.tsv"
+    }
+  ]
+}
