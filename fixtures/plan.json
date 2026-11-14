@@ -1,0 +1,17 @@
+{
+  "working_directory": "repository root",
+  "execution": "one fresh Python kernel per notebook; cells in document order; stop after first error or timeout",
+  "cell_timeout_seconds": 2,
+  "parameters": "one parameters-tagged cell of simple name=literal assignments, override only existing names; JSON scalar values",
+  "supported_outputs": [
+    "stream",
+    "display_data",
+    "update_display_data",
+    "execute_result",
+    "error",
+    "clear_output"
+  ],
+  "display_id": "updates apply to all previously displayed outputs for that display_id in this kernel run, even outputs in earlier cells",
+  "stdin": "unsupported and should fail the cell explicitly",
+  "source_policy": "source notebooks read-only; clear old execution_count and code outputs in result before run"
+}
