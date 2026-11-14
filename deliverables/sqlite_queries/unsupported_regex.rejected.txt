@@ -1,0 +1,6 @@
+status: rejected
+rule: unsupported_syntax
+message: 正则匹配操作符 '~' 不在 scope 内（scope.json 明确拒绝 regex）
+position: {'offset': 40, 'line': 1, 'column': 41}
+SELECT event_id FROM events WHERE label ~ '^[a-z]+$'
+                                        ^

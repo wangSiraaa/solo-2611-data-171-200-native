@@ -1,0 +1,1 @@
+SELECT event_id, ((active IS NULL AND ? IS NOT NULL) OR (active IS NOT NULL AND ? IS NULL) OR (active IS NOT NULL AND active <> ?)) AS changed FROM events WHERE (customer_id >= ?) ORDER BY event_id ASC NULLS FIRST;

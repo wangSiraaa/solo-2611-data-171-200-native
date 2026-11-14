@@ -1,0 +1,440 @@
+[
+  {
+    "query_id": "distinct_latest",
+    "status": "verified",
+    "checks": [
+      "PostgreSQL 使用真实绑定执行：0 个位置参数，NULL 参数经 ::声明类型 传递，未内联为 SQL 常量，事务只读",
+      "SQLite 以 mode=ro 只读打开并使用真实绑定执行：0 个 ? 位置参数；布尔按声明由 0/1 映回 True/False，未做字符串化",
+      "列顺序与逻辑输出类型一致：customer_id:integer, event_id:integer, label:text",
+      "两端 3 行逐行相等（含顺序）；重复行数=0，重复行按普通 SELECT 语义保留并逐行核对",
+      "[SQLite] 3 行满足显式 ORDER BY （3 个键，含 NULLS 位置；相邻比较 2 次）",
+      "[PostgreSQL] 3 行满足显式 ORDER BY （3 个键，含 NULLS 位置；相邻比较 2 次）",
+      "DISTINCT ON 与独立 Python 手工选行表逐行一致（非仅比对两个包装器的 JSON）；并列审计组=1"
+    ],
+    "pg_row_count": 3,
+    "sqlite_row_count": 3,
+    "pg_columns": [
+      "customer_id",
+      "event_id",
+      "label"
+    ],
+    "rows_match": true,
+    "distinct_reference": {
+      "manual_reference_rows": [
+        {
+          "customer_id": 1,
+          "event_id": 2,
+          "label": "beta"
+        },
+        {
+          "customer_id": 2,
+          "event_id": 5,
+          "label": null
+        },
+        {
+          "customer_id": 3,
+          "event_id": 6,
+          "label": "last"
+        }
+      ],
+      "matches_postgresql": true,
+      "matches_sqlite": true,
+      "tie_audit": {
+        "applicable": true,
+        "tie_groups": 1,
+        "details": [
+          {
+            "group_key": [
+              [
+                "__v__",
+                1
+              ]
+            ],
+            "member_event_ids": [
+              1,
+              2,
+              3
+            ],
+            "identical_before_event_id": 2
+          }
+        ],
+        "conclusion": "存在同组在 event_id 之前排序键完全相同的并列行，event_id 唯一决定 ROW_NUMBER=1 的归属"
+      }
+    },
+    "sample_rows": [
+      {
+        "customer_id": 1,
+        "event_id": 2,
+        "label": "beta"
+      },
+      {
+        "customer_id": 2,
+        "event_id": 5,
+        "label": null
+      },
+      {
+        "customer_id": 3,
+        "event_id": 6,
+        "label": "last"
+      }
+    ],
+    "executed": true,
+    "compiled": {
+      "query_id": "distinct_latest",
+      "sqlite_sql": "SELECT customer_id, event_id, label FROM (SELECT customer_id AS customer_id, event_id AS event_id, label AS label, tick AS tick_ord, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY customer_id ASC NULLS FIRST, tick DESC NULLS LAST, event_id DESC NULLS LAST) AS rn__rank FROM events) t0__ WHERE rn__rank = 1 ORDER BY customer_id ASC NULLS FIRST, tick_ord DESC NULLS LAST, event_id DESC NULLS LAST",
+      "binding_map": [],
+      "output_schema": [
+        {
+          "name": "customer_id",
+          "logical_type": "integer",
+          "position": 1,
+          "sqlite_storage": "INTEGER"
+        },
+        {
+          "name": "event_id",
+          "logical_type": "integer",
+          "position": 2,
+          "sqlite_storage": "INTEGER"
+        },
+        {
+          "name": "label",
+          "logical_type": "text",
+          "position": 3,
+          "sqlite_storage": "TEXT"
+        }
+      ],
+      "rewrites": [
+        "DISTINCT ON -> ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY 源排序) 子查询取 rn = 1；排名列 rn__rank 与附加排序列仅存在于内层，不进入最终输出；外层复用完整源 ORDER BY 保留展示顺序与 NULLS 位置"
+      ],
+      "distinct_evidence": [
+        "ORDER BY 前 1 项与 DISTINCT ON 分组键逐项相同（结构等价），构成合法最左前缀",
+        "分组键之后的 ORDER BY 含 events.event_id（DESC），event_id 为主键且全局唯一，并列行可唯一确定",
+        "编译器未新增任何排序项，仅复用源 ORDER BY 做窗口分区与最终展示排序"
+      ]
+    }
+  },
+  {
+    "query_id": "cte_parameters",
+    "status": "verified",
+    "checks": [
+      "PostgreSQL 使用真实绑定执行：3 个位置参数，NULL 参数经 ::声明类型 传递，未内联为 SQL 常量，事务只读",
+      "SQLite 以 mode=ro 只读打开并使用真实绑定执行：3 个 ? 位置参数；布尔按声明由 0/1 映回 True/False，未做字符串化",
+      "列顺序与逻辑输出类型一致：customer_id:integer, event_id:integer, name:text",
+      "两端 2 行逐行相等（含顺序）；重复行数=0，重复行按普通 SELECT 语义保留并逐行核对",
+      "[SQLite] 2 行满足显式 ORDER BY （1 个键，含 NULLS 位置；相邻比较 1 次）",
+      "[PostgreSQL] 2 行满足显式 ORDER BY （1 个键，含 NULLS 位置；相邻比较 1 次）",
+      "CTE 内部 DISTINCT ON 通过独立手工选行表核对（并列审计组=1），外层结果 event_id 是手工选行集合的子集"
+    ],
+    "pg_row_count": 2,
+    "sqlite_row_count": 2,
+    "pg_columns": [
+      "customer_id",
+      "event_id",
+      "name"
+    ],
+    "rows_match": true,
+    "distinct_reference": {
+      "cte_inner_manual_reference_rows": [
+        {
+          "customer_id": 1,
+          "event_id": 2,
+          "label": "beta"
+        },
+        {
+          "customer_id": 2,
+          "event_id": 5,
+          "label": null
+        },
+        {
+          "customer_id": 3,
+          "event_id": 6,
+          "label": "last"
+        }
+      ],
+      "cte_tie_audit": {
+        "applicable": true,
+        "tie_groups": 1,
+        "details": [
+          {
+            "group_key": [
+              [
+                "__v__",
+                1
+              ]
+            ],
+            "member_event_ids": [
+              1,
+              2,
+              3
+            ],
+            "identical_before_event_id": 2
+          }
+        ],
+        "conclusion": "存在同组在 event_id 之前排序键完全相同的并列行，event_id 唯一决定 ROW_NUMBER=1 的归属"
+      },
+      "cte_outer_event_ids_subset_of_manual": true
+    },
+    "sample_rows": [
+      {
+        "customer_id": 1,
+        "event_id": 2,
+        "name": "beta! literal $1"
+      },
+      {
+        "customer_id": 2,
+        "event_id": 5,
+        "name": "! literal $1"
+      }
+    ],
+    "executed": true,
+    "compiled": {
+      "query_id": "cte_parameters",
+      "sqlite_sql": "WITH chosen AS (SELECT customer_id, event_id, label FROM (SELECT customer_id AS customer_id, event_id AS event_id, label AS label, tick AS tick_ord, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY customer_id ASC NULLS FIRST, tick DESC NULLS LAST, event_id DESC NULLS LAST) AS rn__rank FROM events WHERE (customer_id >= ?)) t0__ WHERE rn__rank = 1 ORDER BY customer_id ASC NULLS FIRST, tick_ord DESC NULLS LAST, event_id DESC NULLS LAST) SELECT customer_id, event_id, (COALESCE(CAST(label AS TEXT), '') || COALESCE(CAST(? AS TEXT), '') || ' literal $1') AS name FROM chosen WHERE (customer_id <= ?) ORDER BY customer_id ASC NULLS FIRST",
+      "binding_map": [
+        {
+          "placeholder_index": 1,
+          "source_index": 1,
+          "source_token": "$1",
+          "logical_type": "integer"
+        },
+        {
+          "placeholder_index": 2,
+          "source_index": 2,
+          "source_token": "$2",
+          "logical_type": "text"
+        },
+        {
+          "placeholder_index": 3,
+          "source_index": 3,
+          "source_token": "$3",
+          "logical_type": "integer"
+        }
+      ],
+      "output_schema": [
+        {
+          "name": "customer_id",
+          "logical_type": "integer",
+          "position": 1,
+          "sqlite_storage": "INTEGER"
+        },
+        {
+          "name": "event_id",
+          "logical_type": "integer",
+          "position": 2,
+          "sqlite_storage": "INTEGER"
+        },
+        {
+          "name": "name",
+          "logical_type": "text",
+          "position": 3,
+          "sqlite_storage": "TEXT"
+        }
+      ],
+      "rewrites": [
+        "DISTINCT ON -> ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY 源排序) 子查询取 rn = 1；排名列 rn__rank 与附加排序列仅存在于内层，不进入最终输出；外层复用完整源 ORDER BY 保留展示顺序与 NULLS 位置",
+        "concat(...) -> COALESCE(CAST(label AS TEXT), '') || COALESCE(CAST(? AS TEXT), '') || ' literal $1'（每个非字面量参数 COALESCE 为空串，NULL 不传播；仅 text 类型）",
+        "WITH chosen -> SQLite WITH chosen：CTE 名称、输出列名与列顺序按内部 SELECT 原样保留，外层只按名称引用，重写产生的辅助排名列不会穿透 CTE 边界"
+      ],
+      "distinct_evidence": [
+        "ORDER BY 前 1 项与 DISTINCT ON 分组键逐项相同（结构等价），构成合法最左前缀",
+        "分组键之后的 ORDER BY 含 events.event_id（DESC），event_id 为主键且全局唯一，并列行可唯一确定",
+        "编译器未新增任何排序项，仅复用源 ORDER BY 做窗口分区与最终展示排序"
+      ]
+    }
+  },
+  {
+    "query_id": "nullsafe",
+    "status": "verified",
+    "checks": [
+      "PostgreSQL 使用真实绑定执行：2 个位置参数，NULL 参数经 ::声明类型 传递，未内联为 SQL 常量，事务只读",
+      "SQLite 以 mode=ro 只读打开并使用真实绑定执行：4 个 ? 位置参数；布尔按声明由 0/1 映回 True/False，未做字符串化",
+      "列顺序与逻辑输出类型一致：event_id:integer, changed:boolean",
+      "两端 6 行逐行相等（含顺序）；重复行数=0，重复行按普通 SELECT 语义保留并逐行核对",
+      "[SQLite] 6 行满足显式 ORDER BY （1 个键，含 NULLS 位置；相邻比较 5 次）",
+      "[PostgreSQL] 6 行满足显式 ORDER BY （1 个键，含 NULLS 位置；相邻比较 5 次）"
+    ],
+    "pg_row_count": 6,
+    "sqlite_row_count": 6,
+    "pg_columns": [
+      "event_id",
+      "changed"
+    ],
+    "rows_match": true,
+    "distinct_reference": null,
+    "sample_rows": [
+      {
+        "event_id": 1,
+        "changed": true
+      },
+      {
+        "event_id": 2,
+        "changed": true
+      },
+      {
+        "event_id": 3,
+        "changed": false
+      },
+      {
+        "event_id": 4,
+        "changed": true
+      },
+      {
+        "event_id": 5,
+        "changed": true
+      },
+      {
+        "event_id": 6,
+        "changed": false
+      }
+    ],
+    "executed": true,
+    "compiled": {
+      "query_id": "nullsafe",
+      "sqlite_sql": "SELECT event_id, ((active IS NULL AND ? IS NOT NULL) OR (active IS NOT NULL AND ? IS NULL) OR (active IS NOT NULL AND active <> ?)) AS changed FROM events WHERE (customer_id >= ?) ORDER BY event_id ASC NULLS FIRST",
+      "binding_map": [
+        {
+          "placeholder_index": 1,
+          "source_index": 1,
+          "source_token": "$1",
+          "logical_type": "boolean"
+        },
+        {
+          "placeholder_index": 2,
+          "source_index": 1,
+          "source_token": "$1",
+          "logical_type": "boolean"
+        },
+        {
+          "placeholder_index": 3,
+          "source_index": 1,
+          "source_token": "$1",
+          "logical_type": "boolean"
+        },
+        {
+          "placeholder_index": 4,
+          "source_index": 2,
+          "source_token": "$2",
+          "logical_type": "integer"
+        }
+      ],
+      "output_schema": [
+        {
+          "name": "event_id",
+          "logical_type": "integer",
+          "position": 1,
+          "sqlite_storage": "INTEGER"
+        },
+        {
+          "name": "changed",
+          "logical_type": "boolean",
+          "position": 2,
+          "sqlite_storage": "INTEGER 0/1"
+        }
+      ],
+      "rewrites": [
+        "IS DISTINCT FROM -> 显式三值逻辑 CASE 等价表达式（NULL IS NULL=相等、单侧 NULL=不等、布尔按 0/1 比较；规避 SQLite 对无类型绑定参数的 IS 语义差异；同一参数多次出现按语法位置重复绑定同一值）"
+      ],
+      "distinct_evidence": []
+    }
+  },
+  {
+    "query_id": "concat_nulls",
+    "status": "verified",
+    "checks": [
+      "PostgreSQL 使用真实绑定执行：0 个位置参数，NULL 参数经 ::声明类型 传递，未内联为 SQL 常量，事务只读",
+      "SQLite 以 mode=ro 只读打开并使用真实绑定执行：0 个 ? 位置参数；布尔按声明由 0/1 映回 True/False，未做字符串化",
+      "列顺序与逻辑输出类型一致：event_id:integer, caption:text",
+      "两端 6 行逐行相等（含顺序）；重复行数=0，重复行按普通 SELECT 语义保留并逐行核对",
+      "[SQLite] 6 行满足显式 ORDER BY （2 个键，含 NULLS 位置；相邻比较 5 次）",
+      "[PostgreSQL] 6 行满足显式 ORDER BY （2 个键，含 NULLS 位置；相邻比较 5 次）"
+    ],
+    "pg_row_count": 6,
+    "sqlite_row_count": 6,
+    "pg_columns": [
+      "event_id",
+      "caption"
+    ],
+    "rows_match": true,
+    "distinct_reference": null,
+    "sample_rows": [
+      {
+        "event_id": 1,
+        "caption": "name=alpha;"
+      },
+      {
+        "event_id": 2,
+        "caption": "name=beta;"
+      },
+      {
+        "event_id": 5,
+        "caption": "name=;"
+      },
+      {
+        "event_id": 4,
+        "caption": "name=x;"
+      },
+      {
+        "event_id": 3,
+        "caption": "name=none;"
+      },
+      {
+        "event_id": 6,
+        "caption": "name=last;"
+      }
+    ],
+    "executed": true,
+    "compiled": {
+      "query_id": "concat_nulls",
+      "sqlite_sql": "SELECT event_id, ('name=' || COALESCE(CAST(label AS TEXT), '') || ';') AS caption FROM events ORDER BY tick DESC NULLS LAST, event_id ASC NULLS FIRST",
+      "binding_map": [],
+      "output_schema": [
+        {
+          "name": "event_id",
+          "logical_type": "integer",
+          "position": 1,
+          "sqlite_storage": "INTEGER"
+        },
+        {
+          "name": "caption",
+          "logical_type": "text",
+          "position": 2,
+          "sqlite_storage": "TEXT"
+        }
+      ],
+      "rewrites": [
+        "concat(...) -> 'name=' || COALESCE(CAST(label AS TEXT), '') || ';'（每个非字面量参数 COALESCE 为空串，NULL 不传播；仅 text 类型）"
+      ],
+      "distinct_evidence": []
+    }
+  },
+  {
+    "query_id": "nondeterministic",
+    "status": "rejected",
+    "error": {
+      "rule": "nondeterministic_distinct",
+      "message": "ORDER BY 在 DISTINCT ON 分组键之后不含 event_id：同组并列行（例如同 customer_id 且同 tick 的多行）选行不确定；按 scope 要求拒绝，且不会自行追加排序键改变源查询",
+      "position": {
+        "offset": 84,
+        "line": 1,
+        "column": 85
+      },
+      "snippet": "SELECT DISTINCT ON (customer_id) customer_id,label FROM events ORDER BY customer_id,tick DESC NULLS LAST\n                                                                                    ^"
+    },
+    "executed": false
+  },
+  {
+    "query_id": "unsupported_regex",
+    "status": "rejected",
+    "error": {
+      "rule": "unsupported_syntax",
+      "message": "正则匹配操作符 '~' 不在 scope 内（scope.json 明确拒绝 regex）",
+      "position": {
+        "offset": 40,
+        "line": 1,
+        "column": 41
+      },
+      "snippet": "SELECT event_id FROM events WHERE label ~ '^[a-z]+$'\n                                        ^"
+    },
+    "executed": false
+  }
+]

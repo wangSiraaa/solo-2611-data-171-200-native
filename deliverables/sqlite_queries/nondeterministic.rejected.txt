@@ -1,0 +1,6 @@
+status: rejected
+rule: nondeterministic_distinct
+message: ORDER BY 在 DISTINCT ON 分组键之后不含 event_id：同组并列行（例如同 customer_id 且同 tick 的多行）选行不确定；按 scope 要求拒绝，且不会自行追加排序键改变源查询
+position: {'offset': 84, 'line': 1, 'column': 85}
+SELECT DISTINCT ON (customer_id) customer_id,label FROM events ORDER BY customer_id,tick DESC NULLS LAST
+                                                                                    ^
