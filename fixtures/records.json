@@ -1,0 +1,39 @@
+[
+  {
+    "record_id": "packet-A",
+    "customer": "North & East",
+    "ref": "R-001",
+    "note": "Line one\nLine two",
+    "items": [
+      {
+        "name": "Cable <Type A>",
+        "qty": 2,
+        "price": "12.50"
+      },
+      {
+        "name": "Adapter",
+        "qty": 0,
+        "price": "0.00"
+      }
+    ]
+  },
+  {
+    "record_id": "packet-empty",
+    "customer": "Empty order",
+    "ref": "R-002",
+    "note": "No lines",
+    "items": []
+  },
+  {
+    "record_id": "packet-missing",
+    "customer": "Missing value",
+    "ref": "R-003",
+    "items": [
+      {
+        "name": "Plug",
+        "qty": 1,
+        "price": "4.00"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "scalar_keys": [
+    "customer",
+    "ref",
+    "note"
+  ],
+  "loop": "items",
+  "loop_fields": [
+    "name",
+    "qty",
+    "price"
+  ],
+  "text_insertion": "take character formatting from first matched placeholder run; preserve surrounding runs; newline becomes Word line break",
+  "empty_loop": "remove marker and prototype rows; preserve table footer",
+  "bookmark_clone": "each clone gets unique bookmark id and unique bookmark name; pairs remain matched",
+  "drawing_clone": "docPr IDs must be unique within output; existing image relationship may be shared",
+  "scope": "main document paragraphs and ordinary table cells; no headers/footers, nested loops, tracked changes or placeholder crossing hyperlink/paragraph boundary"
+}
