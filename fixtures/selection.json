@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "A": "source-A.pdf",
+    "B": "source-B.pdf"
+  },
+  "pages": [
+    {
+      "source": "A",
+      "page": 1
+    },
+    {
+      "source": "B",
+      "page": 2
+    },
+    {
+      "source": "A",
+      "page": 3
+    },
+    {
+      "source": "B",
+      "page": 1
+    }
+  ],
+  "source_page_numbering": "1-based",
+  "named_destination_policy": "namespace by source id; collisions cannot overwrite",
+  "outline_policy": "retain only destinations whose pages were selected; retained children of omitted parents reattach to nearest retained ancestor or source root",
+  "unsupported": "external GoToR, JavaScript, forms, encrypted PDFs; report and refuse affected source",
+  "retain_page_geometry": "page size/crop/rotation and original content remain unchanged"
+}
