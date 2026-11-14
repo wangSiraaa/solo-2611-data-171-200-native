@@ -1,0 +1,17 @@
+{
+  "coordinate_unit": "SVG CSS px",
+  "node_dimensions": "provided outer boxes, including label padding; may enlarge, not shrink",
+  "font": "sans-serif",
+  "label_wrapping": "wrap within given box using declared deterministic character-width estimate; no browser font metrics required",
+  "node_padding": 18,
+  "route_clearance": 8,
+  "edge_label_box": {
+    "height": 18,
+    "width_rule": "max(36, 7*ASCII_char_count + 14*nonASCII_char_count)"
+  },
+  "arrows": "end on target boundary, start on source boundary; self-loops explicitly routed",
+  "parallel_edges": "distinct lanes or visibly separate curves/polyline offsets; preserve all IDs",
+  "old_layout": "run v1 first, pass its coordinate JSON as input to v2; no precomputed answer layout supplied",
+  "update_report": "displacement per unchanged node and causes for necessary relocation",
+  "verification": "use exactly rendered node/label boxes and edge polylines; intersections with unrelated nodes are failures; edge crossings allowed but identified; label overlaps diagnosed with IDs"
+}

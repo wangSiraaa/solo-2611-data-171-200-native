@@ -1,0 +1,86 @@
+[
+  {
+    "node_id": "raw",
+    "label": "原始订单",
+    "width": 110,
+    "height": 44
+  },
+  {
+    "node_id": "clean",
+    "label": "清洗与字段标准化",
+    "width": 150,
+    "height": 54
+  },
+  {
+    "node_id": "dim",
+    "label": "维度映射和历史归属",
+    "width": 160,
+    "height": 54
+  },
+  {
+    "node_id": "join",
+    "label": "订单与付款关联",
+    "width": 150,
+    "height": 54
+  },
+  {
+    "node_id": "quality",
+    "label": "质量检查：回写修订建议",
+    "width": 190,
+    "height": 66
+  },
+  {
+    "node_id": "agg",
+    "label": "按经营日汇总",
+    "width": 135,
+    "height": 50
+  },
+  {
+    "node_id": "report",
+    "label": "经营日报",
+    "width": 110,
+    "height": 44
+  },
+  {
+    "node_id": "archive",
+    "label": "归档快照",
+    "width": 110,
+    "height": 44
+  },
+  {
+    "node_id": "alerts",
+    "label": "异常通知",
+    "width": 110,
+    "height": 44
+  },
+  {
+    "node_id": "external",
+    "label": "外部参考数据",
+    "width": 135,
+    "height": 50
+  },
+  {
+    "node_id": "catalog",
+    "label": "数据字典",
+    "width": 110,
+    "height": 44
+  },
+  {
+    "node_id": "audit",
+    "label": "审计日志",
+    "width": 110,
+    "height": 44
+  },
+  {
+    "node_id": "tax",
+    "label": "税务核对中间结果",
+    "width": 170,
+    "height": 54
+  },
+  {
+    "node_id": "taxreport",
+    "label": "税务报告",
+    "width": 120,
+    "height": 44
+  }
+]

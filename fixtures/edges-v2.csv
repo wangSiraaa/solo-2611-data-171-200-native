@@ -1,0 +1,18 @@
+edge_id,source,target,label
+E01,raw,clean,orders
+E02,clean,dim,codes
+E03,dim,join,enriched
+E04,join,quality,validate
+E05,quality,dim,repair
+E06,join,agg,amounts
+E07,agg,report,daily
+E08,report,archive,snapshot
+E09,quality,alerts,issues
+E10,raw,archive,raw copy
+E11,external,dim,mapping
+E12,catalog,audit,changes
+E13,join,agg,counts
+E14,audit,audit,retention
+E15,join,tax,tax base
+E16,tax,taxreport,checked
+E17,taxreport,archive,tax snapshot
