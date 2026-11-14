@@ -1,0 +1,1058 @@
+{
+  "schema": "depsvg-layout/1",
+  "coordinate_unit": "SVG CSS px",
+  "canvas": {
+    "x": 0.0,
+    "y": 0.0,
+    "width": 1490.0,
+    "height": 1742.0
+  },
+  "rank_center_x": {
+    "0": 97.5,
+    "1": 360.0,
+    "2": 650.0,
+    "3": 932.5,
+    "4": 1175.0,
+    "5": 1405.0,
+    "1000": 85.0,
+    "1001": 315.0
+  },
+  "components": [
+    {
+      "component": 0,
+      "node_ids": [
+        "agg",
+        "alerts",
+        "archive",
+        "clean",
+        "dim",
+        "external",
+        "join",
+        "quality",
+        "raw",
+        "report"
+      ],
+      "box": {
+        "x": 30.0,
+        "y": 30.0,
+        "width": 1430.0,
+        "height": 1296.0
+      }
+    },
+    {
+      "component": 1,
+      "node_ids": [
+        "audit",
+        "catalog"
+      ],
+      "box": {
+        "x": 30.0,
+        "y": 1416.0,
+        "width": 340.0,
+        "height": 296.0
+      }
+    }
+  ],
+  "sccs": [
+    {
+      "scc_id": 4,
+      "node_ids": [
+        "dim",
+        "join",
+        "quality"
+      ],
+      "cyclic": true,
+      "box": {
+        "x": 529.0,
+        "y": 466.0,
+        "width": 242.0,
+        "height": 270.0
+      }
+    },
+    {
+      "scc_id": 8,
+      "node_ids": [
+        "audit"
+      ],
+      "cyclic": true,
+      "box": {
+        "x": 234.0,
+        "y": 1602.0,
+        "width": 162.0,
+        "height": 88.0
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "external",
+      "label": "外部参考数据",
+      "lines": [
+        "外部参考数据"
+      ],
+      "box": {
+        "x": 30.0,
+        "y": 30.0,
+        "width": 135.0,
+        "height": 50.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 0,
+      "scc_id": 7,
+      "in_cycle": false,
+      "is_new": false
+    },
+    {
+      "node_id": "raw",
+      "label": "原始订单",
+      "lines": [
+        "原始订单"
+      ],
+      "box": {
+        "x": 42.5,
+        "y": 106.0,
+        "width": 110.0,
+        "height": 44.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 0,
+      "scc_id": 6,
+      "in_cycle": false,
+      "is_new": false
+    },
+    {
+      "node_id": "clean",
+      "label": "清洗与字段标准化",
+      "lines": [
+        "清洗与字段标准化"
+      ],
+      "box": {
+        "x": 285.0,
+        "y": 270.0,
+        "width": 150.0,
+        "height": 54.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 1,
+      "scc_id": 5,
+      "in_cycle": false,
+      "is_new": false
+    },
+    {
+      "node_id": "catalog",
+      "label": "数据字典",
+      "lines": [
+        "数据字典"
+      ],
+      "box": {
+        "x": 30.0,
+        "y": 1416.0,
+        "width": 110.0,
+        "height": 44.0
+      },
+      "box_enlarged": false,
+      "component": 1,
+      "rank": 0,
+      "scc_id": 9,
+      "in_cycle": false,
+      "is_new": false
+    },
+    {
+      "node_id": "dim",
+      "label": "维度映射和历史归属",
+      "lines": [
+        "维度映射",
+        "和历史归属"
+      ],
+      "box": {
+        "x": 570.0,
+        "y": 488.0,
+        "width": 160.0,
+        "height": 54.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 2,
+      "scc_id": 4,
+      "in_cycle": true,
+      "is_new": false
+    },
+    {
+      "node_id": "join",
+      "label": "订单与付款关联",
+      "lines": [
+        "订单与付款关联"
+      ],
+      "box": {
+        "x": 575.0,
+        "y": 568.0,
+        "width": 150.0,
+        "height": 54.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 2,
+      "scc_id": 4,
+      "in_cycle": true,
+      "is_new": false
+    },
+    {
+      "node_id": "audit",
+      "label": "审计日志",
+      "lines": [
+        "审计日志"
+      ],
+      "box": {
+        "x": 260.0,
+        "y": 1624.0,
+        "width": 110.0,
+        "height": 44.0
+      },
+      "box_enlarged": false,
+      "component": 1,
+      "rank": 1,
+      "scc_id": 8,
+      "in_cycle": true,
+      "is_new": false
+    },
+    {
+      "node_id": "quality",
+      "label": "质量检查：回写修订建议",
+      "lines": [
+        "质量检查：回写修订建议"
+      ],
+      "box": {
+        "x": 555.0,
+        "y": 648.0,
+        "width": 190.0,
+        "height": 66.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 2,
+      "scc_id": 4,
+      "in_cycle": true,
+      "is_new": false
+    },
+    {
+      "node_id": "agg",
+      "label": "按经营日汇总",
+      "lines": [
+        "按经营日汇总"
+      ],
+      "box": {
+        "x": 865.0,
+        "y": 878.0,
+        "width": 135.0,
+        "height": 50.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 3,
+      "scc_id": 3,
+      "in_cycle": false,
+      "is_new": false
+    },
+    {
+      "node_id": "alerts",
+      "label": "异常通知",
+      "lines": [
+        "异常通知"
+      ],
+      "box": {
+        "x": 877.5,
+        "y": 954.0,
+        "width": 110.0,
+        "height": 44.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 3,
+      "scc_id": 0,
+      "in_cycle": false,
+      "is_new": false
+    },
+    {
+      "node_id": "report",
+      "label": "经营日报",
+      "lines": [
+        "经营日报"
+      ],
+      "box": {
+        "x": 1120.0,
+        "y": 1118.0,
+        "width": 110.0,
+        "height": 44.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 4,
+      "scc_id": 2,
+      "in_cycle": false,
+      "is_new": false
+    },
+    {
+      "node_id": "archive",
+      "label": "归档快照",
+      "lines": [
+        "归档快照"
+      ],
+      "box": {
+        "x": 1350.0,
+        "y": 1282.0,
+        "width": 110.0,
+        "height": 44.0
+      },
+      "box_enlarged": false,
+      "component": 0,
+      "rank": 5,
+      "scc_id": 1,
+      "in_cycle": false,
+      "is_new": false
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "E01",
+      "source": "raw",
+      "target": "clean",
+      "label": "orders",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          152.5,
+          128.0
+        ],
+        [
+          228.75,
+          128.0
+        ],
+        [
+          228.75,
+          297.0
+        ],
+        [
+          285.0,
+          297.0
+        ]
+      ],
+      "label_box": {
+        "text": "orders",
+        "box": {
+          "x": 232.75,
+          "y": 203.5,
+          "width": 42.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E02",
+      "source": "clean",
+      "target": "dim",
+      "label": "codes",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          435.0,
+          297.0
+        ],
+        [
+          505.0,
+          297.0
+        ],
+        [
+          505.0,
+          515.0
+        ],
+        [
+          570.0,
+          515.0
+        ]
+      ],
+      "label_box": {
+        "text": "codes",
+        "box": {
+          "x": 509.0,
+          "y": 397.0,
+          "width": 36.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E03",
+      "source": "dim",
+      "target": "join",
+      "label": "enriched",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          570.0,
+          515.0
+        ],
+        [
+          515.0,
+          515.0
+        ],
+        [
+          515.0,
+          595.0
+        ],
+        [
+          575.0,
+          595.0
+        ]
+      ],
+      "label_box": {
+        "text": "enriched",
+        "box": {
+          "x": 519.0,
+          "y": 546.0,
+          "width": 56.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E04",
+      "source": "join",
+      "target": "quality",
+      "label": "validate",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          575.0,
+          595.0
+        ],
+        [
+          499.0,
+          595.0
+        ],
+        [
+          499.0,
+          681.0
+        ],
+        [
+          555.0,
+          681.0
+        ]
+      ],
+      "label_box": {
+        "text": "validate",
+        "box": {
+          "x": 503.0,
+          "y": 629.0,
+          "width": 56.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E05",
+      "source": "quality",
+      "target": "dim",
+      "label": "repair",
+      "kind": "backward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          745.0,
+          681.0
+        ],
+        [
+          785.0,
+          681.0
+        ],
+        [
+          785.0,
+          515.0
+        ],
+        [
+          730.0,
+          515.0
+        ]
+      ],
+      "label_box": {
+        "text": "repair",
+        "box": {
+          "x": 789.0,
+          "y": 589.0,
+          "width": 42.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E06",
+      "source": "join",
+      "target": "agg",
+      "label": "amounts",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": true,
+      "lane_index": 0,
+      "parallel_count": 2,
+      "points": [
+        [
+          725.0,
+          595.0
+        ],
+        [
+          791.25,
+          595.0
+        ],
+        [
+          791.25,
+          903.0
+        ],
+        [
+          865.0,
+          903.0
+        ]
+      ],
+      "label_box": {
+        "text": "amounts",
+        "box": {
+          "x": 795.25,
+          "y": 740.0,
+          "width": 49.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E07",
+      "source": "agg",
+      "target": "report",
+      "label": "daily",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          1000.0,
+          903.0
+        ],
+        [
+          1053.75,
+          903.0
+        ],
+        [
+          1053.75,
+          1140.0
+        ],
+        [
+          1120.0,
+          1140.0
+        ]
+      ],
+      "label_box": {
+        "text": "daily",
+        "box": {
+          "x": 1057.75,
+          "y": 1012.5,
+          "width": 36.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E08",
+      "source": "report",
+      "target": "archive",
+      "label": "snapshot",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          1230.0,
+          1140.0
+        ],
+        [
+          1290.0,
+          1140.0
+        ],
+        [
+          1290.0,
+          1304.0
+        ],
+        [
+          1350.0,
+          1304.0
+        ]
+      ],
+      "label_box": {
+        "text": "snapshot",
+        "box": {
+          "x": 1294.0,
+          "y": 1213.0,
+          "width": 56.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E09",
+      "source": "quality",
+      "target": "alerts",
+      "label": "issues",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          745.0,
+          681.0
+        ],
+        [
+          807.25,
+          681.0
+        ],
+        [
+          807.25,
+          976.0
+        ],
+        [
+          877.5,
+          976.0
+        ]
+      ],
+      "label_box": {
+        "text": "issues",
+        "box": {
+          "x": 811.25,
+          "y": 819.5,
+          "width": 42.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E10",
+      "source": "raw",
+      "target": "archive",
+      "label": "raw copy",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          152.5,
+          128.0
+        ],
+        [
+          1474.0,
+          128.0
+        ],
+        [
+          1474.0,
+          1304.0
+        ],
+        [
+          1460.0,
+          1304.0
+        ]
+      ],
+      "label_box": {
+        "text": "raw copy",
+        "box": {
+          "x": 785.25,
+          "y": 106.0,
+          "width": 56.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E11",
+      "source": "external",
+      "target": "dim",
+      "label": "mapping",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          165.0,
+          55.0
+        ],
+        [
+          1490.0,
+          55.0
+        ],
+        [
+          1490.0,
+          515.0
+        ],
+        [
+          730.0,
+          515.0
+        ]
+      ],
+      "label_box": {
+        "text": "mapping",
+        "box": {
+          "x": 803.0,
+          "y": 33.0,
+          "width": 49.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E12",
+      "source": "catalog",
+      "target": "audit",
+      "label": "changes",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          140.0,
+          1438.0
+        ],
+        [
+          200.0,
+          1438.0
+        ],
+        [
+          200.0,
+          1646.0
+        ],
+        [
+          260.0,
+          1646.0
+        ]
+      ],
+      "label_box": {
+        "text": "changes",
+        "box": {
+          "x": 204.0,
+          "y": 1533.0,
+          "width": 49.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E13",
+      "source": "join",
+      "target": "agg",
+      "label": "counts",
+      "kind": "forward",
+      "is_self_loop": false,
+      "is_parallel": true,
+      "lane_index": 1,
+      "parallel_count": 2,
+      "points": [
+        [
+          725.0,
+          604.0
+        ],
+        [
+          823.25,
+          604.0
+        ],
+        [
+          823.25,
+          912.0
+        ],
+        [
+          865.0,
+          912.0
+        ]
+      ],
+      "label_box": {
+        "text": "counts",
+        "box": {
+          "x": 894.25,
+          "y": 749.0,
+          "width": 42.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    },
+    {
+      "edge_id": "E14",
+      "source": "audit",
+      "target": "audit",
+      "label": "retention",
+      "kind": "self_loop",
+      "is_self_loop": true,
+      "is_parallel": false,
+      "lane_index": 0,
+      "parallel_count": 1,
+      "points": [
+        [
+          293.0,
+          1624.0
+        ],
+        [
+          293.0,
+          1568.0
+        ],
+        [
+          315.0,
+          1558.0
+        ],
+        [
+          337.0,
+          1568.0
+        ],
+        [
+          337.0,
+          1624.0
+        ]
+      ],
+      "label_box": {
+        "text": "retention",
+        "box": {
+          "x": 305.5,
+          "y": 1546.0,
+          "width": 63.0,
+          "height": 18.0
+        }
+      },
+      "is_new": false
+    }
+  ],
+  "issues": [
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E01 与 E10 在 (228.75, 128.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E01",
+        "E10"
+      ],
+      "at": {
+        "at": {
+          "x": 228.75,
+          "y": 128.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E02 与 E03 在 (515.0, 515.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E02",
+        "E03"
+      ],
+      "at": {
+        "at": {
+          "x": 515.0,
+          "y": 515.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E03 与 E04 在 (515.0, 595.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E03",
+        "E04"
+      ],
+      "at": {
+        "at": {
+          "x": 515.0,
+          "y": 595.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E05 与 E06 在 (785.0, 595.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E05",
+        "E06"
+      ],
+      "at": {
+        "at": {
+          "x": 785.0,
+          "y": 595.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E05 与 E09 在 (785.0, 681.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E05",
+        "E09"
+      ],
+      "at": {
+        "at": {
+          "x": 785.0,
+          "y": 681.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E05 与 E11 在 (785.0, 515.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E05",
+        "E11"
+      ],
+      "at": {
+        "at": {
+          "x": 785.0,
+          "y": 515.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E05 与 E13 在 (785.0, 604.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E05",
+        "E13"
+      ],
+      "at": {
+        "at": {
+          "x": 785.0,
+          "y": 604.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E06 与 E09 在 (791.25, 681.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E06",
+        "E09"
+      ],
+      "at": {
+        "at": {
+          "x": 791.25,
+          "y": 681.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E06 与 E09 在 (807.25, 903.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E06",
+        "E09"
+      ],
+      "at": {
+        "at": {
+          "x": 807.25,
+          "y": 903.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E06 与 E13 在 (791.25, 604.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E06",
+        "E13"
+      ],
+      "at": {
+        "at": {
+          "x": 791.25,
+          "y": 604.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E06 与 E13 在 (823.25, 903.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E06",
+        "E13"
+      ],
+      "at": {
+        "at": {
+          "x": 823.25,
+          "y": 903.0
+        }
+      }
+    },
+    {
+      "severity": "info",
+      "code": "edge-crossing",
+      "message": "边 E10 与 E11 在 (1474.0, 515.0) 交叉（允许，交叉点不渲染为节点）",
+      "ids": [
+        "E10",
+        "E11"
+      ],
+      "at": {
+        "at": {
+          "x": 1474.0,
+          "y": 515.0
+        }
+      }
+    }
+  ],
+  "update": null,
+  "source_files": {
+    "nodes": "/workspace/fixtures/nodes-v1.json",
+    "edges": "/workspace/fixtures/edges-v1.csv",
+    "plan": "/workspace/fixtures/display-plan.json",
+    "mode": "full"
+  }
+}

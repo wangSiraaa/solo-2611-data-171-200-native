@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>依赖图布局 v1 / v2 对照</title>
+<style>
+  body { font-family: sans-serif; margin: 24px; color: #1f2d3d; background: #f5f7fa; }
+  h1 { font-size: 20px; } h2 { font-size: 16px; margin-top: 28px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card { background: #fff; border: 1px solid #d8dee8; border-radius: 10px;
+           padding: 14px; overflow: auto; max-height: 78vh; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; background:#fff; }
+  th, td { border: 1px solid #d8dee8; padding: 6px 8px; text-align: left; }
+  th { background: #eef2f7; }
+  .sev-error { color:#b3261e; } .sev-warning { color:#9a6700; }
+  .sev-info { color:#5a6b7b; }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; font-size:13px; margin:12px 0; }
+  .legend i { display:inline-block; vertical-align:middle; margin-right:5px; }
+  .legend .box { width:16px; height:12px; border:2px solid #2f6db5; border-radius:3px; background:#fff; }
+  .legend .box.new { border-color:#c0392b; }
+  .legend .dash { width:18px; height:12px; border:2px dashed #c47ed4; }
+  .legend .band { width:18px; height:12px; background:#f7f9fc; border:1px solid #d8dee8; }
+  .legend .arrow { width:18px; height:2px; background:#444; }
+  .meta { font-size:12px; color:#667; }
+  svg { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+<h1>依赖关系图静态布局对照（同一份坐标 JSON 渲染）</h1>
+<p class="meta">v1：12 节点 / 14 边；
+v2：14 节点 / 17 边；
+新增节点 tax, taxreport，
+新增边 E15, E16, E17。</p>
+
+    <div class="legend">
+      <span><i class="box normal"></i>普通节点</span>
+      <span><i class="box new"></i>新增节点/边</span>
+      <span><i class="dash"></i>SCC 循环簇（回边保留并在簇外绕行）</span>
+      <span><i class="band"></i>独立组件边界</span>
+      <span><i class="arrow"></i>箭头端点落在节点盒边界</span>
+    </div>
+<div class="grid">
+  <div class="card"><h2>v1 初始布局</h2><svg xmlns="http://www.w3.org/2000/svg" width="1490.00" height="1742.00" viewBox="0 0 1490.00 1742.00" font-family="sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/></marker></defs>
+<g class="component" data-component="0"><rect x="30.00" y="30.00" width="1430.00" height="1296.00" rx="10" fill="#f7f9fc" stroke="#d8dee8"/><text x="38.00" y="46.00" font-size="11" fill="#8a94a6">组件 1（10 节点）</text></g>
+<g class="component" data-component="1"><rect x="30.00" y="1416.00" width="340.00" height="296.00" rx="10" fill="#fbf8f3" stroke="#d8dee8"/><text x="38.00" y="1432.00" font-size="11" fill="#8a94a6">组件 2（2 节点）</text></g>
+<g class="scc" data-scc="4"><rect x="529.00" y="466.00" width="242.00" height="270.00" rx="12" fill="none" stroke="#c47ed4" stroke-width="1.5" stroke-dasharray="7 5"/><text x="537.00" y="480.00" font-size="11" fill="#9b4fb0">SCC 4：循环（3 节点）</text></g>
+<g class="scc" data-scc="8"><rect x="234.00" y="1602.00" width="162.00" height="88.00" rx="12" fill="none" stroke="#c47ed4" stroke-width="1.5" stroke-dasharray="7 5"/><text x="242.00" y="1616.00" font-size="11" fill="#9b4fb0">SCC 8：循环（1 节点）</text></g>
+<g class="edges">
+<g class="edge forward" data-edge-id="E01"><title>E01: raw → clean [orders]</title><polyline points="152.50,128.00 228.75,128.00 228.75,297.00 285.00,297.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E02"><title>E02: clean → dim [codes]</title><polyline points="435.00,297.00 505.00,297.00 505.00,515.00 570.00,515.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E03"><title>E03: dim → join [enriched]</title><polyline points="570.00,515.00 515.00,515.00 515.00,595.00 575.00,595.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E04"><title>E04: join → quality [validate]</title><polyline points="575.00,595.00 499.00,595.00 499.00,681.00 555.00,681.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge backward" data-edge-id="E05"><title>E05: quality → dim [repair]</title><polyline points="745.00,681.00 785.00,681.00 785.00,515.00 730.00,515.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward parallel" data-edge-id="E06"><title>E06: join → agg [amounts]</title><polyline points="725.00,595.00 791.25,595.00 791.25,903.00 865.00,903.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E07"><title>E07: agg → report [daily]</title><polyline points="1000.00,903.00 1053.75,903.00 1053.75,1140.00 1120.00,1140.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E08"><title>E08: report → archive [snapshot]</title><polyline points="1230.00,1140.00 1290.00,1140.00 1290.00,1304.00 1350.00,1304.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E09"><title>E09: quality → alerts [issues]</title><polyline points="745.00,681.00 807.25,681.00 807.25,976.00 877.50,976.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E10"><title>E10: raw → archive [raw copy]</title><polyline points="152.50,128.00 1474.00,128.00 1474.00,1304.00 1460.00,1304.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E11"><title>E11: external → dim [mapping]</title><polyline points="165.00,55.00 1490.00,55.00 1490.00,515.00 730.00,515.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E12"><title>E12: catalog → audit [changes]</title><polyline points="140.00,1438.00 200.00,1438.00 200.00,1646.00 260.00,1646.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward parallel" data-edge-id="E13"><title>E13: join → agg [counts]</title><polyline points="725.00,604.00 823.25,604.00 823.25,912.00 865.00,912.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge self_loop self-loop" data-edge-id="E14"><title>E14: audit → audit [retention]</title><polyline points="293.00,1624.00 293.00,1568.00 315.00,1558.00 337.00,1568.00 337.00,1624.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+</g>
+<g class="edge-labels">
+<g class="edge-label" data-edge-id="E01"><rect x="232.75" y="203.50" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="253.75" y="216.50" font-size="11" text-anchor="middle" fill="#333">orders</text></g>
+<g class="edge-label" data-edge-id="E02"><rect x="509.00" y="397.00" width="36.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="527.00" y="410.00" font-size="11" text-anchor="middle" fill="#333">codes</text></g>
+<g class="edge-label" data-edge-id="E03"><rect x="519.00" y="546.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="547.00" y="559.00" font-size="11" text-anchor="middle" fill="#333">enriched</text></g>
+<g class="edge-label" data-edge-id="E04"><rect x="503.00" y="629.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="531.00" y="642.00" font-size="11" text-anchor="middle" fill="#333">validate</text></g>
+<g class="edge-label" data-edge-id="E05"><rect x="789.00" y="589.00" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="810.00" y="602.00" font-size="11" text-anchor="middle" fill="#333">repair</text></g>
+<g class="edge-label" data-edge-id="E06"><rect x="795.25" y="740.00" width="49.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="819.75" y="753.00" font-size="11" text-anchor="middle" fill="#333">amounts</text></g>
+<g class="edge-label" data-edge-id="E07"><rect x="1057.75" y="1012.50" width="36.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="1075.75" y="1025.50" font-size="11" text-anchor="middle" fill="#333">daily</text></g>
+<g class="edge-label" data-edge-id="E08"><rect x="1294.00" y="1213.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="1322.00" y="1226.00" font-size="11" text-anchor="middle" fill="#333">snapshot</text></g>
+<g class="edge-label" data-edge-id="E09"><rect x="811.25" y="819.50" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="832.25" y="832.50" font-size="11" text-anchor="middle" fill="#333">issues</text></g>
+<g class="edge-label" data-edge-id="E10"><rect x="785.25" y="106.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="813.25" y="119.00" font-size="11" text-anchor="middle" fill="#333">raw copy</text></g>
+<g class="edge-label" data-edge-id="E11"><rect x="803.00" y="33.00" width="49.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="827.50" y="46.00" font-size="11" text-anchor="middle" fill="#333">mapping</text></g>
+<g class="edge-label" data-edge-id="E12"><rect x="204.00" y="1533.00" width="49.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="228.50" y="1546.00" font-size="11" text-anchor="middle" fill="#333">changes</text></g>
+<g class="edge-label" data-edge-id="E13"><rect x="894.25" y="749.00" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="915.25" y="762.00" font-size="11" text-anchor="middle" fill="#333">counts</text></g>
+<g class="edge-label" data-edge-id="E14"><rect x="305.50" y="1546.00" width="63.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="337.00" y="1559.00" font-size="11" text-anchor="middle" fill="#333">retention</text></g>
+</g>
+<g class="nodes">
+<g class="node" data-node-id="agg"><title>agg：按经营日汇总</title><rect x="865.00" y="878.00" width="135.00" height="50.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="932.50" y="905.50" font-size="13" text-anchor="middle" fill="#1f2d3d">按经营日汇总</text>
+<text x="870.00" y="924.00" font-size="9" fill="#9aa5b1">agg</text>
+</g>
+<g class="node" data-node-id="alerts"><title>alerts：异常通知</title><rect x="877.50" y="954.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="932.50" y="978.50" font-size="13" text-anchor="middle" fill="#1f2d3d">异常通知</text>
+<text x="882.50" y="994.00" font-size="9" fill="#9aa5b1">alerts</text>
+</g>
+<g class="node" data-node-id="archive"><title>archive：归档快照</title><rect x="1350.00" y="1282.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="1405.00" y="1306.50" font-size="13" text-anchor="middle" fill="#1f2d3d">归档快照</text>
+<text x="1355.00" y="1322.00" font-size="9" fill="#9aa5b1">archive</text>
+</g>
+<g class="node cyclic" data-node-id="audit"><title>audit：审计日志</title><rect x="260.00" y="1624.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="315.00" y="1648.50" font-size="13" text-anchor="middle" fill="#1f2d3d">审计日志</text>
+<text x="265.00" y="1664.00" font-size="9" fill="#9aa5b1">audit</text>
+</g>
+<g class="node" data-node-id="catalog"><title>catalog：数据字典</title><rect x="30.00" y="1416.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="85.00" y="1440.50" font-size="13" text-anchor="middle" fill="#1f2d3d">数据字典</text>
+<text x="35.00" y="1456.00" font-size="9" fill="#9aa5b1">catalog</text>
+</g>
+<g class="node" data-node-id="clean"><title>clean：清洗与字段标准化</title><rect x="285.00" y="270.00" width="150.00" height="54.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="360.00" y="299.50" font-size="13" text-anchor="middle" fill="#1f2d3d">清洗与字段标准化</text>
+<text x="290.00" y="320.00" font-size="9" fill="#9aa5b1">clean</text>
+</g>
+<g class="node cyclic" data-node-id="dim"><title>dim：维度映射和历史归属</title><rect x="570.00" y="488.00" width="160.00" height="54.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="650.00" y="509.00" font-size="13" text-anchor="middle" fill="#1f2d3d">维度映射</text>
+<text x="650.00" y="526.00" font-size="13" text-anchor="middle" fill="#1f2d3d">和历史归属</text>
+<text x="575.00" y="538.00" font-size="9" fill="#9aa5b1">dim</text>
+</g>
+<g class="node" data-node-id="external"><title>external：外部参考数据</title><rect x="30.00" y="30.00" width="135.00" height="50.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="97.50" y="57.50" font-size="13" text-anchor="middle" fill="#1f2d3d">外部参考数据</text>
+<text x="35.00" y="76.00" font-size="9" fill="#9aa5b1">external</text>
+</g>
+<g class="node cyclic" data-node-id="join"><title>join：订单与付款关联</title><rect x="575.00" y="568.00" width="150.00" height="54.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="650.00" y="597.50" font-size="13" text-anchor="middle" fill="#1f2d3d">订单与付款关联</text>
+<text x="580.00" y="618.00" font-size="9" fill="#9aa5b1">join</text>
+</g>
+<g class="node cyclic" data-node-id="quality"><title>quality：质量检查：回写修订建议</title><rect x="555.00" y="648.00" width="190.00" height="66.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="650.00" y="683.50" font-size="13" text-anchor="middle" fill="#1f2d3d">质量检查：回写修订建议</text>
+<text x="560.00" y="710.00" font-size="9" fill="#9aa5b1">quality</text>
+</g>
+<g class="node" data-node-id="raw"><title>raw：原始订单</title><rect x="42.50" y="106.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="97.50" y="130.50" font-size="13" text-anchor="middle" fill="#1f2d3d">原始订单</text>
+<text x="47.50" y="146.00" font-size="9" fill="#9aa5b1">raw</text>
+</g>
+<g class="node" data-node-id="report"><title>report：经营日报</title><rect x="1120.00" y="1118.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="1175.00" y="1142.50" font-size="13" text-anchor="middle" fill="#1f2d3d">经营日报</text>
+<text x="1125.00" y="1158.00" font-size="9" fill="#9aa5b1">report</text>
+</g>
+</g>
+</svg></div>
+  <div class="card"><h2>v2 增量布局（红色为新增）</h2><svg xmlns="http://www.w3.org/2000/svg" width="1490.00" height="1976.00" viewBox="0 0 1490.00 1976.00" font-family="sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/></marker></defs>
+<g class="component" data-component="0"><rect x="30.00" y="30.00" width="1430.00" height="1574.00" rx="10" fill="#f7f9fc" stroke="#d8dee8"/><text x="38.00" y="46.00" font-size="11" fill="#8a94a6">组件 1（12 节点）</text></g>
+<g class="component" data-component="1"><rect x="30.00" y="1694.00" width="340.00" height="252.00" rx="10" fill="#fbf8f3" stroke="#d8dee8"/><text x="38.00" y="1710.00" font-size="11" fill="#8a94a6">组件 2（2 节点）</text></g>
+<g class="scc" data-scc="6"><rect x="529.00" y="466.00" width="242.00" height="270.00" rx="12" fill="none" stroke="#c47ed4" stroke-width="1.5" stroke-dasharray="7 5"/><text x="537.00" y="480.00" font-size="11" fill="#9b4fb0">SCC 6：循环（3 节点）</text></g>
+<g class="scc" data-scc="10"><rect x="234.00" y="1880.00" width="162.00" height="88.00" rx="12" fill="none" stroke="#c47ed4" stroke-width="1.5" stroke-dasharray="7 5"/><text x="242.00" y="1894.00" font-size="11" fill="#9b4fb0">SCC 10：循环（1 节点）</text></g>
+<g class="edges">
+<g class="edge forward" data-edge-id="E01"><title>E01: raw → clean [orders]</title><polyline points="152.50,128.00 228.75,128.00 228.75,297.00 285.00,297.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E02"><title>E02: clean → dim [codes]</title><polyline points="435.00,297.00 505.00,297.00 505.00,515.00 570.00,515.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E03"><title>E03: dim → join [enriched]</title><polyline points="570.00,515.00 515.00,515.00 515.00,595.00 575.00,595.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E04"><title>E04: join → quality [validate]</title><polyline points="575.00,595.00 499.00,595.00 499.00,681.00 555.00,681.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge backward" data-edge-id="E05"><title>E05: quality → dim [repair]</title><polyline points="745.00,681.00 785.00,681.00 785.00,515.00 730.00,515.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward parallel" data-edge-id="E06"><title>E06: join → agg [amounts]</title><polyline points="725.00,595.00 791.25,595.00 791.25,903.00 865.00,903.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E07"><title>E07: agg → report [daily]</title><polyline points="1000.00,903.00 1053.75,903.00 1053.75,1140.00 1120.00,1140.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E08"><title>E08: report → archive [snapshot]</title><polyline points="1230.00,1140.00 1290.00,1140.00 1290.00,1304.00 1350.00,1304.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E09"><title>E09: quality → alerts [issues]</title><polyline points="745.00,681.00 807.25,681.00 807.25,976.00 877.50,976.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E10"><title>E10: raw → archive [raw copy]</title><polyline points="152.50,128.00 1474.00,128.00 1474.00,1304.00 1460.00,1304.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E11"><title>E11: external → dim [mapping]</title><polyline points="165.00,55.00 1490.00,55.00 1490.00,515.00 730.00,515.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward" data-edge-id="E12"><title>E12: catalog → audit [changes]</title><polyline points="140.00,1716.00 200.00,1716.00 200.00,1924.00 260.00,1924.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward parallel" data-edge-id="E13"><title>E13: join → agg [counts]</title><polyline points="725.00,604.00 823.25,604.00 823.25,912.00 865.00,912.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge self_loop self-loop" data-edge-id="E14"><title>E14: audit → audit [retention]</title><polyline points="293.00,1902.00 293.00,1846.00 315.00,1836.00 337.00,1846.00 337.00,1902.00" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward new" data-edge-id="E15"><title>E15: join → tax [tax base]</title><polyline points="725.00,595.00 839.25,595.00 839.25,1443.00 847.50,1443.00" fill="none" stroke="#c0392b" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward new" data-edge-id="E16"><title>E16: tax → taxreport [checked]</title><polyline points="1017.50,1443.00 1069.75,1443.00 1069.75,1582.00 1115.00,1582.00" fill="none" stroke="#c0392b" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+<g class="edge forward new" data-edge-id="E17"><title>E17: taxreport → archive [tax snapshot]</title><polyline points="1235.00,1582.00 1306.00,1582.00 1306.00,1304.00 1350.00,1304.00" fill="none" stroke="#c0392b" stroke-width="1.4" marker-end="url(#arrow)"/></g>
+</g>
+<g class="edge-labels">
+<g class="edge-label" data-edge-id="E01"><rect x="232.75" y="203.50" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="253.75" y="216.50" font-size="11" text-anchor="middle" fill="#333">orders</text></g>
+<g class="edge-label" data-edge-id="E02"><rect x="509.00" y="397.00" width="36.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="527.00" y="410.00" font-size="11" text-anchor="middle" fill="#333">codes</text></g>
+<g class="edge-label" data-edge-id="E03"><rect x="519.00" y="546.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="547.00" y="559.00" font-size="11" text-anchor="middle" fill="#333">enriched</text></g>
+<g class="edge-label" data-edge-id="E04"><rect x="503.00" y="629.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="531.00" y="642.00" font-size="11" text-anchor="middle" fill="#333">validate</text></g>
+<g class="edge-label" data-edge-id="E05"><rect x="789.00" y="589.00" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="810.00" y="602.00" font-size="11" text-anchor="middle" fill="#333">repair</text></g>
+<g class="edge-label" data-edge-id="E06"><rect x="795.25" y="740.00" width="49.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="819.75" y="753.00" font-size="11" text-anchor="middle" fill="#333">amounts</text></g>
+<g class="edge-label" data-edge-id="E07"><rect x="1057.75" y="1012.50" width="36.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="1075.75" y="1025.50" font-size="11" text-anchor="middle" fill="#333">daily</text></g>
+<g class="edge-label" data-edge-id="E08"><rect x="1294.00" y="1213.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="1322.00" y="1226.00" font-size="11" text-anchor="middle" fill="#333">snapshot</text></g>
+<g class="edge-label" data-edge-id="E09"><rect x="811.25" y="819.50" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="832.25" y="832.50" font-size="11" text-anchor="middle" fill="#333">issues</text></g>
+<g class="edge-label" data-edge-id="E10"><rect x="785.25" y="106.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="813.25" y="119.00" font-size="11" text-anchor="middle" fill="#333">raw copy</text></g>
+<g class="edge-label" data-edge-id="E11"><rect x="803.00" y="33.00" width="49.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="827.50" y="46.00" font-size="11" text-anchor="middle" fill="#333">mapping</text></g>
+<g class="edge-label" data-edge-id="E12"><rect x="204.00" y="1811.00" width="49.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="228.50" y="1824.00" font-size="11" text-anchor="middle" fill="#333">changes</text></g>
+<g class="edge-label" data-edge-id="E13"><rect x="894.25" y="749.00" width="42.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="915.25" y="762.00" font-size="11" text-anchor="middle" fill="#333">counts</text></g>
+<g class="edge-label" data-edge-id="E14"><rect x="305.50" y="1824.00" width="63.00" height="18.00" rx="3" fill="#ffffff" stroke="#c9ced8" stroke-width="0.8"/><text x="337.00" y="1837.00" font-size="11" text-anchor="middle" fill="#333">retention</text></g>
+<g class="edge-label new" data-edge-id="E15"><rect x="843.25" y="1010.00" width="56.00" height="18.00" rx="3" fill="#ffffff" stroke="#c0392b" stroke-width="0.8"/><text x="871.25" y="1023.00" font-size="11" text-anchor="middle" fill="#333">tax base</text></g>
+<g class="edge-label new" data-edge-id="E16"><rect x="1073.75" y="1503.50" width="49.00" height="18.00" rx="3" fill="#ffffff" stroke="#c0392b" stroke-width="0.8"/><text x="1098.25" y="1516.50" font-size="11" text-anchor="middle" fill="#333">checked</text></g>
+<g class="edge-label new" data-edge-id="E17"><rect x="1310.00" y="1434.00" width="84.00" height="18.00" rx="3" fill="#ffffff" stroke="#c0392b" stroke-width="0.8"/><text x="1352.00" y="1447.00" font-size="11" text-anchor="middle" fill="#333">tax snapshot</text></g>
+</g>
+<g class="nodes">
+<g class="node" data-node-id="agg"><title>agg：按经营日汇总</title><rect x="865.00" y="878.00" width="135.00" height="50.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="932.50" y="905.50" font-size="13" text-anchor="middle" fill="#1f2d3d">按经营日汇总</text>
+<text x="870.00" y="924.00" font-size="9" fill="#9aa5b1">agg</text>
+</g>
+<g class="node" data-node-id="alerts"><title>alerts：异常通知</title><rect x="877.50" y="954.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="932.50" y="978.50" font-size="13" text-anchor="middle" fill="#1f2d3d">异常通知</text>
+<text x="882.50" y="994.00" font-size="9" fill="#9aa5b1">alerts</text>
+</g>
+<g class="node" data-node-id="archive"><title>archive：归档快照</title><rect x="1350.00" y="1282.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="1405.00" y="1306.50" font-size="13" text-anchor="middle" fill="#1f2d3d">归档快照</text>
+<text x="1355.00" y="1322.00" font-size="9" fill="#9aa5b1">archive</text>
+</g>
+<g class="node cyclic" data-node-id="audit"><title>audit：审计日志</title><rect x="260.00" y="1902.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="315.00" y="1926.50" font-size="13" text-anchor="middle" fill="#1f2d3d">审计日志</text>
+<text x="265.00" y="1942.00" font-size="9" fill="#9aa5b1">audit</text>
+</g>
+<g class="node" data-node-id="catalog"><title>catalog：数据字典</title><rect x="30.00" y="1694.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="85.00" y="1718.50" font-size="13" text-anchor="middle" fill="#1f2d3d">数据字典</text>
+<text x="35.00" y="1734.00" font-size="9" fill="#9aa5b1">catalog</text>
+</g>
+<g class="node" data-node-id="clean"><title>clean：清洗与字段标准化</title><rect x="285.00" y="270.00" width="150.00" height="54.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="360.00" y="299.50" font-size="13" text-anchor="middle" fill="#1f2d3d">清洗与字段标准化</text>
+<text x="290.00" y="320.00" font-size="9" fill="#9aa5b1">clean</text>
+</g>
+<g class="node cyclic" data-node-id="dim"><title>dim：维度映射和历史归属</title><rect x="570.00" y="488.00" width="160.00" height="54.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="650.00" y="509.00" font-size="13" text-anchor="middle" fill="#1f2d3d">维度映射</text>
+<text x="650.00" y="526.00" font-size="13" text-anchor="middle" fill="#1f2d3d">和历史归属</text>
+<text x="575.00" y="538.00" font-size="9" fill="#9aa5b1">dim</text>
+</g>
+<g class="node" data-node-id="external"><title>external：外部参考数据</title><rect x="30.00" y="30.00" width="135.00" height="50.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="97.50" y="57.50" font-size="13" text-anchor="middle" fill="#1f2d3d">外部参考数据</text>
+<text x="35.00" y="76.00" font-size="9" fill="#9aa5b1">external</text>
+</g>
+<g class="node cyclic" data-node-id="join"><title>join：订单与付款关联</title><rect x="575.00" y="568.00" width="150.00" height="54.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="650.00" y="597.50" font-size="13" text-anchor="middle" fill="#1f2d3d">订单与付款关联</text>
+<text x="580.00" y="618.00" font-size="9" fill="#9aa5b1">join</text>
+</g>
+<g class="node cyclic" data-node-id="quality"><title>quality：质量检查：回写修订建议</title><rect x="555.00" y="648.00" width="190.00" height="66.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="650.00" y="683.50" font-size="13" text-anchor="middle" fill="#1f2d3d">质量检查：回写修订建议</text>
+<text x="560.00" y="710.00" font-size="9" fill="#9aa5b1">quality</text>
+</g>
+<g class="node" data-node-id="raw"><title>raw：原始订单</title><rect x="42.50" y="106.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="97.50" y="130.50" font-size="13" text-anchor="middle" fill="#1f2d3d">原始订单</text>
+<text x="47.50" y="146.00" font-size="9" fill="#9aa5b1">raw</text>
+</g>
+<g class="node" data-node-id="report"><title>report：经营日报</title><rect x="1120.00" y="1118.00" width="110.00" height="44.00" rx="7" fill="#ffffff" stroke="#2f6db5" stroke-width="1.6"/>
+<text x="1175.00" y="1142.50" font-size="13" text-anchor="middle" fill="#1f2d3d">经营日报</text>
+<text x="1125.00" y="1158.00" font-size="9" fill="#9aa5b1">report</text>
+</g>
+<g class="node new" data-node-id="tax"><title>tax：税务核对中间结果</title><rect x="847.50" y="1416.00" width="170.00" height="54.00" rx="7" fill="#ffffff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="932.50" y="1445.50" font-size="13" text-anchor="middle" fill="#1f2d3d">税务核对中间结果</text>
+<text x="852.50" y="1466.00" font-size="9" fill="#9aa5b1">tax</text>
+</g>
+<g class="node new" data-node-id="taxreport"><title>taxreport：税务报告</title><rect x="1115.00" y="1560.00" width="120.00" height="44.00" rx="7" fill="#ffffff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="1175.00" y="1584.50" font-size="13" text-anchor="middle" fill="#1f2d3d">税务报告</text>
+<text x="1120.00" y="1600.00" font-size="9" fill="#9aa5b1">taxreport</text>
+</g>
+</g>
+</svg></div>
+</div>
+
+<h2>增量稳定性报告</h2>
+<table>
+<tr><th>节点</th><th>旧坐标</th><th>新坐标</th><th>位移</th><th>原因</th></tr>
+<tr><td>catalog</td><td>(30.0, 1416.0)</td><td>(30.0, 1694.0)</td><td>(0.0, 278.0)</td><td>新增节点底部 1604.0 与下游独立组件（顶部 1416.0）间距不足 90.0px</td></tr><tr><td>audit</td><td>(260.0, 1624.0)</td><td>(260.0, 1902.0)</td><td>(0.0, 278.0)</td><td>新增节点底部 1604.0 与下游独立组件（顶部 1416.0）间距不足 90.0px</td></tr>
+</table>
+<p><b>迁移原因：</b>新增节点底部 1604.0 与下游独立组件（顶部 1416.0）间距不足 90.0px，整体平移 278.0px<br>
+<b>旧边复用：</b>E01, E02, E03, E04, E05, E06, E07, E08, E09, E10, E11, E12, E13, E14（折线逐点保留）</p>
+
+<h2>v1 布局问题清单（含边交叉定位，交叉允许且不渲染为节点）</h2>
+<table><tr><th>级别</th><th>代码</th><th>信息</th></tr><tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E01 与 E10 在 (228.75, 128.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E02 与 E03 在 (515.0, 515.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E03 与 E04 在 (515.0, 595.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E06 在 (785.0, 595.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E09 在 (785.0, 681.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E11 在 (785.0, 515.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E13 在 (785.0, 604.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E09 在 (791.25, 681.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E09 在 (807.25, 903.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E13 在 (791.25, 604.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E13 在 (823.25, 903.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E10 与 E11 在 (1474.0, 515.0) 交叉（允许，交叉点不渲染为节点）</td></tr></table>
+<h2>v2 布局问题清单</h2>
+<table><tr><th>级别</th><th>代码</th><th>信息</th></tr><tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E01 与 E10 在 (228.75, 128.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E02 与 E03 在 (515.0, 515.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E03 与 E04 在 (515.0, 595.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E06 在 (785.0, 595.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E09 在 (785.0, 681.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E11 在 (785.0, 515.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E13 在 (785.0, 604.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E05 与 E15 在 (785.0, 595.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E09 在 (791.25, 681.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E09 在 (807.25, 903.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E13 在 (791.25, 604.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E13 在 (823.25, 903.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E15 在 (791.25, 595.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E06 与 E15 在 (839.25, 903.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E08 与 E17 在 (1306.0, 1304.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E09 与 E15 在 (839.25, 976.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E10 与 E11 在 (1474.0, 515.0) 交叉（允许，交叉点不渲染为节点）</td></tr>
+<tr class='sev-info'><td>info</td><td>edge-crossing</td><td>边 E13 与 E15 在 (839.25, 912.0) 交叉（允许，交叉点不渲染为节点）</td></tr></table>
+</body></html>
