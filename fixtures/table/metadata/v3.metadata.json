@@ -1,0 +1,107 @@
+{
+  "format-version": 2,
+  "table-uuid": "63489db9-d78a-4a11-a5e5-a52a425d67db",
+  "location": "s3://offline-fixture/table",
+  "last-sequence-number": 3,
+  "last-updated-ms": 1700000003000,
+  "last-column-id": 3,
+  "schemas": [
+    {
+      "type": "struct",
+      "schema-id": 0,
+      "fields": [
+        {
+          "id": 1,
+          "name": "id",
+          "required": true,
+          "type": "long"
+        },
+        {
+          "id": 2,
+          "name": "tag",
+          "required": false,
+          "type": "string"
+        },
+        {
+          "id": 3,
+          "name": "amount",
+          "required": true,
+          "type": "long"
+        }
+      ]
+    }
+  ],
+  "current-schema-id": 0,
+  "partition-specs": [
+    {
+      "spec-id": 0,
+      "fields": []
+    }
+  ],
+  "default-spec-id": 0,
+  "last-partition-id": 999,
+  "properties": {},
+  "current-snapshot-id": 103,
+  "snapshots": [
+    {
+      "snapshot-id": 101,
+      "sequence-number": 1,
+      "timestamp-ms": 1700000001000,
+      "manifest-list": "s3://offline-fixture/table/metadata/snap-101.avro",
+      "schema-id": 0,
+      "summary": {
+        "operation": "append"
+      }
+    },
+    {
+      "snapshot-id": 102,
+      "sequence-number": 2,
+      "timestamp-ms": 1700000002000,
+      "manifest-list": "s3://offline-fixture/table/metadata/snap-102.avro",
+      "schema-id": 0,
+      "summary": {
+        "operation": "overwrite"
+      },
+      "parent-snapshot-id": 101
+    },
+    {
+      "snapshot-id": 103,
+      "sequence-number": 3,
+      "timestamp-ms": 1700000003000,
+      "manifest-list": "s3://offline-fixture/table/metadata/snap-103.avro",
+      "schema-id": 0,
+      "summary": {
+        "operation": "overwrite"
+      },
+      "parent-snapshot-id": 102
+    }
+  ],
+  "snapshot-log": [
+    {
+      "timestamp-ms": 1700000001000,
+      "snapshot-id": 101
+    },
+    {
+      "timestamp-ms": 1700000002000,
+      "snapshot-id": 102
+    },
+    {
+      "timestamp-ms": 1700000003000,
+      "snapshot-id": 103
+    }
+  ],
+  "metadata-log": [],
+  "sort-orders": [
+    {
+      "order-id": 0,
+      "fields": []
+    }
+  ],
+  "default-sort-order-id": 0,
+  "refs": {
+    "main": {
+      "snapshot-id": 103,
+      "type": "branch"
+    }
+  }
+}

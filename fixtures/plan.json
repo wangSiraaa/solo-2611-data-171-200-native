@@ -1,0 +1,12 @@
+{
+  "metadata": "table/metadata/v3.metadata.json",
+  "uri_mapping": {
+    "s3://offline-fixture/table/": "table/"
+  },
+  "snapshots": [
+    101,
+    102,
+    103
+  ],
+  "supported": "unpartitioned Iceberg v2; flat fixed int64/string schema; data, position deletes, equality deletes"
+}
