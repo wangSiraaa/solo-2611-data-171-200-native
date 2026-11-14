@@ -1,0 +1,50 @@
+{
+  "columns": [
+    {
+      "id": "code",
+      "type": "text",
+      "nullable": false
+    },
+    {
+      "id": "name",
+      "type": "text",
+      "nullable": true
+    },
+    {
+      "id": "qty",
+      "type": "integer",
+      "nullable": false
+    },
+    {
+      "id": "price",
+      "type": "decimal",
+      "nullable": false
+    },
+    {
+      "id": "day",
+      "type": "date",
+      "nullable": false
+    },
+    {
+      "id": "active",
+      "type": "boolean",
+      "nullable": false
+    },
+    {
+      "id": "note",
+      "type": "text",
+      "nullable": true
+    },
+    {
+      "id": "group",
+      "type": "text",
+      "nullable": false
+    }
+  ],
+  "null_marker": "\\N",
+  "empty_string": "text empty field is empty string; empty nontext field invalid; null only through exact null_marker and nullable",
+  "decimal": "signed fixed-point text, at most two fraction digits, output canonical two-decimal string; no exponent or float",
+  "boolean": "true or false lowercase",
+  "date": "ISO YYYY-MM-DD with actual calendar validation",
+  "row_id": "not editable and not displayed as a paste column"
+}

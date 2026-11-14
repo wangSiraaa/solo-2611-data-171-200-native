@@ -1,0 +1,16 @@
+{
+  "keys": {
+    "arrows": "move current cell",
+    "bracketed_paste": "capture ESC[200~ through ESC[201~ payload as a single paste transaction",
+    "enter_in_preview": "commit only if complete valid rectangle fits bounds",
+    "escape_in_preview": "discard entire preview",
+    "ctrl_z": "undo the most recently committed paste as one operation",
+    "F2": "export current grid JSON; destination set by command argument",
+    "q": "quit in normal mode"
+  },
+  "paste_anchor": "capture row_id and column id at opening bracketed-paste marker; preview does not change grid",
+  "framing": "input may split UTF-8 and escape markers across reads; newline in quoted field is data, not an Enter command",
+  "display": "current coordinate and current value; preview size, validity and errors indexed by logical source row/column; narrow terminals may show a safe size message but preserve state",
+  "scope": "one pending preview and at least one undo; no redo, network validator, formula or virtual scrolling requirement",
+  "export": "preserve row IDs and cell types exactly; failed/cancelled previews leave all values unchanged"
+}
