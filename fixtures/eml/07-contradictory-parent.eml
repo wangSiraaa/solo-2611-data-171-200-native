@@ -1,0 +1,12 @@
+From: sender@example.invalid
+To: archive@example.invalid
+Date: Sat, 14 Nov 2026 10:00:00 +0800
+Message-ID: <contradiction@example.invalid>
+Subject: =?utf-8?b?54i25byV55So5Yay56qB?=
+References: <root@example.invalid> <orphan@example.invalid>
+In-Reply-To: <independent@example.invalid>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+
+两类头部不一致

@@ -1,0 +1,56 @@
+From: sender@example.invalid
+To: archive@example.invalid
+Date: Sat, 14 Nov 2026 10:00:00 +0800
+Message-ID: <root@example.invalid>
+Subject: =?utf-8?b?6aG555uu5ZCv5Yqo?=
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============1031236345541256116=="
+
+--===============1031236345541256116==
+Content-Type: multipart/alternative;
+ boundary="===============3032835514723669190=="
+
+--===============3032835514723669190==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+这是纯文本替代正文。
+
+--===============3032835514723669190==
+MIME-Version: 1.0
+Content-Type: multipart/related;
+ boundary="===============1529216218244168404=="
+
+--===============1529216218244168404==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>=E9=A1=B9=E7=9B=AE=E5=90=AF=E5=8A=A8<img src=3D"cid:chart@loca=
+l"></p><img src=3D"https://example.invalid/remote.png"><script>window.bad=3Dt=
+rue</script></body></html>
+
+--===============1529216218244168404==
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''%E5%86%85%E5%B5%8C%E5%9B%BE.png
+Content-ID: <chart@local>
+MIME-Version: 1.0
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNQaDgAAAIkAWHdFJqQ
+AAAAAElFTkSuQmCC
+
+--===============1529216218244168404==--
+
+--===============3032835514723669190==--
+
+--===============1031236345541256116==
+Content-Type: text/csv
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''%E9%A2%84%E7%AE%97%E8%A1%A8.csv
+MIME-Version: 1.0
+
+57yW5Y+3LOmHkeminQpBLDEwMAo=
+
+--===============1031236345541256116==--

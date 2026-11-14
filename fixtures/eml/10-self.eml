@@ -1,0 +1,11 @@
+From: sender@example.invalid
+To: archive@example.invalid
+Date: Sat, 14 Nov 2026 10:00:00 +0800
+Message-ID: <self@example.invalid>
+Subject: Self
+In-Reply-To: <self@example.invalid>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+self body

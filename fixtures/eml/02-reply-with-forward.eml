@@ -1,0 +1,35 @@
+From: sender@example.invalid
+To: archive@example.invalid
+Date: Sat, 14 Nov 2026 10:00:00 +0800
+Message-ID: <reply@example.invalid>
+Subject: Re: =?utf-8?b?6aG555uu5ZCv5Yqo?=
+References: <root@example.invalid>
+In-Reply-To: <root@example.invalid>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============2362407942009003676=="
+
+--===============2362407942009003676==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+回复正文
+
+--===============2362407942009003676==
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+Content-Disposition: attachment
+
+From: sender@example.invalid
+To: archive@example.invalid
+Date: Sat, 14 Nov 2026 10:00:00 +0800
+Message-ID: <attached-only@example.invalid>
+Subject: =?utf-8?b?6L2s5Y+R5Lit55qE6YKu5Lu2?=
+References: <ghost-attached@example.invalid>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+
+此邮件只在附件中出现
+
+--===============2362407942009003676==--

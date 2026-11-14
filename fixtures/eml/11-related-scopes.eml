@@ -1,0 +1,53 @@
+From: sender@example.invalid
+To: archive@example.invalid
+Date: Sat, 14 Nov 2026 10:00:00 +0800
+Message-ID: <scopes@example.invalid>
+Subject: =?utf-8?b?5bWM5aWX6LWE5rqQ?=
+MIME-Version: 1.0
+Content-Type: multipart/related; start="<main@scope>";
+ boundary="===============1244091662798616750=="
+
+--===============1244091662798616750==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+
+--===============1244091662798616750==
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+Content-ID: <reused@scope>
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNQaDgAAAIkAWHdFJqQ
+AAAAAElFTkSuQmCC
+
+--===============1244091662798616750==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+Content-ID: <main@scope>
+
+<p>outer<img src="cid:reused@scope"><img src="cid:missing@scope"></p>
+
+--===============1244091662798616750==
+Content-Type: multipart/related;
+ boundary="===============4586919584766649371=="
+
+--===============4586919584766649371==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+<p>nested<img src="cid:reused@scope"></p>
+
+--===============4586919584766649371==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+Content-ID: <reused@scope>
+
+bmVzdGVkLXJlc291cmNl
+
+--===============4586919584766649371==--
+
+--===============1244091662798616750==--

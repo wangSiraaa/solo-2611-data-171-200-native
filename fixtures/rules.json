@@ -1,0 +1,18 @@
+{
+  "alternative_preference": [
+    "text/html",
+    "text/plain"
+  ],
+  "related_root": "start Content-ID, else first child",
+  "cid_scope": "nearest containing multipart/related; nested scopes do not leak outward",
+  "body_role": "only the chosen root/alternative is primary body; other subtrees still preserve roles and references",
+  "conversation": {
+    "parent_candidate": "last valid References id, otherwise single In-Reply-To id",
+    "references": "retain complete ordered chain as evidence",
+    "conflicting_parent": "retain both headers and conflict, do not silently discard",
+    "same_id": "collapse only byte-identical source bytes; differing versions remain conflict variants",
+    "subject": "never establishes a parent"
+  },
+  "html_policy": "no scripts, event attributes, external loading or active attachments; escape unsupported markup",
+  "id_syntax": "angle-bracket IDs used by fixtures; whitespace folds may be normalized, no case folding of the full identity"
+}
