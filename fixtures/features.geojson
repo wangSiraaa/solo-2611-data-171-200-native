@@ -1,0 +1,155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "name": "across",
+        "active": true,
+        "rank": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -10000,
+            3000
+          ],
+          [
+            -100,
+            80
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            100,
+            -80
+          ],
+          [
+            9000,
+            -3000
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "name": "parcel-hole",
+        "active": false,
+        "rank": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -8000,
+              -6000
+            ],
+            [
+              8000,
+              -6000
+            ],
+            [
+              8000,
+              6000
+            ],
+            [
+              -8000,
+              6000
+            ],
+            [
+              -8000,
+              -6000
+            ]
+          ],
+          [
+            [
+              -1200,
+              -1200
+            ],
+            [
+              -1200,
+              1200
+            ],
+            [
+              1200,
+              1200
+            ],
+            [
+              1200,
+              -1200
+            ],
+            [
+              -1200,
+              -1200
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "name": "thin",
+        "active": true,
+        "rank": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -2,
+              4000
+            ],
+            [
+              2,
+              4000
+            ],
+            [
+              2,
+              4050
+            ],
+            [
+              -2,
+              4050
+            ],
+            [
+              -2,
+              4000
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "name": "on-boundary",
+        "active": true,
+        "rank": 4
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0,
+            -9000
+          ],
+          [
+            0,
+            9000
+          ]
+        ]
+      }
+    }
+  ]
+}

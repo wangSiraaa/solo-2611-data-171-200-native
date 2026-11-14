@@ -1,0 +1,57 @@
+{
+  "source_crs": "EPSG:3857",
+  "world_half_width_m": 20037508.342789244,
+  "tile_scheme": "XYZ, y increases southward",
+  "extent": 4096,
+  "buffer_units": 16,
+  "layer": "data",
+  "tiles": [
+    {
+      "z": 9,
+      "x": 255,
+      "y": 255
+    },
+    {
+      "z": 9,
+      "x": 255,
+      "y": 256
+    },
+    {
+      "z": 9,
+      "x": 256,
+      "y": 255
+    },
+    {
+      "z": 9,
+      "x": 256,
+      "y": 256
+    },
+    {
+      "z": 10,
+      "x": 511,
+      "y": 511
+    },
+    {
+      "z": 10,
+      "x": 511,
+      "y": 512
+    },
+    {
+      "z": 10,
+      "x": 512,
+      "y": 511
+    },
+    {
+      "z": 10,
+      "x": 512,
+      "y": 512
+    }
+  ],
+  "quantization": "choose and disclose one deterministic global-grid rounding rule per zoom; apply consistent tie behavior; output tile coordinates may use buffer range",
+  "geometry_scope": [
+    "LineString",
+    "Polygon with holes"
+  ],
+  "collapsed": "report feature/tile and whether a line or ring collapsed; never silently turn hole into filled polygon",
+  "properties": "string, boolean and nonnegative integer only; preserve feature id; no simplification requested"
+}
