@@ -1,0 +1,34 @@
+{
+  "entry_urls": [
+    "https://archive.example.invalid/site/index.html"
+  ],
+  "cutoffs": [
+    "2026-01-02T12:00:00Z",
+    "2026-01-03T12:00:00Z"
+  ],
+  "selected_capture": "latest WARC-Date <= cutoff; equal dates choose lexicographically smallest Record-ID",
+  "record_scope": "only supplied archive, GET response/revisit; no transfer/content compression in this fixture",
+  "revisit_resolution": "explicit WARC-Refers-To is authoritative and must resolve; do not silently fallback to digest when explicit reference is bad; absent Refers-To may resolve by digest among response payloads with date<=cutoff; equal bytes may have multiple provenance supports",
+  "payload_check": "verify actual bytes using sha1 base32 digest; current revisit HTTP headers retain current capture identity",
+  "url_identity": "lowercase scheme/host, remove default port and fragment, resolve dot segments; preserve percent-encoded slash and exact query order",
+  "allowed_origins": [
+    "https://archive.example.invalid"
+  ],
+  "html_references": [
+    "a[href]",
+    "link[href]",
+    "img[src]",
+    "first valid base[href]"
+  ],
+  "css_references": [
+    "url(...)",
+    "@import url(...)"
+  ],
+  "text_encoding": "UTF-8",
+  "fragment_target": "id attribute or a[name]; report missing target after redirects",
+  "redirect": "resolve Location against redirect original URL; if Location has no fragment preserve incoming fragment; detect cycle by canonical URL",
+  "export": "stable path keyed by canonical URL, content may differ with cutoff; no live original-site references in rendered navigation/resources",
+  "payload_rewrite": "original digest covers original bytes, exported digest covers rewritten bytes",
+  "resource_failures": "local diagnostic placeholder or explicit unresolved local link; never silently use older capture",
+  "serve": "bind 127.0.0.1 with a selectable port; no remote fetching"
+}

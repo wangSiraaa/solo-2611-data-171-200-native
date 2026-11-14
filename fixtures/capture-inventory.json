@@ -1,0 +1,149 @@
+[
+  {
+    "label": "home-old",
+    "record_id": "<urn:uuid:2c3e75c1-6aef-5f22-8221-d733b64b0cf0>",
+    "url": "https://archive.example.invalid/site/index.html",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "guide-old",
+    "record_id": "<urn:uuid:32dac531-6245-50c6-a7d5-a9539fb73784>",
+    "url": "https://archive.example.invalid/site/guide.html",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "about-old",
+    "record_id": "<urn:uuid:5fceff86-0766-5d71-b766-1a6ba49e776d>",
+    "url": "https://archive.example.invalid/site/about.html",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "report-a",
+    "record_id": "<urn:uuid:b15b69bb-fd11-5164-b960-3ef95de781ab>",
+    "url": "https://archive.example.invalid/site/report?view=a",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "report-b",
+    "record_id": "<urn:uuid:6a643ec8-dbdf-5b88-8504-4dda8e1d0b09>",
+    "url": "https://archive.example.invalid/site/report?view=b",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "main-css",
+    "record_id": "<urn:uuid:6a48b93c-6ee5-5128-9c57-69b5b613d202>",
+    "url": "https://archive.example.invalid/css/main.css",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "theme-css",
+    "record_id": "<urn:uuid:adf70c7c-3c1f-5ce0-a415-09264f9d6a7e>",
+    "url": "https://archive.example.invalid/css/theme.css",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "logo-old",
+    "record_id": "<urn:uuid:8c803c13-0c0f-516c-b0f7-9f0b16b5c447>",
+    "url": "https://archive.example.invalid/img/logo.png",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "bg-old",
+    "record_id": "<urn:uuid:5fe863fd-d04d-5822-9ba1-b02dc3be85fa>",
+    "url": "https://archive.example.invalid/img/bg.png",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "redirect-guide",
+    "record_id": "<urn:uuid:dec16d7b-cd15-5ac7-a290-384be9524f07>",
+    "url": "https://archive.example.invalid/site/old-guide",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "guide-revisit",
+    "record_id": "<urn:uuid:36b510ed-4a2b-5978-87b9-5ec6e576f035>",
+    "url": "https://archive.example.invalid/site/guide.html",
+    "date": "2026-01-02T09:00:00Z",
+    "record_type": "revisit"
+  },
+  {
+    "label": "logo-revisit",
+    "record_id": "<urn:uuid:66adf109-eeb1-5302-b6ce-a35e08d5f9a8>",
+    "url": "https://archive.example.invalid/img/logo.png",
+    "date": "2026-01-02T09:00:00Z",
+    "record_type": "revisit"
+  },
+  {
+    "label": "digest-revisit",
+    "record_id": "<urn:uuid:12940d16-05ed-5e0e-84f6-4184e150bd52>",
+    "url": "https://archive.example.invalid/img/by-digest.png",
+    "date": "2026-01-02T09:00:00Z",
+    "record_type": "revisit"
+  },
+  {
+    "label": "missing-revisit",
+    "record_id": "<urn:uuid:9fe18ce7-43cb-5c8d-b08e-ad3fbbcc05bf>",
+    "url": "https://archive.example.invalid/img/missing-revisit.png",
+    "date": "2026-01-02T09:00:00Z",
+    "record_type": "revisit"
+  },
+  {
+    "label": "cycle-a",
+    "record_id": "<urn:uuid:23ddbd7b-0cdf-5fc1-a5a7-f468ad710312>",
+    "url": "https://archive.example.invalid/img/cycle-a.png",
+    "date": "2026-01-02T09:00:00Z",
+    "record_type": "revisit"
+  },
+  {
+    "label": "cycle-b",
+    "record_id": "<urn:uuid:09f6be0c-171e-54fc-82f7-2f14d8ec6710>",
+    "url": "https://archive.example.invalid/img/cycle-b.png",
+    "date": "2026-01-02T09:00:00Z",
+    "record_type": "revisit"
+  },
+  {
+    "label": "bad-digest",
+    "record_id": "<urn:uuid:b7f5d41f-c624-5386-8512-efc4e079d189>",
+    "url": "https://archive.example.invalid/img/bad-digest.png",
+    "date": "2026-01-02T09:00:00Z",
+    "record_type": "revisit"
+  },
+  {
+    "label": "loop-a",
+    "record_id": "<urn:uuid:e5414843-0e11-526c-b7fc-f2b1d4d8def6>",
+    "url": "https://archive.example.invalid/site/loop-a",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "loop-b",
+    "record_id": "<urn:uuid:408ff7c3-2b9b-5819-be44-5ca23049ee79>",
+    "url": "https://archive.example.invalid/site/loop-b",
+    "date": "2026-01-01T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "home-future",
+    "record_id": "<urn:uuid:177ad895-82e2-507f-a348-6454e214204e>",
+    "url": "https://archive.example.invalid/site/index.html",
+    "date": "2026-01-03T09:00:00Z",
+    "record_type": "response"
+  },
+  {
+    "label": "logo-future",
+    "record_id": "<urn:uuid:4eeb087f-2709-57e3-8be8-4e1d4b29a48c>",
+    "url": "https://archive.example.invalid/img/logo.png",
+    "date": "2026-01-03T09:00:00Z",
+    "record_type": "response"
+  }
+]
