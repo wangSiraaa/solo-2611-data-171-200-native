@@ -1,0 +1,503 @@
+{
+  "tool": "offline-symbolize@1.0.0",
+  "node": "v20.20.2",
+  "generatedAt": "2026-11-14T15:15:41.769Z",
+  "fixtureRoot": "/workspace",
+  "manifest": "fixtures/manifest.json",
+  "stackFile": "fixtures/synthetic-boundary.stack.txt",
+  "coordinateConventions": {
+    "stackBase": 1,
+    "mapBase": 0,
+    "columnUnit": "UTF-16 code units"
+  },
+  "preamble": [
+    "Error: synthetic boundary probes (not captured from Node)"
+  ],
+  "summary": {
+    "totalFrames": 5,
+    "statusCounts": {
+      "located-no-content": 2,
+      "unmapped": 2,
+      "map-not-declared": 1
+    },
+    "located": 2
+  },
+  "frames": [
+    {
+      "index": 0,
+      "raw": "    at left (/workspace/assets/boundaries.js:1:6)",
+      "functionName": "left",
+      "functionType": "named",
+      "file": "/workspace/assets/boundaries.js",
+      "identity": "assets/boundaries.js",
+      "generated": {
+        "line1": 1,
+        "column1": 6,
+        "line0": 0,
+        "column0": 5
+      },
+      "status": "located-no-content",
+      "hops": [
+        {
+          "mapIdentity": "assets/boundaries.js.map",
+          "input": {
+            "line0": 0,
+            "column0": 5,
+            "line1": 1,
+            "column1": 6
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "assets/boundaries.js.map",
+            "sourceRoot": "",
+            "sources": [
+              "../src/absent.js"
+            ],
+            "hasSourcesContent": false,
+            "mappedLineCount": 1,
+            "segmentCount": 3
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 0,
+            "nextSegmentColumn0": 6,
+            "nextSegmentIsOneField": true,
+            "coveredRange": "[0, 6)",
+            "targetColumn0": 5,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "src/absent.js",
+            "sourceAbsPath": "/workspace/src/absent.js",
+            "sourceIndex": 0,
+            "sourceEntry": "../src/absent.js",
+            "sourceRoot": "",
+            "line0": 5,
+            "column0": 0,
+            "line1": 6,
+            "column1": 1,
+            "name": null,
+            "contentOrigin": "missing"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 5
+            },
+            {
+              "index": 1,
+              "genCol0": 6,
+              "fields": 1
+            },
+            {
+              "index": 2,
+              "genCol0": 12,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 8
+            }
+          ],
+          "selection": {
+            "segmentIndex": 0,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 1
+        }
+      ],
+      "finalLocation": {
+        "identity": "src/absent.js",
+        "absPath": "/workspace/src/absent.js",
+        "line1": 6,
+        "column1": 1,
+        "line0": 5,
+        "column0": 0,
+        "contentOrigin": "missing",
+        "name": null,
+        "excerpt": null
+      },
+      "reason": "位置证据成立，但物理源文件与 sourcesContent 均缺失，不伪造摘录",
+      "generatedExcerpt": {
+        "line0": 0,
+        "line1": 1,
+        "column0": 5,
+        "column1": 6,
+        "totalLines": 3,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "aa(); xx(); bb();",
+            "target": 5
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "next();",
+            "target": null
+          },
+          {
+            "line0": 2,
+            "line1": 3,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 1,
+      "raw": "    at gap (/workspace/assets/boundaries.js:1:7)",
+      "functionName": "gap",
+      "functionType": "named",
+      "file": "/workspace/assets/boundaries.js",
+      "identity": "assets/boundaries.js",
+      "generated": {
+        "line1": 1,
+        "column1": 7,
+        "line0": 0,
+        "column0": 6
+      },
+      "status": "unmapped",
+      "hops": [
+        {
+          "mapIdentity": "assets/boundaries.js.map",
+          "input": {
+            "line0": 0,
+            "column0": 6,
+            "line1": 1,
+            "column1": 7
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "assets/boundaries.js.map",
+            "sourceRoot": "",
+            "sources": [
+              "../src/absent.js"
+            ],
+            "hasSourcesContent": false,
+            "mappedLineCount": 1,
+            "segmentCount": 3
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 6,
+            "nextSegmentColumn0": 12,
+            "nextSegmentIsOneField": false,
+            "coveredRange": "[6, 12)",
+            "targetColumn0": 6,
+            "targetCovered": true,
+            "oneField": true
+          },
+          "output": null,
+          "reason": "选中的是一字段无映射片段（列 6），它显式中断此前映射",
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 5
+            },
+            {
+              "index": 1,
+              "genCol0": 6,
+              "fields": 1
+            },
+            {
+              "index": 2,
+              "genCol0": 12,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 8
+            }
+          ],
+          "selection": {
+            "segmentIndex": 1,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": "选中的是一字段无映射片段（列 6），它显式中断此前映射"
+          },
+          "hopNo": 1
+        }
+      ],
+      "finalLocation": null,
+      "reason": "第 1 跳终止：选中的是一字段无映射片段（列 6），它显式中断此前映射",
+      "generatedExcerpt": {
+        "line0": 0,
+        "line1": 1,
+        "column0": 6,
+        "column1": 7,
+        "totalLines": 3,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "aa(); xx(); bb();",
+            "target": 6
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "next();",
+            "target": null
+          },
+          {
+            "line0": 2,
+            "line1": 3,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 2,
+      "raw": "    at right (/workspace/assets/boundaries.js:1:13)",
+      "functionName": "right",
+      "functionType": "named",
+      "file": "/workspace/assets/boundaries.js",
+      "identity": "assets/boundaries.js",
+      "generated": {
+        "line1": 1,
+        "column1": 13,
+        "line0": 0,
+        "column0": 12
+      },
+      "status": "located-no-content",
+      "hops": [
+        {
+          "mapIdentity": "assets/boundaries.js.map",
+          "input": {
+            "line0": 0,
+            "column0": 12,
+            "line1": 1,
+            "column1": 13
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "assets/boundaries.js.map",
+            "sourceRoot": "",
+            "sources": [
+              "../src/absent.js"
+            ],
+            "hasSourcesContent": false,
+            "mappedLineCount": 1,
+            "segmentCount": 3
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 12,
+            "nextSegmentColumn0": null,
+            "nextSegmentIsOneField": null,
+            "coveredRange": "[12, 行尾]",
+            "targetColumn0": 12,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "src/absent.js",
+            "sourceAbsPath": "/workspace/src/absent.js",
+            "sourceIndex": 0,
+            "sourceEntry": "../src/absent.js",
+            "sourceRoot": "",
+            "line0": 8,
+            "column0": 3,
+            "line1": 9,
+            "column1": 4,
+            "name": null,
+            "contentOrigin": "missing"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 5
+            },
+            {
+              "index": 1,
+              "genCol0": 6,
+              "fields": 1
+            },
+            {
+              "index": 2,
+              "genCol0": 12,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 8
+            }
+          ],
+          "selection": {
+            "segmentIndex": 2,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 1
+        }
+      ],
+      "finalLocation": {
+        "identity": "src/absent.js",
+        "absPath": "/workspace/src/absent.js",
+        "line1": 9,
+        "column1": 4,
+        "line0": 8,
+        "column0": 3,
+        "contentOrigin": "missing",
+        "name": null,
+        "excerpt": null
+      },
+      "reason": "位置证据成立，但物理源文件与 sourcesContent 均缺失，不伪造摘录",
+      "generatedExcerpt": {
+        "line0": 0,
+        "line1": 1,
+        "column0": 12,
+        "column1": 13,
+        "totalLines": 3,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "aa(); xx(); bb();",
+            "target": 12
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "next();",
+            "target": null
+          },
+          {
+            "line0": 2,
+            "line1": 3,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 3,
+      "raw": "    at emptyLine (/workspace/assets/boundaries.js:2:3)",
+      "functionName": "emptyLine",
+      "functionType": "named",
+      "file": "/workspace/assets/boundaries.js",
+      "identity": "assets/boundaries.js",
+      "generated": {
+        "line1": 2,
+        "column1": 3,
+        "line0": 1,
+        "column0": 2
+      },
+      "status": "unmapped",
+      "hops": [
+        {
+          "mapIdentity": "assets/boundaries.js.map",
+          "input": {
+            "line0": 1,
+            "column0": 2,
+            "line1": 2,
+            "column1": 3
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "assets/boundaries.js.map",
+            "sourceRoot": "",
+            "sources": [
+              "../src/absent.js"
+            ],
+            "hasSourcesContent": false,
+            "mappedLineCount": 1,
+            "segmentCount": 3
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": null,
+          "output": null,
+          "reason": "生成行 2 在该 map 中没有任何片段（整行无映射，不能借用上一行）",
+          "lineSegments": [],
+          "selection": {
+            "segmentIndex": null,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": "生成行 2 在该 map 中没有任何片段（整行无映射，不能借用上一行）"
+          },
+          "hopNo": 1
+        }
+      ],
+      "finalLocation": null,
+      "reason": "第 1 跳终止：生成行 2 在该 map 中没有任何片段（整行无映射，不能借用上一行）",
+      "generatedExcerpt": {
+        "line0": 1,
+        "line1": 2,
+        "column0": 2,
+        "column1": 3,
+        "totalLines": 3,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "aa(); xx(); bb();",
+            "target": null
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "next();",
+            "target": 2
+          },
+          {
+            "line0": 2,
+            "line1": 3,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 4,
+      "raw": "    at missing (/workspace/assets/no-map.js:2:1)",
+      "functionName": "missing",
+      "functionType": "named",
+      "file": "/workspace/assets/no-map.js",
+      "identity": "assets/no-map.js",
+      "generated": {
+        "line1": 2,
+        "column1": 1,
+        "line0": 1,
+        "column0": 0
+      },
+      "status": "map-not-declared",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "manifest.maps 未声明该生成文件的 map：assets/no-map.js"
+    }
+  ]
+}

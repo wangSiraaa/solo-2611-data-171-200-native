@@ -1,0 +1,521 @@
+{
+  "tool": "offline-symbolize@1.0.0",
+  "node": "v20.20.2",
+  "generatedAt": "2026-11-14T15:15:41.593Z",
+  "fixtureRoot": "/workspace",
+  "manifest": "fixtures/manifest.json",
+  "stackFile": "fixtures/basic.cjs.stack.txt",
+  "coordinateConventions": {
+    "stackBase": 1,
+    "mapBase": 0,
+    "columnUnit": "UTF-16 code units"
+  },
+  "preamble": [
+    "/workspace/assets/basic.cjs:1",
+    "const banner=\"🧭\";function boom(){throw new Error(\"basic failure\")}boom();",
+    "                                  ^",
+    "Error: basic failure"
+  ],
+  "summary": {
+    "totalFrames": 9,
+    "statusCounts": {
+      "located": 2,
+      "node-internal": 7
+    },
+    "located": 2
+  },
+  "frames": [
+    {
+      "index": 0,
+      "raw": "    at boom (/workspace/assets/basic.cjs:1:41)",
+      "functionName": "boom",
+      "functionType": "named",
+      "file": "/workspace/assets/basic.cjs",
+      "identity": "assets/basic.cjs",
+      "generated": {
+        "line1": 1,
+        "column1": 41,
+        "line0": 0,
+        "column0": 40
+      },
+      "status": "located",
+      "hops": [
+        {
+          "mapIdentity": "assets/basic.cjs.map",
+          "input": {
+            "line0": 0,
+            "column0": 40,
+            "line1": 1,
+            "column1": 41
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "assets/basic.cjs.map",
+            "sourceRoot": "../src/",
+            "sources": [
+              "basic source (demo).js"
+            ],
+            "hasSourcesContent": true,
+            "mappedLineCount": 1,
+            "segmentCount": 5
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 40,
+            "nextSegmentColumn0": 67,
+            "nextSegmentIsOneField": false,
+            "coveredRange": "[40, 67)",
+            "targetColumn0": 40,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "src/basic source (demo).js",
+            "sourceAbsPath": "/workspace/src/basic source (demo).js",
+            "sourceIndex": 0,
+            "sourceEntry": "basic source (demo).js",
+            "sourceRoot": "../src/",
+            "line0": 2,
+            "column0": 8,
+            "line1": 3,
+            "column1": 9,
+            "name": null,
+            "contentOrigin": "disk"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 1
+            },
+            {
+              "index": 1,
+              "genCol0": 18,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 1
+            },
+            {
+              "index": 2,
+              "genCol0": 34,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 2
+            },
+            {
+              "index": 3,
+              "genCol0": 40,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 2
+            },
+            {
+              "index": 4,
+              "genCol0": 67,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 4
+            }
+          ],
+          "selection": {
+            "segmentIndex": 3,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 1
+        }
+      ],
+      "finalLocation": {
+        "identity": "src/basic source (demo).js",
+        "absPath": "/workspace/src/basic source (demo).js",
+        "line1": 3,
+        "column1": 9,
+        "line0": 2,
+        "column0": 8,
+        "contentOrigin": "disk",
+        "name": null,
+        "excerpt": {
+          "line0": 2,
+          "line1": 3,
+          "column0": 8,
+          "column1": 9,
+          "totalLines": 6,
+          "lineExists": true,
+          "rows": [
+            {
+              "line0": 0,
+              "line1": 1,
+              "text": "const banner = \"🧭\";",
+              "target": null
+            },
+            {
+              "line0": 1,
+              "line1": 2,
+              "text": "function boom() {",
+              "target": null
+            },
+            {
+              "line0": 2,
+              "line1": 3,
+              "text": "  throw new Error(\"basic failure\");",
+              "target": 8
+            },
+            {
+              "line0": 3,
+              "line1": 4,
+              "text": "}",
+              "target": null
+            },
+            {
+              "line0": 4,
+              "line1": 5,
+              "text": "boom();",
+              "target": null
+            },
+            {
+              "line0": 5,
+              "line1": 6,
+              "text": "",
+              "target": null
+            }
+          ]
+        }
+      },
+      "reason": "经 1 跳定位，源内容来自 磁盘文件",
+      "generatedExcerpt": {
+        "line0": 0,
+        "line1": 1,
+        "column0": 40,
+        "column1": 41,
+        "totalLines": 2,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "const banner=\"🧭\";function boom(){throw new Error(\"basic failure\")}boom();",
+            "target": 40
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 1,
+      "raw": "    at Object.<anonymous> (/workspace/assets/basic.cjs:1:68)",
+      "functionName": "Object.<anonymous>",
+      "functionType": "anonymous",
+      "file": "/workspace/assets/basic.cjs",
+      "identity": "assets/basic.cjs",
+      "generated": {
+        "line1": 1,
+        "column1": 68,
+        "line0": 0,
+        "column0": 67
+      },
+      "status": "located",
+      "hops": [
+        {
+          "mapIdentity": "assets/basic.cjs.map",
+          "input": {
+            "line0": 0,
+            "column0": 67,
+            "line1": 1,
+            "column1": 68
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "assets/basic.cjs.map",
+            "sourceRoot": "../src/",
+            "sources": [
+              "basic source (demo).js"
+            ],
+            "hasSourcesContent": true,
+            "mappedLineCount": 1,
+            "segmentCount": 5
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 67,
+            "nextSegmentColumn0": null,
+            "nextSegmentIsOneField": null,
+            "coveredRange": "[67, 行尾]",
+            "targetColumn0": 67,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "src/basic source (demo).js",
+            "sourceAbsPath": "/workspace/src/basic source (demo).js",
+            "sourceIndex": 0,
+            "sourceEntry": "basic source (demo).js",
+            "sourceRoot": "../src/",
+            "line0": 4,
+            "column0": 0,
+            "line1": 5,
+            "column1": 1,
+            "name": null,
+            "contentOrigin": "disk"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 1
+            },
+            {
+              "index": 1,
+              "genCol0": 18,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 1
+            },
+            {
+              "index": 2,
+              "genCol0": 34,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 2
+            },
+            {
+              "index": 3,
+              "genCol0": 40,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 2
+            },
+            {
+              "index": 4,
+              "genCol0": 67,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 4
+            }
+          ],
+          "selection": {
+            "segmentIndex": 4,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 1
+        }
+      ],
+      "finalLocation": {
+        "identity": "src/basic source (demo).js",
+        "absPath": "/workspace/src/basic source (demo).js",
+        "line1": 5,
+        "column1": 1,
+        "line0": 4,
+        "column0": 0,
+        "contentOrigin": "disk",
+        "name": null,
+        "excerpt": {
+          "line0": 4,
+          "line1": 5,
+          "column0": 0,
+          "column1": 1,
+          "totalLines": 6,
+          "lineExists": true,
+          "rows": [
+            {
+              "line0": 1,
+              "line1": 2,
+              "text": "function boom() {",
+              "target": null
+            },
+            {
+              "line0": 2,
+              "line1": 3,
+              "text": "  throw new Error(\"basic failure\");",
+              "target": null
+            },
+            {
+              "line0": 3,
+              "line1": 4,
+              "text": "}",
+              "target": null
+            },
+            {
+              "line0": 4,
+              "line1": 5,
+              "text": "boom();",
+              "target": 0
+            },
+            {
+              "line0": 5,
+              "line1": 6,
+              "text": "",
+              "target": null
+            }
+          ]
+        }
+      },
+      "reason": "经 1 跳定位，源内容来自 磁盘文件",
+      "generatedExcerpt": {
+        "line0": 0,
+        "line1": 1,
+        "column0": 67,
+        "column1": 68,
+        "totalLines": 2,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "const banner=\"🧭\";function boom(){throw new Error(\"basic failure\")}boom();",
+            "target": 67
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 2,
+      "raw": "    at Module._compile (node:internal/modules/cjs/loader:1829:14)",
+      "functionName": "Module._compile",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1829,
+        "column1": 14,
+        "line0": 1828,
+        "column0": 13
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 3,
+      "raw": "    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)",
+      "functionName": "Module._extensions..js",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1969,
+        "column1": 10,
+        "line0": 1968,
+        "column0": 9
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 4,
+      "raw": "    at Module.load (node:internal/modules/cjs/loader:1552:32)",
+      "functionName": "Module.load",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1552,
+        "column1": 32,
+        "line0": 1551,
+        "column0": 31
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 5,
+      "raw": "    at Module._load (node:internal/modules/cjs/loader:1354:12)",
+      "functionName": "Module._load",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1354,
+        "column1": 12,
+        "line0": 1353,
+        "column0": 11
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 6,
+      "raw": "    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)",
+      "functionName": "wrapModuleLoad",
+      "functionType": "named",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 255,
+        "column1": 19,
+        "line0": 254,
+        "column0": 18
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 7,
+      "raw": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
+      "functionName": "Module.executeUserEntryPoint [as runMain]",
+      "functionType": "aliased-method",
+      "file": "node:internal/modules/run_main",
+      "identity": null,
+      "generated": {
+        "line1": 154,
+        "column1": 5,
+        "line0": 153,
+        "column0": 4
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 8,
+      "raw": "    at node:internal/main/run_main_module:33:47",
+      "functionName": null,
+      "functionType": "anonymous-position",
+      "file": "node:internal/main/run_main_module",
+      "identity": null,
+      "generated": {
+        "line1": 33,
+        "column1": 47,
+        "line0": 32,
+        "column0": 46
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    }
+  ]
+}

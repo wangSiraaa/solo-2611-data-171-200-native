@@ -1,0 +1,878 @@
+{
+  "tool": "offline-symbolize@1.0.0",
+  "node": "v20.20.2",
+  "generatedAt": "2026-11-14T15:15:41.704Z",
+  "fixtureRoot": "/workspace",
+  "manifest": "fixtures/manifest.json",
+  "stackFile": "fixtures/indexed.cjs.stack.txt",
+  "coordinateConventions": {
+    "stackBase": 1,
+    "mapBase": 0,
+    "columnUnit": "UTF-16 code units"
+  },
+  "preamble": [
+    "/workspace/assets/indexed.cjs:2",
+    "      function trigger(){throw new Error(\"indexed failure\")}",
+    "                         ^",
+    "Error: indexed failure"
+  ],
+  "summary": {
+    "totalFrames": 10,
+    "statusCounts": {
+      "located": 3,
+      "node-internal": 7
+    },
+    "located": 3
+  },
+  "frames": [
+    {
+      "index": 0,
+      "raw": "    at trigger (/workspace/assets/indexed.cjs:2:32)",
+      "functionName": "trigger",
+      "functionType": "named",
+      "file": "/workspace/assets/indexed.cjs",
+      "identity": "assets/indexed.cjs",
+      "generated": {
+        "line1": 2,
+        "column1": 32,
+        "line0": 1,
+        "column0": 31
+      },
+      "status": "located",
+      "hops": [
+        {
+          "mapIdentity": "assets/indexed.cjs.map",
+          "input": {
+            "line0": 1,
+            "column0": 31,
+            "line1": 2,
+            "column1": 32
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "indexed",
+            "mapPath": "assets/indexed.cjs.map",
+            "sectionCount": 2,
+            "sections": [
+              {
+                "index": 0,
+                "offset": {
+                  "line0": 0,
+                  "column0": 0
+                },
+                "sources": [
+                  "../src/wrapper.js"
+                ],
+                "sourceRoot": "",
+                "segmentCount": 2
+              },
+              {
+                "index": 1,
+                "offset": {
+                  "line0": 1,
+                  "column0": 6
+                },
+                "sources": [
+                  "../intermediate/part.js"
+                ],
+                "sourceRoot": "",
+                "segmentCount": 3
+              }
+            ]
+          },
+          "section": {
+            "index": 1,
+            "offset": {
+              "line0": 1,
+              "column0": 6
+            },
+            "why": "offset (1,6) 是词序上不大于目标 (1,31) 的最后一节"
+          },
+          "coordinate": {
+            "rule": "节首行扣除 section.column；后续行保留原列",
+            "targetIsFirstSectionLine": true,
+            "localLine0": 0,
+            "localColumn0": 25
+          },
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 25,
+            "nextSegmentColumn0": null,
+            "nextSegmentIsOneField": null,
+            "coveredRange": "[25, 行尾]",
+            "targetColumn0": 25,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "intermediate/part.js",
+            "sourceAbsPath": "/workspace/intermediate/part.js",
+            "sourceIndex": 0,
+            "sourceEntry": "../intermediate/part.js",
+            "sourceRoot": "",
+            "line0": 0,
+            "column0": 25,
+            "line1": 1,
+            "column1": 26,
+            "name": null,
+            "contentOrigin": "disk"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 0
+            },
+            {
+              "index": 1,
+              "genCol0": 25,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 0
+            }
+          ],
+          "selection": {
+            "segmentIndex": 1,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 1
+        },
+        {
+          "mapIdentity": "intermediate/part.js.map",
+          "input": {
+            "line0": 0,
+            "column0": 25,
+            "line1": 1,
+            "column1": 26
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "intermediate/part.js.map",
+            "sourceRoot": "../src/",
+            "sources": [
+              "core.ts"
+            ],
+            "hasSourcesContent": false,
+            "mappedLineCount": 2,
+            "segmentCount": 3
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 25,
+            "nextSegmentColumn0": null,
+            "nextSegmentIsOneField": null,
+            "coveredRange": "[25, 行尾]",
+            "targetColumn0": 25,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "src/core.ts",
+            "sourceAbsPath": "/workspace/src/core.ts",
+            "sourceIndex": 0,
+            "sourceEntry": "core.ts",
+            "sourceRoot": "../src/",
+            "line0": 1,
+            "column0": 8,
+            "line1": 2,
+            "column1": 9,
+            "name": null,
+            "contentOrigin": "disk"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 0
+            },
+            {
+              "index": 1,
+              "genCol0": 25,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 1
+            }
+          ],
+          "selection": {
+            "segmentIndex": 1,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 2
+        }
+      ],
+      "finalLocation": {
+        "identity": "src/core.ts",
+        "absPath": "/workspace/src/core.ts",
+        "line1": 2,
+        "column1": 9,
+        "line0": 1,
+        "column0": 8,
+        "contentOrigin": "disk",
+        "name": null,
+        "excerpt": {
+          "line0": 1,
+          "line1": 2,
+          "column0": 8,
+          "column1": 9,
+          "totalLines": 7,
+          "lineExists": true,
+          "rows": [
+            {
+              "line0": 0,
+              "line1": 1,
+              "text": "export function trigger(): never {",
+              "target": null
+            },
+            {
+              "line0": 1,
+              "line1": 2,
+              "text": "  throw new Error(\"indexed failure\");",
+              "target": 8
+            },
+            {
+              "line0": 2,
+              "line1": 3,
+              "text": "}",
+              "target": null
+            },
+            {
+              "line0": 3,
+              "line1": 4,
+              "text": "export function start(): void {",
+              "target": null
+            },
+            {
+              "line0": 4,
+              "line1": 5,
+              "text": "  trigger();",
+              "target": null
+            }
+          ]
+        }
+      },
+      "reason": "经 2 跳定位，源内容来自 磁盘文件",
+      "generatedExcerpt": {
+        "line0": 1,
+        "line1": 2,
+        "column0": 31,
+        "column1": 32,
+        "totalLines": 4,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "function run(){ trigger(); }",
+            "target": null
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "      function trigger(){throw new Error(\"indexed failure\")}",
+            "target": 31
+          },
+          {
+            "line0": 2,
+            "line1": 3,
+            "text": "run();",
+            "target": null
+          },
+          {
+            "line0": 3,
+            "line1": 4,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 1,
+      "raw": "    at run (/workspace/assets/indexed.cjs:1:17)",
+      "functionName": "run",
+      "functionType": "named",
+      "file": "/workspace/assets/indexed.cjs",
+      "identity": "assets/indexed.cjs",
+      "generated": {
+        "line1": 1,
+        "column1": 17,
+        "line0": 0,
+        "column0": 16
+      },
+      "status": "located",
+      "hops": [
+        {
+          "mapIdentity": "assets/indexed.cjs.map",
+          "input": {
+            "line0": 0,
+            "column0": 16,
+            "line1": 1,
+            "column1": 17
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "indexed",
+            "mapPath": "assets/indexed.cjs.map",
+            "sectionCount": 2,
+            "sections": [
+              {
+                "index": 0,
+                "offset": {
+                  "line0": 0,
+                  "column0": 0
+                },
+                "sources": [
+                  "../src/wrapper.js"
+                ],
+                "sourceRoot": "",
+                "segmentCount": 2
+              },
+              {
+                "index": 1,
+                "offset": {
+                  "line0": 1,
+                  "column0": 6
+                },
+                "sources": [
+                  "../intermediate/part.js"
+                ],
+                "sourceRoot": "",
+                "segmentCount": 3
+              }
+            ]
+          },
+          "section": {
+            "index": 0,
+            "offset": {
+              "line0": 0,
+              "column0": 0
+            },
+            "why": "offset (0,0) 是词序上不大于目标 (0,16) 的最后一节"
+          },
+          "coordinate": {
+            "rule": "节首行扣除 section.column；后续行保留原列",
+            "targetIsFirstSectionLine": true,
+            "localLine0": 0,
+            "localColumn0": 16
+          },
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 16,
+            "nextSegmentColumn0": null,
+            "nextSegmentIsOneField": null,
+            "coveredRange": "[16, 行尾]",
+            "targetColumn0": 16,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "src/wrapper.js",
+            "sourceAbsPath": "/workspace/src/wrapper.js",
+            "sourceIndex": 0,
+            "sourceEntry": "../src/wrapper.js",
+            "sourceRoot": "",
+            "line0": 0,
+            "column0": 16,
+            "line1": 1,
+            "column1": 17,
+            "name": null,
+            "contentOrigin": "disk"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 0
+            },
+            {
+              "index": 1,
+              "genCol0": 16,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 0
+            }
+          ],
+          "selection": {
+            "segmentIndex": 1,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 1
+        }
+      ],
+      "finalLocation": {
+        "identity": "src/wrapper.js",
+        "absPath": "/workspace/src/wrapper.js",
+        "line1": 1,
+        "column1": 17,
+        "line0": 0,
+        "column0": 16,
+        "contentOrigin": "disk",
+        "name": null,
+        "excerpt": {
+          "line0": 0,
+          "line1": 1,
+          "column0": 16,
+          "column1": 17,
+          "totalLines": 2,
+          "lineExists": true,
+          "rows": [
+            {
+              "line0": 0,
+              "line1": 1,
+              "text": "function run(){ trigger(); }",
+              "target": 16
+            },
+            {
+              "line0": 1,
+              "line1": 2,
+              "text": "",
+              "target": null
+            }
+          ]
+        }
+      },
+      "reason": "经 1 跳定位，源内容来自 磁盘文件",
+      "generatedExcerpt": {
+        "line0": 0,
+        "line1": 1,
+        "column0": 16,
+        "column1": 17,
+        "totalLines": 4,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "function run(){ trigger(); }",
+            "target": 16
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "      function trigger(){throw new Error(\"indexed failure\")}",
+            "target": null
+          },
+          {
+            "line0": 2,
+            "line1": 3,
+            "text": "run();",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 2,
+      "raw": "    at Object.<anonymous> (/workspace/assets/indexed.cjs:3:1)",
+      "functionName": "Object.<anonymous>",
+      "functionType": "anonymous",
+      "file": "/workspace/assets/indexed.cjs",
+      "identity": "assets/indexed.cjs",
+      "generated": {
+        "line1": 3,
+        "column1": 1,
+        "line0": 2,
+        "column0": 0
+      },
+      "status": "located",
+      "hops": [
+        {
+          "mapIdentity": "assets/indexed.cjs.map",
+          "input": {
+            "line0": 2,
+            "column0": 0,
+            "line1": 3,
+            "column1": 1
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "indexed",
+            "mapPath": "assets/indexed.cjs.map",
+            "sectionCount": 2,
+            "sections": [
+              {
+                "index": 0,
+                "offset": {
+                  "line0": 0,
+                  "column0": 0
+                },
+                "sources": [
+                  "../src/wrapper.js"
+                ],
+                "sourceRoot": "",
+                "segmentCount": 2
+              },
+              {
+                "index": 1,
+                "offset": {
+                  "line0": 1,
+                  "column0": 6
+                },
+                "sources": [
+                  "../intermediate/part.js"
+                ],
+                "sourceRoot": "",
+                "segmentCount": 3
+              }
+            ]
+          },
+          "section": {
+            "index": 1,
+            "offset": {
+              "line0": 1,
+              "column0": 6
+            },
+            "why": "offset (1,6) 是词序上不大于目标 (2,0) 的最后一节"
+          },
+          "coordinate": {
+            "rule": "节首行扣除 section.column；后续行保留原列",
+            "targetIsFirstSectionLine": false,
+            "localLine0": 1,
+            "localColumn0": 0
+          },
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 0,
+            "nextSegmentColumn0": null,
+            "nextSegmentIsOneField": null,
+            "coveredRange": "[0, 行尾]",
+            "targetColumn0": 0,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "intermediate/part.js",
+            "sourceAbsPath": "/workspace/intermediate/part.js",
+            "sourceIndex": 0,
+            "sourceEntry": "../intermediate/part.js",
+            "sourceRoot": "",
+            "line0": 1,
+            "column0": 0,
+            "line1": 2,
+            "column1": 1,
+            "name": null,
+            "contentOrigin": "disk"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 1
+            }
+          ],
+          "selection": {
+            "segmentIndex": 0,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 1
+        },
+        {
+          "mapIdentity": "intermediate/part.js.map",
+          "input": {
+            "line0": 1,
+            "column0": 0,
+            "line1": 2,
+            "column1": 1
+          },
+          "loaded": true,
+          "summary": {
+            "kind": "basic",
+            "mapPath": "intermediate/part.js.map",
+            "sourceRoot": "../src/",
+            "sources": [
+              "core.ts"
+            ],
+            "hasSourcesContent": false,
+            "mappedLineCount": 2,
+            "segmentCount": 3
+          },
+          "section": null,
+          "coordinate": null,
+          "segment": null,
+          "coverage": {
+            "segmentStartColumn0": 0,
+            "nextSegmentColumn0": null,
+            "nextSegmentIsOneField": null,
+            "coveredRange": "[0, 行尾]",
+            "targetColumn0": 0,
+            "targetCovered": true,
+            "oneField": false
+          },
+          "output": {
+            "sourceIdentity": "src/core.ts",
+            "sourceAbsPath": "/workspace/src/core.ts",
+            "sourceIndex": 0,
+            "sourceEntry": "core.ts",
+            "sourceRoot": "../src/",
+            "line0": 4,
+            "column0": 2,
+            "line1": 5,
+            "column1": 3,
+            "name": null,
+            "contentOrigin": "disk"
+          },
+          "reason": null,
+          "lineSegments": [
+            {
+              "index": 0,
+              "genCol0": 0,
+              "fields": 4,
+              "sourceIndex": 0,
+              "sourceLine0": 4
+            }
+          ],
+          "selection": {
+            "segmentIndex": 0,
+            "rule": "同一生成行上 genCol 不大于目标列的最后一个片段",
+            "reason": null,
+            "name": null
+          },
+          "hopNo": 2
+        }
+      ],
+      "finalLocation": {
+        "identity": "src/core.ts",
+        "absPath": "/workspace/src/core.ts",
+        "line1": 5,
+        "column1": 3,
+        "line0": 4,
+        "column0": 2,
+        "contentOrigin": "disk",
+        "name": null,
+        "excerpt": {
+          "line0": 4,
+          "line1": 5,
+          "column0": 2,
+          "column1": 3,
+          "totalLines": 7,
+          "lineExists": true,
+          "rows": [
+            {
+              "line0": 1,
+              "line1": 2,
+              "text": "  throw new Error(\"indexed failure\");",
+              "target": null
+            },
+            {
+              "line0": 2,
+              "line1": 3,
+              "text": "}",
+              "target": null
+            },
+            {
+              "line0": 3,
+              "line1": 4,
+              "text": "export function start(): void {",
+              "target": null
+            },
+            {
+              "line0": 4,
+              "line1": 5,
+              "text": "  trigger();",
+              "target": 2
+            },
+            {
+              "line0": 5,
+              "line1": 6,
+              "text": "}",
+              "target": null
+            },
+            {
+              "line0": 6,
+              "line1": 7,
+              "text": "",
+              "target": null
+            }
+          ]
+        }
+      },
+      "reason": "经 2 跳定位，源内容来自 磁盘文件",
+      "generatedExcerpt": {
+        "line0": 2,
+        "line1": 3,
+        "column0": 0,
+        "column1": 1,
+        "totalLines": 4,
+        "lineExists": true,
+        "rows": [
+          {
+            "line0": 0,
+            "line1": 1,
+            "text": "function run(){ trigger(); }",
+            "target": null
+          },
+          {
+            "line0": 1,
+            "line1": 2,
+            "text": "      function trigger(){throw new Error(\"indexed failure\")}",
+            "target": null
+          },
+          {
+            "line0": 2,
+            "line1": 3,
+            "text": "run();",
+            "target": 0
+          },
+          {
+            "line0": 3,
+            "line1": 4,
+            "text": "",
+            "target": null
+          }
+        ]
+      },
+      "generatedContentOrigin": "disk"
+    },
+    {
+      "index": 3,
+      "raw": "    at Module._compile (node:internal/modules/cjs/loader:1829:14)",
+      "functionName": "Module._compile",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1829,
+        "column1": 14,
+        "line0": 1828,
+        "column0": 13
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 4,
+      "raw": "    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)",
+      "functionName": "Module._extensions..js",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1969,
+        "column1": 10,
+        "line0": 1968,
+        "column0": 9
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 5,
+      "raw": "    at Module.load (node:internal/modules/cjs/loader:1552:32)",
+      "functionName": "Module.load",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1552,
+        "column1": 32,
+        "line0": 1551,
+        "column0": 31
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 6,
+      "raw": "    at Module._load (node:internal/modules/cjs/loader:1354:12)",
+      "functionName": "Module._load",
+      "functionType": "method",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 1354,
+        "column1": 12,
+        "line0": 1353,
+        "column0": 11
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 7,
+      "raw": "    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)",
+      "functionName": "wrapModuleLoad",
+      "functionType": "named",
+      "file": "node:internal/modules/cjs/loader",
+      "identity": null,
+      "generated": {
+        "line1": 255,
+        "column1": 19,
+        "line0": 254,
+        "column0": 18
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 8,
+      "raw": "    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)",
+      "functionName": "Module.executeUserEntryPoint [as runMain]",
+      "functionType": "aliased-method",
+      "file": "node:internal/modules/run_main",
+      "identity": null,
+      "generated": {
+        "line1": 154,
+        "column1": 5,
+        "line0": 153,
+        "column0": 4
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    },
+    {
+      "index": 9,
+      "raw": "    at node:internal/main/run_main_module:33:47",
+      "functionName": null,
+      "functionType": "anonymous-position",
+      "file": "node:internal/main/run_main_module",
+      "identity": null,
+      "generated": {
+        "line1": 33,
+        "column1": 47,
+        "line0": 32,
+        "column0": 46
+      },
+      "status": "node-internal",
+      "hops": [],
+      "finalLocation": null,
+      "reason": "Node 内部帧（node: 协议），无对应本地 map，按要求保留但不解析"
+    }
+  ]
+}

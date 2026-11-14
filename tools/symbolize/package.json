@@ -1,0 +1,18 @@
+{
+  "name": "offline-symbolize",
+  "version": "1.0.0",
+  "private": true,
+  "description": "离线 Source Map v3 堆栈溯源工具（Node 20，零第三方依赖）",
+  "bin": {
+    "symbolize": "bin/symbolize.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "selftest": "node bin/symbolize.js selftest",
+    "verify": "node bin/symbolize.js verify",
+    "report": "node bin/symbolize.js symbolize --manifest ../../fixtures/manifest.json --stack ../../fixtures/basic.cjs.stack.txt"
+  },
+  "license": "UNLICENSED"
+}
