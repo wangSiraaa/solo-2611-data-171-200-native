@@ -1,0 +1,23 @@
+{
+  "base": "release-base",
+  "target": "release-target",
+  "text_encoding": "UTF-8",
+  "text_files": [
+    "app.txt",
+    "service.txt",
+    "notes.txt",
+    "ambiguous.txt"
+  ],
+  "binary_files": [
+    "logo.bin"
+  ],
+  "rename_policy": "choose and document a deterministic content-similarity threshold; retain ties",
+  "net_fragment": "line-level insertion/deletion spans with exact content and blob identity",
+  "source_statuses": [
+    "single_branch",
+    "multiple_candidate_origins",
+    "merge_resolution",
+    "unresolved"
+  ],
+  "read_only_input": true
+}
