@@ -6,6 +6,7 @@ venv/
 .env.*
 !.env.example
 .runtime/
+results/
 .pytest_cache/
 .coverage
 htmlcov/
