@@ -1,0 +1,53 @@
+{
+  "proton_mass": 1.007276466621,
+  "water_mass": 18.010564684,
+  "aa_residue_masses": {
+    "A": 71.037113805,
+    "R": 156.10111105,
+    "N": 114.04292747,
+    "D": 115.026943065,
+    "C": 103.009184505,
+    "E": 129.042593135,
+    "Q": 128.05857754,
+    "G": 57.021463735,
+    "H": 137.058911875,
+    "I": 113.084063975,
+    "L": 113.084063975,
+    "K": 128.094963015,
+    "M": 131.040484645,
+    "F": 147.068413945,
+    "P": 97.052763875,
+    "S": 87.032028435,
+    "T": 101.047678505,
+    "W": 186.07931298,
+    "Y": 163.063328575,
+    "V": 99.068413945
+  },
+  "fixed_modifications": {
+    "C": 57.021464
+  },
+  "variable_modifications": {
+    "M": 15.994915
+  },
+  "max_variable_modifications": 1,
+  "max_missed_cleavages": 1,
+  "peptide_length": [
+    4,
+    20
+  ],
+  "precursor_charges": [
+    2,
+    3
+  ],
+  "precursor_tolerance_ppm": 20,
+  "fragment_tolerance_da": 0.02,
+  "fragment_series": [
+    "b",
+    "y"
+  ],
+  "fragment_charge": 1,
+  "min_matched_fragments": 3,
+  "fdr_estimator": "min(1,(D+1)/max(T,1)) at complete tied-score groups",
+  "target_decoy_tie": "decoy",
+  "seed": 196
+}
