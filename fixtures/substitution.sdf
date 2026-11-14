@@ -1,0 +1,58 @@
+substitution:reactant:0
+     RDKit          2D
+
+  2  1  0  0  0  0  0  0  0  0999 V2000
+    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2990    0.7500    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+M  END
+>  <SIDE>  (1) 
+reactant
+
+>  <MOLECULE_INDEX>  (1) 
+0
+
+$$$$
+substitution:reactant:1
+     RDKit          2D
+
+  1  0  0  0  0  0  0  0  0  0999 V2000
+    0.0000    0.0000    0.0000 O   0  0  0  0  0  1  0  0  0  0  0  0
+M  CHG  1   1  -1
+M  END
+>  <SIDE>  (2) 
+reactant
+
+>  <MOLECULE_INDEX>  (2) 
+1
+
+$$$$
+substitution:product:0
+     RDKit          2D
+
+  2  1  0  0  0  0  0  0  0  0999 V2000
+    0.0000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2990    0.7500    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+M  END
+>  <SIDE>  (3) 
+product
+
+>  <MOLECULE_INDEX>  (3) 
+0
+
+$$$$
+substitution:product:1
+     RDKit          2D
+
+  1  0  0  0  0  0  0  0  0  0999 V2000
+    0.0000    0.0000    0.0000 Cl  0  0  0  0  0 15  0  0  0  0  0  0
+M  CHG  1   1  -1
+M  END
+>  <SIDE>  (4) 
+product
+
+>  <MOLECULE_INDEX>  (4) 
+1
+
+$$$$

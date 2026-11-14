@@ -1,0 +1,17 @@
+{
+  "max_nonhydrogen_atoms": 9,
+  "max_atoms_same_element": 6,
+  "match_invariants": [
+    "atomic_number",
+    "isotope"
+  ],
+  "bond_orders": [
+    1,
+    2,
+    3
+  ],
+  "objective": "sum over unordered reactant atom pairs abs(reactant bond order - mapped product bond order); missing bond=0",
+  "formal_charge_and_H": "preserve and report before/after, not hard match invariants; only heavy atoms mapped",
+  "tie_policy": "stable main mapping; if another equal-cost mapping exists retain one alternate and mark ambiguous",
+  "component_identity": "side + 0-based molecule index; atom index 0-based within molecule"
+}
