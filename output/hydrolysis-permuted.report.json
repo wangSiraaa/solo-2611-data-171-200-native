@@ -1,0 +1,275 @@
+{
+  "source_rxn": "fixtures/hydrolysis-permuted.rxn",
+  "objective": "sum abs(reactant bond order - mapped product bond order); missing bond = 0",
+  "mechanism_claim": "本结果只是键级差数据整理约定下的最优映射，不构成反应机理发现",
+  "precheck": {
+    "n_heavy_atoms": {
+      "reactant": 6,
+      "product": 6
+    },
+    "invariant_counts": {
+      "reactant": [
+        [
+          [
+            6,
+            0
+          ],
+          3
+        ],
+        [
+          [
+            8,
+            0
+          ],
+          3
+        ]
+      ],
+      "product": [
+        [
+          [
+            6,
+            0
+          ],
+          3
+        ],
+        [
+          [
+            8,
+            0
+          ],
+          3
+        ]
+      ]
+    },
+    "charge_totals": {
+      "reactant": 0,
+      "product": 0
+    },
+    "implicit_h_totals": {
+      "reactant": 8,
+      "product": 8
+    },
+    "note": "形式电荷与隐式氢允许反应前后变化，仅报告不作硬匹配"
+  },
+  "cost": 2,
+  "n_optimal_mappings_found": 2,
+  "ambiguous": true,
+  "ambiguity_note": "存在至少一份同键级差目标值的替代双射；主映射按与文件原子编号无关的 canonical-rank 字典序稳定选取，文件原子编号不作为唯一性证据，对称原子互换不代表可区分的化学结论",
+  "main_mapping": [
+    {
+      "map_number": 1,
+      "reactant": "reactant:0:a0",
+      "product": "product:1:a1"
+    },
+    {
+      "map_number": 2,
+      "reactant": "reactant:0:a1",
+      "product": "product:0:a0"
+    },
+    {
+      "map_number": 3,
+      "reactant": "reactant:0:a2",
+      "product": "product:0:a1"
+    },
+    {
+      "map_number": 4,
+      "reactant": "reactant:0:a3",
+      "product": "product:0:a2"
+    },
+    {
+      "map_number": 5,
+      "reactant": "reactant:0:a4",
+      "product": "product:0:a3"
+    },
+    {
+      "map_number": 6,
+      "reactant": "reactant:1:a0",
+      "product": "product:1:a0"
+    }
+  ],
+  "alternate_mapping": [
+    {
+      "map_number": 1,
+      "reactant": "reactant:0:a0",
+      "product": "product:1:a1"
+    },
+    {
+      "map_number": 2,
+      "reactant": "reactant:0:a1",
+      "product": "product:1:a0"
+    },
+    {
+      "map_number": 3,
+      "reactant": "reactant:0:a2",
+      "product": "product:0:a1"
+    },
+    {
+      "map_number": 4,
+      "reactant": "reactant:0:a3",
+      "product": "product:0:a2"
+    },
+    {
+      "map_number": 5,
+      "reactant": "reactant:0:a4",
+      "product": "product:0:a3"
+    },
+    {
+      "map_number": 6,
+      "reactant": "reactant:1:a0",
+      "product": "product:0:a0"
+    }
+  ],
+  "bond_changes": [
+    {
+      "type": "bond_broken",
+      "reactant_atoms": [
+        "reactant:0:a0",
+        "reactant:0:a1"
+      ],
+      "product_atoms": [
+        "product:1:a1",
+        "product:0:a0"
+      ],
+      "map_numbers": [
+        1,
+        2
+      ],
+      "bond_order_before": 1,
+      "bond_order_after": 0,
+      "abs_order_delta": 1
+    },
+    {
+      "type": "bond_formed",
+      "reactant_atoms": [
+        "reactant:0:a0",
+        "reactant:1:a0"
+      ],
+      "product_atoms": [
+        "product:1:a1",
+        "product:1:a0"
+      ],
+      "map_numbers": [
+        1,
+        6
+      ],
+      "bond_order_before": 0,
+      "bond_order_after": 1,
+      "abs_order_delta": 1
+    }
+  ],
+  "atoms": [
+    {
+      "map_number": 1,
+      "element": "C",
+      "reactant_ref": "reactant:0:a0",
+      "product_ref": "product:1:a1",
+      "isotope_before": 0,
+      "isotope_after": 0,
+      "charge_before": 0,
+      "charge_after": 0,
+      "explicit_h_before": 0,
+      "explicit_h_after": 0,
+      "implicit_h_before": 3,
+      "implicit_h_after": 3,
+      "charge_changed": false,
+      "implicit_h_changed": false
+    },
+    {
+      "map_number": 2,
+      "element": "O",
+      "reactant_ref": "reactant:0:a1",
+      "product_ref": "product:0:a0",
+      "isotope_before": 0,
+      "isotope_after": 0,
+      "charge_before": 0,
+      "charge_after": 0,
+      "explicit_h_before": 0,
+      "explicit_h_after": 0,
+      "implicit_h_before": 0,
+      "implicit_h_after": 1,
+      "charge_changed": false,
+      "implicit_h_changed": true
+    },
+    {
+      "map_number": 3,
+      "element": "O",
+      "reactant_ref": "reactant:0:a2",
+      "product_ref": "product:0:a1",
+      "isotope_before": 0,
+      "isotope_after": 0,
+      "charge_before": 0,
+      "charge_after": 0,
+      "explicit_h_before": 0,
+      "explicit_h_after": 0,
+      "implicit_h_before": 0,
+      "implicit_h_after": 0,
+      "charge_changed": false,
+      "implicit_h_changed": false
+    },
+    {
+      "map_number": 4,
+      "element": "C",
+      "reactant_ref": "reactant:0:a3",
+      "product_ref": "product:0:a2",
+      "isotope_before": 0,
+      "isotope_after": 0,
+      "charge_before": 0,
+      "charge_after": 0,
+      "explicit_h_before": 0,
+      "explicit_h_after": 0,
+      "implicit_h_before": 0,
+      "implicit_h_after": 0,
+      "charge_changed": false,
+      "implicit_h_changed": false
+    },
+    {
+      "map_number": 5,
+      "element": "C",
+      "reactant_ref": "reactant:0:a4",
+      "product_ref": "product:0:a3",
+      "isotope_before": 0,
+      "isotope_after": 0,
+      "charge_before": 0,
+      "charge_after": 0,
+      "explicit_h_before": 0,
+      "explicit_h_after": 0,
+      "implicit_h_before": 3,
+      "implicit_h_after": 3,
+      "charge_changed": false,
+      "implicit_h_changed": false
+    },
+    {
+      "map_number": 6,
+      "element": "O",
+      "reactant_ref": "reactant:1:a0",
+      "product_ref": "product:1:a0",
+      "isotope_before": 0,
+      "isotope_after": 0,
+      "charge_before": 0,
+      "charge_after": 0,
+      "explicit_h_before": 0,
+      "explicit_h_after": 0,
+      "implicit_h_before": 2,
+      "implicit_h_after": 1,
+      "charge_changed": false,
+      "implicit_h_changed": true
+    }
+  ],
+  "verification": {
+    "rxn": {
+      "mapped_rxn": "output/hydrolysis-permuted.mapped.rxn",
+      "n_map_numbers": 6,
+      "map_numbers_1_to_n_each_side": true,
+      "element_isotope_preserved": true,
+      "charge_isotope_and_h_preserved": true,
+      "bond_structure_preserved": true,
+      "recomputed_objective": 2,
+      "matches_reported_cost": true
+    },
+    "sdf": {
+      "mapped_sdf": "output/hydrolysis-permuted.mapped.sdf",
+      "records": 4,
+      "map_numbers_1_to_n_each_side": true
+    }
+  }
+}
