@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "run_id": "5974ccc5-6f1a-40e9-8c06-fba1d9c97023",
+  "source_notebook": "fixtures/stdin.ipynb",
+  "output_notebook": "results/stdin.ipynb",
+  "parameters_file": null,
+  "parameter_changes": [],
+  "plan": {
+    "working_directory": "repository root",
+    "execution": "one fresh Python kernel per notebook; cells in document order; stop after first error or timeout",
+    "cell_timeout_seconds": 2,
+    "parameters": "one parameters-tagged cell of simple name=literal assignments, override only existing names; JSON scalar values",
+    "supported_outputs": [
+      "stream",
+      "display_data",
+      "update_display_data",
+      "execute_result",
+      "error",
+      "clear_output"
+    ],
+    "display_id": "updates apply to all previously displayed outputs for that display_id in this kernel run, even outputs in earlier cells",
+    "stdin": "unsupported and should fail the cell explicitly",
+    "source_policy": "source notebooks read-only; clear old execution_count and code outputs in result before run"
+  },
+  "working_directory": "/workspace",
+  "started_at": "2026-11-14T04:54:28.835012+00:00",
+  "cell_timeout_seconds": 2.0,
+  "interrupt_wait_seconds": 10.0,
+  "kernel": {
+    "startup": {
+      "kernel_name": "python3",
+      "pid": 1063,
+      "language": "python",
+      "language_version": "3.11.2",
+      "implementation": "ipython",
+      "banner": "Python 3.11.2 (main, Oct  7 2026, 12:35:07) [GCC 12.2.0]\nType 'copyright', 'credits' or 'license' for more information\nIPython 9.18.1 -- An enhanced Interactive Python. Type '?' for help.\nTip: Run your doctests from within IPython for development and debugging. The special %doctest_mode command toggles a mode where the prompt, output and exceptions display matches as closely as possible that of the default Python interpreter.\n"
+    },
+    "shutdown": {
+      "requested": "shutdown_request",
+      "soft_wait_seconds": 10.0,
+      "hard_wait_seconds": null,
+      "waited_seconds": 0.11155520801548846,
+      "reaped": true,
+      "pid": 1063,
+      "note": ""
+    }
+  },
+  "status": "error",
+  "stop_reason": {
+    "kind": "error",
+    "cell_index": 1,
+    "cell_id": "cell-stdin",
+    "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+    "reply_status": "error"
+  },
+  "cells": [
+    {
+      "cell_index": 1,
+      "cell_id": "cell-stdin",
+      "status": "error",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "reply_msg_id": "00b8a59a-0aca524d4cc740f3c67c03a8_1063_15",
+      "reply_status": "error",
+      "execution_count": 1,
+      "output_count": 1,
+      "started_at": "2026-11-14T04:54:28.835088+00:00",
+      "finished_at": "2026-11-14T04:54:28.914755+00:00",
+      "duration_seconds": 0.079729,
+      "message_seq": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "message_seq_range": [
+        0,
+        7
+      ],
+      "notes": []
+    },
+    {
+      "cell_index": 2,
+      "cell_id": "cell-after",
+      "status": "not_run",
+      "request_msg_id": null,
+      "execution_count": null,
+      "output_count": 0,
+      "reason": "execution stopped before this cell"
+    }
+  ],
+  "messages": [
+    {
+      "seq": 0,
+      "timestamp": "2026-11-14T04:54:28.835092+00:00",
+      "channel": "event",
+      "msg_type": "execute_request",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": null,
+      "parent_matches_request": null,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+        "code_preview": "answer = input('give me a value: ')\nprint('never reached', answer)"
+      }
+    },
+    {
+      "seq": 1,
+      "timestamp": "2026-11-14T04:54:28.835170+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": "7694032b-5d13027174167958030820f0_1062_1",
+      "parent_matches_request": false,
+      "cell_index": 1,
+      "accepted": false,
+      "summary": {
+        "execution_state": "busy"
+      }
+    },
+    {
+      "seq": 2,
+      "timestamp": "2026-11-14T04:54:28.835273+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": "7694032b-5d13027174167958030820f0_1062_1",
+      "parent_matches_request": false,
+      "cell_index": 1,
+      "accepted": false,
+      "summary": {
+        "execution_state": "idle"
+      }
+    },
+    {
+      "seq": 3,
+      "timestamp": "2026-11-14T04:54:28.837243+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "execution_state": "busy"
+      }
+    },
+    {
+      "seq": 4,
+      "timestamp": "2026-11-14T04:54:28.837349+00:00",
+      "channel": "iopub",
+      "msg_type": "execute_input",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "execution_count": 1,
+        "code_preview": "answer = input('give me a value: ')\nprint('never reached', answer)"
+      }
+    },
+    {
+      "seq": 5,
+      "timestamp": "2026-11-14T04:54:28.911179+00:00",
+      "channel": "iopub",
+      "msg_type": "error",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "ename": "StdinNotImplementedError",
+        "evalue": "raw_input was called, but this frontend does not support input requests."
+      }
+    },
+    {
+      "seq": 6,
+      "timestamp": "2026-11-14T04:54:28.914678+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "execution_state": "idle"
+      }
+    },
+    {
+      "seq": 7,
+      "timestamp": "2026-11-14T04:54:28.914739+00:00",
+      "channel": "shell",
+      "msg_type": "execute_reply",
+      "request_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_msg_id": "7694032b-5d13027174167958030820f0_1062_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "status": "error",
+        "traceback": [
+          "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+          "\u001b[31mStdinNotImplementedError\u001b[39m                  Traceback (most recent call last)",
+          "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m answer = input(\u001b[33m'give me a value: '\u001b[39m)\n\u001b[32m      2\u001b[39m print(\u001b[33m'never reached'\u001b[39m, answer)\n",
+          "\u001b[36mFile \u001b[39m\u001b[32m/workspace/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py:1514\u001b[39m, in \u001b[36mKernel.raw_input\u001b[39m\u001b[34m(self, prompt)\u001b[39m\n\u001b[32m   1512\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m \u001b[38;5;28mself\u001b[39m._allow_stdin:\n\u001b[32m   1513\u001b[39m     msg = \u001b[33m\"\u001b[39m\u001b[33mraw_input was called, but this frontend does not support input requests.\u001b[39m\u001b[33m\"\u001b[39m\n\u001b[32m-> \u001b[39m\u001b[32m1514\u001b[39m     \u001b[38;5;28;01mraise\u001b[39;00m StdinNotImplementedError(msg)\n\u001b[32m   1515\u001b[39m \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m._input_request(\n\u001b[32m   1516\u001b[39m     \u001b[38;5;28mstr\u001b[39m(prompt),\n\u001b[32m   1517\u001b[39m     \u001b[38;5;28mself\u001b[39m._get_shell_context_var(\u001b[38;5;28mself\u001b[39m._shell_parent_ident),\n\u001b[32m   1518\u001b[39m     \u001b[38;5;28mself\u001b[39m.get_parent(\u001b[33m\"\u001b[39m\u001b[33mshell\u001b[39m\u001b[33m\"\u001b[39m),\n\u001b[32m   1519\u001b[39m     password=\u001b[38;5;28;01mFalse\u001b[39;00m,\n\u001b[32m   1520\u001b[39m )\n",
+          "\u001b[31mStdinNotImplementedError\u001b[39m: raw_input was called, but this frontend does not support input requests."
+        ],
+        "ename": "StdinNotImplementedError",
+        "evalue": "raw_input was called, but this frontend does not support input requests.",
+        "engine_info": {
+          "engine_uuid": "c5c62a14-d9c2-43ee-9b75-9117045f1b95",
+          "engine_id": -1,
+          "method": "execute"
+        },
+        "execution_count": 1,
+        "user_expressions": {},
+        "payload": []
+      }
+    }
+  ],
+  "counts": {
+    "code_cells": 2,
+    "executed": 1,
+    "succeeded": 0,
+    "errors": 1,
+    "timeouts": 0,
+    "not_run": 1
+  },
+  "finished_at": "2026-11-14T04:54:29.026355+00:00",
+  "duration_seconds": 0.637272
+}

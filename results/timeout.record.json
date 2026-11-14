@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "run_id": "7e799835-eb22-4e4e-85c7-1e7217716c9e",
+  "source_notebook": "fixtures/timeout.ipynb",
+  "output_notebook": "results/timeout.ipynb",
+  "parameters_file": "fixtures/parameters.json",
+  "parameter_changes": [
+    {
+      "name": "threshold",
+      "old_value": 10,
+      "new_value": 8
+    },
+    {
+      "name": "label",
+      "old_value": "original",
+      "new_value": "rerun"
+    }
+  ],
+  "plan": {
+    "working_directory": "repository root",
+    "execution": "one fresh Python kernel per notebook; cells in document order; stop after first error or timeout",
+    "cell_timeout_seconds": 2,
+    "parameters": "one parameters-tagged cell of simple name=literal assignments, override only existing names; JSON scalar values",
+    "supported_outputs": [
+      "stream",
+      "display_data",
+      "update_display_data",
+      "execute_result",
+      "error",
+      "clear_output"
+    ],
+    "display_id": "updates apply to all previously displayed outputs for that display_id in this kernel run, even outputs in earlier cells",
+    "stdin": "unsupported and should fail the cell explicitly",
+    "source_policy": "source notebooks read-only; clear old execution_count and code outputs in result before run"
+  },
+  "working_directory": "/workspace",
+  "started_at": "2026-11-14T04:54:26.022578+00:00",
+  "cell_timeout_seconds": 2.0,
+  "interrupt_wait_seconds": 10.0,
+  "kernel": {
+    "startup": {
+      "kernel_name": "python3",
+      "pid": 1043,
+      "language": "python",
+      "language_version": "3.11.2",
+      "implementation": "ipython",
+      "banner": "Python 3.11.2 (main, Oct  7 2026, 12:35:07) [GCC 12.2.0]\nType 'copyright', 'credits' or 'license' for more information\nIPython 9.18.1 -- An enhanced Interactive Python. Type '?' for help.\nTip: You can use `files = !ls *.png`\n"
+    },
+    "shutdown": {
+      "requested": "shutdown_request",
+      "soft_wait_seconds": 10.0,
+      "hard_wait_seconds": null,
+      "waited_seconds": 0.11117716701119207,
+      "reaped": true,
+      "pid": 1043,
+      "note": ""
+    }
+  },
+  "status": "timeout",
+  "stop_reason": {
+    "kind": "timeout",
+    "cell_index": 3,
+    "cell_id": "cell-10",
+    "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+    "cell_timeout_seconds": 2.0
+  },
+  "cells": [
+    {
+      "cell_index": 1,
+      "cell_id": "cell-1",
+      "status": "ok",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "reply_msg_id": "a080b106-fe6dbde59c73eaf2a36ba2df_1043_14",
+      "reply_status": "ok",
+      "execution_count": 1,
+      "output_count": 0,
+      "started_at": "2026-11-14T04:54:26.022716+00:00",
+      "finished_at": "2026-11-14T04:54:26.042271+00:00",
+      "duration_seconds": 0.019664,
+      "message_seq": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "message_seq_range": [
+        0,
+        6
+      ],
+      "notes": []
+    },
+    {
+      "cell_index": 2,
+      "cell_id": "cell-2",
+      "status": "ok",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "reply_msg_id": "a080b106-fe6dbde59c73eaf2a36ba2df_1043_20",
+      "reply_status": "ok",
+      "execution_count": 2,
+      "output_count": 2,
+      "started_at": "2026-11-14T04:54:26.042449+00:00",
+      "finished_at": "2026-11-14T04:54:26.048234+00:00",
+      "duration_seconds": 0.005886,
+      "message_seq": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "message_seq_range": [
+        7,
+        13
+      ],
+      "notes": []
+    },
+    {
+      "cell_index": 3,
+      "cell_id": "cell-10",
+      "status": "timeout",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "reply_msg_id": "a080b106-fe6dbde59c73eaf2a36ba2df_1043_25",
+      "reply_status": "error",
+      "execution_count": 3,
+      "output_count": 1,
+      "started_at": "2026-11-14T04:54:26.048321+00:00",
+      "finished_at": "2026-11-14T04:54:28.127944+00:00",
+      "duration_seconds": 2.079693,
+      "message_seq": [
+        15,
+        16,
+        19,
+        20,
+        21
+      ],
+      "message_seq_range": [
+        14,
+        21
+      ],
+      "notes": [
+        "interrupted after 2.0s timeout"
+      ]
+    },
+    {
+      "cell_index": 4,
+      "cell_id": "cell-3",
+      "status": "not_run",
+      "request_msg_id": null,
+      "execution_count": null,
+      "output_count": 0,
+      "reason": "execution stopped before this cell"
+    },
+    {
+      "cell_index": 5,
+      "cell_id": "cell-4",
+      "status": "not_run",
+      "request_msg_id": null,
+      "execution_count": null,
+      "output_count": 0,
+      "reason": "execution stopped before this cell"
+    },
+    {
+      "cell_index": 6,
+      "cell_id": "cell-5",
+      "status": "not_run",
+      "request_msg_id": null,
+      "execution_count": null,
+      "output_count": 0,
+      "reason": "execution stopped before this cell"
+    }
+  ],
+  "messages": [
+    {
+      "seq": 0,
+      "timestamp": "2026-11-14T04:54:26.022725+00:00",
+      "channel": "event",
+      "msg_type": "execute_request",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_msg_id": null,
+      "parent_matches_request": null,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+        "code_preview": "threshold = 8\nlabel = 'rerun'"
+      }
+    },
+    {
+      "seq": 1,
+      "timestamp": "2026-11-14T04:54:26.022884+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_1",
+      "parent_matches_request": false,
+      "cell_index": 1,
+      "accepted": false,
+      "summary": {
+        "execution_state": "busy"
+      }
+    },
+    {
+      "seq": 2,
+      "timestamp": "2026-11-14T04:54:26.023079+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_1",
+      "parent_matches_request": false,
+      "cell_index": 1,
+      "accepted": false,
+      "summary": {
+        "execution_state": "idle"
+      }
+    },
+    {
+      "seq": 3,
+      "timestamp": "2026-11-14T04:54:26.026158+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "execution_state": "busy"
+      }
+    },
+    {
+      "seq": 4,
+      "timestamp": "2026-11-14T04:54:26.026331+00:00",
+      "channel": "iopub",
+      "msg_type": "execute_input",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "execution_count": 1,
+        "code_preview": "threshold = 8\nlabel = 'rerun'"
+      }
+    },
+    {
+      "seq": 5,
+      "timestamp": "2026-11-14T04:54:26.042124+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "execution_state": "idle"
+      }
+    },
+    {
+      "seq": 6,
+      "timestamp": "2026-11-14T04:54:26.042237+00:00",
+      "channel": "shell",
+      "msg_type": "execute_reply",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_2",
+      "parent_matches_request": true,
+      "cell_index": 1,
+      "accepted": true,
+      "summary": {
+        "status": "ok",
+        "execution_count": 1,
+        "user_expressions": {},
+        "payload": []
+      }
+    },
+    {
+      "seq": 7,
+      "timestamp": "2026-11-14T04:54:26.042459+00:00",
+      "channel": "event",
+      "msg_type": "execute_request",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_msg_id": null,
+      "parent_matches_request": null,
+      "cell_index": 2,
+      "accepted": true,
+      "summary": {
+        "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+        "code_preview": "import csv\nfrom IPython.display import display, clear_output\nrows=list(csv.DictReader(open(\"fixtures/input.csv\")))\nselected=[r for r in rows if int(r[\"value\"]) >= threshold]\nhandle=display({\"text/plai...<106 more chars>"
+      }
+    },
+    {
+      "seq": 8,
+      "timestamp": "2026-11-14T04:54:26.044370+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_matches_request": true,
+      "cell_index": 2,
+      "accepted": true,
+      "summary": {
+        "execution_state": "busy"
+      }
+    },
+    {
+      "seq": 9,
+      "timestamp": "2026-11-14T04:54:26.044514+00:00",
+      "channel": "iopub",
+      "msg_type": "execute_input",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_matches_request": true,
+      "cell_index": 2,
+      "accepted": true,
+      "summary": {
+        "execution_count": 2,
+        "code_preview": "import csv\nfrom IPython.display import display, clear_output\nrows=list(csv.DictReader(open(\"fixtures/input.csv\")))\nselec...<186 more chars>"
+      }
+    },
+    {
+      "seq": 10,
+      "timestamp": "2026-11-14T04:54:26.046163+00:00",
+      "channel": "iopub",
+      "msg_type": "display_data",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_matches_request": true,
+      "cell_index": 2,
+      "accepted": true,
+      "summary": {
+        "mime_types": [
+          "text/html",
+          "text/plain"
+        ],
+        "display_id": "59acacb02a13f7f3d39b81a45bd55203",
+        "execution_count": null
+      }
+    },
+    {
+      "seq": 11,
+      "timestamp": "2026-11-14T04:54:26.046348+00:00",
+      "channel": "iopub",
+      "msg_type": "stream",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_matches_request": true,
+      "cell_index": 2,
+      "accepted": true,
+      "summary": {
+        "name": "stdout",
+        "text": "selected 3\n"
+      }
+    },
+    {
+      "seq": 12,
+      "timestamp": "2026-11-14T04:54:26.048122+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_matches_request": true,
+      "cell_index": 2,
+      "accepted": true,
+      "summary": {
+        "execution_state": "idle"
+      }
+    },
+    {
+      "seq": 13,
+      "timestamp": "2026-11-14T04:54:26.048206+00:00",
+      "channel": "shell",
+      "msg_type": "execute_reply",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_3",
+      "parent_matches_request": true,
+      "cell_index": 2,
+      "accepted": true,
+      "summary": {
+        "status": "ok",
+        "execution_count": 2,
+        "user_expressions": {},
+        "payload": []
+      }
+    },
+    {
+      "seq": 14,
+      "timestamp": "2026-11-14T04:54:26.048326+00:00",
+      "channel": "event",
+      "msg_type": "execute_request",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": null,
+      "parent_matches_request": null,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+        "code_preview": "import time\ntime.sleep(20)\nprint(\"late\")"
+      }
+    },
+    {
+      "seq": 15,
+      "timestamp": "2026-11-14T04:54:26.049516+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_matches_request": true,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "execution_state": "busy"
+      }
+    },
+    {
+      "seq": 16,
+      "timestamp": "2026-11-14T04:54:26.049640+00:00",
+      "channel": "iopub",
+      "msg_type": "execute_input",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_matches_request": true,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "execution_count": 3,
+        "code_preview": "import time\ntime.sleep(20)\nprint(\"late\")"
+      }
+    },
+    {
+      "seq": 17,
+      "timestamp": "2026-11-14T04:54:28.058673+00:00",
+      "channel": "event",
+      "msg_type": "cell_timeout",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": null,
+      "parent_matches_request": null,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+        "cell_timeout_seconds": 2.0
+      }
+    },
+    {
+      "seq": 18,
+      "timestamp": "2026-11-14T04:54:28.058878+00:00",
+      "channel": "event",
+      "msg_type": "interrupt_request",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": null,
+      "parent_matches_request": null,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4"
+      }
+    },
+    {
+      "seq": 19,
+      "timestamp": "2026-11-14T04:54:28.126553+00:00",
+      "channel": "iopub",
+      "msg_type": "error",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_matches_request": true,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "ename": "KeyboardInterrupt",
+        "evalue": ""
+      }
+    },
+    {
+      "seq": 20,
+      "timestamp": "2026-11-14T04:54:28.127862+00:00",
+      "channel": "iopub",
+      "msg_type": "status",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_matches_request": true,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "execution_state": "idle"
+      }
+    },
+    {
+      "seq": 21,
+      "timestamp": "2026-11-14T04:54:28.127925+00:00",
+      "channel": "shell",
+      "msg_type": "execute_reply",
+      "request_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_msg_id": "b7750c65-997d57345b4a59cb1b46b597_1042_4",
+      "parent_matches_request": true,
+      "cell_index": 3,
+      "accepted": true,
+      "summary": {
+        "status": "error",
+        "traceback": [
+          "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+          "\u001b[31mKeyboardInterrupt\u001b[39m                         Traceback (most recent call last)",
+          "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[3]\u001b[39m\u001b[32m, line 2\u001b[39m\n\u001b[32m      1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m time\n\u001b[32m----> \u001b[39m\u001b[32m2\u001b[39m time.sleep(\u001b[32m20\u001b[39m)\n\u001b[32m      3\u001b[39m print(\u001b[33m\"late\"\u001b[39m)\n",
+          "\u001b[31mKeyboardInterrupt\u001b[39m: "
+        ],
+        "ename": "KeyboardInterrupt",
+        "evalue": "",
+        "engine_info": {
+          "engine_uuid": "6b9963d8-1f4c-4e54-b8ec-d17aeb471b23",
+          "engine_id": -1,
+          "method": "execute"
+        },
+        "execution_count": 3,
+        "user_expressions": {},
+        "payload": []
+      }
+    }
+  ],
+  "counts": {
+    "code_cells": 6,
+    "executed": 3,
+    "succeeded": 2,
+    "errors": 0,
+    "timeouts": 1,
+    "not_run": 3
+  },
+  "finished_at": "2026-11-14T04:54:28.239148+00:00",
+  "duration_seconds": 2.770957
+}
