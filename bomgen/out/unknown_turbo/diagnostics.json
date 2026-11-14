@@ -1,0 +1,66 @@
+[
+  {
+    "basis": {
+      "left": {
+        "detail": {
+          "message": "选项 'turbo' 在该发生上未赋值",
+          "reason": "option_unbound"
+        },
+        "option": "turbo",
+        "path": "root.left",
+        "status": "unknown"
+      },
+      "right": {
+        "detail": {
+          "message": "选项 'turbo' 在该发生上未赋值",
+          "reason": "option_unbound"
+        },
+        "option": "turbo",
+        "path": "root.right",
+        "status": "unknown"
+      }
+    },
+    "code": "CONSTRAINT_PENDING",
+    "message": "跨装配约束 not_both_turbo(not_both_true) 未决: 引用路径未发生或取值未知",
+    "path": null,
+    "severity": "error"
+  },
+  {
+    "basis": {
+      "unknown_options": [
+        "turbo"
+      ],
+      "when": {
+        "eq": [
+          {
+            "option": "turbo"
+          },
+          true
+        ]
+      }
+    },
+    "code": "GAP_UNKNOWN_CONDITION",
+    "message": "启用条件未确定(unknown), 该边不展开并记缺口, 不能发布完整BOM",
+    "path": "root.left.turbo",
+    "severity": "error"
+  },
+  {
+    "basis": {
+      "unknown_options": [
+        "turbo"
+      ],
+      "when": {
+        "eq": [
+          {
+            "option": "turbo"
+          },
+          true
+        ]
+      }
+    },
+    "code": "GAP_UNKNOWN_CONDITION",
+    "message": "启用条件未确定(unknown), 该边不展开并记缺口, 不能发布完整BOM",
+    "path": "root.right.turbo",
+    "severity": "error"
+  }
+]

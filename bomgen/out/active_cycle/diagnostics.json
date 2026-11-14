@@ -1,0 +1,20 @@
+[
+  {
+    "basis": {
+      "cycle": [
+        {
+          "definition": "service",
+          "path": "root.service"
+        },
+        {
+          "definition": "service",
+          "path": "root.service.again"
+        }
+      ]
+    },
+    "code": "CYCLE_ACTIVE",
+    "message": "本次配置激活了定义环(相同定义+相同有效选项状态在活动祖先链上重复)",
+    "path": "root.service.again",
+    "severity": "error"
+  }
+]

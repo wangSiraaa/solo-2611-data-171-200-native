@@ -1,0 +1,22 @@
+[
+  {
+    "basis": {
+      "left": {
+        "option": "interface",
+        "path": "root.left.drive",
+        "status": "ok",
+        "value": "A"
+      },
+      "right": {
+        "option": "interface",
+        "path": "root.right.drive",
+        "status": "ok",
+        "value": "B"
+      }
+    },
+    "code": "CONSTRAINT_VIOLATED",
+    "message": "跨装配约束 ports_match(equal_options) 在同一配置实例上被违反",
+    "path": null,
+    "severity": "error"
+  }
+]

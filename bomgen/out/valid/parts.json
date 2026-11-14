@@ -1,0 +1,73 @@
+[
+  {
+    "contributions": [
+      {
+        "path": "root.left.drive.bolt",
+        "qty": 4
+      },
+      {
+        "path": "root.left.turbo.bolt",
+        "qty": 2
+      },
+      {
+        "path": "root.right.drive.bolt",
+        "qty": 8
+      }
+    ],
+    "part": "bolt",
+    "total": 14,
+    "unit": "piece"
+  },
+  {
+    "contributions": [
+      {
+        "path": "root.right.frame.coat",
+        "qty": 4
+      }
+    ],
+    "part": "coat",
+    "total": 4,
+    "unit": "piece"
+  },
+  {
+    "contributions": [
+      {
+        "path": "root.left.drive.motor_a",
+        "qty": 1
+      },
+      {
+        "path": "root.right.drive.motor_a",
+        "qty": 2
+      }
+    ],
+    "part": "motor_a",
+    "total": 3,
+    "unit": "piece"
+  },
+  {
+    "contributions": [
+      {
+        "path": "root.left.turbo.rotor",
+        "qty": 1
+      }
+    ],
+    "part": "rotor",
+    "total": 1,
+    "unit": "piece"
+  },
+  {
+    "contributions": [
+      {
+        "path": "root.left.frame.shell",
+        "qty": 1
+      },
+      {
+        "path": "root.right.frame.shell",
+        "qty": 2
+      }
+    ],
+    "part": "shell",
+    "total": 3,
+    "unit": "piece"
+  }
+]

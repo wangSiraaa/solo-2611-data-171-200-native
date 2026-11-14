@@ -1,0 +1,22 @@
+[
+  {
+    "basis": {
+      "left": {
+        "option": "turbo",
+        "path": "root.left",
+        "status": "ok",
+        "value": true
+      },
+      "right": {
+        "option": "turbo",
+        "path": "root.right",
+        "status": "ok",
+        "value": true
+      }
+    },
+    "code": "CONSTRAINT_VIOLATED",
+    "message": "跨装配约束 not_both_turbo(not_both_true) 在同一配置实例上被违反",
+    "path": null,
+    "severity": "error"
+  }
+]

@@ -1,0 +1,345 @@
+[
+  {
+    "edge_qty": 1,
+    "id": "root",
+    "kind": "assembly",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": false
+    },
+    "parent": null,
+    "path": "root",
+    "qty": 1,
+    "ref": "product"
+  },
+  {
+    "edge_overrides": {
+      "finish": "steel"
+    },
+    "edge_qty": 1,
+    "id": "left",
+    "instance_overrides": {
+      "turbo": true
+    },
+    "kind": "assembly",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root",
+    "path": "root.left",
+    "qty": 1,
+    "ref": "module"
+  },
+  {
+    "edge_qty": 1,
+    "id": "drive",
+    "kind": "assembly",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left",
+    "path": "root.left.drive",
+    "qty": 1,
+    "ref": "drive"
+  },
+  {
+    "edge_qty": 4,
+    "id": "bolt",
+    "kind": "part",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left.drive",
+    "path": "root.left.drive.bolt",
+    "qty": 4,
+    "ref": "bolt",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "motor_a",
+    "kind": "part",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left.drive",
+    "path": "root.left.drive.motor_a",
+    "qty": 1,
+    "ref": "motor_a",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "frame",
+    "kind": "assembly",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left",
+    "path": "root.left.frame",
+    "qty": 1,
+    "ref": "frame"
+  },
+  {
+    "edge_qty": 1,
+    "id": "shell",
+    "kind": "part",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left.frame",
+    "path": "root.left.frame.shell",
+    "qty": 1,
+    "ref": "shell",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "turbo",
+    "kind": "assembly",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left",
+    "path": "root.left.turbo",
+    "qty": 1,
+    "ref": "turbo"
+  },
+  {
+    "edge_qty": 2,
+    "id": "bolt",
+    "kind": "part",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left.turbo",
+    "path": "root.left.turbo.bolt",
+    "qty": 2,
+    "ref": "bolt",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "rotor",
+    "kind": "part",
+    "options": {
+      "finish": "steel",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.left.turbo",
+    "path": "root.left.turbo.rotor",
+    "qty": 1,
+    "ref": "rotor",
+    "unit": "piece"
+  },
+  {
+    "edge_overrides": {
+      "finish": "painted"
+    },
+    "edge_qty": 2,
+    "id": "right",
+    "instance_overrides": {
+      "turbo": true
+    },
+    "kind": "assembly",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root",
+    "path": "root.right",
+    "qty": 2,
+    "ref": "module"
+  },
+  {
+    "edge_qty": 1,
+    "id": "drive",
+    "kind": "assembly",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right",
+    "path": "root.right.drive",
+    "qty": 2,
+    "ref": "drive"
+  },
+  {
+    "edge_qty": 4,
+    "id": "bolt",
+    "kind": "part",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right.drive",
+    "path": "root.right.drive.bolt",
+    "qty": 8,
+    "ref": "bolt",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "motor_a",
+    "kind": "part",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right.drive",
+    "path": "root.right.drive.motor_a",
+    "qty": 2,
+    "ref": "motor_a",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "frame",
+    "kind": "assembly",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right",
+    "path": "root.right.frame",
+    "qty": 2,
+    "ref": "frame"
+  },
+  {
+    "edge_qty": 2,
+    "id": "coat",
+    "kind": "part",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right.frame",
+    "path": "root.right.frame.coat",
+    "qty": 4,
+    "ref": "coat",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "shell",
+    "kind": "part",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right.frame",
+    "path": "root.right.frame.shell",
+    "qty": 2,
+    "ref": "shell",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "turbo",
+    "kind": "assembly",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right",
+    "path": "root.right.turbo",
+    "qty": 2,
+    "ref": "turbo"
+  },
+  {
+    "edge_qty": 2,
+    "id": "bolt",
+    "kind": "part",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right.turbo",
+    "path": "root.right.turbo.bolt",
+    "qty": 4,
+    "ref": "bolt",
+    "unit": "piece"
+  },
+  {
+    "edge_qty": 1,
+    "id": "rotor",
+    "kind": "part",
+    "options": {
+      "finish": "painted",
+      "interface": "A",
+      "recursive_service": false,
+      "service": false,
+      "turbo": true
+    },
+    "parent": "root.right.turbo",
+    "path": "root.right.turbo.rotor",
+    "qty": 2,
+    "ref": "rotor",
+    "unit": "piece"
+  }
+]
