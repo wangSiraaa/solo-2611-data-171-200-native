@@ -1,0 +1,5 @@
+variant_id,chrom,position,allele0,allele1
+v1,chrS,101,A,G
+v2,chrS,121,A,G
+v3,chrS,141,A,G
+v4,chrS,161,A,G

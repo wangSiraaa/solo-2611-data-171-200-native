@@ -1,0 +1,26 @@
+{
+  "max_variants_per_block": 12,
+  "max_fragments_per_block": 40,
+  "position_coordinate": "1-based reference SNV positions",
+  "min_mapping_quality": 20,
+  "min_base_quality": 20,
+  "mate_disagreement_min_quality_gap": 10,
+  "accepted_cigar": [
+    "M",
+    "=",
+    "X",
+    "I",
+    "D",
+    "S"
+  ],
+  "excluded_flags": [
+    "unmapped",
+    "secondary",
+    "supplementary"
+  ],
+  "group_by": "query_name; exactly one primary read1 and read2",
+  "allele_merge": "single acceptable base uses Q; mates agree uses max Q; disagreement gap>=10 uses higher-Q allele with weight=gap; otherwise no call at this fragment/locus",
+  "objective": "sum_fragment min(weighted mismatch to h, weighted mismatch to complement(h))",
+  "tie_policy": "first variant in each component phase0=0; stable best solution; read tie remains unassigned",
+  "local_probe": "consecutive loci within each component; force opposite relative phase and reoptimize"
+}
