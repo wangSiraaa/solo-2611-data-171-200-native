@@ -1,0 +1,2 @@
+# 与model.formula组合；错误应定位到这条或产生矛盾的有关公式集合
+wrong_force: force = mass * velocity

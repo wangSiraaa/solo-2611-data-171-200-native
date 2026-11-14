@@ -1,0 +1,7 @@
+# 已知量纲；未声明变量为未知维数
+mass : M
+length : L
+time : T
+temperature : Theta
+reference_temperature : Theta
+angle : 1

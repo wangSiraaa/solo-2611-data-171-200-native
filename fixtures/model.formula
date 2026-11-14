@@ -1,0 +1,11 @@
+# 每行一条有稳定名称的等式；普通数字按无量纲解释
+speed: velocity = length / time
+acceleration_rule: acceleration = velocity / time
+newton: force = mass * acceleration
+work: energy = force * length
+kinetic: energy = mass * velocity^2 / 2
+thermal_ratio: factor = exp(temperature / reference_temperature)
+oscillation: phase = sin(angle)
+root_scale: root_energy = energy^(1/2)
+free_response: response = gain * input
+cycle: length = velocity * time

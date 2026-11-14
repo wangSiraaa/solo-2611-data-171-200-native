@@ -1,0 +1,2 @@
+rate: speed = distance/duration
+back: distance = speed*duration

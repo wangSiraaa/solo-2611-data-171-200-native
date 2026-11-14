@@ -1,0 +1,32 @@
+{
+  "base_dimensions": [
+    "M",
+    "L",
+    "T",
+    "Theta"
+  ],
+  "max_variables": 25,
+  "max_equations": 30,
+  "grammar": {
+    "equation": "label : expr = expr (one logical line)",
+    "identifier": "[A-Za-z][A-Za-z0-9_]*",
+    "operators": [
+      "+",
+      "-",
+      "*",
+      "/",
+      "^"
+    ],
+    "power": "signed integer or (signed integer/positive integer), literal exponent only",
+    "functions": [
+      "exp",
+      "log",
+      "sin",
+      "cos",
+      "sqrt"
+    ],
+    "comments": "# to end of line"
+  },
+  "zero_literal": "dimensionless, including 0; no polymorphic dimensional zero",
+  "diagnostic_position": "UTF-8 text decoded to Unicode; 1-based line and codepoint column; half-open source spans"
+}

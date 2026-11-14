@@ -1,0 +1,2 @@
+bad_power: energy = mass * velocity^time
+bad_call: output = mystery(length)
