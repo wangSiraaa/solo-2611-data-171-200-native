@@ -1,0 +1,55 @@
+{
+  "events": {
+    "columns": [
+      "event_id",
+      "customer_id",
+      "tick",
+      "label",
+      "active"
+    ],
+    "rows": [
+      [
+        1,
+        1,
+        10,
+        "alpha",
+        1
+      ],
+      [
+        2,
+        1,
+        10,
+        "beta",
+        0
+      ],
+      [
+        3,
+        1,
+        null,
+        "none",
+        null
+      ],
+      [
+        4,
+        2,
+        4,
+        "x",
+        1
+      ],
+      [
+        5,
+        2,
+        6,
+        null,
+        0
+      ],
+      [
+        6,
+        3,
+        null,
+        "last",
+        null
+      ]
+    ]
+  }
+}

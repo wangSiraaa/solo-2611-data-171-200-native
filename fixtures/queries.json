@@ -1,0 +1,52 @@
+[
+  {
+    "query_id": "distinct_latest",
+    "sql": "SELECT DISTINCT ON (customer_id) customer_id, event_id, label FROM events ORDER BY customer_id, tick DESC NULLS LAST, event_id DESC",
+    "parameters": [],
+    "parameter_types": []
+  },
+  {
+    "query_id": "cte_parameters",
+    "sql": "WITH chosen AS (SELECT DISTINCT ON (customer_id) customer_id,event_id,label FROM events WHERE customer_id >= $1 ORDER BY customer_id,tick DESC NULLS LAST,event_id DESC) SELECT customer_id,event_id,concat(label,$2,' literal $1') AS name FROM chosen WHERE customer_id <= $3 ORDER BY customer_id",
+    "parameters": [
+      1,
+      "!",
+      2
+    ],
+    "parameter_types": [
+      "integer",
+      "text",
+      "integer"
+    ]
+  },
+  {
+    "query_id": "nullsafe",
+    "sql": "SELECT event_id,active IS DISTINCT FROM $1 AS changed FROM events WHERE customer_id >= $2 ORDER BY event_id",
+    "parameters": [
+      null,
+      1
+    ],
+    "parameter_types": [
+      "boolean",
+      "integer"
+    ]
+  },
+  {
+    "query_id": "concat_nulls",
+    "sql": "SELECT event_id,concat('name=',label,';') AS caption FROM events ORDER BY tick DESC NULLS LAST,event_id",
+    "parameters": [],
+    "parameter_types": []
+  },
+  {
+    "query_id": "nondeterministic",
+    "sql": "SELECT DISTINCT ON (customer_id) customer_id,label FROM events ORDER BY customer_id,tick DESC NULLS LAST",
+    "parameters": [],
+    "parameter_types": []
+  },
+  {
+    "query_id": "unsupported_regex",
+    "sql": "SELECT event_id FROM events WHERE label ~ '^[a-z]+$'",
+    "parameters": [],
+    "parameter_types": []
+  }
+]

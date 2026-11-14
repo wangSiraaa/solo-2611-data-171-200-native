@@ -1,3 +1,5 @@
-# SOLO 数据工程输入材料 171–200
+# 题 179 输入材料
 
-每道题以独立分支与初始提交提供小型合成输入。各题的 README 说明字段和依赖，代码实现由该题独立会话完成。使用原生 Python 3.11、Node.js 20 或 PostgreSQL 16；依赖与运行产物置于项目忽略目录。
+先在专用PostgreSQL库执行source.sql，并按rows.json创建SQLite副本（target.sql给DDL）。queries.json为待迁移查询及绑定参数；不要将测试结果直接当通用兼容证明。
+
+所有输入均为本地合成材料；此目录不提供题目实现、参考产物或预期答案。路径相对题目仓库根。使用 Python 3.11；无需 Docker。

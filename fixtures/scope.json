@@ -1,0 +1,9 @@
+{
+  "types": "integer,text,boolean and null only; UTF-8 text compared with binary/codepoint ordering; no locale-sensitive collation or numeric/float conversion",
+  "supported": "SELECT/WHERE/ORDER BY, one nonrecursive CTE, DISTINCT ON with leading ORDER BY keys, text-only concat, IS DISTINCT FROM, PostgreSQL $n parameters; ordinary arithmetic/comparison/boolean/null expressions",
+  "distinct_order": "accepted DISTINCT ON ordering must include event_id after its grouping keys so the selected row is unambiguous; reject otherwise rather than append order",
+  "target_boolean": "SQLite integer 0/1 for boolean, mapped back to logical type in result schema",
+  "output": "SQLite SQL, parameter mapping, output schema and per-rewrite source evidence; helper columns do not become output",
+  "unsupported": "regex, user functions, DML, recursive CTEs, external tables and unspecified dialect features",
+  "parameter_types": "each query declares parameter_types in $1..$n order; validate and use these types when binding in PostgreSQL and mapping to SQLite"
+}
